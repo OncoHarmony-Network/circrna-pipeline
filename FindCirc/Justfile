@@ -1,0 +1,4 @@
+all:
+    echo "Check available recipes with just -l"
+install:
+    conda create -n FindCirc -c conda-forge -c bioconda -y find_circ=1.2 bowtie2

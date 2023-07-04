@@ -1,0 +1,4 @@
+all:
+    echo "Check available recipes with just -l"
+install:
+    mamba env create -f env.yml
