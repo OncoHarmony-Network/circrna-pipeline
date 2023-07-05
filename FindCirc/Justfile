@@ -1,4 +1,9 @@
 all:
     echo "Check available recipes with just -l"
 install:
-    mamba create -n FindCirc -c conda-forge -c bioconda -y find_circ=1.2 bowtie2
+    mamba create -n FindCirc -c conda-forge -c bioconda -y find_circ=1.2 bowtie2 samtools
+test:
+    git clone https://github.com/marvin-jens/find_circ &&\
+    cd find_circ/test_data &&\
+    conda activate FindCirc &&\
+    make
