@@ -17,6 +17,8 @@ zhou2 数据：
 /home/data/reference/hg38_ek12
 ```
 
+样本列表在 `/home/data/EGA/OAK/code/OAK_RNA.txt`
+
 
 ## Copyright
 

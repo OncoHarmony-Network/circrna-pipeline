@@ -1,4 +1,7 @@
 all:
     echo "Check available recipes with just -l"
 install:
-    mamba env create -f env.yml
+    mamba env create -f env.yml &&\
+    conda activate CIRIquant &&\
+    mamba install -c conda-forge -c bioconda bwa=0.7.17 hisat2=2.2.0 stringtie=2.1.1 samtools=1.10 &&\
+    mamba install -c conda-forge -c bioconda r-base=3.6 r-optparse=1.6.6 r-statmod=1.4.35 bioconductor-edger=3.28.0 bioconductor-limma=3.42.0 
