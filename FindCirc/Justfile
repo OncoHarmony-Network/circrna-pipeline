@@ -3,7 +3,12 @@ all:
 install:
     mamba create -n FindCirc -c conda-forge -c bioconda -y find_circ=1.2 bowtie2 samtools
 test:
-    git clone https://github.com/marvin-jens/find_circ &&\
-    cd find_circ/test_data &&\
-    conda activate FindCirc &&\
+    #!/usr/bin/env bash
+    set -euxo pipefail
+
+    if [ ! -d 'find_circ' ]; then
+        git clone https://github.com/marvin-jens/find_circ
+    fi
+    cd find_circ/test_data
+    source activate FindCirc
     make
