@@ -5,6 +5,8 @@
     - ciriquant: https://github.com/nf-core/circrna/blob/master/modules/local/ciriquant/ciriquant/main.nf https://github.com/nf-core/circrna/blob/master/modules/local/ciriquant/filter/main.nf
     - https://github.com/nf-core/circrna/blob/master/modules/local/find_circ/find_circ/main.nf, https://github.com/nf-core/circrna/blob/master/modules/local/find_circ/filter/main.nf, https://github.com/nf-core/circrna/blob/master/modules/local/find_circ/anchors/main.nf
 
+https://github.com/nf-core/circrna/blob/18e580e3f81c3c37189c49033948616a773404af/subworkflows/local/circrna_discovery.nf 这个文件显示了不同软件 workflow 的流程，有参考价值。
+
 zhou2 数据：
 
 ```
