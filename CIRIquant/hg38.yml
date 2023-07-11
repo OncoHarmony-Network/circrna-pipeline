@@ -6,7 +6,7 @@ tools:
   samtools: /home/circrna/miniconda3/envs/CIRIquant/bin/samtools
 
 reference:
-  fasta: /home/data/reference/hg38_ek12/GRCh38.p13.genome.fa
+  fasta: /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
   gtf: /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf
-  bwa_index: /home/data/reference/hg38_ek12/GRCh38.p13.genome.fa
-  hisat_index: /home/data/reference/hg38_ek12/hisat2
+  bwa_index: /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
+  hisat_index: /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa

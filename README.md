@@ -17,9 +17,14 @@ zhou2 数据：
 参考基因组
 /home/data/reference
 /home/data/reference/hg38_ek12
+
+参考文件
+hg38_ek12/GRCh38.primary_assembly.genome.fa
+hg38_ek12/gencode.v34.annotation.gtf
 ```
 
 样本列表在 `/home/data/EGA/OAK/code/OAK_RNA.txt`
+
 
 
 ## Copyright
