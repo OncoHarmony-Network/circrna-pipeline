@@ -1,75 +1,56 @@
 #!/usr/bin/env bash
-set -euxo pipefail
+#set -euxo pipefail
 
 source activate FindCirc
 
 # 0. Config 
-ncpu=20
+ncpu=60
 sample=go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
 prefix=${sample}
-#bowtie2-build ce6.fa bt2_ce6 
-INDEX='/software/RNA/circRNA/call_cirRNA/ref/fa/hisat2_index/bowtie2_index/gencode_v28'
+fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
+INDEX=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.bt2
+#INDEX=/home/data/reference/hg38_ek12/bowtie2.hg38
 indir=/home/data/EGA/OAK/raw
 oudir=/home/data/circ_test
 
-# 1. FIND_CIRC_ALIGN( reads, bowtie2_index.collect(), false, true )
+#========================================================
+
+mkdir -p ${oudir}/${prefix}.find_circ
+cd ${oudir}/${prefix}.find_circ
+echo "1. Aligning reads..."
+
 bowtie2 \
-        -x ${INDEX} \
-        -1 ${indir}/${sample}_1.fastq.gz -2 ${indir}/${sample}_2.fastq.gz \
-        --un-conc-gz ${prefix}.unmapped.fastq.gz \
-        --threads ${ncpu} \
-        --very-sensitive --mm -D 20 --score-min=C,-15,0 -q \
-        2> ${prefix}.bowtie2.log \
-        | samtools sort --threads ${ncpu} -o ${prefix}.bam -
+    -x ${INDEX} \
+    -q -1 ${indir}/${sample}_1.fastq.gz -2 ${indir}/${sample}_2.fastq.gz \
+    --threads ${ncpu} \
+    --very-sensitive --score-min=C,-15,0 --reorder --mm \
+    2> ${prefix}.bowtie2.log | samtools sort -@ ${ncpu} -o ${prefix}.bam -
+samtools index -@ ${ncpu} ${prefix}.bam
 
- if [ -f ${prefix}.unmapped.fastq.1.gz ]; then
-        mv ${prefix}.unmapped.fastq.1.gz ${prefix}.unmapped_1.fastq.gz
-    fi
+echo "2. Fetching the unmapped reads"
+samtools view -@ ${ncpu} -hbf 4 ${prefix}.bam > ${prefix}.unmapped.bam
+samtools index -@ ${ncpu} ${prefix}.unmapped.bam
 
-    if [ -f ${prefix}.unmapped.fastq.2.gz ]; then
-        mv ${prefix}.unmapped.fastq.2.gz ${prefix}.unmapped_2.fastq.gz
-    fi
+echo "3. Splitting into anchors"
+unmapped2anchors.py ${prefix}.unmapped.bam > ${prefix}.unmapped.fastq
 
-# 2. SAMTOOLS_INDEX( FIND_CIRC_ALIGN.out.bam )
+echo "4. Aligning anchors and piping through find_circ"
 
-# 3. SAMTOOLS_VIEW( FIND_CIRC_ALIGN.out.bam.join( SAMTOOLS_INDEX.out.bai ), fasta, [] )
+bowtie2 -q -U ${prefix}.unmapped.fastq -x ${INDEX} --threads ${ncpu} \
+    --reorder --mm --very-sensitive --score-min=C,-15,0 2> ${prefix}.bowtie2.2nd.log | \
+    find_circ.py -G ${fasta} -n ${prefix} \
+    --stats ${prefix}.sites.log \
+    --reads ${prefix}.spliced_reads.fa \
+    > ${prefix}.splice_sites.bed
 
-# 4. FIND_CIRC_ANCHORS( SAMTOOLS_VIEW.out.bam )
+# grep CIRCULAR ${prefix}.splice_sites.bed | \
+#     grep -v chrM | \
+#     grep UNAMBIGUOUS_BP | grep ANCHOR_UNIQUE | \
+#     maxlength.py 100000 \
+#     > ${prefix}.txt
 
-# 5. FIND_CIRC( FIND_CIRC_ANCHORS.out.anchors, bowtie2_index.collect(), fasta )
+# tail -n +2 ${prefix}.txt | awk -v OFS="\t" '{print \$1,\$2,\$3,\$6,\$5}' > ${prefix}_find_circ.bed
 
-# 6. find_circ_filter = FIND_CIRC.out.bed.map{ meta, bed -> meta.tool = "find_circ"; return [ meta, bed ] }
+# awk -v OFS="\t" '{print \$1, \$2, \$3, \$1":"\$2"-"\$3":"\$4, \$5, \$4}' ${prefix}_find_circ.bed > ${prefix}_find_circ_circs.bed
 
-# 7. FIND_CIRC_FILTER( find_circ_filter, bsj_reads )
-
-
-
-unmapped2anchors.py $bam | gzip > ${prefix}_anchors.qfa.gz
-
-INDEX=$(find -L ./ -name "*.rev.1.bt2" | sed "s/.rev.1.bt2//")
-[ -z "\$INDEX" ] && INDEX=$(find -L ./ -name "*.rev.1.bt2l" | sed "s/.rev.1.bt2l//")
-[ -z "\$INDEX" ] && echo "Bowtie2 index files not found" 1>&2 && exit 1
-
-bowtie2 \\
-    --threads ${ncpu} \\
-    --reorder \\
-    --mm \\
-    -D 20 \\
-    --score-min=C,-15,0 \\
-    -q \\
-    -x \$INDEX \\
-    -U $anchors | \\
-    find_circ.py  --genome=$fasta --prefix=${prefix} --stats=${prefix}.sites.log --reads=${prefix}.sites.reads > ${prefix}.sites.bed
-
-prefix=
-
-grep CIRCULAR $bed | \
-    grep -v chrM | \
-    awk '\$5>=${bsj_reads}' | \
-    grep UNAMBIGUOUS_BP | grep ANCHOR_UNIQUE | \
-    maxlength.py 100000 \
-    > ${prefix}.txt
-
-tail -n +2 ${prefix}.txt | awk -v OFS="\t" '{print \$1,\$2,\$3,\$6,\$5}' > ${prefix}_find_circ.bed
-
-awk -v OFS="\t" '{print \$1, \$2, \$3, \$1":"\$2"-"\$3":"\$4, \$5, \$4}' ${prefix}_find_circ.bed > ${prefix}_find_circ_circs.bed
+# echo "Done for ${sample}"

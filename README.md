@@ -25,7 +25,7 @@ hg38_ek12/gencode.v34.annotation.gtf
 
 样本列表在 `/home/data/EGA/OAK/code/OAK_RNA.txt`
 
-
+统一用 fastp 做前期的预处理 https://github.com/OpenGene/fastp
 
 ## Copyright
 
