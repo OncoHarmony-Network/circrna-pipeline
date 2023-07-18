@@ -35,3 +35,12 @@ mkdir -p ${oudir}/${sample}
 perl ${pstalign} ${oudir}/${sample} ${oudir}/${sample}
 ```
 
+3. Output
+
+a) _filteredJunctions.bed: A bed file with all circular junctions found by the pipeline. The score column indicates the number reads spanning each junction.
+
+b) _s_filteredJunctions.bed: A bed file with those juction in (a) that are flanked by GT-AG splice sites. The score column indicates the number reads spanning each junction.
+
+c) _s_filteredJunctions_fw.bed: A bed file with the same circular junctions as in file (b), but here the score column gives the average number of forward spliced reads at both splice sites around each circular junction.
+
+d) (Sorted and indexed) bam file with all chimeric reads identified by STAR. The circRNA junction spanning reads are a subset of these.
