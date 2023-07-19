@@ -1,0 +1,9 @@
+all:
+    echo "Check available recipes with just -l"
+install:
+    mamba create -n Circexplorer2 -c conda-forge -c bioconda -y python=3.7 bwa &&\
+    source activate Circexplorer2 &&\
+    pip install circexplorer2
+test:
+    #!/usr/bin/env bash
+    echo "No test available"

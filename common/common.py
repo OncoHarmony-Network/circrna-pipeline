@@ -37,8 +37,8 @@ def find_common_entries(bed_entries, deviation=3, count_threshold=2):
 def main():
     parser = argparse.ArgumentParser(description='Find common entries in BED input.')
     parser.add_argument('bed_file', nargs='?', help='Input BED file. If not provided, input will be read from stdin.')
-    parser.add_argument('-d', '--deviation', type=int, default=3, help='Deviation value')
-    parser.add_argument('-t', '--count-threshold', type=int, default=2, help='Count threshold value')
+    parser.add_argument('-d', '--deviation', type=int, default=0, help='Deviation value (default: 0)')
+    parser.add_argument('-t', '--count-threshold', type=int, default=2, help='Count threshold value (default: 2)')
     args = parser.parse_args()
     
     bed_entries = []
