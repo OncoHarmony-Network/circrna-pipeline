@@ -17,6 +17,8 @@ oudir=/home/data/circ_test
 
 mkdir -p ${oudir}/${prefix}.find_circ
 cd ${oudir}/${prefix}.find_circ
+
+echo "Start find_circ for ${sample} at `date`"
 echo "1. Aligning reads..."
 
 bowtie2 \
@@ -43,14 +45,14 @@ bowtie2 -q -U ${prefix}.unmapped.fastq -x ${INDEX} --threads ${ncpu} \
     --reads ${prefix}.spliced_reads.fa \
     > ${prefix}.splice_sites.bed
 
-# grep CIRCULAR ${prefix}.splice_sites.bed | \
-#     grep -v chrM | \
-#     grep UNAMBIGUOUS_BP | grep ANCHOR_UNIQUE | \
-#     maxlength.py 100000 \
-#     > ${prefix}.txt
+grep CIRCULAR ${prefix}.splice_sites.bed | \
+    grep -v chrM | \
+    grep UNAMBIGUOUS_BP | grep ANCHOR_UNIQUE | \
+    maxlength.py 100000 \
+    > ${prefix}.txt
 
-# tail -n +2 ${prefix}.txt | awk -v OFS="\t" '{print \$1,\$2,\$3,\$6,\$5}' > ${prefix}_find_circ.bed
+awk -v OFS="\t" '{print $1,$2,$3,$6,$5,$4}' ${prefix}.txt > ../${prefix}.find_circ.bed
+rm *.bam *.fastq
 
-# awk -v OFS="\t" '{print \$1, \$2, \$3, \$1":"\$2"-"\$3":"\$4, \$5, \$4}' ${prefix}_find_circ.bed > ${prefix}_find_circ_circs.bed
-
-# echo "Done for ${sample}"
+echo "Done for ${sample}, final result is ${prefix}.find_circ.bed"
+echo "End find_circ for ${sample} at `date`"
