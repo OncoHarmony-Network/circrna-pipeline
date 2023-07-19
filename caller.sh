@@ -39,20 +39,17 @@ fi
 # https://github.com/OpenGene/fastp
 fp=/home/circrna/miniconda3/bin/fastp
 
+# Set input and output
 sample=go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
 indir=/home/data/EGA/OAK/raw
 oudir=/home/data/circ_test
 nbatch=4
 nthreads=20
 
-#fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
+fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
 
-# commands="
-# ${CIRIquant} ${sample} ${indir} ${oudir} ${nthreads}
-# ${FindCirc} ${sample} ${indir} ${oudir} ${nthreads}
-# ${Circexplorer2} ${sample} ${indir} ${oudir} ${nthreads}
-# ${circRNA_finder} ${sample} ${indir} ${oudir} ${nthreads}
-# "
+# Set commands
+# TODO: set QC with fastp
 
 commands="
 bash ${CIRIquant} {} ${indir} ${oudir} ${nthreads};
@@ -61,5 +58,5 @@ bash ${Circexplorer2} {} ${indir} ${oudir} ${nthreads};
 bash ${circRNA_finder} {} ${indir} ${oudir} ${nthreads};
 "
 
-echo $sample | ${rush} ${commands} -j 4 -k --dry-run
-#${rush} ${commands} -i ${fqfile} -j 4 -k --dry-run
+# Run commands in batch
+cat $fqfile | head -n 4 | ${rush} ${commands} -j ${nbatch} -k
