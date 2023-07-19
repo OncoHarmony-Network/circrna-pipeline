@@ -31,6 +31,7 @@ mkdir -p ${oudir}/${sample}
 
 # use root samtools
 # 这里如果用conda里面的samtools会出现权限问题，使用sudo命令运行root下安装的samtools
+cd ${oudir}/${sample}
 
 perl ${pstalign} ${oudir}/${sample} ${oudir}/${sample}
 ```
