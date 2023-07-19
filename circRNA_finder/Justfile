@@ -1,0 +1,8 @@
+all:
+    echo "Check available recipes with just -l"
+install:
+    #git clone https://github.com/orzechoj/circRNA_finder.git
+    mamba create -n circRNA_finder -c conda-forge -c bioconda -y circrna_finder star samtools
+test:
+    #!/usr/bin/env bash
+    echo "No test available"
