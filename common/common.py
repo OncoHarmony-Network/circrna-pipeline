@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# cat test/*.bed | ./common.py -t 1
 import argparse
 import sys
 from collections import defaultdict
@@ -12,18 +13,25 @@ def find_common_entries(bed_entries, deviation=3, count_threshold=2):
     common_entries = []
     
     for entry in bed_entries:
-        print("dict:", bed_entries_dict)
-        print("entry:", entry)
-        positions = set(range(entry[1], entry[2] + 1))
-        for other_entry, count in bed_entries_dict.items():
-            print("other", other_entry)
-            if entry[0] == other_entry[0] and \
-               not positions.isdisjoint(range(other_entry[1] - deviation, other_entry[2] + deviation + 1)):
-                bed_entries_dict[other_entry] += 1
-        bed_entries_dict[entry] += 1
+
+        if len(bed_entries_dict) == 0:
+            bed_entries_dict[entry] += 1
+        else:
+            flag = []
+            for other_entry, count in bed_entries_dict.items():
+                if entry[0] == other_entry[0] and \
+                    abs(entry[1] - other_entry[1]) <= deviation and abs(entry[2] - other_entry[2]) <= deviation:
+                    bed_entries_dict[other_entry] += 1
+                    flag.append(True)
+                else:
+                    flag.append(False)
+            if not any(flag):
+                bed_entries_dict[entry] += 1
     
-                # if bed_entries_dict[other_entry] == count_threshold:
-                # common_entries.append(other_entry)
+    for entry, count in bed_entries_dict.items():
+        if bed_entries_dict[entry] >= count_threshold:
+            common_entries.append(entry)
+    
     return common_entries
 
 def main():
