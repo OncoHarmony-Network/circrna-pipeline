@@ -4,19 +4,24 @@
 source activate FindCirc
 
 # 0. Config 
-ncpu=20
-sample=go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
+sample=$1
+indir=$2
+oudir=$3
+ncpu=$4
 prefix=${sample}
 fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
 INDEX=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.bt2
 #INDEX=/home/data/reference/hg38_ek12/bowtie2.hg38
-indir=/home/data/EGA/OAK/raw
-oudir=/home/data/circ_test
 
 #========================================================
 outdir2=${oudir}/find_circ
 mkdir -p ${outdir2}
 cd ${outdir2}
+
+if [ -f ../${prefix}.find_circ.ok ]; then
+    echo "Final result file detected, skipping this sample."
+    exit 0
+fi
 
 echo "Start find_circ for ${sample} at `date`"
 echo "1. Aligning reads..."
@@ -52,7 +57,18 @@ grep CIRCULAR ${prefix}.splice_sites.bed | \
     > ${prefix}.txt
 
 awk -v OFS="\t" '{print $1,$2,$3,$6,$5,$4}' ${prefix}.txt > ../${prefix}.find_circ.bed
-rm *.bam *.fastq
 
-echo "Done for ${sample}, final result is ${prefix}.find_circ.bed"
+# 获取上一个命令的退出状态码
+exit_code=$?
+if [ $exit_code -eq 0 ]; then
+    echo "Done for ${sample}, final result is ${prefix}.find_circ.bed"
+    touch ../${prefix}.find_circ.ok
+else
+    if [ -f ../${prefix}.find_circ.ok ]; then
+        rm ../${prefix}.find_circ.ok
+    fi
+fi
+
+rm *.bam *.bai *.fastq *.fa
+
 echo "End find_circ for ${sample} at `date`"
