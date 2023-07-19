@@ -12,8 +12,8 @@ config=/home/circrna/circrna-pipeline/CIRIquant/hg38.yml
 
 #========================================================
 outdir2=${oudir}/ciri
-mkdir -p ${oudir2}
-cd ${oudir2}
+mkdir -p ${outdir2}
+cd ${outdir2}
 
 echo "Start CIRIquant for ${sample} at `date`"
 
@@ -22,7 +22,7 @@ CIRIquant -t ${ncpu} \
         -2 ${indir}/${sample}_2.fastq.gz \
         --config ${config} \
         --no-gene \
-        -o ${oudir2} \
+        -o ${outdir2} \
         -p ${sample} \
         -v
 

@@ -15,8 +15,8 @@ oudir=/home/data/circ_test
 
 #========================================================
 outdir2=${oudir}/find_circ
-mkdir -p ${oudir2}
-cd ${oudir2}
+mkdir -p ${outdir2}
+cd ${outdir2}
 
 echo "Start find_circ for ${sample} at `date`"
 echo "1. Aligning reads..."
