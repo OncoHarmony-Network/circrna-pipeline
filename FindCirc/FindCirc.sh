@@ -4,7 +4,7 @@
 source activate FindCirc
 
 # 0. Config 
-ncpu=60
+ncpu=20
 sample=go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
 prefix=${sample}
 fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
@@ -14,9 +14,9 @@ indir=/home/data/EGA/OAK/raw
 oudir=/home/data/circ_test
 
 #========================================================
-
-mkdir -p ${oudir}/${prefix}.find_circ
-cd ${oudir}/${prefix}.find_circ
+outdir2=${oudir}/find_circ
+mkdir -p ${oudir2}
+cd ${oudir2}
 
 echo "Start find_circ for ${sample} at `date`"
 echo "1. Aligning reads..."
