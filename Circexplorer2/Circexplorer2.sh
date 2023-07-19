@@ -31,7 +31,7 @@ echo "3. Running annotate module..."
 # step3
 CIRCexplorer2 annotate -r ${ann_ref} -g ${fasta} -b ${prefix}'_circ2_result.txt' -o ${prefix}'_circ2_result_ann.txt'
 
-awk -v OFS="\t" '{print $1,$2,$3,$6,$13}' ${prefix}'_circ2_result_ann.txt' > ../${prefix}_circexplorer2.bed
+awk -v OFS="\t" '{print $1,$2,$3,$6,$13}' ${prefix}'_circ2_result_ann.txt' > ../${prefix}.circexplorer2.bed
 
 echo "Done for ${sample}, final result is ${prefix}.circexplorer2.bed"
 echo "End circexplorer2 for ${sample} at `date`"

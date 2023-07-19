@@ -27,11 +27,14 @@ STAR --readFilesIn ${indir}/${sample}_1.fastq.gz ${indir}/${sample}_2.fastq.gz \
 --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 \
 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 \
 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 \
---outFileNamePrefix ${sample}_ \
+--outFileNamePrefix ${sample}. \
 --readFilesCommand zcat
 
 echo "2. Analyzing reads..."
-postProcessStarAlignment.pl ${outdir2} ${outdir2}
+postProcessStarAlignment.pl --starDir ./ --outDir ./
+
+echo "3. Outputing..."
+awk -v OFS="\t" -F"\t" '{print $1,$2,$3,$6,$5}' ${prefix}.filteredJunctions.bed > ../${prefix}.circRNA_finder.bed
 
 echo "Done for ${sample}, final result is ${prefix}.circRNA_finder.bed"
 echo "End circRNA_finder for ${sample} at `date`"
