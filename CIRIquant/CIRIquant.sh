@@ -11,7 +11,7 @@ prefix=${sample}
 config=/home/circrna/circrna-pipeline/CIRIquant/hg38.yml
 
 #========================================================
-outdir2=${oudir}/CIRI
+outdir2=${oudir}/${prefix}.CIRI
 mkdir -p ${outdir2}
 cd ${outdir2}
 

@@ -12,7 +12,7 @@ fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
 ann_ref=/home/data/reference/hg38_ek12/hg38_ref_all.txt 
 
 #========================================================
-outdir2=${oudir}/circexplorer2
+outdir2=${oudir}/${prefix}.circexplorer2
 mkdir -p ${outdir2}
 cd ${outdir2}
 

@@ -14,7 +14,7 @@ INDEX=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.bt2
 #INDEX=/home/data/reference/hg38_ek12/bowtie2.hg38
 
 #========================================================
-outdir2=${oudir}/find_circ
+outdir2=${oudir}/${prefix}.find_circ
 mkdir -p ${outdir2}
 cd ${outdir2}
 
