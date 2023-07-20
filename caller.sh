@@ -43,7 +43,7 @@ fp=/home/circrna/miniconda3/bin/fastp
 sample=go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
 indir=/home/data/EGA/OAK/raw
 oudir=/home/data/circ_test
-nbatch=4
+#nbatch=4
 nthreads=20
 
 fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
@@ -51,12 +51,20 @@ fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
 # Set commands
 # TODO: set QC with fastp
 
-commands="
-bash ${CIRIquant} {} ${indir} ${oudir} ${nthreads};
-bash ${FindCirc} {} ${indir} ${oudir} ${nthreads};
-bash ${Circexplorer2} {} ${indir} ${oudir} ${nthreads};
-bash ${circRNA_finder} {} ${indir} ${oudir} ${nthreads};
-"
+# commands="
+# bash ${CIRIquant} {} ${indir} ${oudir} ${nthreads};
+# bash ${FindCirc} {} ${indir} ${oudir} ${nthreads};
+# bash ${Circexplorer2} {} ${indir} ${oudir} ${nthreads};
+# bash ${circRNA_finder} {} ${indir} ${oudir} ${nthreads};
+# "
+#cat $fqfile | head -n 4 | ${rush} ${commands} -j ${nbatch} -k
 
 # Run commands in batch
-cat $fqfile | head -n 4 | ${rush} ${commands} -j ${nbatch} -k
+commands="bash {} {sample} ${indir} ${oudir} ${nthreads}"
+
+for sample in $(cat $fqfile | head -n  4)
+do
+    #bash ${CIRIquant} ${sample} ${indir} ${oudir} ${nthreads}
+    echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}
+done
+

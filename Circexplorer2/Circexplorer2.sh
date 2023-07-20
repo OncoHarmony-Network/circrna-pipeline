@@ -16,6 +16,8 @@ outdir2=${oudir}/${prefix}.circexplorer2
 mkdir -p ${outdir2}
 cd ${outdir2}
 
+echo "Start circexplorer2 for ${sample} at `date`"
+
 if [ -f ../${prefix}.circexplorer2.bed ] && [ -s ../${prefix}.circexplorer2.bed ]; then
     echo "Final result exists and is not empty, skipped this sample."
     exit 0
@@ -27,7 +29,6 @@ fi
 
 unmap_bwa_sam=${outdir2}/${prefix}'_unmapped_bwa.sam'
 
-echo "Start circexplorer2 for ${sample} at `date`"
 echo "1. Aligning reads..."
 # step1
 bwa mem -t ${ncpu} -T 19 ${fasta} ${indir}/${sample}_1.fastq.gz ${indir}/${sample}_2.fastq.gz > ${unmap_bwa_sam} 2> ${prefix}'_bwa.log'

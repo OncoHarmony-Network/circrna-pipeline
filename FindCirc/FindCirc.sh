@@ -18,6 +18,8 @@ outdir2=${oudir}/${prefix}.find_circ
 mkdir -p ${outdir2}
 cd ${outdir2}
 
+echo "Start find_circ for ${sample} at `date`"
+
 if [ -f ../${prefix}.find_circ.bed ] && [ -s ../${prefix}.find_circ.bed ]; then
     echo "Final result exists and is not empty, skipped this sample."
     exit 0
@@ -27,7 +29,6 @@ else
     echo "Final result file does not exist, run it."
 fi
 
-echo "Start find_circ for ${sample} at `date`"
 echo "1. Aligning reads..."
 
 bowtie2 \

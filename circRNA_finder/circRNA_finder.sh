@@ -19,6 +19,8 @@ outdir2=${oudir}/${prefix}.circRNA_finder
 mkdir -p ${outdir2}
 cd ${outdir2}
 
+echo "Start circRNA_finder for ${sample} at `date`"
+
 if [ -f ../${prefix}.circRNA_finder.bed ] && [ -s ../${prefix}.circRNA_finder.bed ]; then
     echo "Final result exists and is not empty, skipped this sample."
     exit 0
@@ -28,7 +30,6 @@ else
     echo "Final result file does not exist, run it."
 fi
 
-echo "Start circRNA_finder for ${sample} at `date`"
 echo "1. Aligning reads..."
 
 STAR --readFilesIn ${indir}/${sample}_1.fastq.gz ${indir}/${sample}_2.fastq.gz \
