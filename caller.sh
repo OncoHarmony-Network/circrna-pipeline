@@ -40,13 +40,10 @@ fi
 fp=/home/circrna/miniconda3/bin/fastp
 
 # Set input and output
-sample=go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
-indir=/home/data/EGA/OAK/raw
-oudir=/home/data/circ_test
-#nbatch=4
-nthreads=20
-
-fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
+fqfile=$1
+indir=$2
+oudir=$3
+nthreads=$4
 
 # Set commands
 # TODO: set QC with fastp
@@ -62,7 +59,7 @@ fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
 # Run commands in batch
 commands="bash {} {sample} ${indir} ${oudir} ${nthreads}"
 
-for sample in $(cat $fqfile | head -n  4)
+for sample in $(cat $fqfile)
 do
     #bash ${CIRIquant} ${sample} ${indir} ${oudir} ${nthreads}
     echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}

@@ -1,0 +1,7 @@
+[Thu 2023-07-20 17:01:24] [INFO ] Input reads: go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520_1.fastq.gz,go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520_2.fastq.gz
+[Thu 2023-07-20 17:01:24] [INFO ] Library type: unstranded
+[Thu 2023-07-20 17:01:24] [INFO ] Output directory: /home/data/CIRC_PIPE_RESULTS/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520.CIRI, Output prefix: go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520
+[Thu 2023-07-20 17:01:24] [INFO ] Config: hg38 Loaded
+[Thu 2023-07-20 17:01:24] [INFO ] 128 CPU cores availble, using 20
+[Thu 2023-07-20 17:01:24] [INFO ] Align RNA-seq reads to reference genome ..
+[Thu 2023-07-20 17:01:24] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/EGA/OAK/raw/go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520_1.fastq.gz -2 /home/data/EGA/OAK/raw/go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/CIRC_PIPE_RESULTS/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520.bam
