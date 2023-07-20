@@ -19,9 +19,13 @@ outdir2=${oudir}/circRNA_finder
 mkdir -p ${outdir2}
 cd ${outdir2}
 
-if [ -f ../${prefix}.circRNA_finder.ok ]; then
-    echo "Final result file detected, skipping this sample."
+if [ -f ../${prefix}.circRNA_finder.bed ] && [ -s ../${prefix}.circRNA_finder.bed ]; then
+    echo "Final result exists and is not empty, skipped this sample."
     exit 0
+elif [ -f ../${prefix}.circRNA_finder.bed ]; then
+    echo "Final result file exists but is empty, re-run it."
+else
+    echo "Final result file does not exist, run it."
 fi
 
 echo "Start circRNA_finder for ${sample} at `date`"
@@ -41,17 +45,7 @@ postProcessStarAlignment.pl --starDir ./ --outDir ./
 echo "3. Outputing..."
 awk -v OFS="\t" -F"\t" '{print $1,$2,$3,$6,$5}' ${prefix}.filteredJunctions.bed > ../${prefix}.circRNA_finder.bed
 
-# 获取上一个命令的退出状态码
-exit_code=$?
-if [ $exit_code -eq 0 ]; then
-    echo "Done for ${sample}, final result is ${prefix}.circRNA_finder.bed"
-    touch ../${prefix}.circRNA_finder.ok
-else
-    if [ -f ../${prefix}.circRNA_finder.ok ]; then
-        rm ../${prefix}.circRNA_finder.ok
-    fi
-fi
-
 rm *.sam *.bam *.bai
 
+echo "Done for ${sample}, final result should be ${prefix}.circRNA_finder.bed"
 echo "End circRNA_finder for ${sample} at `date`"

@@ -15,9 +15,13 @@ outdir2=${oudir}/CIRI
 mkdir -p ${outdir2}
 cd ${outdir2}
 
-if [ -f ../${prefix}.CIRI.ok ]; then
-    echo "Final result file detected, skipping this sample."
+if [ -f ../${prefix}.CIRI.bed ] && [ -s ../${prefix}.CIRI.bed ]; then
+    echo "Final result exists and is not empty, skipped this sample."
     exit 0
+elif [ -f ../${prefix}.CIRI.bed ]; then
+    echo "Final result file exists but is empty, re-run it."
+else
+    echo "Final result file does not exist, run it."
 fi
 
 echo "Start CIRIquant for ${sample} at `date`"
@@ -35,18 +39,7 @@ grep -v "#" ${prefix}.gtf | awk '{print $14}' | cut -d '.' -f1 > ${prefix}.count
 grep -v "#" ${prefix}.gtf | awk -v OFS="\t" '{gsub(/[";]/, "", $20); gsub(/[";]/, "", $22); print $1,$4-1,$5,$7,$20,$22}' > ${prefix}.tmp
 paste ${prefix}.tmp ${prefix}.counts > ../${prefix}.CIRI.bed
 rm ${prefix}.tmp ${prefix}.counts
-
-# 获取上一个命令的退出状态码
-exit_code=$?
-if [ $exit_code -eq 0 ]; then
-    echo "Done for ${sample}, final result is ${prefix}.CIRI.bed"
-    touch ../${prefix}.CIRI.ok
-else
-    if [ -f ../${prefix}.CIRI.ok ]; then
-        rm ../${prefix}.CIRI.ok
-    fi
-fi
-
 rm -rf align circ
 
+echo "Done for ${sample}, final result should be ${prefix}.CIRI.bed"
 echo "End CIRIquant for ${sample} at `date`"

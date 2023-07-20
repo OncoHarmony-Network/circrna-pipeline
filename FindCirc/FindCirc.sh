@@ -18,9 +18,13 @@ outdir2=${oudir}/find_circ
 mkdir -p ${outdir2}
 cd ${outdir2}
 
-if [ -f ../${prefix}.find_circ.ok ]; then
-    echo "Final result file detected, skipping this sample."
+if [ -f ../${prefix}.find_circ.bed ] && [ -s ../${prefix}.find_circ.bed ]; then
+    echo "Final result exists and is not empty, skipped this sample."
     exit 0
+elif [ -f ../${prefix}.find_circ.bed ]; then
+    echo "Final result file exists but is empty, re-run it."
+else
+    echo "Final result file does not exist, run it."
 fi
 
 echo "Start find_circ for ${sample} at `date`"
@@ -58,17 +62,7 @@ grep CIRCULAR ${prefix}.splice_sites.bed | \
 
 awk -v OFS="\t" '{print $1,$2,$3,$6,$5,$4}' ${prefix}.txt > ../${prefix}.find_circ.bed
 
-# 获取上一个命令的退出状态码
-exit_code=$?
-if [ $exit_code -eq 0 ]; then
-    echo "Done for ${sample}, final result is ${prefix}.find_circ.bed"
-    touch ../${prefix}.find_circ.ok
-else
-    if [ -f ../${prefix}.find_circ.ok ]; then
-        rm ../${prefix}.find_circ.ok
-    fi
-fi
-
 rm *.bam *.bai *.fastq *.fa
 
+echo "Done for ${sample}, final result should be ${prefix}.find_circ.bed"
 echo "End find_circ for ${sample} at `date`"

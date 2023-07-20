@@ -16,9 +16,13 @@ outdir2=${oudir}/circexplorer2
 mkdir -p ${outdir2}
 cd ${outdir2}
 
-if [ -f ../${prefix}.circexplorer2.ok ]; then
-    echo "Final result file detected, skipping this sample."
+if [ -f ../${prefix}.circexplorer2.bed ] && [ -s ../${prefix}.circexplorer2.bed ]; then
+    echo "Final result exists and is not empty, skipped this sample."
     exit 0
+elif [ -f ../${prefix}.circexplorer2.bed ]; then
+    echo "Final result file exists but is empty, re-run it."
+else
+    echo "Final result file does not exist, run it."
 fi
 
 unmap_bwa_sam=${outdir2}/${prefix}'_unmapped_bwa.sam'
@@ -38,17 +42,7 @@ CIRCexplorer2 annotate -r ${ann_ref} -g ${fasta} -b ${prefix}'_circ2_result.txt'
 
 awk -v OFS="\t" '{print $1,$2,$3,$6,$13}' ${prefix}'_circ2_result_ann.txt' > ../${prefix}.circexplorer2.bed
 
-# 获取上一个命令的退出状态码
-exit_code=$?
-if [ $exit_code -eq 0 ]; then
-    echo "Done for ${sample}, final result is ${prefix}.circexplorer2.bed"
-    touch ../${prefix}.circexplorer2.ok
-else
-    if [ -f ../${prefix}.circexplorer2.ok ]; then
-        rm ../${prefix}.circexplorer2.ok
-    fi
-fi
-
 rm *.sam
 
+echo "Done for ${sample}, final result should be ${prefix}.circexplorer2.bed"
 echo "End circexplorer2 for ${sample} at `date`"
