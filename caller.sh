@@ -68,7 +68,7 @@ commands="bash {} {sample} ${indir} ${oudir} ${nthreads} ${config}"
 for sample in $(cat $fqfile)
 do
     #bash ${CIRIquant} ${sample} ${indir} ${oudir} ${nthreads}
-    #echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}
-    echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} --dry-run -D " " -T b -k -j 4 -v sample=${sample} ${commands}
+    echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}
+    #echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} --dry-run -D " " -T b -k -j 4 -v sample=${sample} ${commands}
 done
 
