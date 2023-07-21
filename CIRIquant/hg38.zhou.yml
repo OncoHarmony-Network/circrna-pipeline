@@ -1,0 +1,12 @@
+name: hg38
+tools:
+  bwa: /home/circrna/miniconda3/envs/CIRIquant/bin/bwa
+  hisat2: /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2
+  stringtie: /home/circrna/miniconda3/envs/CIRIquant/bin/stringtie
+  samtools: /home/circrna/miniconda3/envs/CIRIquant/bin/samtools
+
+reference:
+  fasta: /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
+  gtf: /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf
+  bwa_index: /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
+  hisat_index: /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa

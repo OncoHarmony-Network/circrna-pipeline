@@ -9,9 +9,9 @@ indir=$2
 oudir=$3
 ncpu=$4
 prefix=${sample}
-fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
-INDEX=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.bt2
-#INDEX=/home/data/reference/hg38_ek12/bowtie2.hg38
+
+config=$5
+source ${config}
 
 #========================================================
 outdir2=${oudir}/${prefix}.find_circ
@@ -32,7 +32,7 @@ fi
 echo "1. Aligning reads..."
 
 bowtie2 \
-    -x ${INDEX} \
+    -x ${bt2_INDEX} \
     -q -1 ${indir}/${sample}_1.fastq.gz -2 ${indir}/${sample}_2.fastq.gz \
     --threads ${ncpu} \
     --very-sensitive --score-min=C,-15,0 --reorder --mm \
@@ -48,7 +48,7 @@ unmapped2anchors.py ${prefix}.unmapped.bam > ${prefix}.unmapped.fastq
 
 echo "4. Aligning anchors and piping through find_circ"
 
-bowtie2 -q -U ${prefix}.unmapped.fastq -x ${INDEX} --threads ${ncpu} \
+bowtie2 -q -U ${prefix}.unmapped.fastq -x ${bt2_INDEX} --threads ${ncpu} \
     --reorder --mm --very-sensitive --score-min=C,-15,0 2> ${prefix}.bowtie2.2nd.log | \
     find_circ.py -G ${fasta} -n ${prefix} \
     --stats ${prefix}.sites.log \

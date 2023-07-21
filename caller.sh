@@ -44,6 +44,12 @@ fqfile=$1
 indir=$2
 oudir=$3
 nthreads=$4
+config=$5
+
+if [ -z "$config" ]; then
+    echo "config is empty, default is config_zhou2.sh"
+    config=${DIR}/config_zhou2.sh
+fi
 
 # Set commands
 # TODO: set QC with fastp
@@ -57,11 +63,12 @@ nthreads=$4
 #cat $fqfile | head -n 4 | ${rush} ${commands} -j ${nbatch} -k
 
 # Run commands in batch
-commands="bash {} {sample} ${indir} ${oudir} ${nthreads}"
+commands="bash {} {sample} ${indir} ${oudir} ${nthreads} ${config}"
 
 for sample in $(cat $fqfile)
 do
     #bash ${CIRIquant} ${sample} ${indir} ${oudir} ${nthreads}
-    echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}
+    #echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}
+    echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} --dry-run -D " " -T b -k -j 4 -v sample=${sample} ${commands}
 done
 

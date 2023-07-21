@@ -8,9 +8,9 @@ indir=$2
 oudir=$3
 ncpu=$4
 prefix=${sample}
-fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
-gtf=/home/data/reference/hg38_ek12/gencode.v34.annotation.gtf
-gdir=/home/data/reference/hg38_ek12/STAR_index_2.7.10b
+
+config=$5
+source ${config}
 
 #STAR --runThreadN 60 --runMode genomeGenerate --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --genomeFastaFiles /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
 
