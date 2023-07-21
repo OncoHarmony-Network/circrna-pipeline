@@ -12,8 +12,6 @@ prefix=${sample}
 config=$5
 source ${config}
 
-#STAR --runThreadN 60 --runMode genomeGenerate --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --genomeFastaFiles /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
-
 #========================================================
 outdir2=${oudir}/${prefix}.circRNA_finder
 mkdir -p ${outdir2}

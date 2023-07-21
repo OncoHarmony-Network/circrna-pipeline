@@ -14,6 +14,6 @@ gdir=/home/data/reference/hg38_ek12/STAR_index_2.7.10b
 # CIRIquant
 CIRI_config=/home/circrna/circrna-pipeline/CIRIquant/hg38.yml
 
-# finder_circle
+# find_circle
 bt2_INDEX=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.bt2
 
