@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#fqfile=./POPLAR_RNA.txt
-fqfile=./POPLAR_test.txt
+fqfile=./POPLAR_RNA.txt
+#fqfile=./POPLAR_test.txt
 indir=/home/zhou/raid/EGA/POPLAR/raw
 oudir=/home/zhou/raid/CIRC_PIPE_RESULTS/EGA_POPLAR
 nthreads=20
