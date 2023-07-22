@@ -1,5 +1,7 @@
 # CircRNA Identification and Integration Pipeline
 
+The pipeline provides an easy and reproducible way to detect circRNA from pair-end FASTQ files with four methods: CIRIquant, Circexplorer2, find_circ and circRNA_finder.
+
 ## Step 1. Install the required conda environment
 
 1. (Optional) Set an independent linux account `circrna` for deploying and running circRNA identification pipeline.
@@ -90,6 +92,36 @@ The directory [run_batch](run_batch/) have examples for running our TCCIA cohort
 
 I recommend you testing the pipeline with 4 samples. If it goes well, run the whole data files
 you have. The pipeline will skip samples with result file generated.
+
+
+## Output
+
+The output directory contains result files with names combined from sample names and
+methods.
+
+```sh
+$ ls *.bed
+GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.circexplorer2.bed
+GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.circRNA_finder.bed
+GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI.bed
+GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.find_circ.bed
+```
+
+The result file usually contains the postion and count value of circRNAs.
+
+```sh
+$ head GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.circexplorer2.bed
+chr3    9750944 9751949 +       31
+chr3    11331339        11348035        +       16
+chr3    12489783        12489989        +       19
+chr3    12496517        12503784        +       1
+chr3    15016151        15034809        +       11
+chr3    15210801        15212212        +       12
+chr3    15232518        15233973        +       1
+chr3    15563357        15573242        -       3
+chr3    17372074        17384015        -       2
+chr3    18415110        18420991        -       9
+```
 
 ## Reference
 
