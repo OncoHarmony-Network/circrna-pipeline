@@ -1,6 +1,6 @@
 # CircRNA Identification and Integration Pipeline
 
-The pipeline provides an easy and reproducible way to detect circRNA from pair-end FASTQ files with four methods: CIRIquant, Circexplorer2, find_circ and circRNA_finder.
+The pipeline provides an easy and reproducible way to detect circRNA from pair-end FASTQ files using four methods: CIRIquant, Circexplorer2, find_circ, and circRNA_finder.
 
 ## Step 1. Install the required conda environment
 
@@ -62,10 +62,10 @@ Please note, you need to activate corresponding environment before run index com
 
 ## Step 3. Preprocess pair-end fastq files
 
-You need preprocess your pair-end fastq files (QC, cut adapters...). [fastp](https://github.com/OpenGene/fastp) is a one-stop solution for this.
+You need to preprocess your pair-end fastq files (QC, cut adapters, etc.). [fastp](https://github.com/OpenGene/fastp) is a one-stop solution for this.
 
-Currently, we only support file names with postfix `_1.fastq.gz` and `_2.fastq.gz`.
-Please make sure you output your processed fastq files in such format.
+Currently, we only support file names with the postfix `_1.fastq.gz` and `_2.fastq.gz`.
+Please make sure you output your processed fastq files in such a format.
 
 ## Step 4. Test and run pipeline
 
@@ -90,8 +90,7 @@ nohup bash caller.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${config} &> run.lo
 
 The directory [run_batch](run_batch/) have examples for running our TCCIA cohorts.
 
-I recommend you testing the pipeline with 4 samples. If it goes well, run the whole data files
-you have. The pipeline will skip samples with result file generated.
+I recommend testing the pipeline with 4 samples. If it goes well, run all the data files you have. The pipeline will skip samples with result files already generated.
 
 
 ## Output
