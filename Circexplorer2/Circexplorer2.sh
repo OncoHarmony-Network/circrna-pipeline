@@ -8,8 +8,9 @@ indir=$2
 oudir=$3
 ncpu=$4
 prefix=${sample}
-fasta=/home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa
-ann_ref=/home/data/reference/hg38_ek12/hg38_ref_all.txt 
+
+config=$5
+source ${config}
 
 #========================================================
 outdir2=${oudir}/${prefix}.circexplorer2

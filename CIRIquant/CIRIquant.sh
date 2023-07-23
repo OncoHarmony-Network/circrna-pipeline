@@ -8,7 +8,9 @@ indir=$2
 oudir=$3
 ncpu=$4
 prefix=${sample}
-config=/home/circrna/circrna-pipeline/CIRIquant/hg38.yml
+
+config=$5
+source ${config}
 
 #========================================================
 outdir2=${oudir}/${prefix}.CIRI
@@ -29,7 +31,7 @@ fi
 CIRIquant -t ${ncpu} \
         -1 ${indir}/${sample}_1.fastq.gz \
         -2 ${indir}/${sample}_2.fastq.gz \
-        --config ${config} \
+        --config ${CIRI_config} \
         --no-gene \
         -o ${outdir2} \
         -p ${sample} \
