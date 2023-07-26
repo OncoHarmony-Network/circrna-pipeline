@@ -1,0 +1,5 @@
+all:
+    echo "Check available recipes with just -l"
+install:
+    mamba install -c conda-forge -c bioconda -y fastp
+
