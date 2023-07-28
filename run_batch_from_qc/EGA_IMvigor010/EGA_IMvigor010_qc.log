@@ -1,0 +1,253 @@
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 48328033
+total bases: 2464729683
+Q20 bases: 2402749806(97.4853%)
+Q30 bases: 2331111942(94.5788%)
+
+Read2 before filtering:
+total reads: 48328033
+total bases: 2464729683
+Q20 bases: 2351461478(95.4044%)
+Q30 bases: 2243817364(91.0371%)
+
+Read1 after filtering:
+total reads: 48157317
+total bases: 2454092495
+Q20 bases: 2392711303(97.4988%)
+Q30 bases: 2321795161(94.6091%)
+
+Read2 after filtering:
+total reads: 48157317
+total bases: 2454092495
+Q20 bases: 2348657537(95.7037%)
+Q30 bases: 2241789190(91.349%)
+
+Filtering result:
+reads passed filter: 96314634
+reads failed due to low quality: 307130
+reads failed due to too many N: 34302
+reads failed due to too short: 0
+reads with adapter trimmed: 354098
+bases trimmed due to adapters: 3862014
+
+Duplication rate: 43.6335%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/data/IO_RNA/EGA_IMvigor010/fq/A357305b61ed8_fastp.json
+HTML report: /home/data/IO_RNA/EGA_IMvigor010/fq/A357305b61ed8_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/IMvigor010/raw/A357305b61ed8_1.fastq.gz -I /home/data/EGA/IMvigor010/raw/A357305b61ed8_2.fastq.gz -o /home/data/IO_RNA/EGA_IMvigor010/fq/A357305b61ed8_1.fastq.gz -O /home/data/IO_RNA/EGA_IMvigor010/fq/A357305b61ed8_2.fastq.gz -j /home/data/IO_RNA/EGA_IMvigor010/fq/A357305b61ed8_fastp.json -h /home/data/IO_RNA/EGA_IMvigor010/fq/A357305b61ed8_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 153 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57119628
+total bases: 2913101028
+Q20 bases: 2836359694(97.3656%)
+Q30 bases: 2747505703(94.3155%)
+
+Read2 before filtering:
+total reads: 57119628
+total bases: 2913101028
+Q20 bases: 2785862215(95.6322%)
+Q30 bases: 2656325922(91.1855%)
+
+Read1 after filtering:
+total reads: 57107022
+total bases: 2910442072
+Q20 bases: 2833877663(97.3693%)
+Q30 bases: 2745192715(94.3222%)
+
+Read2 after filtering:
+total reads: 57107022
+total bases: 2910442072
+Q20 bases: 2783838847(95.65%)
+Q30 bases: 2654609379(91.2098%)
+
+Filtering result:
+reads passed filter: 114214044
+reads failed due to low quality: 24912
+reads failed due to too many N: 300
+reads failed due to too short: 0
+reads with adapter trimmed: 380636
+bases trimmed due to adapters: 4033188
+
+Duplication rate: 47.9581%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/data/IO_RNA/EGA_IMvigor010/fq/A22a37239ecb0_fastp.json
+HTML report: /home/data/IO_RNA/EGA_IMvigor010/fq/A22a37239ecb0_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/IMvigor010/raw/A22a37239ecb0_1.fastq.gz -I /home/data/EGA/IMvigor010/raw/A22a37239ecb0_2.fastq.gz -o /home/data/IO_RNA/EGA_IMvigor010/fq/A22a37239ecb0_1.fastq.gz -O /home/data/IO_RNA/EGA_IMvigor010/fq/A22a37239ecb0_2.fastq.gz -j /home/data/IO_RNA/EGA_IMvigor010/fq/A22a37239ecb0_fastp.json -h /home/data/IO_RNA/EGA_IMvigor010/fq/A22a37239ecb0_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 193 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 42743554
+total bases: 2179921254
+Q20 bases: 2133451320(97.8683%)
+Q30 bases: 2077252423(95.2903%)
+
+Read2 before filtering:
+total reads: 42743554
+total bases: 2179921254
+Q20 bases: 2109563017(96.7724%)
+Q30 bases: 2037337312(93.4592%)
+
+Read1 after filtering:
+total reads: 42730592
+total bases: 2177159055
+Q20 bases: 2130878049(97.8742%)
+Q30 bases: 2074846509(95.3006%)
+
+Read2 after filtering:
+total reads: 42730592
+total bases: 2177159055
+Q20 bases: 2107227443(96.7879%)
+Q30 bases: 2035236979(93.4813%)
+
+Filtering result:
+reads passed filter: 85461184
+reads failed due to low quality: 14902
+reads failed due to too many N: 11022
+reads failed due to too short: 0
+reads with adapter trimmed: 402292
+bases trimmed due to adapters: 4203866
+
+Duplication rate: 44.8581%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/data/IO_RNA/EGA_IMvigor010/fq/A2d1f282274bd_fastp.json
+HTML report: /home/data/IO_RNA/EGA_IMvigor010/fq/A2d1f282274bd_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/IMvigor010/raw/A2d1f282274bd_1.fastq.gz -I /home/data/EGA/IMvigor010/raw/A2d1f282274bd_2.fastq.gz -o /home/data/IO_RNA/EGA_IMvigor010/fq/A2d1f282274bd_1.fastq.gz -O /home/data/IO_RNA/EGA_IMvigor010/fq/A2d1f282274bd_2.fastq.gz -j /home/data/IO_RNA/EGA_IMvigor010/fq/A2d1f282274bd_fastp.json -h /home/data/IO_RNA/EGA_IMvigor010/fq/A2d1f282274bd_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 128 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 48977524
+total bases: 2497853724
+Q20 bases: 2439372551(97.6587%)
+Q30 bases: 2367356494(94.7756%)
+
+Read2 before filtering:
+total reads: 48977524
+total bases: 2497853724
+Q20 bases: 2412502724(96.583%)
+Q30 bases: 2327493887(93.1798%)
+
+Read1 after filtering:
+total reads: 48885667
+total bases: 2474628784
+Q20 bases: 2417283294(97.6827%)
+Q30 bases: 2346479671(94.8215%)
+
+Read2 after filtering:
+total reads: 48885667
+total bases: 2474628784
+Q20 bases: 2394067622(96.7445%)
+Q30 bases: 2310680750(93.3748%)
+
+Filtering result:
+reads passed filter: 97771334
+reads failed due to low quality: 144978
+reads failed due to too many N: 38736
+reads failed due to too short: 0
+reads with adapter trimmed: 3238906
+bases trimmed due to adapters: 37086282
+
+Duplication rate: 80.9019%
+
+Insert size peak (evaluated by paired-end reads): 70
+
+JSON report: /home/data/IO_RNA/EGA_IMvigor010/fq/A11c47a1c9f68_fastp.json
+HTML report: /home/data/IO_RNA/EGA_IMvigor010/fq/A11c47a1c9f68_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/IMvigor010/raw/A11c47a1c9f68_1.fastq.gz -I /home/data/EGA/IMvigor010/raw/A11c47a1c9f68_2.fastq.gz -o /home/data/IO_RNA/EGA_IMvigor010/fq/A11c47a1c9f68_1.fastq.gz -O /home/data/IO_RNA/EGA_IMvigor010/fq/A11c47a1c9f68_2.fastq.gz -j /home/data/IO_RNA/EGA_IMvigor010/fq/A11c47a1c9f68_fastp.json -h /home/data/IO_RNA/EGA_IMvigor010/fq/A11c47a1c9f68_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 173 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50852759
+total bases: 2593490709
+Q20 bases: 2528995050(97.5132%)
+Q30 bases: 2451753313(94.5349%)
+
+Read2 before filtering:
+total reads: 50852759
+total bases: 2593490709
+Q20 bases: 2485341784(95.83%)
+Q30 bases: 2380072053(91.771%)
+
+Read1 after filtering:
+total reads: 50825224
+total bases: 2590730315
+Q20 bases: 2526426756(97.5179%)
+Q30 bases: 2449365623(94.5434%)
+
+Read2 after filtering:
+total reads: 50825224
+total bases: 2590730315
+Q20 bases: 2483349013(95.8552%)
+Q30 bases: 2378465373(91.8068%)
+
+Filtering result:
+reads passed filter: 101650448
+reads failed due to low quality: 25024
+reads failed due to too many N: 30046
+reads failed due to too short: 0
+reads with adapter trimmed: 256372
+bases trimmed due to adapters: 2714982
+
+Duplication rate: 55.6689%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/data/IO_RNA/EGA_IMvigor010/fq/A26aebf21b21f_fastp.json
+HTML report: /home/data/IO_RNA/EGA_IMvigor010/fq/A26aebf21b21f_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/IMvigor010/raw/A26aebf21b21f_1.fastq.gz -I /home/data/EGA/IMvigor010/raw/A26aebf21b21f_2.fastq.gz -o /home/data/IO_RNA/EGA_IMvigor010/fq/A26aebf21b21f_1.fastq.gz -O /home/data/IO_RNA/EGA_IMvigor010/fq/A26aebf21b21f_2.fastq.gz -j /home/data/IO_RNA/EGA_IMvigor010/fq/A26aebf21b21f_fastp.json -h /home/data/IO_RNA/EGA_IMvigor010/fq/A26aebf21b21f_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 136 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 48447478
+total bases: 2470821378
+Q20 bases: 2384112085(96.4907%)
+Q30 bases: 2285569659(92.5024%)
+
+Read2 before filtering:
+total reads: 48447478
+total bases: 2470821378
+Q20 bases: 2410213590(97.5471%)
+Q30 bases: 2347478898(95.008%)
+
+Read1 after filtering:
+total reads: 48325069
+total bases: 2462570587
+Q20 bases: 2376342306(96.4984%)
+Q30 bases: 2278295202(92.517%)
+
+Read2 after filtering:
+total reads: 48325069
+total bases: 2462570587
+Q20 bases: 2404989344(97.6617%)
+Q30 bases: 2343322119(95.1576%)
+
+Filtering result:
+reads passed filter: 96650138
+reads failed due to low quality: 117796
+reads failed due to too many N: 127022
+reads failed due to too short: 0
+reads with adapter trimmed: 391064
+bases trimmed due to adapters: 4017516
+
+Duplication rate: 65.8502%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/data/IO_RNA/EGA_IMvigor010/fq/A402c57a12f90_fastp.json
+HTML report: /home/data/IO_RNA/EGA_IMvigor010/fq/A402c57a12f90_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/IMvigor010/raw/A402c57a12f90_1.fastq.gz -I /home/data/EGA/IMvigor010/raw/A402c57a12f90_2.fastq.gz -o /home/data/IO_RNA/EGA_IMvigor010/fq/A402c57a12f90_1.fastq.gz -O /home/data/IO_RNA/EGA_IMvigor010/fq/A402c57a12f90_2.fastq.gz -j /home/data/IO_RNA/EGA_IMvigor010/fq/A402c57a12f90_fastp.json -h /home/data/IO_RNA/EGA_IMvigor010/fq/A402c57a12f90_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 116 seconds
+WARNING: fastp uses up to 16 threads although you specified 20

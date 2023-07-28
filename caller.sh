@@ -37,7 +37,7 @@ fi
 
 # Set paths to other programs
 # https://github.com/OpenGene/fastp
-fp=/home/circrna/miniconda3/bin/fastp
+# fp=/home/circrna/miniconda3/bin/fastp
 
 # Set input and output
 fqfile=$1
