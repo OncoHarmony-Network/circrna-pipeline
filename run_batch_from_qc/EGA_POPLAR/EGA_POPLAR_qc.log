@@ -1,0 +1,43 @@
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 76837284
+total bases: 3918701484
+Q20 bases: 3815215138(97.3592%)
+Q30 bases: 3702443220(94.4814%)
+
+Read2 before filtering:
+total reads: 76837284
+total bases: 3918701484
+Q20 bases: 3685189215(94.0411%)
+Q30 bases: 3485813104(88.9533%)
+
+Read1 after filtering:
+total reads: 76312134
+total bases: 3886454869
+Q20 bases: 3788571084(97.4814%)
+Q30 bases: 3679489087(94.6747%)
+
+Read2 after filtering:
+total reads: 76312134
+total bases: 3886454869
+Q20 bases: 3673195531(94.5128%)
+Q30 bases: 3476787471(89.4591%)
+
+Filtering result:
+reads passed filter: 152624268
+reads failed due to low quality: 1028516
+reads failed due to too many N: 21784
+reads failed due to too short: 0
+reads with adapter trimmed: 949986
+bases trimmed due to adapters: 10938462
+
+Duplication rate: 37.778%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/POPLAR/raw/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz -I /home/zhou/raid/EGA/POPLAR/raw/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz -o /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_fastp.json -h /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_fastp.html -w 20 --dont_overwrite 
+fastp v0.23.4, time used: 160 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
