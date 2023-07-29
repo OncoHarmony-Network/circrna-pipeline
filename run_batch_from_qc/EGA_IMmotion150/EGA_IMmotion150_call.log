@@ -1,0 +1,7 @@
+[Sat 2023-07-29 22:25:42] [INFO ] Input reads: EGAN00001749624_1.fastq.gz,EGAN00001749624_2.fastq.gz
+[Sat 2023-07-29 22:25:42] [INFO ] Library type: unstranded
+[Sat 2023-07-29 22:25:42] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI, Output prefix: EGAN00001749624
+[Sat 2023-07-29 22:25:42] [INFO ] Config: hg38 Loaded
+[Sat 2023-07-29 22:25:42] [INFO ] 96 CPU cores availble, using 20
+[Sat 2023-07-29 22:25:42] [INFO ] Align RNA-seq reads to reference genome ..
+[Sat 2023-07-29 22:25:42] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/align/EGAN00001749624.bam

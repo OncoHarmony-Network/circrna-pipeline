@@ -1,0 +1,7 @@
+[Sat 2023-07-29 22:22:41] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz
+[Sat 2023-07-29 22:22:41] [INFO ] Library type: unstranded
+[Sat 2023-07-29 22:22:41] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813
+[Sat 2023-07-29 22:22:41] [INFO ] Config: hg38 Loaded
+[Sat 2023-07-29 22:22:41] [INFO ] 96 CPU cores availble, using 30
+[Sat 2023-07-29 22:22:41] [INFO ] Align RNA-seq reads to reference genome ..
+[Sat 2023-07-29 22:22:41] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.bam
