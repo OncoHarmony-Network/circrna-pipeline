@@ -5,6 +5,7 @@ indir=$2
 outdir=$3
 nthreads=$4
 fp=$5
+mqc=$6
 
 mkdir -p ${outdir}
 
@@ -14,3 +15,8 @@ do
         -j ${outdir}/${sample}_fastp.json -h ${outdir}/${sample}_fastp.html -w ${nthreads} --dont_overwrite
 done
 
+if [ -z "$mqc" ]; then
+    echo "No multiQC set, skip it"
+else 
+    ${mqc} ${outdir}
+fi
