@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-#../common/ll_fq.py ${indir} --output ${fqfile}
+PIPELINE=/home/circrna/circrna-pipeline
 
-fqfile=/home/data/EGA/OAK/code/OAK_RNA.txt
-indir=/home/data/EGA/OAK/raw
-oudir=/home/data/CIRC_PIPE_RESULTS/EGA_OAK
-nthreads=20
+fqfile=./EGA_OAK.txt
+indir=/home/data/IO_RNA/EGA_OAK/fq
+oudir=/home/data/IO_RNA/circRNA/EGA_OAK
+nthreads=30
+config=/home/circrna/circrna-pipeline/config_zhou2.sh
 
-nohup bash ../caller.sh ${fqfile} ${indir} ${oudir} ${nthreads} &> EGA_OAK.log &
+nohup bash ${PIPELINE}/caller.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${config} &> EGA_OAK_call.log &
