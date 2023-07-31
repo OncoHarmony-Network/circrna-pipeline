@@ -1,0 +1,7 @@
+[Mon 2023-07-31 16:52:29] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_44bc89633f_1.fastq.gz,WO29637_ngs_rna_targrna_EA_44bc89633f_2.fastq.gz
+[Mon 2023-07-31 16:52:29] [INFO ] Library type: unstranded
+[Mon 2023-07-31 16:52:29] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_44bc89633f.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_44bc89633f
+[Mon 2023-07-31 16:52:29] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 16:52:29] [INFO ] 128 CPU cores availble, using 16
+[Mon 2023-07-31 16:52:29] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 16:52:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_44bc89633f_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_44bc89633f_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_44bc89633f.CIRI/align/WO29637_ngs_rna_targrna_EA_44bc89633f.bam
