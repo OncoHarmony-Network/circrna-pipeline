@@ -1269,3 +1269,64 @@ Indexing .bam file...
 [Mon 2023-07-31 23:51:52] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522.CIRI/circ/go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522_denovo.sorted.bam
 [Mon 2023-07-31 23:51:52] [INFO ] Detecting reads containing Back-splicing signals
 [Mon 2023-07-31 23:53:26] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 00:02:46] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 00:02:46] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 00:03:01] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 00:03:15] [INFO ] circRNA Expression profile: go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522.gtf
+[Tue 2023-08-01 00:03:15] [INFO ] Finished!
+Start CIRIquant for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 22:23:34 CST
+Final result file does not exist, run it.
+Done for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522, final result should be go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522.CIRI.bed
+End CIRIquant for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 08月 01日 星期二 00:03:17 CST
+Start circexplorer2 for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 22:23:31 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522_circ2_result.txt -o go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 22:55:04
+Start to annotate fusion junctions...
+Annotated 6723 fusion junctions!
+Start to fix fusion junctions...
+Fixed 4370 fusion junctions!
+End CIRCexplorer2 annotate at 22:55:26
+Done for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522, final result should be go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522.circexplorer2.bed
+End circexplorer2 for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 22:55:32 CST
+Start circRNA_finder for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 22:23:31 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522_1.fastq.gz /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 31 22:23:31 ..... started STAR run
+Jul 31 22:23:31 ..... loading genome
+Jul 31 22:23:57 ..... started mapping
+Jul 31 22:35:16 ..... finished mapping
+Jul 31 22:35:21 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522, final result should be go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522.circRNA_finder.bed
+End circRNA_finder for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 22:35:36 CST
+Start find_circ for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 22:23:31 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522, final result should be go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522.find_circ.bed
+End find_circ for go28915_ngs_rna_wts_rnaaccess_EA_e43db4f4b3_20170522 at 2023年 07月 31日 星期一 23:47:18 CST
+[Tue 2023-08-01 00:03:20] [INFO ] Input reads: go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_1.fastq.gz,go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_2.fastq.gz
+[Tue 2023-08-01 00:03:20] [INFO ] Library type: unstranded
+[Tue 2023-08-01 00:03:20] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI, Output prefix: go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517
+[Tue 2023-08-01 00:03:20] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 00:03:20] [INFO ] 128 CPU cores availble, using 30
+[Tue 2023-08-01 00:03:20] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 00:03:20] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_1.fastq.gz -2 /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.bam
+****** Processing go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 00:20:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.sorted.bam /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.bam
+[Tue 2023-08-01 00:24:11] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.sorted.bam

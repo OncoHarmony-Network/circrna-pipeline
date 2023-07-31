@@ -1,6 +1,6 @@
 library(data.table)
 
-WorkDir = "/home/data/IO_RNA/circRNA/EGA_OAK"
+WorkDir = "test"
 GTF = "/home/data/reference/hg38_ek12/gencode.v34.annotation.gtf"
 commonPy = "/home/circrna/circrna-pipeline/common/common.py"
 
@@ -47,7 +47,6 @@ sample_ids = unique(sample_ids)
 
 read_circRNA_beds = function(in.dir, sample, methods) {
   bed_files = file.path(in.dir, paste0(sample, ".", methods, ".bed"))
-  print(bed_files)
   nonexists = !file.exists(bed_files)
   len_nonexists = sum(nonexists)
   if (len_nonexists > 0) {
@@ -61,6 +60,23 @@ read_circRNA_beds = function(in.dir, sample, methods) {
     bed_common = fread(paste0(sample, ".common.bed"), header = FALSE, sep = "\t")
 
     # Read all files and filter them
+    bed_list = lapply(methods[!nonexists], function(x) {
+      if (x == "CIRI") {
+        d = fread(file.path(in.dir, paste0(sample, ".", x, ".bed")), select = c(1:4, 7), header = FALSE, sep = "\t")
+      } else {
+        d = fread(file.path(in.dir, paste0(sample, ".", x, ".bed")), select = 1:5, header = FALSE, sep = "\t")
+      }
+
+      d$tool = x
+      d
+    })
+    bed_dt = rbindlist(bed_list, use.names = FALSE)
+    colnames(bed_dt) = c("chr", "start", "end", "strand", "count", "tool")
+    colnames(bed_common) = c("chr", "start", "end")
+    bed_dt[, id := paste(chr, start, end, sep = "-")]
+    bed_common[, id := paste(chr, start, end, sep = "-")]
+    bed_dt2 = bed_dt[id %in% bed_common$id]
+
 
   }
 }
@@ -69,3 +85,27 @@ read_circRNA_beds = function(in.dir, sample, methods) {
 # Final output
 #id, symbol, strand, chrom, startUpBSE, endDownBSE, tool, samples...
 #id: symbol:strand:chrom:startUpBSE:endDownBSE
+
+# $ head /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_0c549080fd_20170512.circexplorer2.bed
+# chr3    349358  366115  +       1
+# chr3    4410864 4420146 -       2
+# chr3    9424466 9435906 +       1
+# chr3    9453738 9475156 +       1
+# chr3    9762913 9763213 -       1
+# chr3    11358417        11380052        +       1
+# chr3    11807832        11809682        -       1
+
+# $ head /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_0c549080fd_20170512.circRNA_finder.bed
+# chr6    32519369        32580856        -       203
+# KI270711.1      20006   25239   -       43
+# chr1    16564806        16567351        -       33
+# chr1    247155565       247159813       -       19
+
+# head /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_0c549080fd_20170512.CIRI.bed
+# chr1    1804418 1817875 -       ENSG00000078369.18      GNB1    3
+# chr1    1804418 1839238 -       ENSG00000078369.18      GNB1    1
+
+# $ head /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_0c549080fd_20170512.find_circ.bed
+# chr2    232806490       232819985       +       2       circ_000002
+# chr1    225519250       225519322       -       1       circ_000003
+
