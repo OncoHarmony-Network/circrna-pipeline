@@ -5,3 +5,1076 @@
 [Sat 2023-07-29 22:25:42] [INFO ] 96 CPU cores availble, using 20
 [Sat 2023-07-29 22:25:42] [INFO ] Align RNA-seq reads to reference genome ..
 [Sat 2023-07-29 22:25:42] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/align/EGAN00001749624.bam
+****** Processing EGAN00001749624. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sat 2023-07-29 23:27:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/align/EGAN00001749624.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/align/EGAN00001749624.bam
+[Sat 2023-07-29 23:35:17] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/align/EGAN00001749624.sorted.bam
+[Sat 2023-07-29 23:36:14] [DEBUG] HISAT2 bam: EGAN00001749624.sorted.bam
+[Sat 2023-07-29 23:36:14] [INFO ] Skipping gene abundance estimation
+[Sat 2023-07-29 23:36:14] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sat 2023-07-29 23:36:14] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sat 2023-07-29 23:36:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_unmapped.sam
+[Sun 2023-07-30 00:03:49] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_unmapped.sam
+[Sun 2023-07-30 00:03:49] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 00:03:49] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/EGAN00001749624.log
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 00:18:01] [INFO ] Extract circular sequence
+[Sun 2023-07-30 00:18:01] [0%   ] [..................................................][Sun 2023-07-30 00:18:03] [4%   ] [##................................................][Sun 2023-07-30 00:18:04] [8%   ] [####..............................................][Sun 2023-07-30 00:18:05] [12%  ] [######............................................][Sun 2023-07-30 00:18:07] [16%  ] [########..........................................][Sun 2023-07-30 00:18:08] [20%  ] [##########........................................][Sun 2023-07-30 00:18:08] [25%  ] [############......................................][Sun 2023-07-30 00:18:09] [29%  ] [##############....................................][Sun 2023-07-30 00:18:10] [33%  ] [################..................................][Sun 2023-07-30 00:18:11] [37%  ] [##################................................][Sun 2023-07-30 00:18:12] [41%  ] [####################..............................][Sun 2023-07-30 00:18:12] [45%  ] [######################............................][Sun 2023-07-30 00:18:14] [50%  ] [#########################.........................][Sun 2023-07-30 00:18:15] [54%  ] [###########################.......................][Sun 2023-07-30 00:18:15] [58%  ] [############################......................][Sun 2023-07-30 00:18:18] [62%  ] [###############################...................][Sun 2023-07-30 00:18:29] [66%  ] [#################################.................][Sun 2023-07-30 00:18:48] [70%  ] [###################################...............][Sun 2023-07-30 00:19:05] [75%  ] [#####################################.............][Sun 2023-07-30 00:19:17] [79%  ] [#######################################...........][Sun 2023-07-30 00:19:26] [83%  ] [#########################################.........][Sun 2023-07-30 00:19:31] [87%  ] [###########################################.......][Sun 2023-07-30 00:19:32] [91%  ] [#############################################.....][Sun 2023-07-30 00:19:44] [95%  ] [###############################################...][Sun 2023-07-30 00:19:45] [100% ] [##################################################]
+[Sun 2023-07-30 00:19:45] [INFO ] Building circular index ..
+[Sun 2023-07-30 00:19:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_index
+[Sun 2023-07-30 00:23:12] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_index
+[Sun 2023-07-30 00:23:12] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 00:23:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_denovo.bam
+[Sun 2023-07-30 00:43:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_denovo.bam
+[Sun 2023-07-30 00:47:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_denovo.sorted.bam
+[Sun 2023-07-30 00:48:26] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749624.CIRI/circ/EGAN00001749624_denovo.sorted.bam
+[Sun 2023-07-30 00:48:26] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 00:49:27] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 00:55:44] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 00:55:44] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 00:55:59] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 00:56:13] [INFO ] circRNA Expression profile: EGAN00001749624.gtf
+[Sun 2023-07-30 00:56:13] [INFO ] Finished!
+Start CIRIquant for EGAN00001749624 at Sat Jul 29 22:25:42 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749624, final result should be EGAN00001749624.CIRI.bed
+End CIRIquant for EGAN00001749624 at Sun Jul 30 00:56:15 CST 2023
+Start circexplorer2 for EGAN00001749624 at Sat Jul 29 22:25:40 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749624_circ2_result.txt -o EGAN00001749624_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 23:09:10
+Start to annotate fusion junctions...
+Annotated 7177 fusion junctions!
+Start to fix fusion junctions...
+Fixed 4556 fusion junctions!
+End CIRCexplorer2 annotate at 23:09:57
+Done for EGAN00001749624, final result should be EGAN00001749624.circexplorer2.bed
+End circexplorer2 for EGAN00001749624 at Sat Jul 29 23:10:08 CST 2023
+Start circRNA_finder for EGAN00001749624 at Sat Jul 29 22:25:40 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749624_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749624. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 29 22:25:40 ..... started STAR run
+Jul 29 22:25:40 ..... loading genome
+Jul 29 22:32:23 ..... started mapping
+Jul 29 22:41:49 ..... finished mapping
+Jul 29 22:42:00 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749624, final result should be EGAN00001749624.circRNA_finder.bed
+End circRNA_finder for EGAN00001749624 at Sat Jul 29 22:42:12 CST 2023
+Start find_circ for EGAN00001749624 at Sat Jul 29 22:25:40 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749624, final result should be EGAN00001749624.find_circ.bed
+End find_circ for EGAN00001749624 at Sun Jul 30 00:44:12 CST 2023
+[Sun 2023-07-30 00:56:17] [INFO ] Input reads: EGAN00001749297_1.fastq.gz,EGAN00001749297_2.fastq.gz
+[Sun 2023-07-30 00:56:17] [INFO ] Library type: unstranded
+[Sun 2023-07-30 00:56:17] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI, Output prefix: EGAN00001749297
+[Sun 2023-07-30 00:56:17] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 00:56:17] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 00:56:17] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 00:56:17] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/align/EGAN00001749297.bam
+****** Processing EGAN00001749297. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 02:13:52] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/align/EGAN00001749297.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/align/EGAN00001749297.bam
+[Sun 2023-07-30 02:22:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/align/EGAN00001749297.sorted.bam
+[Sun 2023-07-30 02:23:33] [DEBUG] HISAT2 bam: EGAN00001749297.sorted.bam
+[Sun 2023-07-30 02:23:33] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 02:23:33] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 02:23:33] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 02:23:33] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 02:50:10] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_unmapped.sam
+[Sun 2023-07-30 02:50:10] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 02:50:10] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/EGAN00001749297.log
+[Sun 2023-07-30 03:00:44] [INFO ] Extract circular sequence
+[Sun 2023-07-30 03:00:44] [0%   ] [..................................................][Sun 2023-07-30 03:00:45] [4%   ] [##................................................][Sun 2023-07-30 03:00:54] [8%   ] [####..............................................][Sun 2023-07-30 03:01:16] [13%  ] [######............................................][Sun 2023-07-30 03:01:22] [17%  ] [########..........................................][Sun 2023-07-30 03:01:26] [21%  ] [##########........................................][Sun 2023-07-30 03:01:32] [26%  ] [#############.....................................][Sun 2023-07-30 03:01:44] [30%  ] [###############...................................][Sun 2023-07-30 03:01:54] [34%  ] [#################.................................][Sun 2023-07-30 03:01:59] [39%  ] [###################...............................][Sun 2023-07-30 03:02:04] [43%  ] [#####################.............................][Sun 2023-07-30 03:02:10] [47%  ] [#######################...........................][Sun 2023-07-30 03:02:11] [52%  ] [##########################........................][Sun 2023-07-30 03:02:18] [56%  ] [############################......................][Sun 2023-07-30 03:02:19] [60%  ] [##############################....................][Sun 2023-07-30 03:02:20] [65%  ] [################################..................][Sun 2023-07-30 03:02:21] [69%  ] [##################################................][Sun 2023-07-30 03:02:23] [73%  ] [####################################..............][Sun 2023-07-30 03:02:24] [78%  ] [#######################################...........][Sun 2023-07-30 03:02:26] [82%  ] [#########################################.........][Sun 2023-07-30 03:02:38] [86%  ] [###########################################.......][Sun 2023-07-30 03:02:51] [91%  ] [#############################################.....][Sun 2023-07-30 03:02:55] [95%  ] [###############################################...][Sun 2023-07-30 03:03:03] [100% ] [##################################################]
+[Sun 2023-07-30 03:03:03] [INFO ] Building circular index ..
+[Sun 2023-07-30 03:03:03] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_index
+[Sun 2023-07-30 03:11:41] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_index
+[Sun 2023-07-30 03:11:41] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 03:11:41] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_denovo.bam
+[Sun 2023-07-30 03:54:21] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_denovo.bam
+[Sun 2023-07-30 03:59:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_denovo.sorted.bam
+[Sun 2023-07-30 03:59:39] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749297.CIRI/circ/EGAN00001749297_denovo.sorted.bam
+[Sun 2023-07-30 03:59:39] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 04:00:48] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 04:10:27] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 04:10:27] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 04:10:51] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 04:11:19] [INFO ] circRNA Expression profile: EGAN00001749297.gtf
+[Sun 2023-07-30 04:11:19] [INFO ] Finished!
+Start CIRIquant for EGAN00001749297 at Sun Jul 30 00:56:17 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749297, final result should be EGAN00001749297.CIRI.bed
+End CIRIquant for EGAN00001749297 at Sun Jul 30 04:11:21 CST 2023
+Start circexplorer2 for EGAN00001749297 at Sun Jul 30 00:56:15 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749297_circ2_result.txt -o EGAN00001749297_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 01:48:18
+Start to annotate fusion junctions...
+Annotated 10737 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6879 fusion junctions!
+End CIRCexplorer2 annotate at 01:49:00
+Done for EGAN00001749297, final result should be EGAN00001749297.circexplorer2.bed
+End circexplorer2 for EGAN00001749297 at Sun Jul 30 01:49:07 CST 2023
+Start circRNA_finder for EGAN00001749297 at Sun Jul 30 00:56:15 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749297_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749297. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 00:56:15 ..... started STAR run
+Jul 30 00:56:15 ..... loading genome
+Jul 30 01:14:00 ..... started mapping
+Jul 30 01:21:32 ..... finished mapping
+Jul 30 01:21:42 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749297, final result should be EGAN00001749297.circRNA_finder.bed
+End circRNA_finder for EGAN00001749297 at Sun Jul 30 01:22:13 CST 2023
+Start find_circ for EGAN00001749297 at Sun Jul 30 00:56:15 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749297, final result should be EGAN00001749297.find_circ.bed
+End find_circ for EGAN00001749297 at Sun Jul 30 03:35:38 CST 2023
+[Sun 2023-07-30 04:11:25] [INFO ] Input reads: EGAN00001749295_1.fastq.gz,EGAN00001749295_2.fastq.gz
+[Sun 2023-07-30 04:11:25] [INFO ] Library type: unstranded
+[Sun 2023-07-30 04:11:25] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI, Output prefix: EGAN00001749295
+[Sun 2023-07-30 04:11:25] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 04:11:25] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 04:11:25] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 04:11:25] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/align/EGAN00001749295.bam
+****** Processing EGAN00001749295. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 05:16:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/align/EGAN00001749295.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/align/EGAN00001749295.bam
+[Sun 2023-07-30 05:23:52] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/align/EGAN00001749295.sorted.bam
+[Sun 2023-07-30 05:24:25] [DEBUG] HISAT2 bam: EGAN00001749295.sorted.bam
+[Sun 2023-07-30 05:24:25] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 05:24:25] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 05:24:25] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 05:24:25] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 05:51:30] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_unmapped.sam
+[Sun 2023-07-30 05:51:30] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 05:51:30] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/EGAN00001749295.log
+[Sun 2023-07-30 06:13:20] [INFO ] Extract circular sequence
+[Sun 2023-07-30 06:13:20] [0%   ] [..................................................][Sun 2023-07-30 06:13:23] [4%   ] [##................................................][Sun 2023-07-30 06:13:25] [8%   ] [####..............................................][Sun 2023-07-30 06:13:27] [13%  ] [######............................................][Sun 2023-07-30 06:13:29] [17%  ] [########..........................................][Sun 2023-07-30 06:13:30] [21%  ] [##########........................................][Sun 2023-07-30 06:13:32] [26%  ] [#############.....................................][Sun 2023-07-30 06:13:33] [30%  ] [###############...................................][Sun 2023-07-30 06:13:34] [34%  ] [#################.................................][Sun 2023-07-30 06:13:35] [39%  ] [###################...............................][Sun 2023-07-30 06:13:36] [43%  ] [#####################.............................][Sun 2023-07-30 06:13:37] [47%  ] [#######################...........................][Sun 2023-07-30 06:13:40] [52%  ] [##########################........................][Sun 2023-07-30 06:13:40] [56%  ] [############################......................][Sun 2023-07-30 06:13:41] [60%  ] [##############################....................][Sun 2023-07-30 06:13:42] [65%  ] [################################..................][Sun 2023-07-30 06:13:44] [69%  ] [##################################................][Sun 2023-07-30 06:13:47] [73%  ] [####################################..............][Sun 2023-07-30 06:13:49] [78%  ] [#######################################...........][Sun 2023-07-30 06:13:51] [82%  ] [#########################################.........][Sun 2023-07-30 06:13:54] [86%  ] [###########################################.......][Sun 2023-07-30 06:13:55] [91%  ] [#############################################.....][Sun 2023-07-30 06:13:57] [95%  ] [###############################################...][Sun 2023-07-30 06:13:59] [100% ] [##################################################]
+[Sun 2023-07-30 06:13:59] [INFO ] Building circular index ..
+[Sun 2023-07-30 06:13:59] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_index
+[Sun 2023-07-30 06:18:11] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_index
+[Sun 2023-07-30 06:18:11] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 06:18:11] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_denovo.bam
+[Sun 2023-07-30 06:43:22] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_denovo.bam
+[Sun 2023-07-30 06:47:59] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_denovo.sorted.bam
+[Sun 2023-07-30 06:48:44] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749295.CIRI/circ/EGAN00001749295_denovo.sorted.bam
+[Sun 2023-07-30 06:48:44] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 06:49:47] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 07:00:41] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 07:00:41] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 07:01:11] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 07:01:34] [INFO ] circRNA Expression profile: EGAN00001749295.gtf
+[Sun 2023-07-30 07:01:35] [INFO ] Finished!
+Start CIRIquant for EGAN00001749295 at Sun Jul 30 04:11:24 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749295, final result should be EGAN00001749295.CIRI.bed
+End CIRIquant for EGAN00001749295 at Sun Jul 30 07:01:37 CST 2023
+Start circexplorer2 for EGAN00001749295 at Sun Jul 30 04:11:22 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749295_circ2_result.txt -o EGAN00001749295_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 05:09:51
+Start to annotate fusion junctions...
+Annotated 9057 fusion junctions!
+Start to fix fusion junctions...
+Fixed 5698 fusion junctions!
+End CIRCexplorer2 annotate at 05:10:31
+Done for EGAN00001749295, final result should be EGAN00001749295.circexplorer2.bed
+End circexplorer2 for EGAN00001749295 at Sun Jul 30 05:10:38 CST 2023
+Start circRNA_finder for EGAN00001749295 at Sun Jul 30 04:11:22 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749295_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749295. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 04:11:22 ..... started STAR run
+Jul 30 04:11:22 ..... loading genome
+Jul 30 04:17:38 ..... started mapping
+Jul 30 04:26:11 ..... finished mapping
+Jul 30 04:26:20 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749295, final result should be EGAN00001749295.circRNA_finder.bed
+End circRNA_finder for EGAN00001749295 at Sun Jul 30 04:26:33 CST 2023
+Start find_circ for EGAN00001749295 at Sun Jul 30 04:11:22 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749295, final result should be EGAN00001749295.find_circ.bed
+End find_circ for EGAN00001749295 at Sun Jul 30 06:45:32 CST 2023
+[Sun 2023-07-30 07:01:40] [INFO ] Input reads: EGAN00001749443_1.fastq.gz,EGAN00001749443_2.fastq.gz
+[Sun 2023-07-30 07:01:40] [INFO ] Library type: unstranded
+[Sun 2023-07-30 07:01:40] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI, Output prefix: EGAN00001749443
+[Sun 2023-07-30 07:01:40] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 07:01:40] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 07:01:40] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 07:01:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/align/EGAN00001749443.bam
+****** Processing EGAN00001749443. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 07:56:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/align/EGAN00001749443.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/align/EGAN00001749443.bam
+[Sun 2023-07-30 08:00:58] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/align/EGAN00001749443.sorted.bam
+[Sun 2023-07-30 08:01:26] [DEBUG] HISAT2 bam: EGAN00001749443.sorted.bam
+[Sun 2023-07-30 08:01:26] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 08:01:26] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 08:01:26] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 08:01:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 09:20:41] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_unmapped.sam
+[Sun 2023-07-30 09:20:41] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 09:20:41] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/EGAN00001749443.log
+[Sun 2023-07-30 09:46:36] [INFO ] Extract circular sequence
+[Sun 2023-07-30 09:46:36] [0%   ] [..................................................][Sun 2023-07-30 09:46:39] [4%   ] [##................................................][Sun 2023-07-30 09:46:41] [8%   ] [####..............................................][Sun 2023-07-30 09:46:43] [12%  ] [######............................................][Sun 2023-07-30 09:46:44] [16%  ] [########..........................................][Sun 2023-07-30 09:46:46] [20%  ] [##########........................................][Sun 2023-07-30 09:46:47] [25%  ] [############......................................][Sun 2023-07-30 09:46:48] [29%  ] [##############....................................][Sun 2023-07-30 09:46:49] [33%  ] [################..................................][Sun 2023-07-30 09:46:51] [37%  ] [##################................................][Sun 2023-07-30 09:46:51] [41%  ] [####################..............................][Sun 2023-07-30 09:46:52] [45%  ] [######################............................][Sun 2023-07-30 09:46:55] [50%  ] [#########################.........................][Sun 2023-07-30 09:46:56] [54%  ] [###########################.......................][Sun 2023-07-30 09:46:56] [58%  ] [############################......................][Sun 2023-07-30 09:46:57] [62%  ] [###############################...................][Sun 2023-07-30 09:46:59] [66%  ] [#################################.................][Sun 2023-07-30 09:47:01] [70%  ] [###################################...............][Sun 2023-07-30 09:47:03] [75%  ] [#####################################.............][Sun 2023-07-30 09:47:05] [79%  ] [#######################################...........][Sun 2023-07-30 09:47:07] [83%  ] [#########################################.........][Sun 2023-07-30 09:47:09] [87%  ] [###########################################.......][Sun 2023-07-30 09:47:10] [91%  ] [#############################################.....][Sun 2023-07-30 09:47:12] [95%  ] [###############################################...][Sun 2023-07-30 09:47:13] [100% ] [##################################################]
+[Sun 2023-07-30 09:47:13] [INFO ] Building circular index ..
+[Sun 2023-07-30 09:47:13] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_index
+[Sun 2023-07-30 09:53:35] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_index
+[Sun 2023-07-30 09:53:35] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 09:53:35] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_denovo.bam
+[Sun 2023-07-30 10:25:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_denovo.bam
+[Sun 2023-07-30 10:28:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_denovo.sorted.bam
+[Sun 2023-07-30 10:28:58] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749443.CIRI/circ/EGAN00001749443_denovo.sorted.bam
+[Sun 2023-07-30 10:28:58] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 10:30:21] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 10:37:13] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 10:37:13] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 10:37:30] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 10:37:47] [INFO ] circRNA Expression profile: EGAN00001749443.gtf
+[Sun 2023-07-30 10:37:47] [INFO ] Finished!
+Start CIRIquant for EGAN00001749443 at Sun Jul 30 07:01:40 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749443, final result should be EGAN00001749443.CIRI.bed
+End CIRIquant for EGAN00001749443 at Sun Jul 30 10:37:49 CST 2023
+Start circexplorer2 for EGAN00001749443 at Sun Jul 30 07:01:37 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749443_circ2_result.txt -o EGAN00001749443_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 07:56:03
+Start to annotate fusion junctions...
+Annotated 9707 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6266 fusion junctions!
+End CIRCexplorer2 annotate at 07:56:56
+Done for EGAN00001749443, final result should be EGAN00001749443.circexplorer2.bed
+End circexplorer2 for EGAN00001749443 at Sun Jul 30 07:56:57 CST 2023
+Start circRNA_finder for EGAN00001749443 at Sun Jul 30 07:01:37 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749443_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749443. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 07:01:37 ..... started STAR run
+Jul 30 07:01:37 ..... loading genome
+Jul 30 07:13:05 ..... started mapping
+Jul 30 07:18:46 ..... finished mapping
+Jul 30 07:18:53 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749443, final result should be EGAN00001749443.circRNA_finder.bed
+End circRNA_finder for EGAN00001749443 at Sun Jul 30 07:19:05 CST 2023
+Start find_circ for EGAN00001749443 at Sun Jul 30 07:01:37 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749443, final result should be EGAN00001749443.find_circ.bed
+End find_circ for EGAN00001749443 at Sun Jul 30 10:19:42 CST 2023
+[Sun 2023-07-30 10:37:52] [INFO ] Input reads: EGAN00001749513_1.fastq.gz,EGAN00001749513_2.fastq.gz
+[Sun 2023-07-30 10:37:52] [INFO ] Library type: unstranded
+[Sun 2023-07-30 10:37:52] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI, Output prefix: EGAN00001749513
+[Sun 2023-07-30 10:37:52] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 10:37:52] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 10:37:52] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 10:37:52] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/align/EGAN00001749513.bam
+****** Processing EGAN00001749513. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 11:36:58] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/align/EGAN00001749513.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/align/EGAN00001749513.bam
+[Sun 2023-07-30 11:44:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/align/EGAN00001749513.sorted.bam
+[Sun 2023-07-30 11:45:22] [DEBUG] HISAT2 bam: EGAN00001749513.sorted.bam
+[Sun 2023-07-30 11:45:22] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 11:45:22] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 11:45:22] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 11:45:22] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 12:25:22] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_unmapped.sam
+[Sun 2023-07-30 12:25:22] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 12:25:22] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/EGAN00001749513.log
+[Sun 2023-07-30 12:38:53] [INFO ] Extract circular sequence
+[Sun 2023-07-30 12:38:53] [0%   ] [..................................................][Sun 2023-07-30 12:38:56] [4%   ] [##................................................][Sun 2023-07-30 12:38:57] [8%   ] [####..............................................][Sun 2023-07-30 12:38:58] [12%  ] [######............................................][Sun 2023-07-30 12:38:59] [16%  ] [########..........................................][Sun 2023-07-30 12:39:00] [20%  ] [##########........................................][Sun 2023-07-30 12:39:00] [25%  ] [############......................................][Sun 2023-07-30 12:39:01] [29%  ] [##############....................................][Sun 2023-07-30 12:39:02] [33%  ] [################..................................][Sun 2023-07-30 12:39:02] [37%  ] [##################................................][Sun 2023-07-30 12:39:03] [41%  ] [####################..............................][Sun 2023-07-30 12:39:03] [45%  ] [######################............................][Sun 2023-07-30 12:39:05] [50%  ] [#########################.........................][Sun 2023-07-30 12:39:06] [54%  ] [###########################.......................][Sun 2023-07-30 12:39:06] [58%  ] [############################......................][Sun 2023-07-30 12:39:06] [62%  ] [###############################...................][Sun 2023-07-30 12:39:08] [66%  ] [#################################.................][Sun 2023-07-30 12:39:09] [70%  ] [###################################...............][Sun 2023-07-30 12:39:11] [75%  ] [#####################################.............][Sun 2023-07-30 12:39:12] [79%  ] [#######################################...........][Sun 2023-07-30 12:39:13] [83%  ] [#########################################.........][Sun 2023-07-30 12:39:14] [87%  ] [###########################################.......][Sun 2023-07-30 12:39:14] [91%  ] [#############################################.....][Sun 2023-07-30 12:39:15] [95%  ] [###############################################...][Sun 2023-07-30 12:39:16] [100% ] [##################################################]
+[Sun 2023-07-30 12:39:16] [INFO ] Building circular index ..
+[Sun 2023-07-30 12:39:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_index
+[Sun 2023-07-30 12:42:22] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_index
+[Sun 2023-07-30 12:42:22] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 12:42:22] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_denovo.bam
+[Sun 2023-07-30 13:26:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_denovo.bam
+[Sun 2023-07-30 13:35:51] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_denovo.sorted.bam
+[Sun 2023-07-30 13:36:47] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749513.CIRI/circ/EGAN00001749513_denovo.sorted.bam
+[Sun 2023-07-30 13:36:47] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 13:40:43] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 13:55:45] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 13:55:45] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 13:56:03] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 13:56:35] [INFO ] circRNA Expression profile: EGAN00001749513.gtf
+[Sun 2023-07-30 13:56:35] [INFO ] Finished!
+Start CIRIquant for EGAN00001749513 at Sun Jul 30 10:37:52 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749513, final result should be EGAN00001749513.CIRI.bed
+End CIRIquant for EGAN00001749513 at Sun Jul 30 13:56:41 CST 2023
+Start circexplorer2 for EGAN00001749513 at Sun Jul 30 10:37:50 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749513_circ2_result.txt -o EGAN00001749513_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 11:26:52
+Start to annotate fusion junctions...
+Annotated 9885 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6408 fusion junctions!
+End CIRCexplorer2 annotate at 11:36:45
+Done for EGAN00001749513, final result should be EGAN00001749513.circexplorer2.bed
+End circexplorer2 for EGAN00001749513 at Sun Jul 30 11:36:46 CST 2023
+Start circRNA_finder for EGAN00001749513 at Sun Jul 30 10:37:50 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749513_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749513. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 10:37:50 ..... started STAR run
+Jul 30 10:37:50 ..... loading genome
+Jul 30 10:43:35 ..... started mapping
+Jul 30 10:54:14 ..... finished mapping
+Jul 30 10:54:22 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749513, final result should be EGAN00001749513.circRNA_finder.bed
+End circRNA_finder for EGAN00001749513 at Sun Jul 30 10:54:47 CST 2023
+Start find_circ for EGAN00001749513 at Sun Jul 30 10:37:50 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749513, final result should be EGAN00001749513.find_circ.bed
+End find_circ for EGAN00001749513 at Sun Jul 30 12:57:56 CST 2023
+[Sun 2023-07-30 13:56:44] [INFO ] Input reads: EGAN00001749461_1.fastq.gz,EGAN00001749461_2.fastq.gz
+[Sun 2023-07-30 13:56:44] [INFO ] Library type: unstranded
+[Sun 2023-07-30 13:56:44] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI, Output prefix: EGAN00001749461
+[Sun 2023-07-30 13:56:44] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 13:56:44] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 13:56:44] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 13:56:44] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/align/EGAN00001749461.bam
+****** Processing EGAN00001749461. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 15:34:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/align/EGAN00001749461.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/align/EGAN00001749461.bam
+[bam_sort_core] merging from 3 files and 20 in-memory blocks...
+[Sun 2023-07-30 15:45:21] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/align/EGAN00001749461.sorted.bam
+[Sun 2023-07-30 15:46:19] [DEBUG] HISAT2 bam: EGAN00001749461.sorted.bam
+[Sun 2023-07-30 15:46:19] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 15:46:19] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 15:46:19] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 15:46:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_unmapped.sam
+[Sun 2023-07-30 16:50:24] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_unmapped.sam
+[Sun 2023-07-30 16:50:24] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 16:50:24] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/EGAN00001749461.log
+[Sun 2023-07-30 17:22:51] [INFO ] Extract circular sequence
+[Sun 2023-07-30 17:22:51] [0%   ] [..................................................][Sun 2023-07-30 17:22:54] [4%   ] [##................................................][Sun 2023-07-30 17:22:56] [8%   ] [####..............................................][Sun 2023-07-30 17:22:57] [12%  ] [######............................................][Sun 2023-07-30 17:22:59] [16%  ] [########..........................................][Sun 2023-07-30 17:23:00] [20%  ] [##########........................................][Sun 2023-07-30 17:23:01] [25%  ] [############......................................][Sun 2023-07-30 17:23:03] [29%  ] [##############....................................][Sun 2023-07-30 17:23:04] [33%  ] [################..................................][Sun 2023-07-30 17:23:05] [37%  ] [##################................................][Sun 2023-07-30 17:23:06] [41%  ] [####################..............................][Sun 2023-07-30 17:23:06] [45%  ] [######################............................][Sun 2023-07-30 17:23:09] [50%  ] [#########################.........................][Sun 2023-07-30 17:23:10] [54%  ] [###########################.......................][Sun 2023-07-30 17:23:11] [58%  ] [############################......................][Sun 2023-07-30 17:23:11] [62%  ] [###############################...................][Sun 2023-07-30 17:23:13] [66%  ] [#################################.................][Sun 2023-07-30 17:23:16] [70%  ] [###################################...............][Sun 2023-07-30 17:23:18] [75%  ] [#####################################.............][Sun 2023-07-30 17:23:19] [79%  ] [#######################################...........][Sun 2023-07-30 17:23:21] [83%  ] [#########################################.........][Sun 2023-07-30 17:23:23] [87%  ] [###########################################.......][Sun 2023-07-30 17:23:24] [91%  ] [#############################################.....][Sun 2023-07-30 17:23:26] [95%  ] [###############################################...][Sun 2023-07-30 17:23:27] [100% ] [##################################################]
+[Sun 2023-07-30 17:23:27] [INFO ] Building circular index ..
+[Sun 2023-07-30 17:23:27] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_index
+[Sun 2023-07-30 17:28:23] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_index
+[Sun 2023-07-30 17:28:23] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 17:28:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_denovo.bam
+[Sun 2023-07-30 18:25:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_denovo.bam
+[Sun 2023-07-30 18:34:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_denovo.sorted.bam
+[Sun 2023-07-30 18:35:40] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749461.CIRI/circ/EGAN00001749461_denovo.sorted.bam
+[Sun 2023-07-30 18:35:40] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 18:39:28] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 18:54:58] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 18:54:58] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 18:58:37] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 18:58:50] [INFO ] circRNA Expression profile: EGAN00001749461.gtf
+[Sun 2023-07-30 18:58:50] [INFO ] Finished!
+Start CIRIquant for EGAN00001749461 at Sun Jul 30 13:56:44 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749461, final result should be EGAN00001749461.CIRI.bed
+End CIRIquant for EGAN00001749461 at Sun Jul 30 18:58:53 CST 2023
+Start circexplorer2 for EGAN00001749461 at Sun Jul 30 13:56:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749461_circ2_result.txt -o EGAN00001749461_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 15:26:12
+Start to annotate fusion junctions...
+Annotated 10015 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6730 fusion junctions!
+End CIRCexplorer2 annotate at 15:26:39
+Done for EGAN00001749461, final result should be EGAN00001749461.circexplorer2.bed
+End circexplorer2 for EGAN00001749461 at Sun Jul 30 15:26:52 CST 2023
+Start circRNA_finder for EGAN00001749461 at Sun Jul 30 13:56:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749461_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749461. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 13:56:41 ..... started STAR run
+Jul 30 13:56:41 ..... loading genome
+Jul 30 13:58:39 ..... started mapping
+Jul 30 14:13:10 ..... finished mapping
+Jul 30 14:13:16 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749461, final result should be EGAN00001749461.circRNA_finder.bed
+End circRNA_finder for EGAN00001749461 at Sun Jul 30 14:13:40 CST 2023
+Start find_circ for EGAN00001749461 at Sun Jul 30 13:56:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749461, final result should be EGAN00001749461.find_circ.bed
+End find_circ for EGAN00001749461 at Sun Jul 30 17:57:51 CST 2023
+[Sun 2023-07-30 18:58:55] [INFO ] Input reads: EGAN00001749324_1.fastq.gz,EGAN00001749324_2.fastq.gz
+[Sun 2023-07-30 18:58:55] [INFO ] Library type: unstranded
+[Sun 2023-07-30 18:58:55] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI, Output prefix: EGAN00001749324
+[Sun 2023-07-30 18:58:55] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 18:58:55] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 18:58:55] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 18:58:55] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/align/EGAN00001749324.bam
+****** Processing EGAN00001749324. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 20:05:44] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/align/EGAN00001749324.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/align/EGAN00001749324.bam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 20:10:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/align/EGAN00001749324.sorted.bam
+[Sun 2023-07-30 20:11:23] [DEBUG] HISAT2 bam: EGAN00001749324.sorted.bam
+[Sun 2023-07-30 20:11:23] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 20:11:23] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 20:11:23] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 20:11:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_unmapped.sam
+[Sun 2023-07-30 20:33:13] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_unmapped.sam
+[Sun 2023-07-30 20:33:13] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 20:33:13] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/EGAN00001749324.log
+[Sun 2023-07-30 20:44:46] [INFO ] Extract circular sequence
+[Sun 2023-07-30 20:44:46] [0%   ] [..................................................][Sun 2023-07-30 20:44:47] [4%   ] [##................................................][Sun 2023-07-30 20:44:48] [8%   ] [####..............................................][Sun 2023-07-30 20:44:49] [12%  ] [######............................................][Sun 2023-07-30 20:44:49] [16%  ] [########..........................................][Sun 2023-07-30 20:44:50] [20%  ] [##########........................................][Sun 2023-07-30 20:44:51] [25%  ] [############......................................][Sun 2023-07-30 20:44:51] [29%  ] [##############....................................][Sun 2023-07-30 20:44:52] [33%  ] [################..................................][Sun 2023-07-30 20:44:52] [37%  ] [##################................................][Sun 2023-07-30 20:44:52] [41%  ] [####################..............................][Sun 2023-07-30 20:44:53] [45%  ] [######################............................][Sun 2023-07-30 20:44:54] [50%  ] [#########################.........................][Sun 2023-07-30 20:44:54] [54%  ] [###########################.......................][Sun 2023-07-30 20:44:54] [58%  ] [############################......................][Sun 2023-07-30 20:44:55] [62%  ] [###############################...................][Sun 2023-07-30 20:44:56] [66%  ] [#################################.................][Sun 2023-07-30 20:44:57] [70%  ] [###################################...............][Sun 2023-07-30 20:44:58] [75%  ] [#####################################.............][Sun 2023-07-30 20:44:58] [79%  ] [#######################################...........][Sun 2023-07-30 20:44:59] [83%  ] [#########################################.........][Sun 2023-07-30 20:45:00] [87%  ] [###########################################.......][Sun 2023-07-30 20:45:01] [91%  ] [#############################################.....][Sun 2023-07-30 20:45:02] [95%  ] [###############################################...][Sun 2023-07-30 20:45:09] [100% ] [##################################################]
+[Sun 2023-07-30 20:45:09] [INFO ] Building circular index ..
+[Sun 2023-07-30 20:45:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_index
+[Sun 2023-07-30 20:49:50] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_index
+[Sun 2023-07-30 20:49:50] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-07-30 20:49:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_denovo.bam
+[Sun 2023-07-30 21:49:32] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_denovo.bam
+[Sun 2023-07-30 21:58:34] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_denovo.sorted.bam
+[Sun 2023-07-30 22:00:02] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749324.CIRI/circ/EGAN00001749324_denovo.sorted.bam
+[Sun 2023-07-30 22:00:02] [INFO ] Detecting reads containing Back-splicing signals
+[Sun 2023-07-30 22:01:32] [INFO ] Detecting FSJ reads from genome alignment file
+[Sun 2023-07-30 22:14:12] [INFO ] Merge bsj and fsj results
+[Sun 2023-07-30 22:14:12] [INFO ] Loading annotation gtf ..
+[Sun 2023-07-30 22:14:40] [INFO ] Output circRNA expression values
+[Sun 2023-07-30 22:15:10] [INFO ] circRNA Expression profile: EGAN00001749324.gtf
+[Sun 2023-07-30 22:15:10] [INFO ] Finished!
+Start CIRIquant for EGAN00001749324 at Sun Jul 30 18:58:55 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749324, final result should be EGAN00001749324.CIRI.bed
+End CIRIquant for EGAN00001749324 at Sun Jul 30 22:15:14 CST 2023
+Start circexplorer2 for EGAN00001749324 at Sun Jul 30 18:58:53 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749324_circ2_result.txt -o EGAN00001749324_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 19:58:01
+Start to annotate fusion junctions...
+Annotated 9656 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6113 fusion junctions!
+End CIRCexplorer2 annotate at 19:58:39
+Done for EGAN00001749324, final result should be EGAN00001749324.circexplorer2.bed
+End circexplorer2 for EGAN00001749324 at Sun Jul 30 19:58:48 CST 2023
+Start circRNA_finder for EGAN00001749324 at Sun Jul 30 18:58:53 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749324_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749324. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 18:58:53 ..... started STAR run
+Jul 30 18:58:53 ..... loading genome
+Jul 30 19:10:06 ..... started mapping
+Jul 30 19:18:37 ..... finished mapping
+Jul 30 19:18:46 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749324, final result should be EGAN00001749324.circRNA_finder.bed
+End circRNA_finder for EGAN00001749324 at Sun Jul 30 19:19:02 CST 2023
+Start find_circ for EGAN00001749324 at Sun Jul 30 18:58:53 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749324, final result should be EGAN00001749324.find_circ.bed
+End find_circ for EGAN00001749324 at Sun Jul 30 20:48:52 CST 2023
+[Sun 2023-07-30 22:15:19] [INFO ] Input reads: EGAN00001749444_1.fastq.gz,EGAN00001749444_2.fastq.gz
+[Sun 2023-07-30 22:15:19] [INFO ] Library type: unstranded
+[Sun 2023-07-30 22:15:19] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI, Output prefix: EGAN00001749444
+[Sun 2023-07-30 22:15:19] [INFO ] Config: hg38 Loaded
+[Sun 2023-07-30 22:15:19] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-07-30 22:15:19] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-07-30 22:15:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/align/EGAN00001749444.bam
+****** Processing EGAN00001749444. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sun 2023-07-30 23:10:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/align/EGAN00001749444.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/align/EGAN00001749444.bam
+[Sun 2023-07-30 23:19:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/align/EGAN00001749444.sorted.bam
+[Sun 2023-07-30 23:20:18] [DEBUG] HISAT2 bam: EGAN00001749444.sorted.bam
+[Sun 2023-07-30 23:20:18] [INFO ] Skipping gene abundance estimation
+[Sun 2023-07-30 23:20:18] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-07-30 23:20:18] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-07-30 23:20:18] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Sun 2023-07-30 23:45:51] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_unmapped.sam
+[Sun 2023-07-30 23:45:51] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-07-30 23:45:51] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/EGAN00001749444.log
+[Mon 2023-07-31 00:00:43] [INFO ] Extract circular sequence
+[Mon 2023-07-31 00:00:43] [0%   ] [..................................................][Mon 2023-07-31 00:00:46] [4%   ] [##................................................][Mon 2023-07-31 00:00:47] [8%   ] [####..............................................][Mon 2023-07-31 00:00:48] [12%  ] [######............................................][Mon 2023-07-31 00:00:49] [16%  ] [########..........................................][Mon 2023-07-31 00:00:50] [20%  ] [##########........................................][Mon 2023-07-31 00:00:51] [25%  ] [############......................................][Mon 2023-07-31 00:00:52] [29%  ] [##############....................................][Mon 2023-07-31 00:00:53] [33%  ] [################..................................][Mon 2023-07-31 00:00:53] [37%  ] [##################................................][Mon 2023-07-31 00:00:54] [41%  ] [####################..............................][Mon 2023-07-31 00:00:54] [45%  ] [######################............................][Mon 2023-07-31 00:00:56] [50%  ] [#########################.........................][Mon 2023-07-31 00:00:57] [54%  ] [###########################.......................][Mon 2023-07-31 00:00:57] [58%  ] [############################......................][Mon 2023-07-31 00:00:57] [62%  ] [###############################...................][Mon 2023-07-31 00:00:59] [66%  ] [#################################.................][Mon 2023-07-31 00:01:01] [70%  ] [###################################...............][Mon 2023-07-31 00:01:02] [75%  ] [#####################################.............][Mon 2023-07-31 00:01:04] [79%  ] [#######################################...........][Mon 2023-07-31 00:01:05] [83%  ] [#########################################.........][Mon 2023-07-31 00:01:06] [87%  ] [###########################################.......][Mon 2023-07-31 00:01:07] [91%  ] [#############################################.....][Mon 2023-07-31 00:01:09] [95%  ] [###############################################...][Mon 2023-07-31 00:01:09] [100% ] [##################################################]
+[Mon 2023-07-31 00:01:09] [INFO ] Building circular index ..
+[Mon 2023-07-31 00:01:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_index
+[Mon 2023-07-31 00:07:07] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_index
+[Mon 2023-07-31 00:07:07] [INFO ] De novo alignment for circular RNAs ..
+[Mon 2023-07-31 00:07:07] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_denovo.bam
+[Mon 2023-07-31 00:32:38] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_denovo.bam
+[Mon 2023-07-31 00:35:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_denovo.sorted.bam
+[Mon 2023-07-31 00:35:38] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749444.CIRI/circ/EGAN00001749444_denovo.sorted.bam
+[Mon 2023-07-31 00:35:38] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-07-31 00:36:15] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-07-31 00:42:40] [INFO ] Merge bsj and fsj results
+[Mon 2023-07-31 00:42:40] [INFO ] Loading annotation gtf ..
+[Mon 2023-07-31 00:42:58] [INFO ] Output circRNA expression values
+[Mon 2023-07-31 00:43:15] [INFO ] circRNA Expression profile: EGAN00001749444.gtf
+[Mon 2023-07-31 00:43:15] [INFO ] Finished!
+Start CIRIquant for EGAN00001749444 at Sun Jul 30 22:15:19 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749444, final result should be EGAN00001749444.CIRI.bed
+End CIRIquant for EGAN00001749444 at Mon Jul 31 00:43:16 CST 2023
+Start circexplorer2 for EGAN00001749444 at Sun Jul 30 22:15:14 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749444_circ2_result.txt -o EGAN00001749444_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 23:02:23
+Start to annotate fusion junctions...
+Annotated 9378 fusion junctions!
+Start to fix fusion junctions...
+Fixed 5886 fusion junctions!
+End CIRCexplorer2 annotate at 23:03:02
+Done for EGAN00001749444, final result should be EGAN00001749444.circexplorer2.bed
+End circexplorer2 for EGAN00001749444 at Sun Jul 30 23:03:10 CST 2023
+Start circRNA_finder for EGAN00001749444 at Sun Jul 30 22:15:14 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749444_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749444. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 30 22:15:14 ..... started STAR run
+Jul 30 22:15:14 ..... loading genome
+Jul 30 22:19:19 ..... started mapping
+Jul 30 22:27:01 ..... finished mapping
+Jul 30 22:27:10 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749444, final result should be EGAN00001749444.circRNA_finder.bed
+End circRNA_finder for EGAN00001749444 at Sun Jul 30 22:27:22 CST 2023
+Start find_circ for EGAN00001749444 at Sun Jul 30 22:15:14 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749444, final result should be EGAN00001749444.find_circ.bed
+End find_circ for EGAN00001749444 at Mon Jul 31 00:09:30 CST 2023
+[Mon 2023-07-31 00:43:19] [INFO ] Input reads: EGAN00001749578_1.fastq.gz,EGAN00001749578_2.fastq.gz
+[Mon 2023-07-31 00:43:19] [INFO ] Library type: unstranded
+[Mon 2023-07-31 00:43:19] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI, Output prefix: EGAN00001749578
+[Mon 2023-07-31 00:43:19] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 00:43:19] [INFO ] 96 CPU cores availble, using 20
+[Mon 2023-07-31 00:43:19] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 00:43:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/align/EGAN00001749578.bam
+****** Processing EGAN00001749578. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Mon 2023-07-31 02:04:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/align/EGAN00001749578.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/align/EGAN00001749578.bam
+[Mon 2023-07-31 02:14:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/align/EGAN00001749578.sorted.bam
+[Mon 2023-07-31 02:15:50] [DEBUG] HISAT2 bam: EGAN00001749578.sorted.bam
+[Mon 2023-07-31 02:15:50] [INFO ] Skipping gene abundance estimation
+[Mon 2023-07-31 02:15:50] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Mon 2023-07-31 02:15:50] [INFO ] Running BWA-mem mapping candidate reads ..
+[Mon 2023-07-31 02:15:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Mon 2023-07-31 02:53:11] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_unmapped.sam
+[Mon 2023-07-31 02:53:11] [INFO ] Running CIRI2 for circRNA detection ..
+[Mon 2023-07-31 02:53:11] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/EGAN00001749578.log
+[Mon 2023-07-31 03:08:39] [INFO ] Extract circular sequence
+[Mon 2023-07-31 03:08:39] [0%   ] [..................................................][Mon 2023-07-31 03:08:42] [4%   ] [##................................................][Mon 2023-07-31 03:08:43] [8%   ] [####..............................................][Mon 2023-07-31 03:08:45] [12%  ] [######............................................][Mon 2023-07-31 03:08:46] [16%  ] [########..........................................][Mon 2023-07-31 03:08:47] [20%  ] [##########........................................][Mon 2023-07-31 03:08:48] [25%  ] [############......................................][Mon 2023-07-31 03:08:49] [29%  ] [##############....................................][Mon 2023-07-31 03:08:50] [33%  ] [################..................................][Mon 2023-07-31 03:08:51] [37%  ] [##################................................][Mon 2023-07-31 03:08:51] [41%  ] [####################..............................][Mon 2023-07-31 03:08:52] [45%  ] [######################............................][Mon 2023-07-31 03:08:55] [50%  ] [#########################.........................][Mon 2023-07-31 03:08:55] [54%  ] [###########################.......................][Mon 2023-07-31 03:08:56] [58%  ] [############################......................][Mon 2023-07-31 03:08:56] [62%  ] [###############################...................][Mon 2023-07-31 03:08:58] [66%  ] [#################################.................][Mon 2023-07-31 03:09:00] [70%  ] [###################################...............][Mon 2023-07-31 03:09:02] [75%  ] [#####################################.............][Mon 2023-07-31 03:09:03] [79%  ] [#######################################...........][Mon 2023-07-31 03:09:05] [83%  ] [#########################################.........][Mon 2023-07-31 03:09:06] [87%  ] [###########################################.......][Mon 2023-07-31 03:09:07] [91%  ] [#############################################.....][Mon 2023-07-31 03:09:09] [95%  ] [###############################################...][Mon 2023-07-31 03:09:09] [100% ] [##################################################]
+[Mon 2023-07-31 03:09:09] [INFO ] Building circular index ..
+[Mon 2023-07-31 03:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_index
+[Mon 2023-07-31 03:12:02] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_index
+[Mon 2023-07-31 03:12:02] [INFO ] De novo alignment for circular RNAs ..
+[Mon 2023-07-31 03:12:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_denovo.bam
+[Mon 2023-07-31 03:35:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_denovo.bam
+[Mon 2023-07-31 03:38:58] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_denovo.sorted.bam
+[Mon 2023-07-31 03:39:27] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749578.CIRI/circ/EGAN00001749578_denovo.sorted.bam
+[Mon 2023-07-31 03:39:27] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-07-31 03:40:13] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-07-31 03:58:18] [INFO ] Merge bsj and fsj results
+[Mon 2023-07-31 03:58:18] [INFO ] Loading annotation gtf ..
+[Mon 2023-07-31 03:59:09] [INFO ] Output circRNA expression values
+[Mon 2023-07-31 03:59:41] [INFO ] circRNA Expression profile: EGAN00001749578.gtf
+[Mon 2023-07-31 03:59:41] [INFO ] Finished!
+Start CIRIquant for EGAN00001749578 at Mon Jul 31 00:43:19 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749578, final result should be EGAN00001749578.CIRI.bed
+End CIRIquant for EGAN00001749578 at Mon Jul 31 03:59:43 CST 2023
+Start circexplorer2 for EGAN00001749578 at Mon Jul 31 00:43:17 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749578_circ2_result.txt -o EGAN00001749578_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 01:54:27
+Start to annotate fusion junctions...
+Annotated 9212 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6020 fusion junctions!
+End CIRCexplorer2 annotate at 01:55:08
+Done for EGAN00001749578, final result should be EGAN00001749578.circexplorer2.bed
+End circexplorer2 for EGAN00001749578 at Mon Jul 31 01:55:17 CST 2023
+Start circRNA_finder for EGAN00001749578 at Mon Jul 31 00:43:17 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749578_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749578. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 31 00:43:17 ..... started STAR run
+Jul 31 00:43:17 ..... loading genome
+Jul 31 00:52:09 ..... started mapping
+Jul 31 01:07:29 ..... finished mapping
+Jul 31 01:07:38 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749578, final result should be EGAN00001749578.circRNA_finder.bed
+End circRNA_finder for EGAN00001749578 at Mon Jul 31 01:07:56 CST 2023
+Start find_circ for EGAN00001749578 at Mon Jul 31 00:43:17 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749578, final result should be EGAN00001749578.find_circ.bed
+End find_circ for EGAN00001749578 at Mon Jul 31 03:30:42 CST 2023
+[Mon 2023-07-31 03:59:57] [INFO ] Input reads: EGAN00001749638_1.fastq.gz,EGAN00001749638_2.fastq.gz
+[Mon 2023-07-31 03:59:57] [INFO ] Library type: unstranded
+[Mon 2023-07-31 03:59:57] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI, Output prefix: EGAN00001749638
+[Mon 2023-07-31 03:59:57] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 03:59:57] [INFO ] 96 CPU cores availble, using 20
+[Mon 2023-07-31 03:59:57] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 03:59:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/align/EGAN00001749638.bam
+****** Processing EGAN00001749638. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Mon 2023-07-31 05:10:13] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/align/EGAN00001749638.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/align/EGAN00001749638.bam
+[Mon 2023-07-31 05:19:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/align/EGAN00001749638.sorted.bam
+[Mon 2023-07-31 05:20:40] [DEBUG] HISAT2 bam: EGAN00001749638.sorted.bam
+[Mon 2023-07-31 05:20:40] [INFO ] Skipping gene abundance estimation
+[Mon 2023-07-31 05:20:40] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Mon 2023-07-31 05:20:40] [INFO ] Running BWA-mem mapping candidate reads ..
+[Mon 2023-07-31 05:20:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_unmapped.sam
+[Mon 2023-07-31 05:55:01] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_unmapped.sam
+[Mon 2023-07-31 05:55:01] [INFO ] Running CIRI2 for circRNA detection ..
+[Mon 2023-07-31 05:55:01] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/EGAN00001749638.log
+[Mon 2023-07-31 06:08:04] [INFO ] Extract circular sequence
+[Mon 2023-07-31 06:08:04] [0%   ] [..................................................][Mon 2023-07-31 06:16:50] [4%   ] [##................................................][Mon 2023-07-31 06:16:54] [8%   ] [####..............................................][Mon 2023-07-31 06:17:04] [12%  ] [######............................................][Mon 2023-07-31 06:17:09] [16%  ] [########..........................................][Mon 2023-07-31 06:17:12] [20%  ] [##########........................................][Mon 2023-07-31 06:17:15] [25%  ] [############......................................][Mon 2023-07-31 06:17:18] [29%  ] [##############....................................][Mon 2023-07-31 06:17:22] [33%  ] [################..................................][Mon 2023-07-31 06:17:29] [37%  ] [##################................................][Mon 2023-07-31 06:17:32] [41%  ] [####################..............................][Mon 2023-07-31 06:17:38] [45%  ] [######################............................][Mon 2023-07-31 06:17:44] [50%  ] [#########################.........................][Mon 2023-07-31 06:17:45] [54%  ] [###########################.......................][Mon 2023-07-31 06:17:45] [58%  ] [############################......................][Mon 2023-07-31 06:17:46] [62%  ] [###############################...................][Mon 2023-07-31 06:17:48] [66%  ] [#################################.................][Mon 2023-07-31 06:17:50] [70%  ] [###################################...............][Mon 2023-07-31 06:17:51] [75%  ] [#####################################.............][Mon 2023-07-31 06:17:53] [79%  ] [#######################################...........][Mon 2023-07-31 06:17:55] [83%  ] [#########################################.........][Mon 2023-07-31 06:17:56] [87%  ] [###########################################.......][Mon 2023-07-31 06:17:57] [91%  ] [#############################################.....][Mon 2023-07-31 06:17:59] [95%  ] [###############################################...][Mon 2023-07-31 06:18:00] [100% ] [##################################################]
+[Mon 2023-07-31 06:18:00] [INFO ] Building circular index ..
+[Mon 2023-07-31 06:18:00] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_index
+[Mon 2023-07-31 06:20:38] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_index
+[Mon 2023-07-31 06:20:38] [INFO ] De novo alignment for circular RNAs ..
+[Mon 2023-07-31 06:20:38] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_denovo.bam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Mon 2023-07-31 06:47:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_denovo.bam
+[Mon 2023-07-31 06:53:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_denovo.sorted.bam
+[Mon 2023-07-31 06:54:06] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749638.CIRI/circ/EGAN00001749638_denovo.sorted.bam
+[Mon 2023-07-31 06:54:06] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-07-31 06:55:09] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-07-31 07:05:06] [INFO ] Merge bsj and fsj results
+[Mon 2023-07-31 07:05:06] [INFO ] Loading annotation gtf ..
+[Mon 2023-07-31 07:05:47] [INFO ] Output circRNA expression values
+[Mon 2023-07-31 07:06:09] [INFO ] circRNA Expression profile: EGAN00001749638.gtf
+[Mon 2023-07-31 07:06:09] [INFO ] Finished!
+Start CIRIquant for EGAN00001749638 at Mon Jul 31 03:59:56 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749638, final result should be EGAN00001749638.CIRI.bed
+End CIRIquant for EGAN00001749638 at Mon Jul 31 07:06:14 CST 2023
+Start circexplorer2 for EGAN00001749638 at Mon Jul 31 03:59:44 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749638_circ2_result.txt -o EGAN00001749638_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 04:59:01
+Start to annotate fusion junctions...
+Annotated 6973 fusion junctions!
+Start to fix fusion junctions...
+Fixed 4547 fusion junctions!
+End CIRCexplorer2 annotate at 04:59:51
+Done for EGAN00001749638, final result should be EGAN00001749638.circexplorer2.bed
+End circexplorer2 for EGAN00001749638 at Mon Jul 31 04:59:59 CST 2023
+Start circRNA_finder for EGAN00001749638 at Mon Jul 31 03:59:44 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749638_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749638. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 31 03:59:44 ..... started STAR run
+Jul 31 03:59:44 ..... loading genome
+Jul 31 04:07:38 ..... started mapping
+Jul 31 04:17:38 ..... finished mapping
+Jul 31 04:17:49 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749638, final result should be EGAN00001749638.circRNA_finder.bed
+End circRNA_finder for EGAN00001749638 at Mon Jul 31 04:18:01 CST 2023
+Start find_circ for EGAN00001749638 at Mon Jul 31 03:59:44 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749638, final result should be EGAN00001749638.find_circ.bed
+End find_circ for EGAN00001749638 at Mon Jul 31 07:30:51 CST 2023
+[Mon 2023-07-31 07:30:53] [INFO ] Input reads: EGAN00001749345_1.fastq.gz,EGAN00001749345_2.fastq.gz
+[Mon 2023-07-31 07:30:53] [INFO ] Library type: unstranded
+[Mon 2023-07-31 07:30:53] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI, Output prefix: EGAN00001749345
+[Mon 2023-07-31 07:30:53] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 07:30:53] [INFO ] 96 CPU cores availble, using 20
+[Mon 2023-07-31 07:30:53] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 07:30:53] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/align/EGAN00001749345.bam
+****** Processing EGAN00001749345. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[bam_sort_core] merging from 0 files and 20 in-memory blocks...
+[Mon 2023-07-31 07:54:41] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/align/EGAN00001749345.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/align/EGAN00001749345.bam
+[Mon 2023-07-31 07:57:55] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/align/EGAN00001749345.sorted.bam
+[Mon 2023-07-31 07:58:15] [DEBUG] HISAT2 bam: EGAN00001749345.sorted.bam
+[Mon 2023-07-31 07:58:15] [INFO ] Skipping gene abundance estimation
+[Mon 2023-07-31 07:58:15] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Mon 2023-07-31 07:58:15] [INFO ] Running BWA-mem mapping candidate reads ..
+[Mon 2023-07-31 07:58:15] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_unmapped.sam
+[Mon 2023-07-31 08:21:52] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_unmapped.sam
+[Mon 2023-07-31 08:21:52] [INFO ] Running CIRI2 for circRNA detection ..
+[Mon 2023-07-31 08:21:52] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/EGAN00001749345.log
+[Mon 2023-07-31 08:36:43] [INFO ] Extract circular sequence
+[Mon 2023-07-31 08:36:43] [0%   ] [..................................................][Mon 2023-07-31 08:36:46] [4%   ] [##................................................][Mon 2023-07-31 08:36:47] [8%   ] [####..............................................][Mon 2023-07-31 08:36:49] [13%  ] [######............................................][Mon 2023-07-31 08:36:50] [17%  ] [########..........................................][Mon 2023-07-31 08:36:51] [21%  ] [##########........................................][Mon 2023-07-31 08:36:52] [26%  ] [#############.....................................][Mon 2023-07-31 08:36:53] [30%  ] [###############...................................][Mon 2023-07-31 08:36:54] [34%  ] [#################.................................][Mon 2023-07-31 08:36:54] [39%  ] [###################...............................][Mon 2023-07-31 08:36:55] [43%  ] [#####################.............................][Mon 2023-07-31 08:36:56] [47%  ] [#######################...........................][Mon 2023-07-31 08:36:58] [52%  ] [##########################........................][Mon 2023-07-31 08:36:59] [56%  ] [############################......................][Mon 2023-07-31 08:36:59] [60%  ] [##############################....................][Mon 2023-07-31 08:37:00] [65%  ] [################################..................][Mon 2023-07-31 08:37:02] [69%  ] [##################################................][Mon 2023-07-31 08:37:03] [73%  ] [####################################..............][Mon 2023-07-31 08:37:05] [78%  ] [#######################################...........][Mon 2023-07-31 08:37:07] [82%  ] [#########################################.........][Mon 2023-07-31 08:37:08] [86%  ] [###########################################.......][Mon 2023-07-31 08:37:09] [91%  ] [#############################################.....][Mon 2023-07-31 08:37:11] [95%  ] [###############################################...][Mon 2023-07-31 08:37:12] [100% ] [##################################################]
+[Mon 2023-07-31 08:37:12] [INFO ] Building circular index ..
+[Mon 2023-07-31 08:37:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_index
+[Mon 2023-07-31 08:40:23] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_index
+[Mon 2023-07-31 08:40:23] [INFO ] De novo alignment for circular RNAs ..
+[Mon 2023-07-31 08:40:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_denovo.bam
+[Mon 2023-07-31 08:58:00] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_denovo.bam
+[Mon 2023-07-31 09:00:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_denovo.sorted.bam
+[Mon 2023-07-31 09:00:34] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749345.CIRI/circ/EGAN00001749345_denovo.sorted.bam
+[Mon 2023-07-31 09:00:34] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-07-31 09:01:51] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-07-31 09:08:17] [INFO ] Merge bsj and fsj results
+[Mon 2023-07-31 09:08:17] [INFO ] Loading annotation gtf ..
+[Mon 2023-07-31 09:08:45] [INFO ] Output circRNA expression values
+[Mon 2023-07-31 09:09:04] [INFO ] circRNA Expression profile: EGAN00001749345.gtf
+[Mon 2023-07-31 09:09:04] [INFO ] Finished!
+Start CIRIquant for EGAN00001749345 at Mon Jul 31 07:30:53 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749345, final result should be EGAN00001749345.CIRI.bed
+End CIRIquant for EGAN00001749345 at Mon Jul 31 09:09:07 CST 2023
+Start circexplorer2 for EGAN00001749345 at Mon Jul 31 07:30:51 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749345_circ2_result.txt -o EGAN00001749345_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 07:49:08
+Start to annotate fusion junctions...
+Annotated 6057 fusion junctions!
+Start to fix fusion junctions...
+Fixed 3847 fusion junctions!
+End CIRCexplorer2 annotate at 07:49:29
+Done for EGAN00001749345, final result should be EGAN00001749345.circexplorer2.bed
+End circexplorer2 for EGAN00001749345 at Mon Jul 31 07:49:32 CST 2023
+Start circRNA_finder for EGAN00001749345 at Mon Jul 31 07:30:51 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749345_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749345. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 31 07:30:51 ..... started STAR run
+Jul 31 07:30:51 ..... loading genome
+Jul 31 07:36:31 ..... started mapping
+Jul 31 07:40:23 ..... finished mapping
+Jul 31 07:40:30 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749345, final result should be EGAN00001749345.circRNA_finder.bed
+End circRNA_finder for EGAN00001749345 at Mon Jul 31 07:40:36 CST 2023
+Start find_circ for EGAN00001749345 at Mon Jul 31 07:30:51 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749345, final result should be EGAN00001749345.find_circ.bed
+End find_circ for EGAN00001749345 at Mon Jul 31 08:22:49 CST 2023
+[Mon 2023-07-31 09:09:10] [INFO ] Input reads: EGAN00001749633_1.fastq.gz,EGAN00001749633_2.fastq.gz
+[Mon 2023-07-31 09:09:10] [INFO ] Library type: unstranded
+[Mon 2023-07-31 09:09:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI, Output prefix: EGAN00001749633
+[Mon 2023-07-31 09:09:10] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 09:09:10] [INFO ] 96 CPU cores availble, using 20
+[Mon 2023-07-31 09:09:10] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 09:09:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/align/EGAN00001749633.bam
+****** Processing EGAN00001749633. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[bam_sort_core] merging from 2 files and 20 in-memory blocks...
+[Mon 2023-07-31 10:26:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/align/EGAN00001749633.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/align/EGAN00001749633.bam
+[Mon 2023-07-31 10:45:42] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/align/EGAN00001749633.sorted.bam
+[Mon 2023-07-31 10:48:38] [DEBUG] HISAT2 bam: EGAN00001749633.sorted.bam
+[Mon 2023-07-31 10:48:38] [INFO ] Skipping gene abundance estimation
+[Mon 2023-07-31 10:48:38] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Mon 2023-07-31 10:48:38] [INFO ] Running BWA-mem mapping candidate reads ..
+[Mon 2023-07-31 10:48:38] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_unmapped.sam
+[Mon 2023-07-31 11:55:32] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_unmapped.sam
+[Mon 2023-07-31 11:55:32] [INFO ] Running CIRI2 for circRNA detection ..
+[Mon 2023-07-31 11:55:32] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/EGAN00001749633.log
+[Mon 2023-07-31 12:12:05] [INFO ] Extract circular sequence
+[Mon 2023-07-31 12:12:05] [0%   ] [..................................................][Mon 2023-07-31 12:18:51] [4%   ] [##................................................][Mon 2023-07-31 12:23:54] [8%   ] [####..............................................][Mon 2023-07-31 12:25:31] [12%  ] [######............................................][Mon 2023-07-31 12:26:46] [16%  ] [########..........................................][Mon 2023-07-31 12:27:44] [20%  ] [##########........................................][Mon 2023-07-31 12:28:30] [25%  ] [############......................................][Mon 2023-07-31 12:28:58] [29%  ] [##############....................................][Mon 2023-07-31 12:29:07] [33%  ] [################..................................][Mon 2023-07-31 12:29:13] [37%  ] [##################................................][Mon 2023-07-31 12:29:17] [41%  ] [####################..............................][Mon 2023-07-31 12:29:19] [45%  ] [######################............................][Mon 2023-07-31 12:29:29] [50%  ] [#########################.........................][Mon 2023-07-31 12:29:30] [54%  ] [###########################.......................][Mon 2023-07-31 12:29:32] [58%  ] [############################......................][Mon 2023-07-31 12:29:33] [62%  ] [###############################...................][Mon 2023-07-31 12:29:39] [66%  ] [#################################.................][Mon 2023-07-31 12:29:42] [70%  ] [###################################...............][Mon 2023-07-31 12:29:45] [75%  ] [#####################################.............][Mon 2023-07-31 12:29:48] [79%  ] [#######################################...........][Mon 2023-07-31 12:29:51] [83%  ] [#########################################.........][Mon 2023-07-31 12:29:53] [87%  ] [###########################################.......][Mon 2023-07-31 12:29:55] [91%  ] [#############################################.....][Mon 2023-07-31 12:29:57] [95%  ] [###############################################...][Mon 2023-07-31 12:29:58] [100% ] [##################################################]
+[Mon 2023-07-31 12:29:58] [INFO ] Building circular index ..
+[Mon 2023-07-31 12:29:58] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_index
+[Mon 2023-07-31 12:41:44] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_index
+[Mon 2023-07-31 12:41:44] [INFO ] De novo alignment for circular RNAs ..
+[Mon 2023-07-31 12:41:44] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_denovo.bam
+[Mon 2023-07-31 13:36:33] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_denovo.bam
+[Mon 2023-07-31 13:42:55] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_denovo.sorted.bam
+[Mon 2023-07-31 13:44:10] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749633.CIRI/circ/EGAN00001749633_denovo.sorted.bam
+[Mon 2023-07-31 13:44:10] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-07-31 13:45:46] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-07-31 14:03:45] [INFO ] Merge bsj and fsj results
+[Mon 2023-07-31 14:03:45] [INFO ] Loading annotation gtf ..
+[Mon 2023-07-31 14:04:03] [INFO ] Output circRNA expression values
+[Mon 2023-07-31 14:04:36] [INFO ] circRNA Expression profile: EGAN00001749633.gtf
+[Mon 2023-07-31 14:04:36] [INFO ] Finished!
+Start CIRIquant for EGAN00001749633 at Mon Jul 31 09:09:10 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749633, final result should be EGAN00001749633.CIRI.bed
+End CIRIquant for EGAN00001749633 at Mon Jul 31 14:04:41 CST 2023
+Start circexplorer2 for EGAN00001749633 at Mon Jul 31 09:09:07 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749633_circ2_result.txt -o EGAN00001749633_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 10:19:44
+Start to annotate fusion junctions...
+Annotated 14328 fusion junctions!
+Start to fix fusion junctions...
+Fixed 8929 fusion junctions!
+End CIRCexplorer2 annotate at 10:20:12
+Done for EGAN00001749633, final result should be EGAN00001749633.circexplorer2.bed
+End circexplorer2 for EGAN00001749633 at Mon Jul 31 10:20:19 CST 2023
+Start circRNA_finder for EGAN00001749633 at Mon Jul 31 09:09:07 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749633_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749633. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 31 09:09:07 ..... started STAR run
+Jul 31 09:09:07 ..... loading genome
+Jul 31 09:15:49 ..... started mapping
+Jul 31 09:30:48 ..... finished mapping
+Jul 31 09:30:57 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749633, final result should be EGAN00001749633.circRNA_finder.bed
+End circRNA_finder for EGAN00001749633 at Mon Jul 31 09:31:30 CST 2023
+Start find_circ for EGAN00001749633 at Mon Jul 31 09:09:07 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749633, final result should be EGAN00001749633.find_circ.bed
+End find_circ for EGAN00001749633 at Mon Jul 31 12:48:18 CST 2023
+[Mon 2023-07-31 14:04:43] [INFO ] Input reads: EGAN00001749338_1.fastq.gz,EGAN00001749338_2.fastq.gz
+[Mon 2023-07-31 14:04:43] [INFO ] Library type: unstranded
+[Mon 2023-07-31 14:04:43] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI, Output prefix: EGAN00001749338
+[Mon 2023-07-31 14:04:43] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 14:04:43] [INFO ] 96 CPU cores availble, using 20
+[Mon 2023-07-31 14:04:43] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 14:04:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/align/EGAN00001749338.bam
+****** Processing EGAN00001749338. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Mon 2023-07-31 14:50:11] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/align/EGAN00001749338.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/align/EGAN00001749338.bam
+[Mon 2023-07-31 14:54:35] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/align/EGAN00001749338.sorted.bam
+[Mon 2023-07-31 14:55:02] [DEBUG] HISAT2 bam: EGAN00001749338.sorted.bam
+[Mon 2023-07-31 14:55:02] [INFO ] Skipping gene abundance estimation
+[Mon 2023-07-31 14:55:02] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Mon 2023-07-31 14:55:02] [INFO ] Running BWA-mem mapping candidate reads ..
+[Mon 2023-07-31 14:55:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_unmapped.sam
+[bam_sort_core] merging from 1 files and 20 in-memory blocks...
+[Mon 2023-07-31 15:33:12] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_unmapped.sam
+[Mon 2023-07-31 15:33:12] [INFO ] Running CIRI2 for circRNA detection ..
+[Mon 2023-07-31 15:33:12] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/EGAN00001749338.log
+[Mon 2023-07-31 15:56:45] [INFO ] Extract circular sequence
+[Mon 2023-07-31 15:56:45] [0%   ] [..................................................][Mon 2023-07-31 15:56:48] [4%   ] [##................................................][Mon 2023-07-31 15:56:50] [8%   ] [####..............................................][Mon 2023-07-31 15:56:52] [13%  ] [######............................................][Mon 2023-07-31 15:56:53] [17%  ] [########..........................................][Mon 2023-07-31 15:56:55] [21%  ] [##########........................................][Mon 2023-07-31 15:56:56] [26%  ] [#############.....................................][Mon 2023-07-31 15:56:58] [30%  ] [###############...................................][Mon 2023-07-31 15:56:59] [34%  ] [#################.................................][Mon 2023-07-31 15:57:00] [39%  ] [###################...............................][Mon 2023-07-31 15:57:01] [43%  ] [#####################.............................][Mon 2023-07-31 15:57:02] [47%  ] [#######################...........................][Mon 2023-07-31 15:57:05] [52%  ] [##########################........................][Mon 2023-07-31 15:57:06] [56%  ] [############################......................][Mon 2023-07-31 15:57:06] [60%  ] [##############################....................][Mon 2023-07-31 15:57:07] [65%  ] [################################..................][Mon 2023-07-31 15:57:10] [69%  ] [##################################................][Mon 2023-07-31 15:57:12] [73%  ] [####################################..............][Mon 2023-07-31 15:57:14] [78%  ] [#######################################...........][Mon 2023-07-31 15:57:17] [82%  ] [#########################################.........][Mon 2023-07-31 15:57:19] [86%  ] [###########################################.......][Mon 2023-07-31 15:57:21] [91%  ] [#############################################.....][Mon 2023-07-31 15:57:23] [95%  ] [###############################################...][Mon 2023-07-31 15:57:25] [100% ] [##################################################]
+[Mon 2023-07-31 15:57:25] [INFO ] Building circular index ..
+[Mon 2023-07-31 15:57:25] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_index
+[Mon 2023-07-31 16:03:48] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_index
+[Mon 2023-07-31 16:03:48] [INFO ] De novo alignment for circular RNAs ..
+[Mon 2023-07-31 16:03:48] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_index -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_denovo.bam
+[Mon 2023-07-31 16:35:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_denovo.bam
+[Mon 2023-07-31 16:37:54] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_denovo.sorted.bam
+[Mon 2023-07-31 16:38:17] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749338.CIRI/circ/EGAN00001749338_denovo.sorted.bam
+[Mon 2023-07-31 16:38:17] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-07-31 16:39:00] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-07-31 16:46:08] [INFO ] Merge bsj and fsj results
+[Mon 2023-07-31 16:46:08] [INFO ] Loading annotation gtf ..
+[Mon 2023-07-31 16:46:29] [INFO ] Output circRNA expression values
+[Mon 2023-07-31 16:46:53] [INFO ] circRNA Expression profile: EGAN00001749338.gtf
+[Mon 2023-07-31 16:46:53] [INFO ] Finished!
+Start CIRIquant for EGAN00001749338 at Mon Jul 31 14:04:43 CST 2023
+Final result file does not exist, run it.
+Done for EGAN00001749338, final result should be EGAN00001749338.CIRI.bed
+End CIRIquant for EGAN00001749338 at Mon Jul 31 16:46:55 CST 2023
+Start circexplorer2 for EGAN00001749338 at Mon Jul 31 14:04:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b EGAN00001749338_circ2_result.txt -o EGAN00001749338_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 14:45:25
+Start to annotate fusion junctions...
+Annotated 9440 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6179 fusion junctions!
+End CIRCexplorer2 annotate at 14:46:00
+Done for EGAN00001749338, final result should be EGAN00001749338.circexplorer2.bed
+End circexplorer2 for EGAN00001749338 at Mon Jul 31 14:46:02 CST 2023
+Start circRNA_finder for EGAN00001749338 at Mon Jul 31 14:04:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749338_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix EGAN00001749338. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Jul 31 14:04:41 ..... started STAR run
+Jul 31 14:04:41 ..... loading genome
+Jul 31 14:15:48 ..... started mapping
+Jul 31 14:22:23 ..... finished mapping
+Jul 31 14:22:28 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for EGAN00001749338, final result should be EGAN00001749338.circRNA_finder.bed
+End circRNA_finder for EGAN00001749338 at Mon Jul 31 14:22:59 CST 2023
+Start find_circ for EGAN00001749338 at Mon Jul 31 14:04:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for EGAN00001749338, final result should be EGAN00001749338.find_circ.bed
+End find_circ for EGAN00001749338 at Mon Jul 31 16:32:26 CST 2023
+[Mon 2023-07-31 16:46:59] [INFO ] Input reads: EGAN00001749489_1.fastq.gz,EGAN00001749489_2.fastq.gz
+[Mon 2023-07-31 16:46:59] [INFO ] Library type: unstranded
+[Mon 2023-07-31 16:46:59] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749489.CIRI, Output prefix: EGAN00001749489
+[Mon 2023-07-31 16:46:59] [INFO ] Config: hg38 Loaded
+[Mon 2023-07-31 16:46:59] [INFO ] 96 CPU cores availble, using 20
+[Mon 2023-07-31 16:46:59] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-07-31 16:46:59] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749489_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_IMmotion150/fq/EGAN00001749489_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_IMmotion150/EGAN00001749489.CIRI/align/EGAN00001749489.bam
+****** Processing EGAN00001749489. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
