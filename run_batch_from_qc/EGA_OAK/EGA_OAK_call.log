@@ -1330,3 +1330,9 @@ Sorting .bam file...
 Indexing .bam file...
 [Tue 2023-08-01 00:20:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.sorted.bam /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.bam
 [Tue 2023-08-01 00:24:11] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/align/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.sorted.bam
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[Tue 2023-08-01 00:24:41] [DEBUG] HISAT2 bam: go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.sorted.bam
+[Tue 2023-08-01 00:24:41] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 00:24:41] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 00:24:41] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 00:24:41] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_1.fastq.gz /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_OAK/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517.CIRI/circ/go28915_ngs_rna_wts_rnaaccess_EA_6d0dd89017_20170517_unmapped.sam
