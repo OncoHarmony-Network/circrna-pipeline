@@ -416,3 +416,677 @@ End find_circ for WO29637_ngs_rna_targrna_EA_dfc6df5ef9 at 2023年 08月 01日 �
 [Tue 2023-08-01 00:19:48] [INFO ] 128 CPU cores availble, using 16
 [Tue 2023-08-01 00:19:48] [INFO ] Align RNA-seq reads to reference genome ..
 [Tue 2023-08-01 00:19:48] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/align/WO29637_ngs_rna_targrna_EA_323f89e742.bam
+****** Processing WO29637_ngs_rna_targrna_EA_323f89e742. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 00:38:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/align/WO29637_ngs_rna_targrna_EA_323f89e742.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/align/WO29637_ngs_rna_targrna_EA_323f89e742.bam
+[Tue 2023-08-01 00:41:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/align/WO29637_ngs_rna_targrna_EA_323f89e742.sorted.bam
+[Tue 2023-08-01 00:41:26] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_323f89e742.sorted.bam
+[Tue 2023-08-01 00:41:26] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 00:41:26] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 00:41:26] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 00:41:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_unmapped.sam
+[bam_sort_core] merging from 2 files and 16 in-memory blocks...
+[Tue 2023-08-01 01:12:23] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_unmapped.sam
+[Tue 2023-08-01 01:12:23] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 01:12:23] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/WO29637_ngs_rna_targrna_EA_323f89e742.log
+[Tue 2023-08-01 01:25:10] [INFO ] Extract circular sequence
+[Tue 2023-08-01 01:25:10] [0%   ] [..................................................][Tue 2023-08-01 01:25:12] [4%   ] [##................................................][Tue 2023-08-01 01:25:13] [8%   ] [####..............................................][Tue 2023-08-01 01:25:14] [12%  ] [######............................................][Tue 2023-08-01 01:25:15] [16%  ] [########..........................................][Tue 2023-08-01 01:25:16] [20%  ] [##########........................................][Tue 2023-08-01 01:25:16] [25%  ] [############......................................][Tue 2023-08-01 01:25:17] [29%  ] [##############....................................][Tue 2023-08-01 01:25:17] [33%  ] [################..................................][Tue 2023-08-01 01:25:18] [37%  ] [##################................................][Tue 2023-08-01 01:25:18] [41%  ] [####################..............................][Tue 2023-08-01 01:25:19] [45%  ] [######################............................][Tue 2023-08-01 01:25:20] [50%  ] [#########################.........................][Tue 2023-08-01 01:25:21] [54%  ] [###########################.......................][Tue 2023-08-01 01:25:21] [58%  ] [############################......................][Tue 2023-08-01 01:25:21] [62%  ] [###############################...................][Tue 2023-08-01 01:25:23] [66%  ] [#################################.................][Tue 2023-08-01 01:25:24] [70%  ] [###################################...............][Tue 2023-08-01 01:25:26] [75%  ] [#####################################.............][Tue 2023-08-01 01:25:27] [79%  ] [#######################################...........][Tue 2023-08-01 01:25:28] [83%  ] [#########################################.........][Tue 2023-08-01 01:25:29] [87%  ] [###########################################.......][Tue 2023-08-01 01:25:29] [91%  ] [#############################################.....][Tue 2023-08-01 01:25:30] [95%  ] [###############################################...][Tue 2023-08-01 01:25:31] [100% ] [##################################################]
+[Tue 2023-08-01 01:25:31] [INFO ] Building circular index ..
+[Tue 2023-08-01 01:25:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_index
+[Tue 2023-08-01 01:31:06] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_index
+[Tue 2023-08-01 01:31:06] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 01:31:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_denovo.bam
+[Tue 2023-08-01 01:45:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_denovo.bam
+[Tue 2023-08-01 01:47:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_denovo.sorted.bam
+[Tue 2023-08-01 01:47:27] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_323f89e742.CIRI/circ/WO29637_ngs_rna_targrna_EA_323f89e742_denovo.sorted.bam
+[Tue 2023-08-01 01:47:27] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 01:48:24] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 01:57:11] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 01:57:11] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 01:57:28] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 01:57:55] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_323f89e742.gtf
+[Tue 2023-08-01 01:57:55] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 00:19:47 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_323f89e742, final result should be WO29637_ngs_rna_targrna_EA_323f89e742.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 01:57:58 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 00:19:44 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_323f89e742_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_323f89e742_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 01:00:44
+Start to annotate fusion junctions...
+Annotated 9507 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6025 fusion junctions!
+End CIRCexplorer2 annotate at 01:01:00
+Done for WO29637_ngs_rna_targrna_EA_323f89e742, final result should be WO29637_ngs_rna_targrna_EA_323f89e742.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 01:01:07 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 00:19:44 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_323f89e742_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_323f89e742. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 00:19:44 ..... started STAR run
+Aug 01 00:19:44 ..... loading genome
+Aug 01 00:20:07 ..... started mapping
+Aug 01 00:28:08 ..... finished mapping
+Aug 01 00:28:14 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_323f89e742, final result should be WO29637_ngs_rna_targrna_EA_323f89e742.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 00:28:23 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 00:19:44 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_323f89e742, final result should be WO29637_ngs_rna_targrna_EA_323f89e742.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_323f89e742 at 2023年 08月 01日 星期二 01:55:52 CST
+[Tue 2023-08-01 01:58:01] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_c619300642_1.fastq.gz,WO29637_ngs_rna_targrna_EA_c619300642_2.fastq.gz
+[Tue 2023-08-01 01:58:01] [INFO ] Library type: unstranded
+[Tue 2023-08-01 01:58:01] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_c619300642
+[Tue 2023-08-01 01:58:01] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 01:58:01] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 01:58:01] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 01:58:01] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/align/WO29637_ngs_rna_targrna_EA_c619300642.bam
+****** Processing WO29637_ngs_rna_targrna_EA_c619300642. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 02:13:15] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/align/WO29637_ngs_rna_targrna_EA_c619300642.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/align/WO29637_ngs_rna_targrna_EA_c619300642.bam
+[Tue 2023-08-01 02:15:37] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/align/WO29637_ngs_rna_targrna_EA_c619300642.sorted.bam
+[Tue 2023-08-01 02:15:55] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_c619300642.sorted.bam
+[Tue 2023-08-01 02:15:55] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 02:15:55] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 02:15:55] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 02:15:55] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_unmapped.sam
+[bam_sort_core] merging from 1 files and 16 in-memory blocks...
+[Tue 2023-08-01 02:40:39] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_unmapped.sam
+[Tue 2023-08-01 02:40:39] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 02:40:39] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/WO29637_ngs_rna_targrna_EA_c619300642.log
+[Tue 2023-08-01 02:52:56] [INFO ] Extract circular sequence
+[Tue 2023-08-01 02:52:56] [0%   ] [..................................................][Tue 2023-08-01 02:52:58] [4%   ] [##................................................][Tue 2023-08-01 02:53:00] [8%   ] [####..............................................][Tue 2023-08-01 02:53:01] [13%  ] [######............................................][Tue 2023-08-01 02:53:02] [17%  ] [########..........................................][Tue 2023-08-01 02:53:04] [21%  ] [##########........................................][Tue 2023-08-01 02:53:05] [26%  ] [#############.....................................][Tue 2023-08-01 02:53:06] [30%  ] [###############...................................][Tue 2023-08-01 02:53:07] [34%  ] [#################.................................][Tue 2023-08-01 02:53:07] [39%  ] [###################...............................][Tue 2023-08-01 02:53:08] [43%  ] [#####################.............................][Tue 2023-08-01 02:53:09] [47%  ] [#######################...........................][Tue 2023-08-01 02:53:11] [52%  ] [##########################........................][Tue 2023-08-01 02:53:12] [56%  ] [############################......................][Tue 2023-08-01 02:53:12] [60%  ] [##############################....................][Tue 2023-08-01 02:53:12] [65%  ] [################################..................][Tue 2023-08-01 02:53:14] [69%  ] [##################################................][Tue 2023-08-01 02:53:15] [73%  ] [####################################..............][Tue 2023-08-01 02:53:17] [78%  ] [#######################################...........][Tue 2023-08-01 02:53:18] [82%  ] [#########################################.........][Tue 2023-08-01 02:53:19] [86%  ] [###########################################.......][Tue 2023-08-01 02:53:21] [91%  ] [#############################################.....][Tue 2023-08-01 02:53:22] [95%  ] [###############################################...][Tue 2023-08-01 02:53:23] [100% ] [##################################################]
+[Tue 2023-08-01 02:53:23] [INFO ] Building circular index ..
+[Tue 2023-08-01 02:53:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_index
+[Tue 2023-08-01 02:56:13] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_index
+[Tue 2023-08-01 02:56:13] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 02:56:13] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_denovo.bam
+[Tue 2023-08-01 03:07:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_denovo.bam
+[Tue 2023-08-01 03:09:00] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_denovo.sorted.bam
+[Tue 2023-08-01 03:09:17] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_c619300642.CIRI/circ/WO29637_ngs_rna_targrna_EA_c619300642_denovo.sorted.bam
+[Tue 2023-08-01 03:09:17] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 03:10:25] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 03:18:24] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 03:18:24] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 03:18:42] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 03:18:57] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_c619300642.gtf
+[Tue 2023-08-01 03:18:57] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 01:58:01 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_c619300642, final result should be WO29637_ngs_rna_targrna_EA_c619300642.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 03:18:59 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 01:57:58 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_c619300642_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_c619300642_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 02:28:43
+Start to annotate fusion junctions...
+Annotated 6437 fusion junctions!
+Start to fix fusion junctions...
+Fixed 4189 fusion junctions!
+End CIRCexplorer2 annotate at 02:28:58
+Done for WO29637_ngs_rna_targrna_EA_c619300642, final result should be WO29637_ngs_rna_targrna_EA_c619300642.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 02:29:02 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 01:57:58 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_c619300642_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_c619300642. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 01:57:58 ..... started STAR run
+Aug 01 01:57:58 ..... loading genome
+Aug 01 01:58:18 ..... started mapping
+Aug 01 02:04:19 ..... finished mapping
+Aug 01 02:04:24 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_c619300642, final result should be WO29637_ngs_rna_targrna_EA_c619300642.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 02:04:34 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 01:57:58 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_c619300642, final result should be WO29637_ngs_rna_targrna_EA_c619300642.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_c619300642 at 2023年 08月 01日 星期二 03:23:55 CST
+[Tue 2023-08-01 03:23:58] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_5cf9908fa8_1.fastq.gz,WO29637_ngs_rna_targrna_EA_5cf9908fa8_2.fastq.gz
+[Tue 2023-08-01 03:23:58] [INFO ] Library type: unstranded
+[Tue 2023-08-01 03:23:58] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_5cf9908fa8
+[Tue 2023-08-01 03:23:58] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 03:23:58] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 03:23:58] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 03:23:58] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/align/WO29637_ngs_rna_targrna_EA_5cf9908fa8.bam
+****** Processing WO29637_ngs_rna_targrna_EA_5cf9908fa8. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 03:40:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/align/WO29637_ngs_rna_targrna_EA_5cf9908fa8.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/align/WO29637_ngs_rna_targrna_EA_5cf9908fa8.bam
+[Tue 2023-08-01 03:42:22] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/align/WO29637_ngs_rna_targrna_EA_5cf9908fa8.sorted.bam
+[Tue 2023-08-01 03:42:46] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_5cf9908fa8.sorted.bam
+[Tue 2023-08-01 03:42:46] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 03:42:46] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 03:42:46] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 03:42:46] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_unmapped.sam
+[bam_sort_core] merging from 2 files and 16 in-memory blocks...
+[Tue 2023-08-01 04:07:31] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_unmapped.sam
+[Tue 2023-08-01 04:07:31] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 04:07:31] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/WO29637_ngs_rna_targrna_EA_5cf9908fa8.log
+[Tue 2023-08-01 04:18:53] [INFO ] Extract circular sequence
+[Tue 2023-08-01 04:18:53] [0%   ] [..................................................][Tue 2023-08-01 04:18:53] [4%   ] [##................................................][Tue 2023-08-01 04:18:55] [8%   ] [####..............................................][Tue 2023-08-01 04:18:56] [12%  ] [######............................................][Tue 2023-08-01 04:18:57] [16%  ] [########..........................................][Tue 2023-08-01 04:18:58] [20%  ] [##########........................................][Tue 2023-08-01 04:18:59] [25%  ] [############......................................][Tue 2023-08-01 04:19:00] [29%  ] [##############....................................][Tue 2023-08-01 04:19:00] [33%  ] [################..................................][Tue 2023-08-01 04:19:01] [37%  ] [##################................................][Tue 2023-08-01 04:19:02] [41%  ] [####################..............................][Tue 2023-08-01 04:19:02] [45%  ] [######################............................][Tue 2023-08-01 04:19:03] [50%  ] [#########################.........................][Tue 2023-08-01 04:19:05] [54%  ] [###########################.......................][Tue 2023-08-01 04:19:05] [58%  ] [############################......................][Tue 2023-08-01 04:19:05] [62%  ] [###############################...................][Tue 2023-08-01 04:19:06] [66%  ] [#################################.................][Tue 2023-08-01 04:19:07] [70%  ] [###################################...............][Tue 2023-08-01 04:19:09] [75%  ] [#####################################.............][Tue 2023-08-01 04:19:11] [79%  ] [#######################################...........][Tue 2023-08-01 04:19:12] [83%  ] [#########################################.........][Tue 2023-08-01 04:19:13] [87%  ] [###########################################.......][Tue 2023-08-01 04:19:15] [91%  ] [#############################################.....][Tue 2023-08-01 04:19:16] [95%  ] [###############################################...][Tue 2023-08-01 04:19:17] [100% ] [##################################################]
+[Tue 2023-08-01 04:19:17] [INFO ] Building circular index ..
+[Tue 2023-08-01 04:19:17] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_index
+[Tue 2023-08-01 04:20:52] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_index
+[Tue 2023-08-01 04:20:52] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 04:20:52] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_denovo.bam
+[Tue 2023-08-01 04:34:17] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_denovo.bam
+[Tue 2023-08-01 04:36:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_denovo.sorted.bam
+[Tue 2023-08-01 04:37:02] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI/circ/WO29637_ngs_rna_targrna_EA_5cf9908fa8_denovo.sorted.bam
+[Tue 2023-08-01 04:37:02] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 04:38:48] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 04:46:01] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 04:46:01] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 04:46:21] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 04:46:27] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Tue 2023-08-01 04:46:33] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_5cf9908fa8.gtf
+[Tue 2023-08-01 04:46:33] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 03:23:58 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_5cf9908fa8, final result should be WO29637_ngs_rna_targrna_EA_5cf9908fa8.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 04:46:35 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 03:23:55 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_5cf9908fa8_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_5cf9908fa8_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 03:56:04
+Start to annotate fusion junctions...
+Annotated 4224 fusion junctions!
+Start to fix fusion junctions...
+Fixed 2700 fusion junctions!
+End CIRCexplorer2 annotate at 03:56:18
+Done for WO29637_ngs_rna_targrna_EA_5cf9908fa8, final result should be WO29637_ngs_rna_targrna_EA_5cf9908fa8.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 03:56:22 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 03:23:55 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5cf9908fa8_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_5cf9908fa8. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 03:23:55 ..... started STAR run
+Aug 01 03:23:55 ..... loading genome
+Aug 01 03:24:46 ..... started mapping
+Aug 01 03:31:11 ..... finished mapping
+Aug 01 03:31:16 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_5cf9908fa8, final result should be WO29637_ngs_rna_targrna_EA_5cf9908fa8.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 03:31:26 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 03:23:55 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_5cf9908fa8, final result should be WO29637_ngs_rna_targrna_EA_5cf9908fa8.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_5cf9908fa8 at 2023年 08月 01日 星期二 04:57:06 CST
+[Tue 2023-08-01 04:57:09] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_d9c0ad467c_1.fastq.gz,WO29637_ngs_rna_targrna_EA_d9c0ad467c_2.fastq.gz
+[Tue 2023-08-01 04:57:09] [INFO ] Library type: unstranded
+[Tue 2023-08-01 04:57:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_d9c0ad467c
+[Tue 2023-08-01 04:57:09] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 04:57:09] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 04:57:09] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 04:57:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/align/WO29637_ngs_rna_targrna_EA_d9c0ad467c.bam
+****** Processing WO29637_ngs_rna_targrna_EA_d9c0ad467c. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 05:10:59] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/align/WO29637_ngs_rna_targrna_EA_d9c0ad467c.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/align/WO29637_ngs_rna_targrna_EA_d9c0ad467c.bam
+[Tue 2023-08-01 05:13:37] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/align/WO29637_ngs_rna_targrna_EA_d9c0ad467c.sorted.bam
+[Tue 2023-08-01 05:13:59] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_d9c0ad467c.sorted.bam
+[Tue 2023-08-01 05:13:59] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 05:13:59] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 05:13:59] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 05:13:59] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_unmapped.sam
+[bam_sort_core] merging from 1 files and 16 in-memory blocks...
+[Tue 2023-08-01 05:33:24] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_unmapped.sam
+[Tue 2023-08-01 05:33:24] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 05:33:24] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/WO29637_ngs_rna_targrna_EA_d9c0ad467c.log
+[Tue 2023-08-01 05:41:44] [INFO ] Extract circular sequence
+[Tue 2023-08-01 05:41:44] [0%   ] [..................................................][Tue 2023-08-01 05:41:44] [4%   ] [##................................................][Tue 2023-08-01 05:41:46] [8%   ] [####..............................................][Tue 2023-08-01 05:41:47] [12%  ] [######............................................][Tue 2023-08-01 05:41:48] [16%  ] [########..........................................][Tue 2023-08-01 05:41:49] [20%  ] [##########........................................][Tue 2023-08-01 05:41:50] [25%  ] [############......................................][Tue 2023-08-01 05:41:51] [29%  ] [##############....................................][Tue 2023-08-01 05:41:52] [33%  ] [################..................................][Tue 2023-08-01 05:41:52] [37%  ] [##################................................][Tue 2023-08-01 05:41:53] [41%  ] [####################..............................][Tue 2023-08-01 05:41:54] [45%  ] [######################............................][Tue 2023-08-01 05:41:54] [50%  ] [#########################.........................][Tue 2023-08-01 05:41:56] [54%  ] [###########################.......................][Tue 2023-08-01 05:41:56] [58%  ] [############################......................][Tue 2023-08-01 05:41:57] [62%  ] [###############################...................][Tue 2023-08-01 05:41:57] [66%  ] [#################################.................][Tue 2023-08-01 05:41:59] [70%  ] [###################################...............][Tue 2023-08-01 05:42:00] [75%  ] [#####################################.............][Tue 2023-08-01 05:42:01] [79%  ] [#######################################...........][Tue 2023-08-01 05:42:03] [83%  ] [#########################################.........][Tue 2023-08-01 05:42:04] [87%  ] [###########################################.......][Tue 2023-08-01 05:42:05] [91%  ] [#############################################.....][Tue 2023-08-01 05:42:06] [95%  ] [###############################################...][Tue 2023-08-01 05:42:08] [100% ] [##################################################]
+[Tue 2023-08-01 05:42:08] [INFO ] Building circular index ..
+[Tue 2023-08-01 05:42:08] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_index
+[Tue 2023-08-01 05:45:02] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_index
+[Tue 2023-08-01 05:45:02] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 05:45:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_denovo.bam
+[Tue 2023-08-01 05:56:21] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_denovo.bam
+[Tue 2023-08-01 05:58:24] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_denovo.sorted.bam
+[Tue 2023-08-01 05:58:46] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI/circ/WO29637_ngs_rna_targrna_EA_d9c0ad467c_denovo.sorted.bam
+[Tue 2023-08-01 05:58:46] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 06:00:41] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 06:08:08] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 06:08:08] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 06:08:27] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 06:08:38] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Tue 2023-08-01 06:08:45] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_d9c0ad467c.gtf
+[Tue 2023-08-01 06:08:45] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 04:57:09 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_d9c0ad467c, final result should be WO29637_ngs_rna_targrna_EA_d9c0ad467c.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 06:08:46 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 04:57:06 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_d9c0ad467c_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_d9c0ad467c_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 05:20:12
+Start to annotate fusion junctions...
+Annotated 6848 fusion junctions!
+Start to fix fusion junctions...
+Fixed 4402 fusion junctions!
+End CIRCexplorer2 annotate at 05:20:29
+Done for WO29637_ngs_rna_targrna_EA_d9c0ad467c, final result should be WO29637_ngs_rna_targrna_EA_d9c0ad467c.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 05:20:34 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 04:57:06 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_d9c0ad467c_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_d9c0ad467c. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 04:57:06 ..... started STAR run
+Aug 01 04:57:06 ..... loading genome
+Aug 01 04:58:21 ..... started mapping
+Aug 01 05:04:59 ..... finished mapping
+Aug 01 05:05:05 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_d9c0ad467c, final result should be WO29637_ngs_rna_targrna_EA_d9c0ad467c.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 05:05:16 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 04:57:06 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_d9c0ad467c, final result should be WO29637_ngs_rna_targrna_EA_d9c0ad467c.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_d9c0ad467c at 2023年 08月 01日 星期二 06:07:13 CST
+[Tue 2023-08-01 06:08:49] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_5bb9562bf3_1.fastq.gz,WO29637_ngs_rna_targrna_EA_5bb9562bf3_2.fastq.gz
+[Tue 2023-08-01 06:08:49] [INFO ] Library type: unstranded
+[Tue 2023-08-01 06:08:49] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_5bb9562bf3
+[Tue 2023-08-01 06:08:49] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 06:08:49] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 06:08:49] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 06:08:49] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/align/WO29637_ngs_rna_targrna_EA_5bb9562bf3.bam
+****** Processing WO29637_ngs_rna_targrna_EA_5bb9562bf3. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 06:24:42] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/align/WO29637_ngs_rna_targrna_EA_5bb9562bf3.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/align/WO29637_ngs_rna_targrna_EA_5bb9562bf3.bam
+[Tue 2023-08-01 06:27:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/align/WO29637_ngs_rna_targrna_EA_5bb9562bf3.sorted.bam
+[Tue 2023-08-01 06:27:34] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_5bb9562bf3.sorted.bam
+[Tue 2023-08-01 06:27:34] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 06:27:34] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 06:27:34] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 06:27:34] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_unmapped.sam
+[bam_sort_core] merging from 1 files and 16 in-memory blocks...
+[Tue 2023-08-01 06:50:40] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_unmapped.sam
+[Tue 2023-08-01 06:50:40] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 06:50:40] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/WO29637_ngs_rna_targrna_EA_5bb9562bf3.log
+[Tue 2023-08-01 07:01:19] [INFO ] Extract circular sequence
+[Tue 2023-08-01 07:01:19] [0%   ] [..................................................][Tue 2023-08-01 07:01:20] [4%   ] [##................................................][Tue 2023-08-01 07:01:21] [8%   ] [####..............................................][Tue 2023-08-01 07:01:21] [12%  ] [######............................................][Tue 2023-08-01 07:01:22] [16%  ] [########..........................................][Tue 2023-08-01 07:01:22] [20%  ] [##########........................................][Tue 2023-08-01 07:01:23] [25%  ] [############......................................][Tue 2023-08-01 07:01:23] [29%  ] [##############....................................][Tue 2023-08-01 07:01:24] [33%  ] [################..................................][Tue 2023-08-01 07:01:24] [37%  ] [##################................................][Tue 2023-08-01 07:01:24] [41%  ] [####################..............................][Tue 2023-08-01 07:01:25] [45%  ] [######################............................][Tue 2023-08-01 07:01:26] [50%  ] [#########################.........................][Tue 2023-08-01 07:01:26] [54%  ] [###########################.......................][Tue 2023-08-01 07:01:26] [58%  ] [############################......................][Tue 2023-08-01 07:01:26] [62%  ] [###############################...................][Tue 2023-08-01 07:01:27] [66%  ] [#################################.................][Tue 2023-08-01 07:01:28] [70%  ] [###################################...............][Tue 2023-08-01 07:01:29] [75%  ] [#####################################.............][Tue 2023-08-01 07:01:30] [79%  ] [#######################################...........][Tue 2023-08-01 07:01:30] [83%  ] [#########################################.........][Tue 2023-08-01 07:01:31] [87%  ] [###########################################.......][Tue 2023-08-01 07:01:32] [91%  ] [#############################################.....][Tue 2023-08-01 07:01:32] [95%  ] [###############################################...][Tue 2023-08-01 07:01:33] [100% ] [##################################################]
+[Tue 2023-08-01 07:01:33] [INFO ] Building circular index ..
+[Tue 2023-08-01 07:01:33] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_index
+[Tue 2023-08-01 07:03:31] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_index
+[Tue 2023-08-01 07:03:31] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 07:03:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_denovo.bam
+[Tue 2023-08-01 07:15:27] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_denovo.bam
+[Tue 2023-08-01 07:18:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_denovo.sorted.bam
+[Tue 2023-08-01 07:18:32] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI/circ/WO29637_ngs_rna_targrna_EA_5bb9562bf3_denovo.sorted.bam
+[Tue 2023-08-01 07:18:32] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 07:19:59] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 07:30:04] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 07:30:04] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 07:30:27] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 07:30:44] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_5bb9562bf3.gtf
+[Tue 2023-08-01 07:30:44] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 06:08:49 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_5bb9562bf3, final result should be WO29637_ngs_rna_targrna_EA_5bb9562bf3.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 07:30:46 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 06:08:47 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_5bb9562bf3_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_5bb9562bf3_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 06:40:19
+Start to annotate fusion junctions...
+Annotated 6474 fusion junctions!
+Start to fix fusion junctions...
+Fixed 4074 fusion junctions!
+End CIRCexplorer2 annotate at 06:40:35
+Done for WO29637_ngs_rna_targrna_EA_5bb9562bf3, final result should be WO29637_ngs_rna_targrna_EA_5bb9562bf3.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 06:40:42 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 06:08:47 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_5bb9562bf3_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_5bb9562bf3. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 06:08:47 ..... started STAR run
+Aug 01 06:08:47 ..... loading genome
+Aug 01 06:09:26 ..... started mapping
+Aug 01 06:16:08 ..... finished mapping
+Aug 01 06:16:13 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_5bb9562bf3, final result should be WO29637_ngs_rna_targrna_EA_5bb9562bf3.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 06:16:21 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 06:08:47 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_5bb9562bf3, final result should be WO29637_ngs_rna_targrna_EA_5bb9562bf3.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_5bb9562bf3 at 2023年 08月 01日 星期二 07:30:51 CST
+[Tue 2023-08-01 07:30:55] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_794ef0c4a4_1.fastq.gz,WO29637_ngs_rna_targrna_EA_794ef0c4a4_2.fastq.gz
+[Tue 2023-08-01 07:30:55] [INFO ] Library type: unstranded
+[Tue 2023-08-01 07:30:55] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_794ef0c4a4
+[Tue 2023-08-01 07:30:55] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 07:30:55] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 07:30:55] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 07:30:55] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/align/WO29637_ngs_rna_targrna_EA_794ef0c4a4.bam
+****** Processing WO29637_ngs_rna_targrna_EA_794ef0c4a4. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 07:49:27] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/align/WO29637_ngs_rna_targrna_EA_794ef0c4a4.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/align/WO29637_ngs_rna_targrna_EA_794ef0c4a4.bam
+[Tue 2023-08-01 07:52:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/align/WO29637_ngs_rna_targrna_EA_794ef0c4a4.sorted.bam
+[Tue 2023-08-01 07:52:55] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_794ef0c4a4.sorted.bam
+[Tue 2023-08-01 07:52:55] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 07:52:55] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 07:52:55] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 07:52:55] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_unmapped.sam
+[bam_sort_core] merging from 2 files and 16 in-memory blocks...
+[Tue 2023-08-01 08:26:56] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_unmapped.sam
+[Tue 2023-08-01 08:26:56] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 08:26:56] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/WO29637_ngs_rna_targrna_EA_794ef0c4a4.log
+[Tue 2023-08-01 08:38:14] [INFO ] Extract circular sequence
+[Tue 2023-08-01 08:38:14] [0%   ] [..................................................][Tue 2023-08-01 08:38:14] [4%   ] [##................................................][Tue 2023-08-01 08:38:17] [8%   ] [####..............................................][Tue 2023-08-01 08:38:18] [12%  ] [######............................................][Tue 2023-08-01 08:38:18] [16%  ] [########..........................................][Tue 2023-08-01 08:38:19] [20%  ] [##########........................................][Tue 2023-08-01 08:38:20] [25%  ] [############......................................][Tue 2023-08-01 08:38:21] [29%  ] [##############....................................][Tue 2023-08-01 08:38:21] [33%  ] [################..................................][Tue 2023-08-01 08:38:22] [37%  ] [##################................................][Tue 2023-08-01 08:38:22] [41%  ] [####################..............................][Tue 2023-08-01 08:38:23] [45%  ] [######################............................][Tue 2023-08-01 08:38:23] [50%  ] [#########################.........................][Tue 2023-08-01 08:38:24] [54%  ] [###########################.......................][Tue 2023-08-01 08:38:25] [58%  ] [############################......................][Tue 2023-08-01 08:38:25] [62%  ] [###############################...................][Tue 2023-08-01 08:38:25] [66%  ] [#################################.................][Tue 2023-08-01 08:38:26] [70%  ] [###################################...............][Tue 2023-08-01 08:38:28] [75%  ] [#####################################.............][Tue 2023-08-01 08:38:29] [79%  ] [#######################################...........][Tue 2023-08-01 08:38:30] [83%  ] [#########################################.........][Tue 2023-08-01 08:38:31] [87%  ] [###########################################.......][Tue 2023-08-01 08:38:32] [91%  ] [#############################################.....][Tue 2023-08-01 08:38:33] [95%  ] [###############################################...][Tue 2023-08-01 08:38:33] [100% ] [##################################################]
+[Tue 2023-08-01 08:38:33] [INFO ] Building circular index ..
+[Tue 2023-08-01 08:38:33] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_index
+[Tue 2023-08-01 08:38:40] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_index
+[Tue 2023-08-01 08:38:40] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 08:38:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_denovo.bam
+[Tue 2023-08-01 08:48:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_denovo.bam
+[Tue 2023-08-01 08:50:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_denovo.sorted.bam
+[Tue 2023-08-01 08:50:18] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI/circ/WO29637_ngs_rna_targrna_EA_794ef0c4a4_denovo.sorted.bam
+[Tue 2023-08-01 08:50:18] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 08:52:04] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 09:01:36] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 09:01:36] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 09:02:03] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 09:02:03] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Tue 2023-08-01 09:02:10] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_794ef0c4a4.gtf
+[Tue 2023-08-01 09:02:10] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 07:30:54 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_794ef0c4a4, final result should be WO29637_ngs_rna_targrna_EA_794ef0c4a4.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 09:02:11 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 07:30:52 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_794ef0c4a4_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_794ef0c4a4_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 08:10:04
+Start to annotate fusion junctions...
+Annotated 2852 fusion junctions!
+Start to fix fusion junctions...
+Fixed 1985 fusion junctions!
+End CIRCexplorer2 annotate at 08:10:14
+Done for WO29637_ngs_rna_targrna_EA_794ef0c4a4, final result should be WO29637_ngs_rna_targrna_EA_794ef0c4a4.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 08:10:19 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 07:30:52 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_794ef0c4a4_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_794ef0c4a4. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 07:30:52 ..... started STAR run
+Aug 01 07:30:52 ..... loading genome
+Aug 01 07:31:30 ..... started mapping
+Aug 01 07:39:28 ..... finished mapping
+Aug 01 07:39:32 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_794ef0c4a4, final result should be WO29637_ngs_rna_targrna_EA_794ef0c4a4.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 07:39:44 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 07:30:52 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_794ef0c4a4, final result should be WO29637_ngs_rna_targrna_EA_794ef0c4a4.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_794ef0c4a4 at 2023年 08月 01日 星期二 09:11:22 CST
+[Tue 2023-08-01 09:11:25] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_05e308e0a0_1.fastq.gz,WO29637_ngs_rna_targrna_EA_05e308e0a0_2.fastq.gz
+[Tue 2023-08-01 09:11:25] [INFO ] Library type: unstranded
+[Tue 2023-08-01 09:11:25] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_05e308e0a0
+[Tue 2023-08-01 09:11:25] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 09:11:25] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 09:11:25] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 09:11:25] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/align/WO29637_ngs_rna_targrna_EA_05e308e0a0.bam
+****** Processing WO29637_ngs_rna_targrna_EA_05e308e0a0. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 09:25:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/align/WO29637_ngs_rna_targrna_EA_05e308e0a0.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/align/WO29637_ngs_rna_targrna_EA_05e308e0a0.bam
+[Tue 2023-08-01 09:27:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/align/WO29637_ngs_rna_targrna_EA_05e308e0a0.sorted.bam
+[Tue 2023-08-01 09:28:19] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_05e308e0a0.sorted.bam
+[Tue 2023-08-01 09:28:19] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 09:28:19] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 09:28:19] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 09:28:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_unmapped.sam
+[bam_sort_core] merging from 1 files and 16 in-memory blocks...
+[Tue 2023-08-01 09:57:10] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_unmapped.sam
+[Tue 2023-08-01 09:57:10] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 09:57:10] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/WO29637_ngs_rna_targrna_EA_05e308e0a0.log
+[Tue 2023-08-01 10:06:10] [INFO ] Extract circular sequence
+[Tue 2023-08-01 10:06:10] [0%   ] [..................................................][Tue 2023-08-01 10:06:12] [4%   ] [##................................................][Tue 2023-08-01 10:06:13] [8%   ] [####..............................................][Tue 2023-08-01 10:06:13] [12%  ] [######............................................][Tue 2023-08-01 10:06:14] [16%  ] [########..........................................][Tue 2023-08-01 10:06:15] [20%  ] [##########........................................][Tue 2023-08-01 10:06:15] [25%  ] [############......................................][Tue 2023-08-01 10:06:16] [29%  ] [##############....................................][Tue 2023-08-01 10:06:16] [33%  ] [################..................................][Tue 2023-08-01 10:06:17] [37%  ] [##################................................][Tue 2023-08-01 10:06:17] [41%  ] [####################..............................][Tue 2023-08-01 10:06:18] [45%  ] [######################............................][Tue 2023-08-01 10:06:19] [50%  ] [#########################.........................][Tue 2023-08-01 10:06:20] [54%  ] [###########################.......................][Tue 2023-08-01 10:06:20] [58%  ] [############################......................][Tue 2023-08-01 10:06:20] [62%  ] [###############################...................][Tue 2023-08-01 10:06:21] [66%  ] [#################################.................][Tue 2023-08-01 10:06:23] [70%  ] [###################################...............][Tue 2023-08-01 10:06:24] [75%  ] [#####################################.............][Tue 2023-08-01 10:06:25] [79%  ] [#######################################...........][Tue 2023-08-01 10:06:26] [83%  ] [#########################################.........][Tue 2023-08-01 10:06:27] [87%  ] [###########################################.......][Tue 2023-08-01 10:06:28] [91%  ] [#############################################.....][Tue 2023-08-01 10:06:29] [95%  ] [###############################################...][Tue 2023-08-01 10:06:29] [100% ] [##################################################]
+[Tue 2023-08-01 10:06:29] [INFO ] Building circular index ..
+[Tue 2023-08-01 10:06:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_index
+[Tue 2023-08-01 10:09:09] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_index
+[Tue 2023-08-01 10:09:09] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 10:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_denovo.bam
+[Tue 2023-08-01 10:18:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_denovo.bam
+[Tue 2023-08-01 10:20:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_denovo.sorted.bam
+[Tue 2023-08-01 10:20:48] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI/circ/WO29637_ngs_rna_targrna_EA_05e308e0a0_denovo.sorted.bam
+[Tue 2023-08-01 10:20:48] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 10:21:55] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 10:30:16] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 10:30:16] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 10:30:34] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 10:30:52] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_05e308e0a0.gtf
+[Tue 2023-08-01 10:30:52] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 09:11:25 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_05e308e0a0, final result should be WO29637_ngs_rna_targrna_EA_05e308e0a0.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 10:30:54 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 09:11:22 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_05e308e0a0_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_05e308e0a0_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 09:48:13
+Start to annotate fusion junctions...
+Annotated 6346 fusion junctions!
+Start to fix fusion junctions...
+Fixed 3824 fusion junctions!
+End CIRCexplorer2 annotate at 09:48:34
+Done for WO29637_ngs_rna_targrna_EA_05e308e0a0, final result should be WO29637_ngs_rna_targrna_EA_05e308e0a0.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 09:48:40 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 09:11:22 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_05e308e0a0_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_05e308e0a0. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 09:11:22 ..... started STAR run
+Aug 01 09:11:22 ..... loading genome
+Aug 01 09:13:16 ..... started mapping
+Aug 01 09:19:25 ..... finished mapping
+Aug 01 09:19:28 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_05e308e0a0, final result should be WO29637_ngs_rna_targrna_EA_05e308e0a0.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 09:19:37 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 09:11:22 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_05e308e0a0, final result should be WO29637_ngs_rna_targrna_EA_05e308e0a0.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_05e308e0a0 at 2023年 08月 01日 星期二 10:40:22 CST
+[Tue 2023-08-01 10:40:28] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_6cc9d52dcb_1.fastq.gz,WO29637_ngs_rna_targrna_EA_6cc9d52dcb_2.fastq.gz
+[Tue 2023-08-01 10:40:28] [INFO ] Library type: unstranded
+[Tue 2023-08-01 10:40:28] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_6cc9d52dcb
+[Tue 2023-08-01 10:40:28] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 10:40:28] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 10:40:28] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 10:40:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/align/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.bam
+****** Processing WO29637_ngs_rna_targrna_EA_6cc9d52dcb. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 11:00:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/align/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/align/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.bam
+[Tue 2023-08-01 11:03:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/align/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.sorted.bam
+[Tue 2023-08-01 11:03:45] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_6cc9d52dcb.sorted.bam
+[Tue 2023-08-01 11:03:45] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 11:03:45] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 11:03:45] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 11:03:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_unmapped.sam
+[bam_sort_core] merging from 1 files and 16 in-memory blocks...
+[Tue 2023-08-01 11:23:50] [DEBUG] BWA-mem sam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_unmapped.sam
+[Tue 2023-08-01 11:23:50] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-08-01 11:23:50] [DEBUG] CIRI2.pl -I /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_unmapped.sam -O /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.ciri -F /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/data/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 16 -G /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.log
+[Tue 2023-08-01 11:34:25] [INFO ] Extract circular sequence
+[Tue 2023-08-01 11:34:25] [0%   ] [..................................................][Tue 2023-08-01 11:34:26] [4%   ] [##................................................][Tue 2023-08-01 11:34:27] [8%   ] [####..............................................][Tue 2023-08-01 11:34:28] [12%  ] [######............................................][Tue 2023-08-01 11:34:28] [16%  ] [########..........................................][Tue 2023-08-01 11:34:29] [20%  ] [##########........................................][Tue 2023-08-01 11:34:30] [25%  ] [############......................................][Tue 2023-08-01 11:34:30] [29%  ] [##############....................................][Tue 2023-08-01 11:34:31] [33%  ] [################..................................][Tue 2023-08-01 11:34:31] [37%  ] [##################................................][Tue 2023-08-01 11:34:32] [41%  ] [####################..............................][Tue 2023-08-01 11:34:32] [45%  ] [######################............................][Tue 2023-08-01 11:34:33] [50%  ] [#########################.........................][Tue 2023-08-01 11:34:34] [54%  ] [###########################.......................][Tue 2023-08-01 11:34:34] [58%  ] [############################......................][Tue 2023-08-01 11:34:34] [62%  ] [###############################...................][Tue 2023-08-01 11:34:36] [66%  ] [#################################.................][Tue 2023-08-01 11:34:37] [70%  ] [###################################...............][Tue 2023-08-01 11:34:38] [75%  ] [#####################################.............][Tue 2023-08-01 11:34:39] [79%  ] [#######################################...........][Tue 2023-08-01 11:34:40] [83%  ] [#########################################.........][Tue 2023-08-01 11:34:40] [87%  ] [###########################################.......][Tue 2023-08-01 11:34:41] [91%  ] [#############################################.....][Tue 2023-08-01 11:34:42] [95%  ] [###############################################...][Tue 2023-08-01 11:34:43] [100% ] [##################################################]
+[Tue 2023-08-01 11:34:43] [INFO ] Building circular index ..
+[Tue 2023-08-01 11:34:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 16 -f /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_index.fa /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_index
+[Tue 2023-08-01 11:35:50] [DEBUG] De-novo index: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_index
+[Tue 2023-08-01 11:35:50] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-08-01 11:35:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_index -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_denovo.bam
+[Tue 2023-08-01 11:44:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_denovo.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_denovo.bam
+[Tue 2023-08-01 11:46:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_denovo.sorted.bam
+[Tue 2023-08-01 11:46:35] [DEBUG] De-novo bam: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI/circ/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_denovo.sorted.bam
+[Tue 2023-08-01 11:46:35] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-08-01 11:47:56] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-08-01 11:57:44] [INFO ] Merge bsj and fsj results
+[Tue 2023-08-01 11:57:44] [INFO ] Loading annotation gtf ..
+[Tue 2023-08-01 11:58:11] [INFO ] Output circRNA expression values
+[Tue 2023-08-01 11:58:29] [INFO ] circRNA Expression profile: WO29637_ngs_rna_targrna_EA_6cc9d52dcb.gtf
+[Tue 2023-08-01 11:58:29] [INFO ] Finished!
+Start CIRIquant for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 10:40:27 CST
+Final result file does not exist, run it.
+Done for WO29637_ngs_rna_targrna_EA_6cc9d52dcb, final result should be WO29637_ngs_rna_targrna_EA_6cc9d52dcb.CIRI.bed
+End CIRIquant for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 11:58:31 CST
+Start circexplorer2 for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 10:40:23 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/data/reference/hg38_ek12/hg38_ref_all.txt -g /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b WO29637_ngs_rna_targrna_EA_6cc9d52dcb_circ2_result.txt -o WO29637_ngs_rna_targrna_EA_6cc9d52dcb_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 11:13:41
+Start to annotate fusion junctions...
+Annotated 4897 fusion junctions!
+Start to fix fusion junctions...
+Fixed 3200 fusion junctions!
+End CIRCexplorer2 annotate at 11:13:58
+Done for WO29637_ngs_rna_targrna_EA_6cc9d52dcb, final result should be WO29637_ngs_rna_targrna_EA_6cc9d52dcb.circexplorer2.bed
+End circexplorer2 for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 11:14:03 CST
+Start circRNA_finder for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 10:40:22 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_6cc9d52dcb_2.fastq.gz --runThreadN 20 --genomeDir /home/data/reference/hg38_ek12/STAR_index_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix WO29637_ngs_rna_targrna_EA_6cc9d52dcb. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 01 10:40:22 ..... started STAR run
+Aug 01 10:40:22 ..... loading genome
+Aug 01 10:41:18 ..... started mapping
+Aug 01 10:50:33 ..... finished mapping
+Aug 01 10:50:40 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for WO29637_ngs_rna_targrna_EA_6cc9d52dcb, final result should be WO29637_ngs_rna_targrna_EA_6cc9d52dcb.circRNA_finder.bed
+End circRNA_finder for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 10:50:52 CST
+Start find_circ for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 10:40:22 CST
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for WO29637_ngs_rna_targrna_EA_6cc9d52dcb, final result should be WO29637_ngs_rna_targrna_EA_6cc9d52dcb.find_circ.bed
+End find_circ for WO29637_ngs_rna_targrna_EA_6cc9d52dcb at 2023年 08月 01日 星期二 12:15:27 CST
+[Tue 2023-08-01 12:15:30] [INFO ] Input reads: WO29637_ngs_rna_targrna_EA_0e8c1a49df_1.fastq.gz,WO29637_ngs_rna_targrna_EA_0e8c1a49df_2.fastq.gz
+[Tue 2023-08-01 12:15:30] [INFO ] Library type: unstranded
+[Tue 2023-08-01 12:15:30] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_0e8c1a49df.CIRI, Output prefix: WO29637_ngs_rna_targrna_EA_0e8c1a49df
+[Tue 2023-08-01 12:15:30] [INFO ] Config: hg38 Loaded
+[Tue 2023-08-01 12:15:30] [INFO ] 128 CPU cores availble, using 16
+[Tue 2023-08-01 12:15:30] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-08-01 12:15:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 16 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_0e8c1a49df_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_0e8c1a49df_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_0e8c1a49df.CIRI/align/WO29637_ngs_rna_targrna_EA_0e8c1a49df.bam
+****** Processing WO29637_ngs_rna_targrna_EA_0e8c1a49df. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-08-01 12:30:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 16 -o /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_0e8c1a49df.CIRI/align/WO29637_ngs_rna_targrna_EA_0e8c1a49df.sorted.bam /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_0e8c1a49df.CIRI/align/WO29637_ngs_rna_targrna_EA_0e8c1a49df.bam
+[Tue 2023-08-01 12:33:13] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 16 /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_0e8c1a49df.CIRI/align/WO29637_ngs_rna_targrna_EA_0e8c1a49df.sorted.bam
+[Tue 2023-08-01 12:33:31] [DEBUG] HISAT2 bam: WO29637_ngs_rna_targrna_EA_0e8c1a49df.sorted.bam
+[Tue 2023-08-01 12:33:31] [INFO ] Skipping gene abundance estimation
+[Tue 2023-08-01 12:33:31] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-08-01 12:33:31] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-08-01 12:33:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 16 -T 19 /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_0e8c1a49df_1.fastq.gz /home/data/IO_RNA/EGA_IMmotion151/fq/WO29637_ngs_rna_targrna_EA_0e8c1a49df_2.fastq.gz > /home/data/IO_RNA/circRNA/EGA_IMmotion151/WO29637_ngs_rna_targrna_EA_0e8c1a49df.CIRI/circ/WO29637_ngs_rna_targrna_EA_0e8c1a49df_unmapped.sam
+[bam_sort_core] merging from 1 files and 16 in-memory blocks...
