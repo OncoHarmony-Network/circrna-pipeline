@@ -130,7 +130,7 @@ aggr_circRNA_beds = function(sample, methods) {
 
     # Final output for one sample
     bed_dt2 = merge(bed_dt, annot, by = "id", all.x = FALSE, all.y = TRUE)
-    solid_ids = bed_dt2[, .(N = sum(count >= 2)), by = .(id)][N >= 2]$id  # id by at least two tools with ≥2 back-splice reads
+    solid_ids = bed_dt2[, .(N = sum(count >= 2)), by = .(id)][N >= 1]$id  # id by at least two tools with ≥1 back-splice reads
     
     if (length(solid_ids) > 0) {
       message("\t=>", length(solid_ids), " solid circRNAs detected")
