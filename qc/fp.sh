@@ -9,6 +9,11 @@ mqc=$6
 
 mkdir -p ${outdir}
 
+if [ -f fastp.failed.txt ]; then
+    echo "Previous failed sample list file detected, remove it"
+    rm fastp.failed.txt
+fi
+
 for sample in $(cat $fqfile)
 do
     if [ -f ${outdir}/${sample}_fastp.html ]; then
