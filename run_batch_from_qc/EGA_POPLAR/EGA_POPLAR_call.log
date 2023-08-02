@@ -1,681 +1,48 @@
-[Sat 2023-07-29 22:22:41] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz
-[Sat 2023-07-29 22:22:41] [INFO ] Library type: unstranded
-[Sat 2023-07-29 22:22:41] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813
-[Sat 2023-07-29 22:22:41] [INFO ] Config: hg38 Loaded
-[Sat 2023-07-29 22:22:41] [INFO ] 96 CPU cores availble, using 30
-[Sat 2023-07-29 22:22:41] [INFO ] Align RNA-seq reads to reference genome ..
-[Sat 2023-07-29 22:22:41] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Sun 2023-07-30 00:08:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.bam
-[Sun 2023-07-30 00:17:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.sorted.bam
-[Sun 2023-07-30 00:18:15] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.sorted.bam
-[Sun 2023-07-30 00:18:15] [INFO ] Skipping gene abundance estimation
-[Sun 2023-07-30 00:18:15] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Sun 2023-07-30 00:18:15] [INFO ] Running BWA-mem mapping candidate reads ..
-[Sun 2023-07-30 00:18:15] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_unmapped.sam
-[bam_sort_core] merging from 1 files and 30 in-memory blocks...
-[Sun 2023-07-30 00:51:57] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_unmapped.sam
-[Sun 2023-07-30 00:51:57] [INFO ] Running CIRI2 for circRNA detection ..
-[Sun 2023-07-30 00:51:57] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.log
-[Sun 2023-07-30 01:08:24] [INFO ] Extract circular sequence
-[Sun 2023-07-30 01:08:24] [0%   ] [..................................................][Sun 2023-07-30 01:08:35] [4%   ] [##................................................][Sun 2023-07-30 01:08:46] [8%   ] [####..............................................][Sun 2023-07-30 01:08:48] [12%  ] [######............................................][Sun 2023-07-30 01:08:51] [16%  ] [########..........................................][Sun 2023-07-30 01:08:58] [20%  ] [##########........................................][Sun 2023-07-30 01:09:06] [25%  ] [############......................................][Sun 2023-07-30 01:09:07] [29%  ] [##############....................................][Sun 2023-07-30 01:09:24] [33%  ] [################..................................][Sun 2023-07-30 01:09:27] [37%  ] [##################................................][Sun 2023-07-30 01:09:30] [41%  ] [####################..............................][Sun 2023-07-30 01:09:38] [45%  ] [######################............................][Sun 2023-07-30 01:09:41] [50%  ] [#########################.........................][Sun 2023-07-30 01:09:42] [54%  ] [###########################.......................][Sun 2023-07-30 01:09:51] [58%  ] [############################......................][Sun 2023-07-30 01:10:00] [62%  ] [###############################...................][Sun 2023-07-30 01:11:29] [66%  ] [#################################.................][Sun 2023-07-30 01:12:01] [70%  ] [###################################...............][Sun 2023-07-30 01:12:22] [75%  ] [#####################################.............][Sun 2023-07-30 01:12:38] [79%  ] [#######################################...........][Sun 2023-07-30 01:12:52] [83%  ] [#########################################.........][Sun 2023-07-30 01:13:00] [87%  ] [###########################################.......][Sun 2023-07-30 01:13:04] [91%  ] [#############################################.....][Sun 2023-07-30 01:13:16] [95%  ] [###############################################...][Sun 2023-07-30 01:13:19] [100% ] [##################################################]
-[Sun 2023-07-30 01:13:19] [INFO ] Building circular index ..
-[Sun 2023-07-30 01:13:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_index
-[Sun 2023-07-30 01:21:43] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_index
-[Sun 2023-07-30 01:21:43] [INFO ] De novo alignment for circular RNAs ..
-[Sun 2023-07-30 01:21:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_denovo.bam
-[Sun 2023-07-30 02:36:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_denovo.bam
-[Sun 2023-07-30 02:42:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_denovo.sorted.bam
-[Sun 2023-07-30 02:43:40] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_denovo.sorted.bam
-[Sun 2023-07-30 02:43:40] [INFO ] Detecting reads containing Back-splicing signals
-[Sun 2023-07-30 02:46:20] [INFO ] Detecting FSJ reads from genome alignment file
-[Sun 2023-07-30 02:58:29] [INFO ] Merge bsj and fsj results
-[Sun 2023-07-30 02:58:29] [INFO ] Loading annotation gtf ..
-[Sun 2023-07-30 02:58:50] [INFO ] Output circRNA expression values
-[Sun 2023-07-30 02:59:05] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.gtf
-[Sun 2023-07-30 02:59:05] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sat Jul 29 22:22:41 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sun Jul 30 02:59:07 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sat Jul 29 22:22:39 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 23:44:42
-Start to annotate fusion junctions...
-Annotated 9858 fusion junctions!
-Start to fix fusion junctions...
-Fixed 6571 fusion junctions!
-End CIRCexplorer2 annotate at 23:45:20
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sat Jul 29 23:45:32 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sat Jul 29 22:22:39 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 29 22:22:39 ..... started STAR run
-Jul 29 22:22:39 ..... loading genome
-Jul 29 22:32:23 ..... started mapping
-Jul 29 22:49:55 ..... finished mapping
-Jul 29 22:50:11 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sat Jul 29 22:50:42 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sat Jul 29 22:22:39 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Sun Jul 30 02:32:56 CST 2023
-[Sun 2023-07-30 02:59:10] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_2.fastq.gz
-[Sun 2023-07-30 02:59:10] [INFO ] Library type: unstranded
-[Sun 2023-07-30 02:59:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820
-[Sun 2023-07-30 02:59:10] [INFO ] Config: hg38 Loaded
-[Sun 2023-07-30 02:59:10] [INFO ] 96 CPU cores availble, using 30
-[Sun 2023-07-30 02:59:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Sun 2023-07-30 02:59:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Sun 2023-07-30 05:10:00] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.bam
-[bam_sort_core] merging from 2 files and 30 in-memory blocks...
-[Sun 2023-07-30 05:29:27] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.sorted.bam
-[Sun 2023-07-30 05:30:46] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.sorted.bam
-[Sun 2023-07-30 05:30:46] [INFO ] Skipping gene abundance estimation
-[Sun 2023-07-30 05:30:46] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Sun 2023-07-30 05:30:46] [INFO ] Running BWA-mem mapping candidate reads ..
-[Sun 2023-07-30 05:30:46] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_unmapped.sam
-[Sun 2023-07-30 06:05:22] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_unmapped.sam
-[Sun 2023-07-30 06:05:22] [INFO ] Running CIRI2 for circRNA detection ..
-[Sun 2023-07-30 06:05:22] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.log
-[Sun 2023-07-30 06:31:24] [INFO ] Extract circular sequence
-[Sun 2023-07-30 06:31:24] [0%   ] [..................................................][Sun 2023-07-30 06:32:18] [4%   ] [##................................................][Sun 2023-07-30 06:32:35] [8%   ] [####..............................................][Sun 2023-07-30 06:32:39] [13%  ] [######............................................][Sun 2023-07-30 06:32:42] [17%  ] [########..........................................][Sun 2023-07-30 06:32:50] [21%  ] [##########........................................][Sun 2023-07-30 06:32:51] [26%  ] [#############.....................................][Sun 2023-07-30 06:33:01] [30%  ] [###############...................................][Sun 2023-07-30 06:33:06] [34%  ] [#################.................................][Sun 2023-07-30 06:33:18] [39%  ] [###################...............................][Sun 2023-07-30 06:33:32] [43%  ] [#####################.............................][Sun 2023-07-30 06:33:35] [47%  ] [#######################...........................][Sun 2023-07-30 06:33:47] [52%  ] [##########################........................][Sun 2023-07-30 06:33:55] [56%  ] [############################......................][Sun 2023-07-30 06:34:01] [60%  ] [##############################....................][Sun 2023-07-30 06:34:07] [65%  ] [################################..................][Sun 2023-07-30 06:34:16] [69%  ] [##################################................][Sun 2023-07-30 06:34:27] [73%  ] [####################################..............][Sun 2023-07-30 06:34:33] [78%  ] [#######################################...........][Sun 2023-07-30 06:35:04] [82%  ] [#########################################.........][Sun 2023-07-30 06:35:06] [86%  ] [###########################################.......][Sun 2023-07-30 06:35:09] [91%  ] [#############################################.....][Sun 2023-07-30 06:35:10] [95%  ] [###############################################...][Sun 2023-07-30 06:35:12] [100% ] [##################################################]
-[Sun 2023-07-30 06:35:12] [INFO ] Building circular index ..
-[Sun 2023-07-30 06:35:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_index
-[Sun 2023-07-30 06:37:57] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_index
-[Sun 2023-07-30 06:37:57] [INFO ] De novo alignment for circular RNAs ..
-[Sun 2023-07-30 06:37:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_denovo.bam
-[Sun 2023-07-30 07:53:32] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_denovo.bam
-[Sun 2023-07-30 08:03:01] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_denovo.sorted.bam
-[Sun 2023-07-30 08:03:56] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_denovo.sorted.bam
-[Sun 2023-07-30 08:03:56] [INFO ] Detecting reads containing Back-splicing signals
-[Sun 2023-07-30 08:07:19] [INFO ] Detecting FSJ reads from genome alignment file
-[Sun 2023-07-30 08:23:01] [INFO ] Merge bsj and fsj results
-[Sun 2023-07-30 08:23:01] [INFO ] Loading annotation gtf ..
-[Sun 2023-07-30 08:42:49] [INFO ] Output circRNA expression values
-[Sun 2023-07-30 08:43:00] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.gtf
-[Sun 2023-07-30 08:43:00] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 02:59:10 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 08:43:02 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 02:59:07 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 04:03:47
-Start to annotate fusion junctions...
-Annotated 9242 fusion junctions!
-Start to fix fusion junctions...
-Fixed 6160 fusion junctions!
-End CIRCexplorer2 annotate at 04:04:20
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 04:04:35 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 02:59:08 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 30 02:59:08 ..... started STAR run
-Jul 30 02:59:08 ..... loading genome
-Jul 30 03:05:10 ..... started mapping
-Jul 30 03:26:44 ..... finished mapping
-Jul 30 03:26:53 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 03:27:33 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 02:59:07 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Sun Jul 30 07:13:56 CST 2023
-[Sun 2023-07-30 08:43:05] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_2.fastq.gz
-[Sun 2023-07-30 08:43:05] [INFO ] Library type: unstranded
-[Sun 2023-07-30 08:43:05] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813
-[Sun 2023-07-30 08:43:05] [INFO ] Config: hg38 Loaded
-[Sun 2023-07-30 08:43:05] [INFO ] 96 CPU cores availble, using 30
-[Sun 2023-07-30 08:43:05] [INFO ] Align RNA-seq reads to reference genome ..
-[Sun 2023-07-30 08:43:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Sun 2023-07-30 10:17:56] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.bam
-[Sun 2023-07-30 10:26:54] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.sorted.bam
-[Sun 2023-07-30 10:27:54] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.sorted.bam
-[Sun 2023-07-30 10:27:54] [INFO ] Skipping gene abundance estimation
-[Sun 2023-07-30 10:27:54] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Sun 2023-07-30 10:27:54] [INFO ] Running BWA-mem mapping candidate reads ..
-[Sun 2023-07-30 10:27:54] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_unmapped.sam
-[bam_sort_core] merging from 1 files and 30 in-memory blocks...
-[Sun 2023-07-30 11:05:01] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_unmapped.sam
-[Sun 2023-07-30 11:05:01] [INFO ] Running CIRI2 for circRNA detection ..
-[Sun 2023-07-30 11:05:01] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.log
-[Sun 2023-07-30 11:43:05] [INFO ] Extract circular sequence
-[Sun 2023-07-30 11:43:05] [0%   ] [..................................................][Sun 2023-07-30 11:43:08] [4%   ] [##................................................][Sun 2023-07-30 11:43:09] [8%   ] [####..............................................][Sun 2023-07-30 11:43:11] [13%  ] [######............................................][Sun 2023-07-30 11:43:12] [17%  ] [########..........................................][Sun 2023-07-30 11:43:14] [21%  ] [##########........................................][Sun 2023-07-30 11:43:15] [26%  ] [#############.....................................][Sun 2023-07-30 11:43:16] [30%  ] [###############...................................][Sun 2023-07-30 11:43:17] [34%  ] [#################.................................][Sun 2023-07-30 11:43:18] [39%  ] [###################...............................][Sun 2023-07-30 11:43:19] [43%  ] [#####################.............................][Sun 2023-07-30 11:43:19] [47%  ] [#######################...........................][Sun 2023-07-30 11:43:22] [52%  ] [##########################........................][Sun 2023-07-30 11:43:23] [56%  ] [############################......................][Sun 2023-07-30 11:43:23] [60%  ] [##############################....................][Sun 2023-07-30 11:43:24] [65%  ] [################################..................][Sun 2023-07-30 11:43:26] [69%  ] [##################################................][Sun 2023-07-30 11:43:28] [73%  ] [####################################..............][Sun 2023-07-30 11:43:30] [78%  ] [#######################################...........][Sun 2023-07-30 11:43:32] [82%  ] [#########################################.........][Sun 2023-07-30 11:43:33] [86%  ] [###########################################.......][Sun 2023-07-30 11:43:35] [91%  ] [#############################################.....][Sun 2023-07-30 11:43:36] [95%  ] [###############################################...][Sun 2023-07-30 11:43:38] [100% ] [##################################################]
-[Sun 2023-07-30 11:43:38] [INFO ] Building circular index ..
-[Sun 2023-07-30 11:43:38] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_index
-[Sun 2023-07-30 11:46:57] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_index
-[Sun 2023-07-30 11:46:57] [INFO ] De novo alignment for circular RNAs ..
-[Sun 2023-07-30 11:46:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_denovo.bam
-[Sun 2023-07-30 12:35:44] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_denovo.bam
-[Sun 2023-07-30 12:39:51] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_denovo.sorted.bam
-[Sun 2023-07-30 12:40:34] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_denovo.sorted.bam
-[Sun 2023-07-30 12:40:34] [INFO ] Detecting reads containing Back-splicing signals
-[Sun 2023-07-30 12:43:05] [INFO ] Detecting FSJ reads from genome alignment file
-[Sun 2023-07-30 12:55:46] [INFO ] Merge bsj and fsj results
-[Sun 2023-07-30 12:55:46] [INFO ] Loading annotation gtf ..
-[Sun 2023-07-30 12:56:04] [INFO ] Output circRNA expression values
-[Sun 2023-07-30 12:56:18] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.gtf
-[Sun 2023-07-30 12:56:18] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 08:43:05 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 12:56:22 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 08:43:03 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 09:53:46
-Start to annotate fusion junctions...
-Annotated 7319 fusion junctions!
-Start to fix fusion junctions...
-Fixed 4556 fusion junctions!
-End CIRCexplorer2 annotate at 09:54:23
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 09:54:31 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 08:43:03 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 30 08:43:03 ..... started STAR run
-Jul 30 08:43:03 ..... loading genome
-Jul 30 08:48:49 ..... started mapping
-Jul 30 09:04:23 ..... finished mapping
-Jul 30 09:04:33 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 09:05:00 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 08:43:03 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Sun Jul 30 12:25:37 CST 2023
-[Sun 2023-07-30 12:56:24] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_2.fastq.gz
-[Sun 2023-07-30 12:56:24] [INFO ] Library type: unstranded
-[Sun 2023-07-30 12:56:24] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820
-[Sun 2023-07-30 12:56:24] [INFO ] Config: hg38 Loaded
-[Sun 2023-07-30 12:56:24] [INFO ] 96 CPU cores availble, using 30
-[Sun 2023-07-30 12:56:24] [INFO ] Align RNA-seq reads to reference genome ..
-[Sun 2023-07-30 12:56:24] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[bam_sort_core] merging from 1 files and 30 in-memory blocks...
-[Sun 2023-07-30 13:57:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.bam
-[Sun 2023-07-30 14:10:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.sorted.bam
-[Sun 2023-07-30 14:12:27] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.sorted.bam
-[Sun 2023-07-30 14:12:27] [INFO ] Skipping gene abundance estimation
-[Sun 2023-07-30 14:12:27] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Sun 2023-07-30 14:12:27] [INFO ] Running BWA-mem mapping candidate reads ..
-[Sun 2023-07-30 14:12:27] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_unmapped.sam
-[Sun 2023-07-30 14:50:43] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_unmapped.sam
-[Sun 2023-07-30 14:50:43] [INFO ] Running CIRI2 for circRNA detection ..
-[Sun 2023-07-30 14:50:43] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.log
-[Sun 2023-07-30 15:19:57] [INFO ] Extract circular sequence
-[Sun 2023-07-30 15:19:57] [0%   ] [..................................................][Sun 2023-07-30 15:20:00] [4%   ] [##................................................][Sun 2023-07-30 15:20:01] [8%   ] [####..............................................][Sun 2023-07-30 15:20:03] [13%  ] [######............................................][Sun 2023-07-30 15:20:05] [17%  ] [########..........................................][Sun 2023-07-30 15:20:06] [21%  ] [##########........................................][Sun 2023-07-30 15:20:07] [26%  ] [#############.....................................][Sun 2023-07-30 15:20:08] [30%  ] [###############...................................][Sun 2023-07-30 15:20:09] [34%  ] [#################.................................][Sun 2023-07-30 15:20:10] [39%  ] [###################...............................][Sun 2023-07-30 15:20:11] [43%  ] [#####################.............................][Sun 2023-07-30 15:20:11] [47%  ] [#######################...........................][Sun 2023-07-30 15:20:14] [52%  ] [##########################........................][Sun 2023-07-30 15:20:15] [56%  ] [############################......................][Sun 2023-07-30 15:20:15] [60%  ] [##############################....................][Sun 2023-07-30 15:20:16] [65%  ] [################################..................][Sun 2023-07-30 15:20:18] [69%  ] [##################################................][Sun 2023-07-30 15:20:20] [73%  ] [####################################..............][Sun 2023-07-30 15:20:22] [78%  ] [#######################################...........][Sun 2023-07-30 15:20:24] [82%  ] [#########################################.........][Sun 2023-07-30 15:20:26] [86%  ] [###########################################.......][Sun 2023-07-30 15:20:27] [91%  ] [#############################################.....][Sun 2023-07-30 15:20:29] [95%  ] [###############################################...][Sun 2023-07-30 15:20:30] [100% ] [##################################################]
-[Sun 2023-07-30 15:20:30] [INFO ] Building circular index ..
-[Sun 2023-07-30 15:20:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_index
-[Sun 2023-07-30 15:21:32] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_index
-[Sun 2023-07-30 15:21:32] [INFO ] De novo alignment for circular RNAs ..
-[Sun 2023-07-30 15:21:32] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_denovo.bam
-[Sun 2023-07-30 15:50:25] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_denovo.bam
-[Sun 2023-07-30 15:53:37] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_denovo.sorted.bam
-[Sun 2023-07-30 15:54:05] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_denovo.sorted.bam
-[Sun 2023-07-30 15:54:05] [INFO ] Detecting reads containing Back-splicing signals
-[Sun 2023-07-30 15:55:56] [INFO ] Detecting FSJ reads from genome alignment file
-[Sun 2023-07-30 16:04:32] [INFO ] Merge bsj and fsj results
-[Sun 2023-07-30 16:04:32] [INFO ] Loading annotation gtf ..
-[Sun 2023-07-30 16:04:53] [INFO ] Output circRNA expression values
-[Sun 2023-07-30 16:05:01] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.gtf
-[Sun 2023-07-30 16:05:01] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 12:56:24 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 16:05:04 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 12:56:22 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 13:40:48
-Start to annotate fusion junctions...
-Annotated 4826 fusion junctions!
-Start to fix fusion junctions...
-Fixed 3419 fusion junctions!
-End CIRCexplorer2 annotate at 13:41:09
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 13:41:19 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 12:56:22 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 30 12:56:22 ..... started STAR run
-Jul 30 12:56:22 ..... loading genome
-Jul 30 13:07:42 ..... started mapping
-Jul 30 13:17:43 ..... finished mapping
-Jul 30 13:17:49 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 13:18:04 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 12:56:22 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Sun Jul 30 15:27:36 CST 2023
-[Sun 2023-07-30 16:05:07] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_2.fastq.gz
-[Sun 2023-07-30 16:05:07] [INFO ] Library type: unstranded
-[Sun 2023-07-30 16:05:07] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813
-[Sun 2023-07-30 16:05:07] [INFO ] Config: hg38 Loaded
-[Sun 2023-07-30 16:05:07] [INFO ] 96 CPU cores availble, using 30
-[Sun 2023-07-30 16:05:07] [INFO ] Align RNA-seq reads to reference genome ..
-[Sun 2023-07-30 16:05:07] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Sun 2023-07-30 17:43:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.bam
-[bam_sort_core] merging from 1 files and 30 in-memory blocks...
-[Sun 2023-07-30 17:54:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.sorted.bam
-[Sun 2023-07-30 17:55:02] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.sorted.bam
-[Sun 2023-07-30 17:55:02] [INFO ] Skipping gene abundance estimation
-[Sun 2023-07-30 17:55:02] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Sun 2023-07-30 17:55:02] [INFO ] Running BWA-mem mapping candidate reads ..
-[Sun 2023-07-30 17:55:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_unmapped.sam
-[Sun 2023-07-30 18:38:48] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_unmapped.sam
-[Sun 2023-07-30 18:38:48] [INFO ] Running CIRI2 for circRNA detection ..
-[Sun 2023-07-30 18:38:48] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.log
-[Sun 2023-07-30 18:55:01] [INFO ] Extract circular sequence
-[Sun 2023-07-30 18:55:01] [0%   ] [..................................................][Sun 2023-07-30 18:55:53] [4%   ] [##................................................][Sun 2023-07-30 18:55:58] [8%   ] [####..............................................][Sun 2023-07-30 18:56:03] [12%  ] [######............................................][Sun 2023-07-30 18:56:05] [16%  ] [########..........................................][Sun 2023-07-30 18:56:09] [20%  ] [##########........................................][Sun 2023-07-30 18:56:15] [25%  ] [############......................................][Sun 2023-07-30 18:56:19] [29%  ] [##############....................................][Sun 2023-07-30 18:56:21] [33%  ] [################..................................][Sun 2023-07-30 18:56:28] [37%  ] [##################................................][Sun 2023-07-30 18:56:30] [41%  ] [####################..............................][Sun 2023-07-30 18:56:30] [45%  ] [######################............................][Sun 2023-07-30 18:56:41] [50%  ] [#########################.........................][Sun 2023-07-30 18:56:42] [54%  ] [###########################.......................][Sun 2023-07-30 18:56:44] [58%  ] [############################......................][Sun 2023-07-30 18:56:44] [62%  ] [###############################...................][Sun 2023-07-30 18:56:48] [66%  ] [#################################.................][Sun 2023-07-30 18:56:51] [70%  ] [###################################...............][Sun 2023-07-30 18:56:53] [75%  ] [#####################################.............][Sun 2023-07-30 18:57:00] [79%  ] [#######################################...........][Sun 2023-07-30 18:57:01] [83%  ] [#########################################.........][Sun 2023-07-30 18:57:05] [87%  ] [###########################################.......][Sun 2023-07-30 18:57:14] [91%  ] [#############################################.....][Sun 2023-07-30 18:57:22] [95%  ] [###############################################...][Sun 2023-07-30 18:57:27] [100% ] [##################################################]
-[Sun 2023-07-30 18:57:27] [INFO ] Building circular index ..
-[Sun 2023-07-30 18:57:27] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_index
-[Sun 2023-07-30 18:59:40] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_index
-[Sun 2023-07-30 18:59:40] [INFO ] De novo alignment for circular RNAs ..
-[Sun 2023-07-30 18:59:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_denovo.bam
-[Sun 2023-07-30 20:14:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_denovo.bam
-[Sun 2023-07-30 20:21:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_denovo.sorted.bam
-[Sun 2023-07-30 20:22:46] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_denovo.sorted.bam
-[Sun 2023-07-30 20:22:46] [INFO ] Detecting reads containing Back-splicing signals
-[Sun 2023-07-30 20:26:52] [INFO ] Detecting FSJ reads from genome alignment file
-[Sun 2023-07-30 20:42:56] [INFO ] Merge bsj and fsj results
-[Sun 2023-07-30 20:42:56] [INFO ] Loading annotation gtf ..
-[Sun 2023-07-30 20:43:11] [INFO ] Output circRNA expression values
-[Sun 2023-07-30 20:43:23] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.gtf
-[Sun 2023-07-30 20:43:23] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 16:05:07 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 20:43:25 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 16:05:04 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 17:29:42
-Start to annotate fusion junctions...
-Annotated 8736 fusion junctions!
-Start to fix fusion junctions...
-Fixed 5672 fusion junctions!
-End CIRCexplorer2 annotate at 17:30:15
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 17:30:26 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 16:05:04 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 30 16:05:04 ..... started STAR run
-Jul 30 16:05:04 ..... loading genome
-Jul 30 16:10:47 ..... started mapping
-Jul 30 16:27:08 ..... finished mapping
-Jul 30 16:27:15 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 16:27:46 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 16:05:04 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Sun Jul 30 19:45:56 CST 2023
-[Sun 2023-07-30 20:43:28] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_2.fastq.gz
-[Sun 2023-07-30 20:43:28] [INFO ] Library type: unstranded
-[Sun 2023-07-30 20:43:28] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813
-[Sun 2023-07-30 20:43:28] [INFO ] Config: hg38 Loaded
-[Sun 2023-07-30 20:43:28] [INFO ] 96 CPU cores availble, using 30
-[Sun 2023-07-30 20:43:28] [INFO ] Align RNA-seq reads to reference genome ..
-[Sun 2023-07-30 20:43:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Sun 2023-07-30 23:14:34] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.bam
-[Sun 2023-07-30 23:34:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.sorted.bam
-[Sun 2023-07-30 23:35:47] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.sorted.bam
-[Sun 2023-07-30 23:35:47] [INFO ] Skipping gene abundance estimation
-[Sun 2023-07-30 23:35:47] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Sun 2023-07-30 23:35:47] [INFO ] Running BWA-mem mapping candidate reads ..
-[Sun 2023-07-30 23:35:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_unmapped.sam
-[bam_sort_core] merging from 2 files and 30 in-memory blocks...
-[Mon 2023-07-31 00:25:58] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_unmapped.sam
-[Mon 2023-07-31 00:25:58] [INFO ] Running CIRI2 for circRNA detection ..
-[Mon 2023-07-31 00:25:58] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.log
-[Mon 2023-07-31 00:44:21] [INFO ] Extract circular sequence
-[Mon 2023-07-31 00:44:21] [0%   ] [..................................................][Mon 2023-07-31 00:44:39] [4%   ] [##................................................][Mon 2023-07-31 00:45:29] [8%   ] [####..............................................][Mon 2023-07-31 00:46:47] [13%  ] [######............................................][Mon 2023-07-31 00:47:07] [17%  ] [########..........................................][Mon 2023-07-31 00:47:12] [21%  ] [##########........................................][Mon 2023-07-31 00:47:32] [26%  ] [#############.....................................][Mon 2023-07-31 00:47:40] [30%  ] [###############...................................][Mon 2023-07-31 00:47:49] [34%  ] [#################.................................][Mon 2023-07-31 00:47:56] [39%  ] [###################...............................][Mon 2023-07-31 00:48:09] [43%  ] [#####################.............................][Mon 2023-07-31 00:48:14] [47%  ] [#######################...........................][Mon 2023-07-31 00:48:32] [52%  ] [##########################........................][Mon 2023-07-31 00:48:36] [56%  ] [############################......................][Mon 2023-07-31 00:48:36] [60%  ] [##############################....................][Mon 2023-07-31 00:48:39] [65%  ] [################################..................][Mon 2023-07-31 00:49:12] [69%  ] [##################################................][Mon 2023-07-31 00:49:35] [73%  ] [####################################..............][Mon 2023-07-31 00:49:38] [78%  ] [#######################################...........][Mon 2023-07-31 00:49:56] [82%  ] [#########################################.........][Mon 2023-07-31 00:50:12] [86%  ] [###########################################.......][Mon 2023-07-31 00:50:32] [91%  ] [#############################################.....][Mon 2023-07-31 00:50:49] [95%  ] [###############################################...][Mon 2023-07-31 00:51:04] [100% ] [##################################################]
-[Mon 2023-07-31 00:51:04] [INFO ] Building circular index ..
-[Mon 2023-07-31 00:51:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_index
-[Mon 2023-07-31 01:08:50] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_index
-[Mon 2023-07-31 01:08:50] [INFO ] De novo alignment for circular RNAs ..
-[Mon 2023-07-31 01:08:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_denovo.bam
-[Mon 2023-07-31 03:02:20] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_denovo.bam
-[Mon 2023-07-31 03:13:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_denovo.sorted.bam
-[Mon 2023-07-31 03:15:22] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_denovo.sorted.bam
-[Mon 2023-07-31 03:15:22] [INFO ] Detecting reads containing Back-splicing signals
-[Mon 2023-07-31 03:19:00] [INFO ] Detecting FSJ reads from genome alignment file
-[Mon 2023-07-31 03:37:40] [INFO ] Merge bsj and fsj results
-[Mon 2023-07-31 03:37:40] [INFO ] Loading annotation gtf ..
-[Mon 2023-07-31 03:37:53] [INFO ] Output circRNA expression values
-[Mon 2023-07-31 03:38:21] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.gtf
-[Mon 2023-07-31 03:38:21] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Sun Jul 30 20:43:27 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Mon Jul 31 03:38:26 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Sun Jul 30 20:43:25 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 22:27:39
-Start to annotate fusion junctions...
-Annotated 14566 fusion junctions!
-Start to fix fusion junctions...
-Fixed 9318 fusion junctions!
-End CIRCexplorer2 annotate at 22:28:31
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Sun Jul 30 22:28:38 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Sun Jul 30 20:43:25 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 30 20:43:25 ..... started STAR run
-Jul 30 20:43:25 ..... loading genome
-Jul 30 20:54:08 ..... started mapping
-Jul 30 21:14:26 ..... finished mapping
-Jul 30 21:14:42 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Sun Jul 30 21:15:12 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Sun Jul 30 20:43:25 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Mon Jul 31 02:47:47 CST 2023
-[Mon 2023-07-31 03:38:29] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_2.fastq.gz
-[Mon 2023-07-31 03:38:29] [INFO ] Library type: unstranded
-[Mon 2023-07-31 03:38:29] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820
-[Mon 2023-07-31 03:38:29] [INFO ] Config: hg38 Loaded
-[Mon 2023-07-31 03:38:29] [INFO ] 96 CPU cores availble, using 30
-[Mon 2023-07-31 03:38:29] [INFO ] Align RNA-seq reads to reference genome ..
-[Mon 2023-07-31 03:38:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Mon 2023-07-31 06:13:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.bam
-[Mon 2023-07-31 06:29:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.sorted.bam
-[Mon 2023-07-31 06:31:46] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.sorted.bam
-[Mon 2023-07-31 06:31:46] [INFO ] Skipping gene abundance estimation
-[Mon 2023-07-31 06:31:46] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Mon 2023-07-31 06:31:46] [INFO ] Running BWA-mem mapping candidate reads ..
-[Mon 2023-07-31 06:31:46] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_unmapped.sam
-[bam_sort_core] merging from 2 files and 30 in-memory blocks...
-[Mon 2023-07-31 07:33:55] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_unmapped.sam
-[Mon 2023-07-31 07:33:55] [INFO ] Running CIRI2 for circRNA detection ..
-[Mon 2023-07-31 07:33:55] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.log
-[Mon 2023-07-31 08:01:30] [INFO ] Extract circular sequence
-[Mon 2023-07-31 08:01:30] [0%   ] [..................................................][Mon 2023-07-31 08:01:33] [4%   ] [##................................................][Mon 2023-07-31 08:01:34] [8%   ] [####..............................................][Mon 2023-07-31 08:01:36] [13%  ] [######............................................][Mon 2023-07-31 08:01:37] [17%  ] [########..........................................][Mon 2023-07-31 08:01:38] [21%  ] [##########........................................][Mon 2023-07-31 08:01:39] [26%  ] [#############.....................................][Mon 2023-07-31 08:01:40] [30%  ] [###############...................................][Mon 2023-07-31 08:01:41] [34%  ] [#################.................................][Mon 2023-07-31 08:01:42] [39%  ] [###################...............................][Mon 2023-07-31 08:01:43] [43%  ] [#####################.............................][Mon 2023-07-31 08:01:44] [47%  ] [#######################...........................][Mon 2023-07-31 08:01:46] [52%  ] [##########################........................][Mon 2023-07-31 08:01:47] [56%  ] [############################......................][Mon 2023-07-31 08:01:47] [60%  ] [##############################....................][Mon 2023-07-31 08:01:48] [65%  ] [################################..................][Mon 2023-07-31 08:01:50] [69%  ] [##################################................][Mon 2023-07-31 08:01:52] [73%  ] [####################################..............][Mon 2023-07-31 08:01:54] [78%  ] [#######################################...........][Mon 2023-07-31 08:01:56] [82%  ] [#########################################.........][Mon 2023-07-31 08:01:58] [86%  ] [###########################################.......][Mon 2023-07-31 08:01:59] [91%  ] [#############################################.....][Mon 2023-07-31 08:02:01] [95%  ] [###############################################...][Mon 2023-07-31 08:02:03] [100% ] [##################################################]
-[Mon 2023-07-31 08:02:03] [INFO ] Building circular index ..
-[Mon 2023-07-31 08:02:03] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_index
-[Mon 2023-07-31 08:07:21] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_index
-[Mon 2023-07-31 08:07:21] [INFO ] De novo alignment for circular RNAs ..
-[Mon 2023-07-31 08:07:21] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_denovo.bam
-[Mon 2023-07-31 09:38:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_denovo.bam
-[Mon 2023-07-31 09:57:48] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_denovo.sorted.bam
-[Mon 2023-07-31 09:59:44] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_denovo.sorted.bam
-[Mon 2023-07-31 09:59:44] [INFO ] Detecting reads containing Back-splicing signals
-[Mon 2023-07-31 10:02:48] [INFO ] Detecting FSJ reads from genome alignment file
-[Mon 2023-07-31 10:22:18] [INFO ] Merge bsj and fsj results
-[Mon 2023-07-31 10:22:18] [INFO ] Loading annotation gtf ..
-[Mon 2023-07-31 10:22:33] [INFO ] Output circRNA expression values
-[Mon 2023-07-31 10:22:46] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.gtf
-[Mon 2023-07-31 10:22:46] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 03:38:28 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 10:22:51 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 03:38:27 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 05:37:08
-Start to annotate fusion junctions...
-Annotated 10882 fusion junctions!
-Start to fix fusion junctions...
-Fixed 7329 fusion junctions!
-End CIRCexplorer2 annotate at 05:37:53
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 05:38:08 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 03:38:27 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 31 03:38:27 ..... started STAR run
-Jul 31 03:38:27 ..... loading genome
-Jul 31 03:44:00 ..... started mapping
-Jul 31 04:14:58 ..... finished mapping
-Jul 31 04:15:10 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 04:15:44 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 03:38:27 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_fc20e584ca_20150820 at Mon Jul 31 09:59:41 CST 2023
-[Mon 2023-07-31 10:22:53] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_2.fastq.gz
-[Mon 2023-07-31 10:22:53] [INFO ] Library type: unstranded
-[Mon 2023-07-31 10:22:53] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813
-[Mon 2023-07-31 10:22:53] [INFO ] Config: hg38 Loaded
-[Mon 2023-07-31 10:22:53] [INFO ] 96 CPU cores availble, using 30
-[Mon 2023-07-31 10:22:53] [INFO ] Align RNA-seq reads to reference genome ..
-[Mon 2023-07-31 10:22:53] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.bam
-****** Processing GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Mon 2023-07-31 12:40:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.bam
-[bam_sort_core] merging from 1 files and 30 in-memory blocks...
-[Mon 2023-07-31 12:49:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.sorted.bam
-[Mon 2023-07-31 12:50:28] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.sorted.bam
-[Mon 2023-07-31 12:50:28] [INFO ] Skipping gene abundance estimation
-[Mon 2023-07-31 12:50:28] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Mon 2023-07-31 12:50:28] [INFO ] Running BWA-mem mapping candidate reads ..
-[Mon 2023-07-31 12:50:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_unmapped.sam
-[Mon 2023-07-31 13:22:47] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_unmapped.sam
-[Mon 2023-07-31 13:22:47] [INFO ] Running CIRI2 for circRNA detection ..
-[Mon 2023-07-31 13:22:47] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.log
-[Mon 2023-07-31 13:40:34] [INFO ] Extract circular sequence
-[Mon 2023-07-31 13:40:34] [0%   ] [..................................................][Mon 2023-07-31 13:41:44] [4%   ] [##................................................][Mon 2023-07-31 13:41:45] [8%   ] [####..............................................][Mon 2023-07-31 13:41:50] [12%  ] [######............................................][Mon 2023-07-31 13:41:53] [16%  ] [########..........................................][Mon 2023-07-31 13:41:59] [20%  ] [##########........................................][Mon 2023-07-31 13:42:00] [25%  ] [############......................................][Mon 2023-07-31 13:42:02] [29%  ] [##############....................................][Mon 2023-07-31 13:42:03] [33%  ] [################..................................][Mon 2023-07-31 13:42:06] [37%  ] [##################................................][Mon 2023-07-31 13:42:06] [41%  ] [####################..............................][Mon 2023-07-31 13:42:07] [45%  ] [######################............................][Mon 2023-07-31 13:42:10] [50%  ] [#########################.........................][Mon 2023-07-31 13:42:11] [54%  ] [###########################.......................][Mon 2023-07-31 13:42:11] [58%  ] [############################......................][Mon 2023-07-31 13:42:13] [62%  ] [###############################...................][Mon 2023-07-31 13:42:17] [66%  ] [#################################.................][Mon 2023-07-31 13:42:19] [70%  ] [###################################...............][Mon 2023-07-31 13:42:21] [75%  ] [#####################################.............][Mon 2023-07-31 13:42:25] [79%  ] [#######################################...........][Mon 2023-07-31 13:42:28] [83%  ] [#########################################.........][Mon 2023-07-31 13:42:31] [87%  ] [###########################################.......][Mon 2023-07-31 13:42:33] [91%  ] [#############################################.....][Mon 2023-07-31 13:42:37] [95%  ] [###############################################...][Mon 2023-07-31 13:42:42] [100% ] [##################################################]
-[Mon 2023-07-31 13:42:42] [INFO ] Building circular index ..
-[Mon 2023-07-31 13:42:42] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 30 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_index
-[Mon 2023-07-31 13:47:04] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_index
-[Mon 2023-07-31 13:47:04] [INFO ] De novo alignment for circular RNAs ..
-[Mon 2023-07-31 13:47:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_denovo.bam
-[Mon 2023-07-31 15:00:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_denovo.bam
-[Mon 2023-07-31 15:03:08] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_denovo.sorted.bam
-[Mon 2023-07-31 15:03:30] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_denovo.sorted.bam
-[Mon 2023-07-31 15:03:30] [INFO ] Detecting reads containing Back-splicing signals
-[Mon 2023-07-31 15:04:45] [INFO ] Detecting FSJ reads from genome alignment file
-[Mon 2023-07-31 15:16:49] [INFO ] Merge bsj and fsj results
-[Mon 2023-07-31 15:16:49] [INFO ] Loading annotation gtf ..
-[Mon 2023-07-31 15:26:58] [INFO ] Output circRNA expression values
-[Mon 2023-07-31 15:27:14] [INFO ] circRNA Expression profile: GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.gtf
-[Mon 2023-07-31 15:27:14] [INFO ] Finished!
-Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 10:22:53 CST 2023
-Final result file does not exist, run it.
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.CIRI.bed
-End CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 15:27:17 CST 2023
-Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 10:22:51 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_circ2_result.txt -o GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 11:27:16
-Start to annotate fusion junctions...
-Annotated 9845 fusion junctions!
-Start to fix fusion junctions...
-Fixed 6313 fusion junctions!
-End CIRCexplorer2 annotate at 11:27:57
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.circexplorer2.bed
-End circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 11:28:08 CST 2023
-Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 10:22:51 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Jul 31 10:22:51 ..... started STAR run
-Jul 31 10:22:51 ..... loading genome
-Jul 31 10:29:04 ..... started mapping
-Jul 31 10:48:24 ..... finished mapping
-Jul 31 10:48:34 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.circRNA_finder.bed
-End circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 10:48:55 CST 2023
-Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 10:22:51 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813, final result should be GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813.find_circ.bed
-End find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_75b63f12f5_20150813 at Mon Jul 31 13:58:58 CST 2023
-[Mon 2023-07-31 15:27:19] [INFO ] Input reads: go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_1.fastq.gz,go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_2.fastq.gz
-[Mon 2023-07-31 15:27:19] [INFO ] Library type: unstranded
-[Mon 2023-07-31 15:27:19] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI, Output prefix: go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625
-[Mon 2023-07-31 15:27:19] [INFO ] Config: hg38 Loaded
-[Mon 2023-07-31 15:27:19] [INFO ] 96 CPU cores availble, using 30
-[Mon 2023-07-31 15:27:19] [INFO ] Align RNA-seq reads to reference genome ..
-[Mon 2023-07-31 15:27:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 30 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/align/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.bam
-****** Processing go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Mon 2023-07-31 16:31:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 30 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/align/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/align/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.bam
-[bam_sort_core] merging from 1 files and 30 in-memory blocks...
-[Mon 2023-07-31 16:37:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 30 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/align/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.sorted.bam
-[Mon 2023-07-31 16:37:36] [DEBUG] HISAT2 bam: go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.sorted.bam
-[Mon 2023-07-31 16:37:36] [INFO ] Skipping gene abundance estimation
-[Mon 2023-07-31 16:37:36] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Mon 2023-07-31 16:37:36] [INFO ] Running BWA-mem mapping candidate reads ..
-[Mon 2023-07-31 16:37:36] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 30 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/circ/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_unmapped.sam
-[Mon 2023-07-31 17:09:21] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/circ/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_unmapped.sam
-[Mon 2023-07-31 17:09:21] [INFO ] Running CIRI2 for circRNA detection ..
-[Mon 2023-07-31 17:09:21] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/circ/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/circ/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 30 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.CIRI/go28753_ngs_rna_wts_rnaaccess_EA_f04c74af22_20160625.log
+Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Wed Aug  2 22:50:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Wed Aug  2 22:50:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Wed Aug  2 22:50:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_84b2d1874a_20150813 at Wed Aug  2 22:50:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Wed Aug  2 22:50:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Wed Aug  2 22:50:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Wed Aug  2 22:50:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_f3251ce553_20150820 at Wed Aug  2 22:50:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Wed Aug  2 22:50:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Wed Aug  2 22:50:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Wed Aug  2 22:50:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_8827fa15c2_20150813 at Wed Aug  2 22:50:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Wed Aug  2 22:50:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Wed Aug  2 22:50:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Wed Aug  2 22:50:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_0f0fda909f_20150820 at Wed Aug  2 22:50:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Wed Aug  2 22:50:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Wed Aug  2 22:50:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Wed Aug  2 22:50:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_4e0f4395a5_20150813 at Wed Aug  2 22:50:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Wed Aug  2 22:50:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Wed Aug  2 22:50:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Wed Aug  2 22:50:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO28753_ngs_rna_targrna_rnaaccess_EA_d244d2ddaa_20150813 at Wed Aug  2 22:50:19 CST 2023
+Final result exists and is not empty, skipped this sample.
