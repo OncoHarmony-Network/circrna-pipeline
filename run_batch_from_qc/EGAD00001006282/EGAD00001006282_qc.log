@@ -167,3 +167,2112 @@ HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_SCREEN_fastp.html
 /home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt98_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt98_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_SCREEN_fastp.html -w 20 
 fastp v0.23.4, time used: 216 seconds
 WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 53932545
+total bases: 2747049160
+Q20 bases: 2697585126(98.1994%)
+Q30 bases: 2632671990(95.8364%)
+
+Read2 before filtering:
+total reads: 53932545
+total bases: 2740621611
+Q20 bases: 2655856682(96.9071%)
+Q30 bases: 2554203547(93.198%)
+
+Read1 after filtering:
+total reads: 53932544
+total bases: 2746711898
+Q20 bases: 2697258074(98.1995%)
+Q30 bases: 2632358826(95.8367%)
+
+Read2 after filtering:
+total reads: 53932544
+total bases: 2740287943
+Q20 bases: 2655543563(96.9075%)
+Q30 bases: 2553914195(93.1988%)
+
+Filtering result:
+reads passed filter: 107865088
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 73194
+bases trimmed due to adapters: 670833
+
+Duplication rate: 52.8807%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt77_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt77_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 428 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50582019
+total bases: 2574971824
+Q20 bases: 2519393559(97.8416%)
+Q30 bases: 2447294798(95.0416%)
+
+Read2 before filtering:
+total reads: 50582019
+total bases: 2570412728
+Q20 bases: 2480256485(96.4925%)
+Q30 bases: 2374190451(92.3661%)
+
+Read1 after filtering:
+total reads: 50582018
+total bases: 2574722537
+Q20 bases: 2519154042(97.8418%)
+Q30 bases: 2447067839(95.042%)
+
+Read2 after filtering:
+total reads: 50582018
+total bases: 2570166867
+Q20 bases: 2480029599(96.4929%)
+Q30 bases: 2373983841(92.3669%)
+
+Filtering result:
+reads passed filter: 101164036
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 49182
+bases trimmed due to adapters: 495071
+
+Duplication rate: 46.3279%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt103_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt103_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 572 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50509807
+total bases: 2572864997
+Q20 bases: 2528451593(98.2738%)
+Q30 bases: 2469529593(95.9836%)
+
+Read2 before filtering:
+total reads: 50509807
+total bases: 2565248579
+Q20 bases: 2479235071(96.647%)
+Q30 bases: 2377317253(92.674%)
+
+Read1 after filtering:
+total reads: 50509807
+total bases: 2572539951
+Q20 bases: 2528135676(98.2739%)
+Q30 bases: 2469226292(95.984%)
+
+Read2 after filtering:
+total reads: 50509807
+total bases: 2564926208
+Q20 bases: 2478929797(96.6472%)
+Q30 bases: 2377033699(92.6745%)
+
+Filtering result:
+reads passed filter: 101019614
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 78772
+bases trimmed due to adapters: 647417
+
+Duplication rate: 70.4851%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt77_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt77_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt77_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 602 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50087285
+total bases: 2550976743
+Q20 bases: 2484857312(97.4081%)
+Q30 bases: 2407811062(94.3878%)
+
+Read2 before filtering:
+total reads: 50087285
+total bases: 2547223139
+Q20 bases: 2441183541(95.8371%)
+Q30 bases: 2326468658(91.3335%)
+
+Read1 after filtering:
+total reads: 50087285
+total bases: 2550740866
+Q20 bases: 2484631659(97.4082%)
+Q30 bases: 2407596795(94.3881%)
+
+Read2 after filtering:
+total reads: 50087285
+total bases: 2546988732
+Q20 bases: 2440968015(95.8374%)
+Q30 bases: 2326270993(91.3342%)
+
+Filtering result:
+reads passed filter: 100174570
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 46720
+bases trimmed due to adapters: 470284
+
+Duplication rate: 37.7067%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt85_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt85_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 572 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 61400337
+total bases: 3128687497
+Q20 bases: 3062413592(97.8817%)
+Q30 bases: 2982190915(95.3176%)
+
+Read2 before filtering:
+total reads: 61400337
+total bases: 3123670364
+Q20 bases: 3005934247(96.2308%)
+Q30 bases: 2874496709(92.023%)
+
+Read1 after filtering:
+total reads: 61400337
+total bases: 3128414836
+Q20 bases: 3062150276(97.8818%)
+Q30 bases: 2981938736(95.3179%)
+
+Read2 after filtering:
+total reads: 61400337
+total bases: 3123399068
+Q20 bases: 3005682098(96.2311%)
+Q30 bases: 2874264054(92.0236%)
+
+Filtering result:
+reads passed filter: 122800674
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 56566
+bases trimmed due to adapters: 543957
+
+Duplication rate: 31.4174%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20025_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20025_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 728 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52376629
+total bases: 2667766513
+Q20 bases: 2621063122(98.2493%)
+Q30 bases: 2557782179(95.8773%)
+
+Read2 before filtering:
+total reads: 52376629
+total bases: 2661687442
+Q20 bases: 2579490732(96.9119%)
+Q30 bases: 2480317248(93.1859%)
+
+Read1 after filtering:
+total reads: 52376629
+total bases: 2667548588
+Q20 bases: 2620851577(98.2494%)
+Q30 bases: 2557579393(95.8775%)
+
+Read2 after filtering:
+total reads: 52376629
+total bases: 2661471432
+Q20 bases: 2579288569(96.9121%)
+Q30 bases: 2480131216(93.1865%)
+
+Filtering result:
+reads passed filter: 104753258
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 47050
+bases trimmed due to adapters: 433935
+
+Duplication rate: 43.9147%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt84_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt84_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 554 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 84534572
+total bases: 4307305854
+Q20 bases: 4286757693(99.5229%)
+Q30 bases: 4210607989(97.755%)
+
+Read2 before filtering:
+total reads: 84534572
+total bases: 4302982438
+Q20 bases: 4266609700(99.1547%)
+Q30 bases: 4155459897(96.5716%)
+
+Read1 after filtering:
+total reads: 84534563
+total bases: 4306966203
+Q20 bases: 4286422084(99.523%)
+Q30 bases: 4210286116(97.7553%)
+
+Read2 after filtering:
+total reads: 84534563
+total bases: 4302645453
+Q20 bases: 4266285875(99.1549%)
+Q30 bases: 4155165022(96.5723%)
+
+Filtering result:
+reads passed filter: 169069126
+reads failed due to low quality: 18
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 60876
+bases trimmed due to adapters: 675718
+
+Duplication rate: 61.04%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt30041_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt30041_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 808 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57988489
+total bases: 2950336989
+Q20 bases: 2877283593(97.5239%)
+Q30 bases: 2774864764(94.0525%)
+
+Read2 before filtering:
+total reads: 57988489
+total bases: 2940551227
+Q20 bases: 2841678175(96.6376%)
+Q30 bases: 2711042931(92.1951%)
+
+Read1 after filtering:
+total reads: 57988489
+total bases: 2949968417
+Q20 bases: 2876927553(97.524%)
+Q30 bases: 2774528512(94.0528%)
+
+Read2 after filtering:
+total reads: 57988489
+total bases: 2940184420
+Q20 bases: 2841330744(96.6378%)
+Q30 bases: 2710723581(92.1957%)
+
+Filtering result:
+reads passed filter: 115976978
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 92324
+bases trimmed due to adapters: 735379
+
+Duplication rate: 69.0917%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt78_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt78_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 526 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52561999
+total bases: 2677739062
+Q20 bases: 2639003046(98.5534%)
+Q30 bases: 2583626174(96.4854%)
+
+Read2 before filtering:
+total reads: 52561999
+total bases: 2671812589
+Q20 bases: 2588823142(96.8939%)
+Q30 bases: 2488912501(93.1545%)
+
+Read1 after filtering:
+total reads: 52561998
+total bases: 2677541695
+Q20 bases: 2638810896(98.5535%)
+Q30 bases: 2583441350(96.4856%)
+
+Read2 after filtering:
+total reads: 52561998
+total bases: 2671617910
+Q20 bases: 2588641713(96.8942%)
+Q30 bases: 2488745355(93.155%)
+
+Filtering result:
+reads passed filter: 105123996
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 39218
+bases trimmed due to adapters: 391962
+
+Duplication rate: 46.3054%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt8_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt8_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 457 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57768215
+total bases: 2942135328
+Q20 bases: 2869463178(97.53%)
+Q30 bases: 2783904039(94.6219%)
+
+Read2 before filtering:
+total reads: 57768215
+total bases: 2936901926
+Q20 bases: 2822371614(96.1003%)
+Q30 bases: 2694291152(91.7392%)
+
+Read1 after filtering:
+total reads: 57768213
+total bases: 2941910583
+Q20 bases: 2869247624(97.5301%)
+Q30 bases: 2783698891(94.6221%)
+
+Read2 after filtering:
+total reads: 57768213
+total bases: 2936679022
+Q20 bases: 2822166808(96.1006%)
+Q30 bases: 2694103373(91.7398%)
+
+Filtering result:
+reads passed filter: 115536426
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 44656
+bases trimmed due to adapters: 447475
+
+Duplication rate: 62.1522%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt81_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt81_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt81_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt81_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt81_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt81_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt81_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt81_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 476 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 54591499
+total bases: 2782349174
+Q20 bases: 2704597335(97.2055%)
+Q30 bases: 2612606306(93.8993%)
+
+Read2 before filtering:
+total reads: 54591499
+total bases: 2778576705
+Q20 bases: 2672320712(96.1759%)
+Q30 bases: 2557193783(92.0325%)
+
+Read1 after filtering:
+total reads: 54591496
+total bases: 2782047422
+Q20 bases: 2704303229(97.2055%)
+Q30 bases: 2612322229(93.8993%)
+
+Read2 after filtering:
+total reads: 54591496
+total bases: 2778276409
+Q20 bases: 2672036956(96.1761%)
+Q30 bases: 2556927178(92.0329%)
+
+Filtering result:
+reads passed filter: 109182992
+reads failed due to low quality: 6
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 61758
+bases trimmed due to adapters: 601772
+
+Duplication rate: 27.7005%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_WEEK2_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_WEEK2_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20034_WEEK2_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20034_WEEK2_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_WEEK2_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_WEEK2_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_WEEK2_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_WEEK2_fastp.html -w 20 
+fastp v0.23.4, time used: 424 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57439575
+total bases: 2927742849
+Q20 bases: 2876982764(98.2662%)
+Q30 bases: 2813101905(96.0843%)
+
+Read2 before filtering:
+total reads: 57439575
+total bases: 2924209321
+Q20 bases: 2824142991(96.578%)
+Q30 bases: 2716980794(92.9133%)
+
+Read1 after filtering:
+total reads: 57439574
+total bases: 2927416708
+Q20 bases: 2876663966(98.2663%)
+Q30 bases: 2812792880(96.0845%)
+
+Read2 after filtering:
+total reads: 57439574
+total bases: 2923884745
+Q20 bases: 2823834270(96.5782%)
+Q30 bases: 2716688586(92.9137%)
+
+Filtering result:
+reads passed filter: 114879148
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 65502
+bases trimmed due to adapters: 650618
+
+Duplication rate: 28.2714%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20034_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20034_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20034_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 435 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 51413651
+total bases: 2619237719
+Q20 bases: 2568488088(98.0624%)
+Q30 bases: 2502380765(95.5385%)
+
+Read2 before filtering:
+total reads: 51413651
+total bases: 2613993533
+Q20 bases: 2528877503(96.7438%)
+Q30 bases: 2431487405(93.0181%)
+
+Read1 after filtering:
+total reads: 51413650
+total bases: 2618991401
+Q20 bases: 2568249971(98.0626%)
+Q30 bases: 2502152636(95.5388%)
+
+Read2 after filtering:
+total reads: 51413650
+total bases: 2613749176
+Q20 bases: 2528648701(96.7441%)
+Q30 bases: 2431275150(93.0187%)
+
+Filtering result:
+reads passed filter: 102827300
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 52926
+bases trimmed due to adapters: 490593
+
+Duplication rate: 54.6701%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt98_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt98_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt98_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 475 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 49118161
+total bases: 2501800907
+Q20 bases: 2440060139(97.5321%)
+Q30 bases: 2365841963(94.5656%)
+
+Read2 before filtering:
+total reads: 49118161
+total bases: 2496059365
+Q20 bases: 2383278598(95.4816%)
+Q30 bases: 2260199969(90.5507%)
+
+Read1 after filtering:
+total reads: 49118160
+total bases: 2501584999
+Q20 bases: 2439853406(97.5323%)
+Q30 bases: 2365645873(94.5659%)
+
+Read2 after filtering:
+total reads: 49118160
+total bases: 2495845415
+Q20 bases: 2383083058(95.482%)
+Q30 bases: 2260021946(90.5514%)
+
+Filtering result:
+reads passed filter: 98236320
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 42250
+bases trimmed due to adapters: 429775
+
+Duplication rate: 49.9006%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt109_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt109_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 504 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57992323
+total bases: 2955882901
+Q20 bases: 2888344931(97.7151%)
+Q30 bases: 2809316847(95.0415%)
+
+Read2 before filtering:
+total reads: 57992323
+total bases: 2951948040
+Q20 bases: 2841959446(96.274%)
+Q30 bases: 2723192968(92.2507%)
+
+Read1 after filtering:
+total reads: 57992323
+total bases: 2955618313
+Q20 bases: 2888086789(97.7151%)
+Q30 bases: 2809067391(95.0416%)
+
+Read2 after filtering:
+total reads: 57992323
+total bases: 2951684665
+Q20 bases: 2841710459(96.2742%)
+Q30 bases: 2722958930(92.251%)
+
+Filtering result:
+reads passed filter: 115984646
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 53836
+bases trimmed due to adapters: 527963
+
+Duplication rate: 34.1141%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_WEEK2_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_WEEK2_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt30041_WEEK2_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt30041_WEEK2_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_WEEK2_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_WEEK2_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_WEEK2_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30041_WEEK2_fastp.html -w 20 
+fastp v0.23.4, time used: 502 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57578874
+total bases: 2934816167
+Q20 bases: 2858453663(97.398%)
+Q30 bases: 2766038758(94.2491%)
+
+Read2 before filtering:
+total reads: 57578874
+total bases: 2930617728
+Q20 bases: 2815973572(96.0881%)
+Q30 bases: 2693307055(91.9024%)
+
+Read1 after filtering:
+total reads: 57578873
+total bases: 2934596994
+Q20 bases: 2858239790(97.398%)
+Q30 bases: 2765831521(94.2491%)
+
+Read2 after filtering:
+total reads: 57578873
+total bases: 2930399549
+Q20 bases: 2815767229(96.0882%)
+Q30 bases: 2693112986(91.9026%)
+
+Filtering result:
+reads passed filter: 115157746
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 44002
+bases trimmed due to adapters: 437257
+
+Duplication rate: 32.8123%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20039_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20039_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20039_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20039_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20039_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20039_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20039_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20039_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 416 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 51274562
+total bases: 2612557747
+Q20 bases: 2570360527(98.3848%)
+Q30 bases: 2513699044(96.216%)
+
+Read2 before filtering:
+total reads: 51274562
+total bases: 2606754592
+Q20 bases: 2520078071(96.6749%)
+Q30 bases: 2418433052(92.7756%)
+
+Read1 after filtering:
+total reads: 51274561
+total bases: 2612220702
+Q20 bases: 2570032612(98.385%)
+Q30 bases: 2513383609(96.2164%)
+
+Read2 after filtering:
+total reads: 51274561
+total bases: 2606419588
+Q20 bases: 2519760083(96.6752%)
+Q30 bases: 2418134815(92.7761%)
+
+Filtering result:
+reads passed filter: 102549122
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 79190
+bases trimmed due to adapters: 671950
+
+Duplication rate: 69.5259%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt13_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt13_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt13_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt13_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt13_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt13_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt13_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt13_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 511 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52223943
+total bases: 2660827860
+Q20 bases: 2612913738(98.1993%)
+Q30 bases: 2549701575(95.8236%)
+
+Read2 before filtering:
+total reads: 52223943
+total bases: 2655989714
+Q20 bases: 2572082868(96.8408%)
+Q30 bases: 2472225356(93.0811%)
+
+Read1 after filtering:
+total reads: 52223942
+total bases: 2660559429
+Q20 bases: 2612653405(98.1994%)
+Q30 bases: 2549452054(95.8239%)
+
+Read2 after filtering:
+total reads: 52223942
+total bases: 2655722528
+Q20 bases: 2571829205(96.841%)
+Q30 bases: 2471987346(93.0815%)
+
+Filtering result:
+reads passed filter: 104447884
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 61408
+bases trimmed due to adapters: 535534
+
+Duplication rate: 49.5783%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt7_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt7_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt7_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt7_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt7_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt7_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt7_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt7_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 477 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 53501499
+total bases: 2726018360
+Q20 bases: 2673902908(98.0882%)
+Q30 bases: 2607371297(95.6476%)
+
+Read2 before filtering:
+total reads: 53501499
+total bases: 2723875634
+Q20 bases: 2641826840(96.9878%)
+Q30 bases: 2554032661(93.7647%)
+
+Read1 after filtering:
+total reads: 53501499
+total bases: 2725739268
+Q20 bases: 2673631093(98.0883%)
+Q30 bases: 2607108695(95.6478%)
+
+Read2 after filtering:
+total reads: 53501499
+total bases: 2723596456
+Q20 bases: 2641559253(96.9879%)
+Q30 bases: 2553778040(93.7649%)
+
+Filtering result:
+reads passed filter: 107002998
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 59850
+bases trimmed due to adapters: 558270
+
+Duplication rate: 30.892%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30019_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30019_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt30019_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt30019_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30019_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30019_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30019_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt30019_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 426 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52121799
+total bases: 2656373129
+Q20 bases: 2610245410(98.2635%)
+Q30 bases: 2552376469(96.085%)
+
+Read2 before filtering:
+total reads: 52121799
+total bases: 2652627699
+Q20 bases: 2565997402(96.7342%)
+Q30 bases: 2468817880(93.0707%)
+
+Read1 after filtering:
+total reads: 52121799
+total bases: 2656134171
+Q20 bases: 2610013360(98.2636%)
+Q30 bases: 2552152813(96.0852%)
+
+Read2 after filtering:
+total reads: 52121799
+total bases: 2652390511
+Q20 bases: 2565777079(96.7345%)
+Q30 bases: 2468613607(93.0713%)
+
+Filtering result:
+reads passed filter: 104243598
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 48336
+bases trimmed due to adapters: 476146
+
+Duplication rate: 57.1362%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt28_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt28_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 339 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50586260
+total bases: 2576585827
+Q20 bases: 2527508463(98.0953%)
+Q30 bases: 2464341641(95.6437%)
+
+Read2 before filtering:
+total reads: 50586260
+total bases: 2568707279
+Q20 bases: 2480667573(96.5726%)
+Q30 bases: 2377822796(92.5689%)
+
+Read1 after filtering:
+total reads: 50586259
+total bases: 2576356864
+Q20 bases: 2527286832(98.0954%)
+Q30 bases: 2464129888(95.644%)
+
+Read2 after filtering:
+total reads: 50586259
+total bases: 2568481437
+Q20 bases: 2480457795(96.5729%)
+Q30 bases: 2377631306(92.5695%)
+
+Filtering result:
+reads passed filter: 101172518
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 48166
+bases trimmed due to adapters: 454703
+
+Duplication rate: 50.0233%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt49_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt49_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 184 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 58917715
+total bases: 3002507187
+Q20 bases: 2945726404(98.1089%)
+Q30 bases: 2874292802(95.7298%)
+
+Read2 before filtering:
+total reads: 58917715
+total bases: 2996265579
+Q20 bases: 2873101700(95.8894%)
+Q30 bases: 2736778559(91.3397%)
+
+Read1 after filtering:
+total reads: 58917713
+total bases: 3002226624
+Q20 bases: 2945453734(98.109%)
+Q30 bases: 2874030065(95.73%)
+
+Read2 after filtering:
+total reads: 58917713
+total bases: 2995987528
+Q20 bases: 2872843477(95.8897%)
+Q30 bases: 2736540971(91.3402%)
+
+Filtering result:
+reads passed filter: 117835426
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 60414
+bases trimmed due to adapters: 558444
+
+Duplication rate: 34.7612%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20007_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20007_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 215 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 62807167
+total bases: 3198634908
+Q20 bases: 3119379474(97.5222%)
+Q30 bases: 3025244493(94.5792%)
+
+Read2 before filtering:
+total reads: 62807167
+total bases: 3192512564
+Q20 bases: 3063576150(95.9613%)
+Q30 bases: 2920188024(91.4699%)
+
+Read1 after filtering:
+total reads: 62807164
+total bases: 3198369532
+Q20 bases: 3119125900(97.5224%)
+Q30 bases: 3025004206(94.5796%)
+
+Read2 after filtering:
+total reads: 62807164
+total bases: 3192249555
+Q20 bases: 3063335690(95.9617%)
+Q30 bases: 2919969006(91.4706%)
+
+Filtering result:
+reads passed filter: 125614328
+reads failed due to low quality: 6
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 52800
+bases trimmed due to adapters: 528098
+
+Duplication rate: 57.1232%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt90_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt90_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt90_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt90_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt90_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt90_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt90_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt90_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 228 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 62822884
+total bases: 3199646113
+Q20 bases: 3120237894(97.5182%)
+Q30 bases: 3026872210(94.6002%)
+
+Read2 before filtering:
+total reads: 62822884
+total bases: 3193919366
+Q20 bases: 3067384570(96.0383%)
+Q30 bases: 2926198055(91.6178%)
+
+Read1 after filtering:
+total reads: 62822881
+total bases: 3199344449
+Q20 bases: 3119948977(97.5184%)
+Q30 bases: 3026597677(94.6006%)
+
+Read2 after filtering:
+total reads: 62822881
+total bases: 3193620436
+Q20 bases: 3067109206(96.0386%)
+Q30 bases: 2925945263(91.6184%)
+
+Filtering result:
+reads passed filter: 125645762
+reads failed due to low quality: 6
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 59472
+bases trimmed due to adapters: 600336
+
+Duplication rate: 41.7092%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt80_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt80_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt80_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt80_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt80_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt80_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt80_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt80_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 230 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 53333167
+total bases: 2715464828
+Q20 bases: 2649873189(97.5845%)
+Q30 bases: 2569035491(94.6076%)
+
+Read2 before filtering:
+total reads: 53333167
+total bases: 2710452183
+Q20 bases: 2610915059(96.3277%)
+Q30 bases: 2495499764(92.0695%)
+
+Read1 after filtering:
+total reads: 53333166
+total bases: 2715211927
+Q20 bases: 2649630876(97.5847%)
+Q30 bases: 2568805990(94.6079%)
+
+Read2 after filtering:
+total reads: 53333166
+total bases: 2710201840
+Q20 bases: 2610684325(96.328%)
+Q30 bases: 2495289131(92.0702%)
+
+Filtering result:
+reads passed filter: 106666332
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 47780
+bases trimmed due to adapters: 503155
+
+Duplication rate: 61.9958%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt101_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt101_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 401 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52281159
+total bases: 2664130401
+Q20 bases: 2623559830(98.4772%)
+Q30 bases: 2567948775(96.3898%)
+
+Read2 before filtering:
+total reads: 52281159
+total bases: 2660092548
+Q20 bases: 2578194438(96.9212%)
+Q30 bases: 2481775627(93.2966%)
+
+Read1 after filtering:
+total reads: 52281158
+total bases: 2663850219
+Q20 bases: 2623286291(98.4772%)
+Q30 bases: 2567684730(96.39%)
+
+Read2 after filtering:
+total reads: 52281158
+total bases: 2659814234
+Q20 bases: 2577932947(96.9215%)
+Q30 bases: 2481532367(93.2972%)
+
+Filtering result:
+reads passed filter: 104562316
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 59544
+bases trimmed due to adapters: 558394
+
+Duplication rate: 56.9479%
+
+Insert size peak (evaluated by paired-end reads): 70
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt44_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt44_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 433 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50547154
+total bases: 2574454260
+Q20 bases: 2510242736(97.5058%)
+Q30 bases: 2435414089(94.5992%)
+
+Read2 before filtering:
+total reads: 50547154
+total bases: 2570681497
+Q20 bases: 2466815144(95.9596%)
+Q30 bases: 2354277976(91.5819%)
+
+Read1 after filtering:
+total reads: 50547152
+total bases: 2574201104
+Q20 bases: 2510000660(97.506%)
+Q30 bases: 2435184156(94.5996%)
+
+Read2 after filtering:
+total reads: 50547152
+total bases: 2570430142
+Q20 bases: 2466584159(95.96%)
+Q30 bases: 2354065857(91.5826%)
+
+Filtering result:
+reads passed filter: 101094304
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 50258
+bases trimmed due to adapters: 504341
+
+Duplication rate: 43.7161%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt66_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt66_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt66_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt66_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt66_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt66_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt66_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt66_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 409 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 62048334
+total bases: 3160101262
+Q20 bases: 3078201379(97.4083%)
+Q30 bases: 2982924122(94.3933%)
+
+Read2 before filtering:
+total reads: 62048334
+total bases: 3156257838
+Q20 bases: 3036408664(96.2028%)
+Q30 bases: 2903479601(91.9912%)
+
+Read1 after filtering:
+total reads: 62048334
+total bases: 3159777648
+Q20 bases: 3077892919(97.4085%)
+Q30 bases: 2982632499(94.3937%)
+
+Read2 after filtering:
+total reads: 62048334
+total bases: 3155936773
+Q20 bases: 3036115204(96.2033%)
+Q30 bases: 2903211452(91.9921%)
+
+Filtering result:
+reads passed filter: 124096668
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 62204
+bases trimmed due to adapters: 644679
+
+Duplication rate: 61.3696%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt101_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt101_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt101_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 476 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 53206561
+total bases: 2711217754
+Q20 bases: 2670762813(98.5079%)
+Q30 bases: 2614763784(96.4424%)
+
+Read2 before filtering:
+total reads: 53206561
+total bases: 2707220412
+Q20 bases: 2627764751(97.065%)
+Q30 bases: 2532520073(93.5469%)
+
+Read1 after filtering:
+total reads: 53206560
+total bases: 2710906966
+Q20 bases: 2670459049(98.508%)
+Q30 bases: 2614470005(96.4426%)
+
+Read2 after filtering:
+total reads: 53206560
+total bases: 2706911620
+Q20 bases: 2627472468(97.0653%)
+Q30 bases: 2532246044(93.5474%)
+
+Filtering result:
+reads passed filter: 106413120
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 65588
+bases trimmed due to adapters: 619502
+
+Duplication rate: 46.2145%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt26_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt26_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 401 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 51548752
+total bases: 2625078804
+Q20 bases: 2539741457(96.7492%)
+Q30 bases: 2444445745(93.1189%)
+
+Read2 before filtering:
+total reads: 51548752
+total bases: 2621526450
+Q20 bases: 2532102666(96.5889%)
+Q30 bases: 2427640466(92.6041%)
+
+Read1 after filtering:
+total reads: 51548750
+total bases: 2624826950
+Q20 bases: 2539499035(96.7492%)
+Q30 bases: 2444215258(93.1191%)
+
+Read2 after filtering:
+total reads: 51548750
+total bases: 2621276219
+Q20 bases: 2531869169(96.5892%)
+Q30 bases: 2427424930(92.6047%)
+
+Filtering result:
+reads passed filter: 103097500
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 55156
+bases trimmed due to adapters: 501908
+
+Duplication rate: 49.233%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt89_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt89_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt89_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt89_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt89_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt89_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt89_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt89_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 293 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 53136848
+total bases: 2706457623
+Q20 bases: 2636273821(97.4068%)
+Q30 bases: 2554972189(94.4028%)
+
+Read2 before filtering:
+total reads: 53136848
+total bases: 2702671689
+Q20 bases: 2591966743(95.9039%)
+Q30 bases: 2471874194(91.4604%)
+
+Read1 after filtering:
+total reads: 53136847
+total bases: 2706225778
+Q20 bases: 2636051922(97.4069%)
+Q30 bases: 2554761381(94.4031%)
+
+Read2 after filtering:
+total reads: 53136847
+total bases: 2702440928
+Q20 bases: 2591753501(95.9042%)
+Q30 bases: 2471677578(91.4609%)
+
+Filtering result:
+reads passed filter: 106273694
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 48144
+bases trimmed due to adapters: 462524
+
+Duplication rate: 39.9289%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt85_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt85_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt85_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 185 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 49498406
+total bases: 2521086648
+Q20 bases: 2477425600(98.2682%)
+Q30 bases: 2417926022(95.9081%)
+
+Read2 before filtering:
+total reads: 49498406
+total bases: 2515475469
+Q20 bases: 2440804671(97.0315%)
+Q30 bases: 2347270473(93.3132%)
+
+Read1 after filtering:
+total reads: 49498406
+total bases: 2520805033
+Q20 bases: 2477152763(98.2683%)
+Q30 bases: 2417665137(95.9085%)
+
+Read2 after filtering:
+total reads: 49498406
+total bases: 2515197054
+Q20 bases: 2440542622(97.0319%)
+Q30 bases: 2347028448(93.3139%)
+
+Filtering result:
+reads passed filter: 98996812
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 64802
+bases trimmed due to adapters: 560030
+
+Duplication rate: 51.3823%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt84_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt84_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt84_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 169 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 55473892
+total bases: 2826533412
+Q20 bases: 2773736925(98.1321%)
+Q30 bases: 2701107936(95.5626%)
+
+Read2 before filtering:
+total reads: 55473892
+total bases: 2824264724
+Q20 bases: 2745112533(97.1974%)
+Q30 bases: 2659613972(94.1701%)
+
+Read1 after filtering:
+total reads: 55473891
+total bases: 2826270530
+Q20 bases: 2773481112(98.1322%)
+Q30 bases: 2700861081(95.5627%)
+
+Read2 after filtering:
+total reads: 55473891
+total bases: 2824002468
+Q20 bases: 2744862206(97.1976%)
+Q30 bases: 2659376672(94.1705%)
+
+Filtering result:
+reads passed filter: 110947782
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 53734
+bases trimmed due to adapters: 525036
+
+Duplication rate: 34.7102%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20019_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20019_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20019_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20019_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20019_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20019_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20019_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20019_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 363 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 51651555
+total bases: 2631106791
+Q20 bases: 2586366151(98.2996%)
+Q30 bases: 2526866199(96.0381%)
+
+Read2 before filtering:
+total reads: 51651555
+total bases: 2625612239
+Q20 bases: 2544923998(96.9269%)
+Q30 bases: 2449955838(93.3099%)
+
+Read1 after filtering:
+total reads: 51651555
+total bases: 2630874712
+Q20 bases: 2586140904(98.2997%)
+Q30 bases: 2526650363(96.0384%)
+
+Read2 after filtering:
+total reads: 51651555
+total bases: 2625383693
+Q20 bases: 2544710901(96.9272%)
+Q30 bases: 2449760024(93.3106%)
+
+Filtering result:
+reads passed filter: 103303110
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 44730
+bases trimmed due to adapters: 460625
+
+Duplication rate: 55.8757%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt79_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt79_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 384 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 60487237
+total bases: 3082291599
+Q20 bases: 2973945171(96.4849%)
+Q30 bases: 2859794968(92.7815%)
+
+Read2 before filtering:
+total reads: 60487237
+total bases: 3078853257
+Q20 bases: 2984841890(96.9465%)
+Q30 bases: 2876667098(93.4331%)
+
+Read1 after filtering:
+total reads: 60487236
+total bases: 3081976893
+Q20 bases: 2973639794(96.4848%)
+Q30 bases: 2859501087(92.7814%)
+
+Read2 after filtering:
+total reads: 60487236
+total bases: 3078539973
+Q20 bases: 2984547253(96.9468%)
+Q30 bases: 2876392046(93.4336%)
+
+Filtering result:
+reads passed filter: 120974472
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 68638
+bases trimmed due to adapters: 627907
+
+Duplication rate: 46.9703%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20007_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20007_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20007_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 404 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52099207
+total bases: 2654522072
+Q20 bases: 2597122904(97.8377%)
+Q30 bases: 2526559017(95.1794%)
+
+Read2 before filtering:
+total reads: 52099207
+total bases: 2649967819
+Q20 bases: 2551317488(96.2773%)
+Q30 bases: 2439875607(92.0719%)
+
+Read1 after filtering:
+total reads: 52099206
+total bases: 2654298564
+Q20 bases: 2596907264(97.8378%)
+Q30 bases: 2526352926(95.1797%)
+
+Read2 after filtering:
+total reads: 52099206
+total bases: 2649745680
+Q20 bases: 2551111381(96.2776%)
+Q30 bases: 2439686055(92.0725%)
+
+Filtering result:
+reads passed filter: 104198412
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 48106
+bases trimmed due to adapters: 445549
+
+Duplication rate: 44.1264%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_WEEK2_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_WEEK2_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20025_WEEK2_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20025_WEEK2_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_WEEK2_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_WEEK2_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_WEEK2_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20025_WEEK2_fastp.html -w 20 
+fastp v0.23.4, time used: 355 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50434929
+total bases: 2570403280
+Q20 bases: 2524858021(98.2281%)
+Q30 bases: 2467387204(95.9922%)
+
+Read2 before filtering:
+total reads: 50434929
+total bases: 2565856813
+Q20 bases: 2471766033(96.333%)
+Q30 bases: 2367804110(92.2812%)
+
+Read1 after filtering:
+total reads: 50434925
+total bases: 2570168730
+Q20 bases: 2524629758(98.2282%)
+Q30 bases: 2467166449(95.9924%)
+
+Read2 after filtering:
+total reads: 50434925
+total bases: 2565623912
+Q20 bases: 2471548256(96.3332%)
+Q30 bases: 2367601105(92.2817%)
+
+Filtering result:
+reads passed filter: 100869850
+reads failed due to low quality: 8
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 49730
+bases trimmed due to adapters: 467107
+
+Duplication rate: 54.8987%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt44_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt44_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt44_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 336 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 57869722
+total bases: 2949596853
+Q20 bases: 2880820099(97.6683%)
+Q30 bases: 2800847522(94.957%)
+
+Read2 before filtering:
+total reads: 57869722
+total bases: 2946021364
+Q20 bases: 2842008949(96.4694%)
+Q30 bases: 2728238040(92.6075%)
+
+Read1 after filtering:
+total reads: 57869721
+total bases: 2949310914
+Q20 bases: 2880541216(97.6683%)
+Q30 bases: 2800577750(94.957%)
+
+Read2 after filtering:
+total reads: 57869721
+total bases: 2945736450
+Q20 bases: 2841737634(96.4695%)
+Q30 bases: 2727981489(92.6078%)
+
+Filtering result:
+reads passed filter: 115739442
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 61124
+bases trimmed due to adapters: 570773
+
+Duplication rate: 30.1525%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt109_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt109_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt109_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 378 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 61957369
+total bases: 3155679760
+Q20 bases: 3076066968(97.4772%)
+Q30 bases: 2982364982(94.5078%)
+
+Read2 before filtering:
+total reads: 61957369
+total bases: 3150708258
+Q20 bases: 3018580273(95.8064%)
+Q30 bases: 2874058841(91.2195%)
+
+Read1 after filtering:
+total reads: 61957367
+total bases: 3155413899
+Q20 bases: 3075812890(97.4773%)
+Q30 bases: 2982124267(94.5082%)
+
+Read2 after filtering:
+total reads: 61957367
+total bases: 3150444745
+Q20 bases: 3018338541(95.8067%)
+Q30 bases: 2873837965(91.2201%)
+
+Filtering result:
+reads passed filter: 123914734
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 52394
+bases trimmed due to adapters: 529199
+
+Duplication rate: 53.9816%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt93_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt93_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt93_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt93_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt93_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt93_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt93_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt93_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 437 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 56690657
+total bases: 2887038577
+Q20 bases: 2836337036(98.2438%)
+Q30 bases: 2764104518(95.7419%)
+
+Read2 before filtering:
+total reads: 56690657
+total bases: 2878842236
+Q20 bases: 2784117084(96.7096%)
+Q30 bases: 2664536975(92.5559%)
+
+Read1 after filtering:
+total reads: 56690656
+total bases: 2886757864
+Q20 bases: 2836064959(98.244%)
+Q30 bases: 2763844948(95.7422%)
+
+Read2 after filtering:
+total reads: 56690656
+total bases: 2878565595
+Q20 bases: 2783858473(96.7099%)
+Q30 bases: 2664300423(92.5565%)
+
+Filtering result:
+reads passed filter: 113381312
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 58934
+bases trimmed due to adapters: 557269
+
+Duplication rate: 35.1805%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt79_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt79_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt79_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 371 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52767691
+total bases: 2686882029
+Q20 bases: 2625981898(97.7334%)
+Q30 bases: 2550520180(94.9249%)
+
+Read2 before filtering:
+total reads: 52767691
+total bases: 2682322553
+Q20 bases: 2584561252(96.3553%)
+Q30 bases: 2472556357(92.1797%)
+
+Read1 after filtering:
+total reads: 52767690
+total bases: 2686633933
+Q20 bases: 2625744236(97.7336%)
+Q30 bases: 2550295105(94.9253%)
+
+Read2 after filtering:
+total reads: 52767690
+total bases: 2682077263
+Q20 bases: 2584336334(96.3558%)
+Q30 bases: 2472351749(92.1805%)
+
+Filtering result:
+reads passed filter: 105535380
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 49594
+bases trimmed due to adapters: 493301
+
+Duplication rate: 40.6247%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt92_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt92_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 302 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52435718
+total bases: 2671259514
+Q20 bases: 2630773281(98.4844%)
+Q30 bases: 2573036911(96.323%)
+
+Read2 before filtering:
+total reads: 52435718
+total bases: 2664572973
+Q20 bases: 2580697336(96.8522%)
+Q30 bases: 2478414007(93.0136%)
+
+Read1 after filtering:
+total reads: 52435717
+total bases: 2670970940
+Q20 bases: 2630492596(98.4845%)
+Q30 bases: 2572767473(96.3233%)
+
+Read2 after filtering:
+total reads: 52435717
+total bases: 2664287532
+Q20 bases: 2580428497(96.8525%)
+Q30 bases: 2478164897(93.0142%)
+
+Filtering result:
+reads passed filter: 104871434
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 63366
+bases trimmed due to adapters: 573927
+
+Duplication rate: 55.4999%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt8_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt8_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt8_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 326 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 51794915
+total bases: 2638795236
+Q20 bases: 2590716912(98.178%)
+Q30 bases: 2527671138(95.7888%)
+
+Read2 before filtering:
+total reads: 51794915
+total bases: 2633407241
+Q20 bases: 2545023474(96.6437%)
+Q30 bases: 2444203172(92.8152%)
+
+Read1 after filtering:
+total reads: 51794915
+total bases: 2638588112
+Q20 bases: 2590516532(98.1781%)
+Q30 bases: 2527478794(95.7891%)
+
+Read2 after filtering:
+total reads: 51794915
+total bases: 2633202372
+Q20 bases: 2544832752(96.644%)
+Q30 bases: 2444027440(92.8158%)
+
+Filtering result:
+reads passed filter: 103589830
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 42860
+bases trimmed due to adapters: 411993
+
+Duplication rate: 58.8008%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt87_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt87_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt87_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt87_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt87_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt87_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt87_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt87_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 321 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 55404236
+total bases: 2823997172
+Q20 bases: 2781600268(98.4987%)
+Q30 bases: 2727772324(96.5926%)
+
+Read2 before filtering:
+total reads: 55404236
+total bases: 2820162165
+Q20 bases: 2730539248(96.8221%)
+Q30 bases: 2631690890(93.317%)
+
+Read1 after filtering:
+total reads: 55404235
+total bases: 2823645687
+Q20 bases: 2781256964(98.4988%)
+Q30 bases: 2727439222(96.5928%)
+
+Read2 after filtering:
+total reads: 55404235
+total bases: 2819813077
+Q20 bases: 2730211075(96.8224%)
+Q30 bases: 2631383007(93.3176%)
+
+Filtering result:
+reads passed filter: 110808470
+reads failed due to low quality: 2
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 72734
+bases trimmed due to adapters: 700489
+
+Duplication rate: 46.3285%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt26_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt26_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt26_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 359 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 52954815
+total bases: 2696328575
+Q20 bases: 2635126317(97.7302%)
+Q30 bases: 2558721988(94.8965%)
+
+Read2 before filtering:
+total reads: 52954815
+total bases: 2692025612
+Q20 bases: 2598176340(96.5138%)
+Q30 bases: 2490363780(92.5089%)
+
+Read1 after filtering:
+total reads: 52954813
+total bases: 2696105746
+Q20 bases: 2634912516(97.7303%)
+Q30 bases: 2558519047(94.8968%)
+
+Read2 after filtering:
+total reads: 52954813
+total bases: 2691805095
+Q20 bases: 2597974035(96.5142%)
+Q30 bases: 2490179636(92.5097%)
+
+Filtering result:
+reads passed filter: 105909626
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 43834
+bases trimmed due to adapters: 443152
+
+Duplication rate: 54.8542%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt92_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt92_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt92_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 344 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 54419876
+total bases: 2772953051
+Q20 bases: 2728962252(98.4136%)
+Q30 bases: 2670291257(96.2977%)
+
+Read2 before filtering:
+total reads: 54419876
+total bases: 2769191733
+Q20 bases: 2683638933(96.9105%)
+Q30 bases: 2584131515(93.3172%)
+
+Read1 after filtering:
+total reads: 54419874
+total bases: 2772562501
+Q20 bases: 2728581205(98.4137%)
+Q30 bases: 2669923274(96.298%)
+
+Read2 after filtering:
+total reads: 54419874
+total bases: 2768802884
+Q20 bases: 2683269143(96.9108%)
+Q30 bases: 2583784122(93.3177%)
+
+Filtering result:
+reads passed filter: 108839748
+reads failed due to low quality: 4
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 91982
+bases trimmed due to adapters: 779224
+
+Duplication rate: 59.8988%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt11_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt11_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 351 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 51477037
+total bases: 2623018202
+Q20 bases: 2584386419(98.5272%)
+Q30 bases: 2530197293(96.4613%)
+
+Read2 before filtering:
+total reads: 51477037
+total bases: 2619110940
+Q20 bases: 2539429119(96.9577%)
+Q30 bases: 2445316798(93.3644%)
+
+Read1 after filtering:
+total reads: 51477037
+total bases: 2622694437
+Q20 bases: 2584069537(98.5273%)
+Q30 bases: 2529890703(96.4615%)
+
+Read2 after filtering:
+total reads: 51477037
+total bases: 2618788716
+Q20 bases: 2539121189(96.9578%)
+Q30 bases: 2445026477(93.3648%)
+
+Filtering result:
+reads passed filter: 102954074
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 75294
+bases trimmed due to adapters: 645989
+
+Duplication rate: 73.4248%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt28_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt28_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt28_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 336 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 54390662
+total bases: 2772208703
+Q20 bases: 2727977149(98.4045%)
+Q30 bases: 2672325723(96.397%)
+
+Read2 before filtering:
+total reads: 54390662
+total bases: 2767349664
+Q20 bases: 2671817409(96.5479%)
+Q30 bases: 2566827792(92.754%)
+
+Read1 after filtering:
+total reads: 54390662
+total bases: 2771919986
+Q20 bases: 2727695999(98.4046%)
+Q30 bases: 2672053814(96.3972%)
+
+Read2 after filtering:
+total reads: 54390662
+total bases: 2767061760
+Q20 bases: 2671545103(96.5481%)
+Q30 bases: 2566571140(92.7544%)
+
+Filtering result:
+reads passed filter: 108781324
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 66326
+bases trimmed due to adapters: 576621
+
+Duplication rate: 55.699%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt16_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt16_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt16_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt16_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt16_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt16_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt16_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt16_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 370 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 54218501
+total bases: 2757409727
+Q20 bases: 2677842118(97.1144%)
+Q30 bases: 2556131456(92.7005%)
+
+Read2 before filtering:
+total reads: 54218501
+total bases: 2749735764
+Q20 bases: 2661843322(96.8036%)
+Q30 bases: 2533398456(92.1324%)
+
+Read1 after filtering:
+total reads: 54218501
+total bases: 2757115165
+Q20 bases: 2677558140(97.1145%)
+Q30 bases: 2555865173(92.7007%)
+
+Read2 after filtering:
+total reads: 54218501
+total bases: 2749443383
+Q20 bases: 2661567616(96.8039%)
+Q30 bases: 2533148673(92.1331%)
+
+Filtering result:
+reads passed filter: 108437002
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 65028
+bases trimmed due to adapters: 586943
+
+Duplication rate: 45.7381%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_SCREEN_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_SCREEN_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt78_SCREEN_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt78_SCREEN_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_SCREEN_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_SCREEN_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_SCREEN_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt78_SCREEN_fastp.html -w 20 
+fastp v0.23.4, time used: 413 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 55400486
+total bases: 2822819352
+Q20 bases: 2767237260(98.031%)
+Q30 bases: 2692014090(95.3661%)
+
+Read2 before filtering:
+total reads: 55400486
+total bases: 2820795301
+Q20 bases: 2741369011(97.1843%)
+Q30 bases: 2655677023(94.1464%)
+
+Read1 after filtering:
+total reads: 55400486
+total bases: 2822586500
+Q20 bases: 2767010862(98.031%)
+Q30 bases: 2691795763(95.3663%)
+
+Read2 after filtering:
+total reads: 55400486
+total bases: 2820562493
+Q20 bases: 2741146220(97.1844%)
+Q30 bases: 2655465330(94.1467%)
+
+Filtering result:
+reads passed filter: 110800972
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 48252
+bases trimmed due to adapters: 465660
+
+Duplication rate: 38.2266%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20018_WEEK4_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20018_WEEK4_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20018_WEEK4_1.clipped.fastq.gz -I /home/zhou/t12a/EGAD00001006282/RNA/raw/Pt20018_WEEK4_2.clipped.fastq.gz -o /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20018_WEEK4_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20018_WEEK4_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20018_WEEK4_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt20018_WEEK4_fastp.html -w 20 
+fastp v0.23.4, time used: 377 seconds
+
+  /// MultiQC 🔍 | v1.14
+
+|           multiqc | Search path : /home/zhou/raid/IO_RNA/EGAD00001006282/fq
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 216/216  
+|             fastp | Found 54 reports
+|           multiqc | Compressing plot data
+|           multiqc | Report      : ../../../../zhou/raid/IO_RNA/EGAD00001006282/fq/multiqc_report.html
+|           multiqc | Data        : ../../../../zhou/raid/IO_RNA/EGAD00001006282/fq/multiqc_data
+|           multiqc | MultiQC complete
