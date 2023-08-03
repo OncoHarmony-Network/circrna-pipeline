@@ -2,6 +2,7 @@
 
 py=/home/circrna/miniconda3/bin/python3
 fp=/home/circrna/miniconda3/bin/fastp
+multiqc=/home/circrna/miniconda3/bin/multiqc
 PIPELINE=/home/circrna/circrna-pipeline
 
 fqfile=./HRA000524.txt
@@ -11,4 +12,4 @@ nthreads=20
 
 ${py} ${PIPELINE}/common/ll_fq.py ${indir} --output ${fqfile}
 
-#nohup bash ${PIPELINE}/qc/fp.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${fp} &> HRA000524_qc.log &
+nohup bash ${PIPELINE}/qc/fp.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${fp} ${multiqc} &> HRA000524_qc.log &
