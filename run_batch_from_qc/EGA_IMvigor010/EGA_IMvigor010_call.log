@@ -1,0 +1,7 @@
+[Sun 2023-08-13 22:39:29] [INFO ] Input reads: A7b450775c2a8_1.fastq.gz,A7b450775c2a8_2.fastq.gz
+[Sun 2023-08-13 22:39:29] [INFO ] Library type: unstranded
+[Sun 2023-08-13 22:39:29] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor010/A7b450775c2a8.CIRI, Output prefix: A7b450775c2a8
+[Sun 2023-08-13 22:39:29] [INFO ] Config: hg38 Loaded
+[Sun 2023-08-13 22:39:29] [INFO ] 128 CPU cores availble, using 6
+[Sun 2023-08-13 22:39:29] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-08-13 22:39:29] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 6 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor010/fq/A7b450775c2a8_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor010/fq/A7b450775c2a8_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor010/A7b450775c2a8.CIRI/align/A7b450775c2a8.bam
