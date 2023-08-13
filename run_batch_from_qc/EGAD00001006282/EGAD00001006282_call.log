@@ -1,0 +1,7 @@
+[Sun 2023-08-13 22:58:40] [INFO ] Input reads: Pt103_SCREEN_1.fastq.gz,Pt103_SCREEN_2.fastq.gz
+[Sun 2023-08-13 22:58:40] [INFO ] Library type: unstranded
+[Sun 2023-08-13 22:58:40] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI, Output prefix: Pt103_SCREEN
+[Sun 2023-08-13 22:58:40] [INFO ] Config: hg38 Loaded
+[Sun 2023-08-13 22:58:40] [INFO ] 96 CPU cores availble, using 2
+[Sun 2023-08-13 22:58:40] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-08-13 22:58:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/align/Pt103_SCREEN.bam
