@@ -113,3 +113,67 @@ Indexing .bam file...
 [Mon 2023-08-14 09:37:16] [INFO ] De novo alignment for circular RNAs ..
 [Mon 2023-08-14 09:37:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_index -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.bam
 [Mon 2023-08-14 09:54:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 2 -o /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.bam
+[Mon 2023-08-14 10:03:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 2 /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.sorted.bam
+[Mon 2023-08-14 10:04:21] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.sorted.bam
+[Mon 2023-08-14 10:04:21] [INFO ] Detecting reads containing Back-splicing signals
+[Mon 2023-08-14 10:04:42] [INFO ] Detecting FSJ reads from genome alignment file
+[Mon 2023-08-14 10:10:42] [INFO ] Merge bsj and fsj results
+[Mon 2023-08-14 10:10:42] [INFO ] Loading annotation gtf ..
+[Mon 2023-08-14 10:10:57] [INFO ] Output circRNA expression values
+[Mon 2023-08-14 10:10:59] [INFO ] circRNA Expression profile: Pt11_WEEK4.gtf
+[Mon 2023-08-14 10:10:59] [INFO ] Finished!
+/home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh: line 39: -p: command not found
+Start CIRIquant for Pt11_WEEK4 at Mon Aug 14 05:27:43 CST 2023
+Final result file does not exist, run it.
+Done for Pt11_WEEK4, final result should be Pt11_WEEK4.CIRI.bed
+End CIRIquant for Pt11_WEEK4 at Mon Aug 14 10:11:02 CST 2023
+Start circexplorer2 for Pt11_WEEK4 at Mon Aug 14 05:27:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b Pt11_WEEK4_circ2_result.txt -o Pt11_WEEK4_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 08:23:28
+Start to annotate fusion junctions...
+Annotated 267 fusion junctions!
+Start to fix fusion junctions...
+Fixed 166 fusion junctions!
+End CIRCexplorer2 annotate at 08:23:38
+Done for Pt11_WEEK4, final result should be Pt11_WEEK4.circexplorer2.bed
+End circexplorer2 for Pt11_WEEK4 at Mon Aug 14 08:23:41 CST 2023
+Start circRNA_finder for Pt11_WEEK4 at Mon Aug 14 05:27:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_1.fastq.gz /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix Pt11_WEEK4. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Aug 14 05:27:41 ..... started STAR run
+Aug 14 05:27:41 ..... loading genome
+Aug 14 05:28:38 ..... started mapping
+Aug 14 05:32:33 ..... finished mapping
+Aug 14 05:32:38 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for Pt11_WEEK4, final result should be Pt11_WEEK4.circRNA_finder.bed
+End circRNA_finder for Pt11_WEEK4 at Mon Aug 14 05:32:46 CST 2023
+Start find_circ for Pt11_WEEK4 at Mon Aug 14 05:27:41 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for Pt11_WEEK4, final result should be Pt11_WEEK4.find_circ.bed
+End find_circ for Pt11_WEEK4 at Mon Aug 14 08:56:25 CST 2023
+[Mon 2023-08-14 10:11:04] [INFO ] Input reads: Pt49_SCREEN_1.fastq.gz,Pt49_SCREEN_2.fastq.gz
+[Mon 2023-08-14 10:11:04] [INFO ] Library type: unstranded
+[Mon 2023-08-14 10:11:04] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt49_SCREEN.CIRI, Output prefix: Pt49_SCREEN
+[Mon 2023-08-14 10:11:04] [INFO ] Config: hg38 Loaded
+[Mon 2023-08-14 10:11:04] [INFO ] 96 CPU cores availble, using 2
+[Mon 2023-08-14 10:11:04] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-08-14 10:11:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_SCREEN_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_SCREEN_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt49_SCREEN.CIRI/align/Pt49_SCREEN.bam
+****** Processing Pt49_SCREEN. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...

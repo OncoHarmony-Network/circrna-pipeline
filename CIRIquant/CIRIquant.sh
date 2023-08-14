@@ -28,6 +28,9 @@ else
     echo "Final result file does not exist, run it."
 fi
 
+# To avoid error: https://github.com/bioinfo-biols/CIRIquant/issues/37
+rm -rf ${outdir2}/*
+
 CIRIquant -t ${ncpu} \
         -1 ${indir}/${sample}_1.fastq.gz \
         -2 ${indir}/${sample}_2.fastq.gz \

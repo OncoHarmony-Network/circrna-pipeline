@@ -29,6 +29,8 @@ else
     echo "Final result file does not exist, run it."
 fi
 
+rm -rf ${outdir2}/*
+
 echo "1. Aligning reads..."
 
 bowtie2 \

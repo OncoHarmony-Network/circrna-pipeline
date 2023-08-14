@@ -28,6 +28,8 @@ else
     echo "Final result file does not exist, run it."
 fi
 
+rm -rf ${outdir2}/*
+
 unmap_bwa_sam=${outdir2}/${prefix}'_unmapped_bwa.sam'
 
 echo "1. Aligning reads..."

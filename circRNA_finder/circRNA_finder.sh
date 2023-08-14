@@ -28,6 +28,8 @@ else
     echo "Final result file does not exist, run it."
 fi
 
+rm -rf ${outdir2}/*
+
 echo "1. Aligning reads..."
 
 STAR --readFilesIn ${indir}/${sample}_1.fastq.gz ${indir}/${sample}_2.fastq.gz \
