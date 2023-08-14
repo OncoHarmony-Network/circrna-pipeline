@@ -1,0 +1,449 @@
+[Sun 2023-08-13 22:48:45] [INFO ] Input reads: GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_1.fastq.gz,GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_2.fastq.gz
+[Sun 2023-08-13 22:48:45] [INFO ] Library type: unstranded
+[Sun 2023-08-13 22:48:45] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI, Output prefix: GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813
+[Sun 2023-08-13 22:48:45] [INFO ] Config: hg38 Loaded
+[Sun 2023-08-13 22:48:45] [INFO ] 96 CPU cores availble, using 20
+[Sun 2023-08-13 22:48:45] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-08-13 22:48:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.bam
+Time loading forward index: 00:00:23
+Time loading reference: 00:00:03
+Multiseed full-index search: 00:21:26
+27595063 reads; of these:
+  27595063 (100.00%) were paired; of these:
+    1945083 (7.05%) aligned concordantly 0 times
+    19125161 (69.31%) aligned concordantly exactly 1 time
+    6524819 (23.64%) aligned concordantly >1 times
+    ----
+    1945083 pairs aligned concordantly 0 times; of these:
+      70421 (3.62%) aligned discordantly 1 time
+    ----
+    1874662 pairs aligned 0 times concordantly or discordantly; of these:
+      3749324 mates make up the pairs; of these:
+        1872996 (49.96%) aligned 0 times
+        1323050 (35.29%) aligned exactly 1 time
+        553278 (14.76%) aligned >1 times
+96.61% overall alignment rate
+Time searching: 00:21:30
+Overall time: 00:21:53
+[Sun 2023-08-13 23:10:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 20 -o /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.bam
+[bam_sort_core] merging from 20 files and 20 in-memory blocks...
+[Sun 2023-08-13 23:19:34] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 20 /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/align/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.sorted.bam
+[Sun 2023-08-13 23:20:51] [DEBUG] HISAT2 bam: GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.sorted.bam
+[Sun 2023-08-13 23:20:51] [INFO ] Skipping gene abundance estimation
+[Sun 2023-08-13 23:20:51] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sun 2023-08-13 23:20:51] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sun 2023-08-13 23:20:51] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 3924778 sequences (200000030 bp)...
+[M::process] read 3924772 sequences (200000052 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (19, 1003168, 2222, 11)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (86, 126, 471)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1241)
+[M::mem_pestat] mean and std.dev: (161.27, 134.82)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1626)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (149, 293, 1564)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4394)
+[M::mem_pestat] mean and std.dev: (783.93, 1016.85)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5809)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (154, 960, 3274)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9514)
+[M::mem_pestat] mean and std.dev: (2046.29, 2464.84)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12634)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (90, 444, 1781)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5163)
+[M::mem_pestat] mean and std.dev: (1278.36, 1610.40)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 7720)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 3924778 reads in 1576.246 CPU sec, 353.144 real sec
+[M::process] read 3924768 sequences (200000010 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (18, 1000237, 2109, 3)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (145, 376, 2974)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 8632)
+[M::mem_pestat] mean and std.dev: (1969.44, 2617.38)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12439)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 289, 1555)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4369)
+[M::mem_pestat] mean and std.dev: (778.14, 1010.78)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5776)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (140, 875, 3401)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9923)
+[M::mem_pestat] mean and std.dev: (2103.32, 2585.51)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13184)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924772 reads in 1438.855 CPU sec, 136.330 real sec
+[M::process] read 3924788 sequences (200000074 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (14, 999845, 2183, 9)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (57, 310, 1927)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5667)
+[M::mem_pestat] mean and std.dev: (1206.93, 1782.33)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8336)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 289, 1559)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4381)
+[M::mem_pestat] mean and std.dev: (777.13, 1010.28)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5792)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (165, 947, 3329)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9657)
+[M::mem_pestat] mean and std.dev: (2072.02, 2472.53)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12821)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924768 reads in 1483.365 CPU sec, 135.386 real sec
+[M::process] read 3924792 sequences (200000002 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (21, 1001130, 2107, 1)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (124, 416, 1384)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3904)
+[M::mem_pestat] mean and std.dev: (731.32, 922.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5164)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 289, 1550)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4354)
+[M::mem_pestat] mean and std.dev: (774.73, 1006.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5756)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (133, 949, 3404)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9946)
+[M::mem_pestat] mean and std.dev: (2108.24, 2538.95)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13217)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924788 reads in 1468.030 CPU sec, 114.400 real sec
+[M::process] read 3924818 sequences (200000028 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (16, 998550, 2131, 7)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (129, 400, 2868)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 8346)
+[M::mem_pestat] mean and std.dev: (1413.75, 1630.41)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 11085)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (147, 286, 1548)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4350)
+[M::mem_pestat] mean and std.dev: (774.53, 1008.28)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5751)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (120, 831, 3482)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10206)
+[M::mem_pestat] mean and std.dev: (2109.88, 2596.61)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13568)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924792 reads in 1422.476 CPU sec, 110.783 real sec
+[M::process] read 3924752 sequences (200000070 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (15, 1002270, 2210, 15)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (94, 126, 323)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 781)
+[M::mem_pestat] mean and std.dev: (152.00, 106.70)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1010)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 290, 1556)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4372)
+[M::mem_pestat] mean and std.dev: (778.29, 1010.30)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5780)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (139, 911, 3433)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10021)
+[M::mem_pestat] mean and std.dev: (2180.11, 2625.15)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13315)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (154, 375, 1781)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5035)
+[M::mem_pestat] mean and std.dev: (484.33, 612.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 6662)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 3924818 reads in 1431.259 CPU sec, 112.912 real sec
+[M::process] read 3924784 sequences (200000004 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (13, 998408, 2102, 8)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (108, 125, 4607)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 13605)
+[M::mem_pestat] mean and std.dev: (1449.15, 2169.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 18104)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (147, 285, 1539)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4323)
+[M::mem_pestat] mean and std.dev: (768.42, 1000.00)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5715)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (140, 916, 3438)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10034)
+[M::mem_pestat] mean and std.dev: (2137.64, 2590.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13332)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924752 reads in 1437.204 CPU sec, 111.364 real sec
+[M::process] read 3924762 sequences (200000008 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (19, 1000076, 2261, 7)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (120, 262, 5592)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 16536)
+[M::mem_pestat] mean and std.dev: (2263.47, 2874.37)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 22008)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (149, 293, 1562)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4388)
+[M::mem_pestat] mean and std.dev: (783.23, 1015.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5801)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (152, 1043, 3608)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10520)
+[M::mem_pestat] mean and std.dev: (2260.99, 2666.16)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13976)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924784 reads in 1454.051 CPU sec, 116.287 real sec
+[M::process] read 3924812 sequences (200000022 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (9, 1000227, 2274, 11)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 289, 1564)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4396)
+[M::mem_pestat] mean and std.dev: (782.79, 1018.68)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5812)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (144, 910, 3301)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9615)
+[M::mem_pestat] mean and std.dev: (2039.88, 2448.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12772)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (83, 375, 4337)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 12845)
+[M::mem_pestat] mean and std.dev: (1925.91, 2923.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 17099)
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 3924762 reads in 1564.378 CPU sec, 122.055 real sec
+[M::process] read 3924876 sequences (200000100 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (13, 1000588, 2143, 6)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (64, 102, 473)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1291)
+[M::mem_pestat] mean and std.dev: (227.67, 267.67)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1700)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 290, 1553)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4363)
+[M::mem_pestat] mean and std.dev: (777.19, 1008.50)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5768)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (139, 902, 3503)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10231)
+[M::mem_pestat] mean and std.dev: (2193.52, 2660.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13595)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924812 reads in 1454.870 CPU sec, 112.945 real sec
+[M::process] read 3924802 sequences (200000002 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (10, 1001136, 2175, 11)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (62, 102, 193)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 455)
+[M::mem_pestat] mean and std.dev: (100.56, 63.47)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 586)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 290, 1552)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4360)
+[M::mem_pestat] mean and std.dev: (776.29, 1008.16)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5764)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (149, 856, 3172)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9218)
+[M::mem_pestat] mean and std.dev: (1945.07, 2378.98)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12241)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (45, 83, 507)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1431)
+[M::mem_pestat] mean and std.dev: (235.40, 258.05)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1893)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 3924876 reads in 1408.696 CPU sec, 108.488 real sec
+[M::process] read 3924822 sequences (200000056 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (14, 998160, 2153, 13)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (30, 215, 744)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2172)
+[M::mem_pestat] mean and std.dev: (313.25, 404.46)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2886)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 287, 1543)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4333)
+[M::mem_pestat] mean and std.dev: (771.19, 1001.12)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5728)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (139, 873, 3290)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9592)
+[M::mem_pestat] mean and std.dev: (1997.94, 2439.20)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 12743)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (63, 185, 2155)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6339)
+[M::mem_pestat] mean and std.dev: (625.67, 793.04)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8431)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 3924802 reads in 1456.109 CPU sec, 114.644 real sec
+[M::process] read 3924784 sequences (200000038 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (14, 1001188, 2125, 9)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (64, 124, 165)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 367)
+[M::mem_pestat] mean and std.dev: (95.64, 51.63)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 468)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (148, 291, 1559)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4381)
+[M::mem_pestat] mean and std.dev: (781.29, 1013.74)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5792)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (160, 979, 3392)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 9856)
+[M::mem_pestat] mean and std.dev: (2119.62, 2528.23)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13088)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 3924822 reads in 1480.449 CPU sec, 118.246 real sec
+[M::process] read 243016 sequences (12383492 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (14, 998651, 2182, 13)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (65, 290, 637)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1781)
+[M::mem_pestat] mean and std.dev: (201.00, 188.01)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2353)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (147, 285, 1545)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4341)
+[M::mem_pestat] mean and std.dev: (770.77, 1003.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5739)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (143, 957, 3433)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10013)
+[M::mem_pestat] mean and std.dev: (2194.51, 2646.22)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 13303)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (30, 47, 507)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1461)
+[M::mem_pestat] mean and std.dev: (93.27, 139.79)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1938)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 3924784 reads in 1449.169 CPU sec, 112.041 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (2, 61776, 110, 1)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (146, 278, 1532)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4304)
+[M::mem_pestat] mean and std.dev: (762.07, 996.41)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 5690)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (144, 1271, 3682)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10758)
+[M::mem_pestat] mean and std.dev: (2421.86, 2816.16)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 14296)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 243016 reads in 99.699 CPU sec, 7.210 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 20 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_1.fastq.gz /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_2.fastq.gz
+[main] Real time: 1926.582 sec; CPU: 20644.518 sec
+[Sun 2023-08-13 23:52:58] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sam
+[Sun 2023-08-13 23:52:58] [INFO ] Running CIRI2 for circRNA detection ..
+[Sun 2023-08-13 23:52:58] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 20 -G /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.log
+[Sun Aug 13 23:52:58 2023] CIRI begins running
+[Sun Aug 13 23:52:58 2023] Loading reference
+ Output file /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.ciri already exists and is overwritten.
+[Sun Aug 13 23:53:41 2023] Requesting system to split SAM into 20 pieces
+[Sun Aug 13 23:52:58 2023] CIRI begins running
+[Sun Aug 13 23:52:58 2023] Loading reference
+[Sun Aug 13 23:53:41 2023] Requesting system to split SAM into 20 pieces
+ Divided SAM sizes:
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samaa	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samab	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samac	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samad	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samae	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samaf	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samag	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samah	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samai	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samaj	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samak	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samal	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samam	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.saman	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samao	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samap	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samaq	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samar	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samas	      660330511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samat	      660330495
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samau	      440220570
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samav	      440220511
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samaw	      440220602
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samax	      440220436
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samay	      440220555
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samaz	      440220827
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.samba	      440220772
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sambb	      440220706
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sambc	      440220982
+ /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sambd	      440220210
+Cannot split /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sam into 20 (30) pieces with size of 660330511 and named them as /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_unmapped.sam.
+Fatal error. Aborted.
+[Sun 2023-08-13 23:54:09] [INFO ] Extract circular sequence
+[Sun 2023-08-13 23:54:09] [INFO ] Building circular index ..
+[Sun 2023-08-13 23:54:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index
+Settings:
+  Output files: "/home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index.*.ht2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Local offset rate: 3 (one in 8)
+  Local fTable chars: 6
+  Local sequence length: 57344
+  Local sequence overlap between two consecutive indexes: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index.fa
+Warning: Empty fasta file: '/home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index.fa'
+Warning: All fasta inputs were empty
+Total time for call to driver() for forward index: 00:00:00
+Error: Encountered internal HISAT2 exception (#1)
+Command: hisat2-build --wrapper basic-0 -p 20 -f /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index.fa /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index 
+[Sun 2023-08-13 23:54:09] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index
+[Sun 2023-08-13 23:54:09] [INFO ] De novo alignment for circular RNAs ..
+[Sun 2023-08-13 23:54:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 20 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index -1 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGA_POPLAR/fq/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_denovo.bam
+(ERR): "/home/zhou/raid/IO_RNA/circRNA/EGA_POPLAR/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813.CIRI/circ/GO28753_ngs_rna_targrna_rnaaccess_EA_d2a0cd5ad8_20150813_index" does not exist
+Exiting now ...
