@@ -83,3 +83,45 @@ HTML report: /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088893_fastp.html
 /home/circrna/miniconda3/bin/fastp -i /home/zhou/t12b/zhou/EBI/RNA/PRJNA356761/raw/SRR5088893_1.fastq.gz -I /home/zhou/t12b/zhou/EBI/RNA/PRJNA356761/raw/SRR5088893_2.fastq.gz -o /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088893_1.fastq.gz -O /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088893_2.fastq.gz -j /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088893_fastp.json -h /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088893_fastp.html -w 20 
 fastp v0.23.4, time used: 115 seconds
 WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 50772588
+total bases: 2563954498
+Q20 bases: 2506479696(97.7584%)
+Q30 bases: 2441585017(95.2273%)
+
+Read2 before filtering:
+total reads: 50772588
+total bases: 2578901047
+Q20 bases: 2477654321(96.074%)
+Q30 bases: 2364683133(91.6934%)
+
+Read1 after filtering:
+total reads: 50772588
+total bases: 2563691324
+Q20 bases: 2506227084(97.7585%)
+Q30 bases: 2441342214(95.2276%)
+
+Read2 after filtering:
+total reads: 50772588
+total bases: 2578627334
+Q20 bases: 2477399003(96.0743%)
+Q30 bases: 2364448368(91.6941%)
+
+Filtering result:
+reads passed filter: 101545176
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 61998
+bases trimmed due to adapters: 536887
+
+Duplication rate: 44.7614%
+
+Insert size peak (evaluated by paired-end reads): 69
+
+JSON report: /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088822_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088822_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/t12b/zhou/EBI/RNA/PRJNA356761/raw/SRR5088822_1.fastq.gz -I /home/zhou/t12b/zhou/EBI/RNA/PRJNA356761/raw/SRR5088822_2.fastq.gz -o /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088822_1.fastq.gz -O /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088822_2.fastq.gz -j /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088822_fastp.json -h /home/zhou/raid/IO_RNA/PRJNA356761/fq/SRR5088822_fastp.html -w 20 
+fastp v0.23.4, time used: 312 seconds
+WARNING: fastp uses up to 16 threads although you specified 20

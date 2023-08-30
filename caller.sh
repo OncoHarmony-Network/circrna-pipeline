@@ -72,3 +72,4 @@ do
     #echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} --dry-run -D " " -T b -k -j 4 -v sample=${sample} ${commands}
 done
 
+echo "The pipeline is done. Please check the result files."
