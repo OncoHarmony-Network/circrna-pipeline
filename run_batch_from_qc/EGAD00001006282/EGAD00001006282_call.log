@@ -1,179 +1,432 @@
-[Sun 2023-08-13 22:58:40] [INFO ] Input reads: Pt103_SCREEN_1.fastq.gz,Pt103_SCREEN_2.fastq.gz
-[Sun 2023-08-13 22:58:40] [INFO ] Library type: unstranded
-[Sun 2023-08-13 22:58:40] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI, Output prefix: Pt103_SCREEN
-[Sun 2023-08-13 22:58:40] [INFO ] Config: hg38 Loaded
-[Sun 2023-08-13 22:58:40] [INFO ] 96 CPU cores availble, using 2
-[Sun 2023-08-13 22:58:40] [INFO ] Align RNA-seq reads to reference genome ..
-[Sun 2023-08-13 22:58:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/align/Pt103_SCREEN.bam
-****** Processing Pt103_SCREEN. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Mon 2023-08-14 00:31:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 2 -o /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/align/Pt103_SCREEN.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/align/Pt103_SCREEN.bam
-[Mon 2023-08-14 00:49:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 2 /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/align/Pt103_SCREEN.sorted.bam
-[Mon 2023-08-14 00:50:46] [DEBUG] HISAT2 bam: Pt103_SCREEN.sorted.bam
-[Mon 2023-08-14 00:50:46] [INFO ] Skipping gene abundance estimation
-[Mon 2023-08-14 00:50:46] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Mon 2023-08-14 00:50:46] [INFO ] Running BWA-mem mapping candidate reads ..
-[Mon 2023-08-14 00:50:46] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 2 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_1.fastq.gz /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_unmapped.sam
-[bam_sort_core] merging from 17 files and 2 in-memory blocks...
-[Mon 2023-08-14 04:14:47] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_unmapped.sam
-[Mon 2023-08-14 04:14:47] [INFO ] Running CIRI2 for circRNA detection ..
-[Mon 2023-08-14 04:14:47] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 2 -G /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/Pt103_SCREEN.log
-[Mon 2023-08-14 04:39:24] [INFO ] Extract circular sequence
-[Mon 2023-08-14 04:39:24] [0%   ] [..................................................][Mon 2023-08-14 04:39:26] [6%   ] [###...............................................][Mon 2023-08-14 04:39:27] [12%  ] [######............................................][Mon 2023-08-14 04:39:28] [18%  ] [#########.........................................][Mon 2023-08-14 04:39:29] [25%  ] [############......................................][Mon 2023-08-14 04:39:29] [31%  ] [###############...................................][Mon 2023-08-14 04:39:30] [37%  ] [##################................................][Mon 2023-08-14 04:39:31] [43%  ] [#####################.............................][Mon 2023-08-14 04:39:31] [50%  ] [#########################.........................][Mon 2023-08-14 04:39:32] [56%  ] [############################......................][Mon 2023-08-14 04:39:33] [62%  ] [###############################...................][Mon 2023-08-14 04:39:34] [68%  ] [##################################................][Mon 2023-08-14 04:39:35] [75%  ] [#####################################.............][Mon 2023-08-14 04:39:36] [81%  ] [########################################..........][Mon 2023-08-14 04:39:37] [87%  ] [###########################################.......][Mon 2023-08-14 04:39:38] [93%  ] [##############################################....][Mon 2023-08-14 04:39:39] [100% ] [##################################################]
-[Mon 2023-08-14 04:39:39] [INFO ] Building circular index ..
-[Mon 2023-08-14 04:39:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 2 -f /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_index.fa /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_index
-[Mon 2023-08-14 04:39:44] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_index
-[Mon 2023-08-14 04:39:44] [INFO ] De novo alignment for circular RNAs ..
-[Mon 2023-08-14 04:39:44] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_index -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_denovo.bam
-[Mon 2023-08-14 04:56:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 2 -o /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_denovo.bam
-[Mon 2023-08-14 05:13:56] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 2 /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_denovo.sorted.bam
-[Mon 2023-08-14 05:15:05] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt103_SCREEN.CIRI/circ/Pt103_SCREEN_denovo.sorted.bam
-[Mon 2023-08-14 05:15:05] [INFO ] Detecting reads containing Back-splicing signals
-[Mon 2023-08-14 05:15:26] [INFO ] Detecting FSJ reads from genome alignment file
-[Mon 2023-08-14 05:27:15] [INFO ] Merge bsj and fsj results
-[Mon 2023-08-14 05:27:15] [INFO ] Loading annotation gtf ..
-[Mon 2023-08-14 05:27:35] [INFO ] Output circRNA expression values
-[Mon 2023-08-14 05:27:38] [INFO ] circRNA Expression profile: Pt103_SCREEN.gtf
-[Mon 2023-08-14 05:27:38] [INFO ] Finished!
-Start CIRIquant for Pt103_SCREEN at Sun Aug 13 22:58:40 CST 2023
-Final result file does not exist, run it.
-Done for Pt103_SCREEN, final result should be Pt103_SCREEN.CIRI.bed
-End CIRIquant for Pt103_SCREEN at Mon Aug 14 05:27:41 CST 2023
-Start circexplorer2 for Pt103_SCREEN at Sun Aug 13 22:58:38 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b Pt103_SCREEN_circ2_result.txt -o Pt103_SCREEN_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 03:06:54
-Start to annotate fusion junctions...
-Annotated 86 fusion junctions!
-Start to fix fusion junctions...
-Fixed 35 fusion junctions!
-End CIRCexplorer2 annotate at 03:07:07
-Done for Pt103_SCREEN, final result should be Pt103_SCREEN.circexplorer2.bed
-End circexplorer2 for Pt103_SCREEN at Mon Aug 14 03:07:12 CST 2023
-Start circRNA_finder for Pt103_SCREEN at Sun Aug 13 22:58:38 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_1.fastq.gz /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt103_SCREEN_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix Pt103_SCREEN. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Aug 13 22:58:38 ..... started STAR run
-Aug 13 22:58:38 ..... loading genome
-Aug 13 23:00:47 ..... started mapping
-Aug 13 23:09:43 ..... finished mapping
-Aug 13 23:09:50 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for Pt103_SCREEN, final result should be Pt103_SCREEN.circRNA_finder.bed
-End circRNA_finder for Pt103_SCREEN at Sun Aug 13 23:09:57 CST 2023
-Start find_circ for Pt103_SCREEN at Sun Aug 13 22:58:38 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for Pt103_SCREEN, final result should be Pt103_SCREEN.find_circ.bed
-End find_circ for Pt103_SCREEN at Mon Aug 14 04:25:57 CST 2023
-[Mon 2023-08-14 05:27:44] [INFO ] Input reads: Pt11_WEEK4_1.fastq.gz,Pt11_WEEK4_2.fastq.gz
-[Mon 2023-08-14 05:27:44] [INFO ] Library type: unstranded
-[Mon 2023-08-14 05:27:44] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI, Output prefix: Pt11_WEEK4
-[Mon 2023-08-14 05:27:44] [INFO ] Config: hg38 Loaded
-[Mon 2023-08-14 05:27:44] [INFO ] 96 CPU cores availble, using 2
-[Mon 2023-08-14 05:27:44] [INFO ] Align RNA-seq reads to reference genome ..
-[Mon 2023-08-14 05:27:44] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/align/Pt11_WEEK4.bam
-****** Processing Pt11_WEEK4. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
-[Mon 2023-08-14 06:27:28] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 2 -o /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/align/Pt11_WEEK4.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/align/Pt11_WEEK4.bam
-[Mon 2023-08-14 06:40:32] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 2 /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/align/Pt11_WEEK4.sorted.bam
-[Mon 2023-08-14 06:41:09] [DEBUG] HISAT2 bam: Pt11_WEEK4.sorted.bam
-[Mon 2023-08-14 06:41:09] [INFO ] Skipping gene abundance estimation
-[Mon 2023-08-14 06:41:09] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
-[Mon 2023-08-14 06:41:09] [INFO ] Running BWA-mem mapping candidate reads ..
-[Mon 2023-08-14 06:41:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 2 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_1.fastq.gz /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_unmapped.sam
-[bam_sort_core] merging from 14 files and 2 in-memory blocks...
-[Mon 2023-08-14 09:05:08] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_unmapped.sam
-[Mon 2023-08-14 09:05:08] [INFO ] Running CIRI2 for circRNA detection ..
-[Mon 2023-08-14 09:05:08] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 2 -G /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/Pt11_WEEK4.log
-[Mon 2023-08-14 09:36:55] [INFO ] Extract circular sequence
-[Mon 2023-08-14 09:36:55] [0%   ] [..................................................][Mon 2023-08-14 09:36:57] [6%   ] [###...............................................][Mon 2023-08-14 09:36:58] [13%  ] [######............................................][Mon 2023-08-14 09:36:59] [20%  ] [##########........................................][Mon 2023-08-14 09:37:00] [26%  ] [#############.....................................][Mon 2023-08-14 09:37:01] [33%  ] [################..................................][Mon 2023-08-14 09:37:02] [40%  ] [####################..............................][Mon 2023-08-14 09:37:03] [46%  ] [#######################...........................][Mon 2023-08-14 09:37:03] [53%  ] [##########################........................][Mon 2023-08-14 09:37:04] [60%  ] [##############################....................][Mon 2023-08-14 09:37:06] [66%  ] [#################################.................][Mon 2023-08-14 09:37:06] [73%  ] [####################################..............][Mon 2023-08-14 09:37:07] [80%  ] [########################################..........][Mon 2023-08-14 09:37:08] [86%  ] [###########################################.......][Mon 2023-08-14 09:37:09] [93%  ] [##############################################....][Mon 2023-08-14 09:37:11] [100% ] [##################################################]
-[Mon 2023-08-14 09:37:11] [INFO ] Building circular index ..
-[Mon 2023-08-14 09:37:11] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 2 -f /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_index.fa /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_index
-[Mon 2023-08-14 09:37:16] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_index
-[Mon 2023-08-14 09:37:16] [INFO ] De novo alignment for circular RNAs ..
-[Mon 2023-08-14 09:37:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_index -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.bam
-[Mon 2023-08-14 09:54:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 2 -o /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.bam
-[Mon 2023-08-14 10:03:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 2 /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.sorted.bam
-[Mon 2023-08-14 10:04:21] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt11_WEEK4.CIRI/circ/Pt11_WEEK4_denovo.sorted.bam
-[Mon 2023-08-14 10:04:21] [INFO ] Detecting reads containing Back-splicing signals
-[Mon 2023-08-14 10:04:42] [INFO ] Detecting FSJ reads from genome alignment file
-[Mon 2023-08-14 10:10:42] [INFO ] Merge bsj and fsj results
-[Mon 2023-08-14 10:10:42] [INFO ] Loading annotation gtf ..
-[Mon 2023-08-14 10:10:57] [INFO ] Output circRNA expression values
-[Mon 2023-08-14 10:10:59] [INFO ] circRNA Expression profile: Pt11_WEEK4.gtf
-[Mon 2023-08-14 10:10:59] [INFO ] Finished!
-/home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh: line 39: -p: command not found
-Start CIRIquant for Pt11_WEEK4 at Mon Aug 14 05:27:43 CST 2023
-Final result file does not exist, run it.
-Done for Pt11_WEEK4, final result should be Pt11_WEEK4.CIRI.bed
-End CIRIquant for Pt11_WEEK4 at Mon Aug 14 10:11:02 CST 2023
-Start circexplorer2 for Pt11_WEEK4 at Mon Aug 14 05:27:41 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Running parse module...
-3. Running annotate module...
-CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b Pt11_WEEK4_circ2_result.txt -o Pt11_WEEK4_circ2_result_ann.txt
-Start CIRCexplorer2 annotate at 08:23:28
-Start to annotate fusion junctions...
-Annotated 267 fusion junctions!
-Start to fix fusion junctions...
-Fixed 166 fusion junctions!
-End CIRCexplorer2 annotate at 08:23:38
-Done for Pt11_WEEK4, final result should be Pt11_WEEK4.circexplorer2.bed
-End circexplorer2 for Pt11_WEEK4 at Mon Aug 14 08:23:41 CST 2023
-Start circRNA_finder for Pt11_WEEK4 at Mon Aug 14 05:27:41 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_1.fastq.gz /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt11_WEEK4_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix Pt11_WEEK4. --readFilesCommand zcat
-	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
-Aug 14 05:27:41 ..... started STAR run
-Aug 14 05:27:41 ..... loading genome
-Aug 14 05:28:38 ..... started mapping
-Aug 14 05:32:33 ..... finished mapping
-Aug 14 05:32:38 ..... finished successfully
-2. Analyzing reads...
-3. Outputing...
-Done for Pt11_WEEK4, final result should be Pt11_WEEK4.circRNA_finder.bed
-End circRNA_finder for Pt11_WEEK4 at Mon Aug 14 05:32:46 CST 2023
-Start find_circ for Pt11_WEEK4 at Mon Aug 14 05:27:41 CST 2023
-Final result file does not exist, run it.
-1. Aligning reads...
-2. Fetching the unmapped reads
-3. Splitting into anchors
-4. Aligning anchors and piping through find_circ
-Done for Pt11_WEEK4, final result should be Pt11_WEEK4.find_circ.bed
-End find_circ for Pt11_WEEK4 at Mon Aug 14 08:56:25 CST 2023
-[Mon 2023-08-14 10:11:04] [INFO ] Input reads: Pt49_SCREEN_1.fastq.gz,Pt49_SCREEN_2.fastq.gz
-[Mon 2023-08-14 10:11:04] [INFO ] Library type: unstranded
-[Mon 2023-08-14 10:11:04] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt49_SCREEN.CIRI, Output prefix: Pt49_SCREEN
-[Mon 2023-08-14 10:11:04] [INFO ] Config: hg38 Loaded
-[Mon 2023-08-14 10:11:04] [INFO ] 96 CPU cores availble, using 2
-[Mon 2023-08-14 10:11:04] [INFO ] Align RNA-seq reads to reference genome ..
-[Mon 2023-08-14 10:11:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 2 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_SCREEN_1.fastq.gz -2 /home/zhou/raid/IO_RNA/EGAD00001006282/fq/Pt49_SCREEN_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/EGAD00001006282/Pt49_SCREEN.CIRI/align/Pt49_SCREEN.bam
-****** Processing Pt49_SCREEN. (1/1) ******
-Filtering chimeric transcripts...
-Converting to .bed file...
-Getting forward spliced reads for circle junctions with splice sites...
-Creating .bam file...
-Sorting .bam file...
-Indexing .bam file...
+Start CIRIquant for Pt103_SCREEN at Tue Aug 29 22:18:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt103_SCREEN at Tue Aug 29 22:18:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt103_SCREEN at Tue Aug 29 22:18:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt103_SCREEN at Tue Aug 29 22:18:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt11_WEEK4 at Tue Aug 29 22:18:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt11_WEEK4 at Tue Aug 29 22:18:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt11_WEEK4 at Tue Aug 29 22:18:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt11_WEEK4 at Tue Aug 29 22:18:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt49_SCREEN at Tue Aug 29 22:18:23 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt49_SCREEN at Tue Aug 29 22:18:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt49_SCREEN at Tue Aug 29 22:18:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt49_SCREEN at Tue Aug 29 22:18:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt98_SCREEN at Tue Aug 29 22:18:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt98_SCREEN at Tue Aug 29 22:18:23 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt98_SCREEN at Tue Aug 29 22:18:23 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt98_SCREEN at Tue Aug 29 22:18:23 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt77_WEEK4 at Tue Aug 29 22:18:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt77_WEEK4 at Tue Aug 29 22:18:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt77_WEEK4 at Tue Aug 29 22:18:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt77_WEEK4 at Tue Aug 29 22:18:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt103_WEEK4 at Tue Aug 29 22:18:30 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt103_WEEK4 at Tue Aug 29 22:18:28 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt103_WEEK4 at Tue Aug 29 22:18:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt103_WEEK4 at Tue Aug 29 22:18:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt77_SCREEN at Tue Aug 29 22:18:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt77_SCREEN at Tue Aug 29 22:18:30 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt77_SCREEN at Tue Aug 29 22:18:30 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt77_SCREEN at Tue Aug 29 22:18:30 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt85_WEEK4 at Tue Aug 29 22:18:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt85_WEEK4 at Tue Aug 29 22:18:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt85_WEEK4 at Tue Aug 29 22:18:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt85_WEEK4 at Tue Aug 29 22:18:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20025_SCREEN at Tue Aug 29 22:18:36 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20025_SCREEN at Tue Aug 29 22:18:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20025_SCREEN at Tue Aug 29 22:18:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20025_SCREEN at Tue Aug 29 22:18:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt84_WEEK4 at Tue Aug 29 22:18:38 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt84_WEEK4 at Tue Aug 29 22:18:36 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt84_WEEK4 at Tue Aug 29 22:18:36 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt84_WEEK4 at Tue Aug 29 22:18:36 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt30041_SCREEN at Tue Aug 29 22:18:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt30041_SCREEN at Tue Aug 29 22:18:38 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt30041_SCREEN at Tue Aug 29 22:18:38 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt30041_SCREEN at Tue Aug 29 22:18:38 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt78_WEEK4 at Tue Aug 29 22:18:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt78_WEEK4 at Tue Aug 29 22:18:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt78_WEEK4 at Tue Aug 29 22:18:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt78_WEEK4 at Tue Aug 29 22:18:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt8_WEEK4 at Tue Aug 29 22:18:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt8_WEEK4 at Tue Aug 29 22:18:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt8_WEEK4 at Tue Aug 29 22:18:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt8_WEEK4 at Tue Aug 29 22:18:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt81_WEEK4 at Tue Aug 29 22:18:46 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt81_WEEK4 at Tue Aug 29 22:18:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt81_WEEK4 at Tue Aug 29 22:18:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt81_WEEK4 at Tue Aug 29 22:18:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20034_WEEK2 at Tue Aug 29 22:18:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20034_WEEK2 at Tue Aug 29 22:18:46 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20034_WEEK2 at Tue Aug 29 22:18:46 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20034_WEEK2 at Tue Aug 29 22:18:46 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20034_SCREEN at Tue Aug 29 22:18:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20034_SCREEN at Tue Aug 29 22:18:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20034_SCREEN at Tue Aug 29 22:18:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20034_SCREEN at Tue Aug 29 22:18:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt98_WEEK4 at Tue Aug 29 22:18:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt98_WEEK4 at Tue Aug 29 22:18:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt98_WEEK4 at Tue Aug 29 22:18:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt98_WEEK4 at Tue Aug 29 22:18:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt109_SCREEN at Tue Aug 29 22:18:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt109_SCREEN at Tue Aug 29 22:18:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt109_SCREEN at Tue Aug 29 22:18:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt109_SCREEN at Tue Aug 29 22:18:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt30041_WEEK2 at Tue Aug 29 22:18:57 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt30041_WEEK2 at Tue Aug 29 22:18:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt30041_WEEK2 at Tue Aug 29 22:18:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt30041_WEEK2 at Tue Aug 29 22:18:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20039_SCREEN at Tue Aug 29 22:18:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20039_SCREEN at Tue Aug 29 22:18:57 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20039_SCREEN at Tue Aug 29 22:18:57 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20039_SCREEN at Tue Aug 29 22:18:57 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt13_WEEK4 at Tue Aug 29 22:19:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt13_WEEK4 at Tue Aug 29 22:18:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt13_WEEK4 at Tue Aug 29 22:18:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt13_WEEK4 at Tue Aug 29 22:18:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt7_SCREEN at Tue Aug 29 22:19:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt7_SCREEN at Tue Aug 29 22:19:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt7_SCREEN at Tue Aug 29 22:19:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt7_SCREEN at Tue Aug 29 22:19:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt30019_SCREEN at Tue Aug 29 22:19:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt30019_SCREEN at Tue Aug 29 22:19:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt30019_SCREEN at Tue Aug 29 22:19:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt30019_SCREEN at Tue Aug 29 22:19:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt28_WEEK4 at Tue Aug 29 22:19:07 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt28_WEEK4 at Tue Aug 29 22:19:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt28_WEEK4 at Tue Aug 29 22:19:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt28_WEEK4 at Tue Aug 29 22:19:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt49_WEEK4 at Tue Aug 29 22:19:09 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt49_WEEK4 at Tue Aug 29 22:19:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt49_WEEK4 at Tue Aug 29 22:19:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt49_WEEK4 at Tue Aug 29 22:19:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20007_WEEK4 at Tue Aug 29 22:19:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20007_WEEK4 at Tue Aug 29 22:19:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20007_WEEK4 at Tue Aug 29 22:19:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20007_WEEK4 at Tue Aug 29 22:19:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt90_SCREEN at Tue Aug 29 22:19:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt90_SCREEN at Tue Aug 29 22:19:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt90_SCREEN at Tue Aug 29 22:19:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt90_SCREEN at Tue Aug 29 22:19:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt80_WEEK4 at Tue Aug 29 22:19:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt80_WEEK4 at Tue Aug 29 22:19:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt80_WEEK4 at Tue Aug 29 22:19:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt80_WEEK4 at Tue Aug 29 22:19:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt101_SCREEN at Tue Aug 29 22:19:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt101_SCREEN at Tue Aug 29 22:19:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt101_SCREEN at Tue Aug 29 22:19:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt101_SCREEN at Tue Aug 29 22:19:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt44_SCREEN at Tue Aug 29 22:19:20 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt44_SCREEN at Tue Aug 29 22:19:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt44_SCREEN at Tue Aug 29 22:19:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt44_SCREEN at Tue Aug 29 22:19:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt66_SCREEN at Tue Aug 29 22:19:22 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt66_SCREEN at Tue Aug 29 22:19:20 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt66_SCREEN at Tue Aug 29 22:19:20 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt66_SCREEN at Tue Aug 29 22:19:20 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt101_WEEK4 at Tue Aug 29 22:19:24 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt101_WEEK4 at Tue Aug 29 22:19:22 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt101_WEEK4 at Tue Aug 29 22:19:22 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt101_WEEK4 at Tue Aug 29 22:19:22 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt26_WEEK4 at Tue Aug 29 22:19:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt26_WEEK4 at Tue Aug 29 22:19:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt26_WEEK4 at Tue Aug 29 22:19:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt26_WEEK4 at Tue Aug 29 22:19:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt89_WEEK4 at Tue Aug 29 22:19:29 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt89_WEEK4 at Tue Aug 29 22:19:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt89_WEEK4 at Tue Aug 29 22:19:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt89_WEEK4 at Tue Aug 29 22:19:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt85_SCREEN at Tue Aug 29 22:19:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt85_SCREEN at Tue Aug 29 22:19:29 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt85_SCREEN at Tue Aug 29 22:19:29 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt85_SCREEN at Tue Aug 29 22:19:29 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt84_SCREEN at Tue Aug 29 22:19:33 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt84_SCREEN at Tue Aug 29 22:19:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt84_SCREEN at Tue Aug 29 22:19:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt84_SCREEN at Tue Aug 29 22:19:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20019_SCREEN at Tue Aug 29 22:19:35 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20019_SCREEN at Tue Aug 29 22:19:33 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20019_SCREEN at Tue Aug 29 22:19:33 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20019_SCREEN at Tue Aug 29 22:19:33 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt79_SCREEN at Tue Aug 29 22:19:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt79_SCREEN at Tue Aug 29 22:19:35 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt79_SCREEN at Tue Aug 29 22:19:35 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt79_SCREEN at Tue Aug 29 22:19:35 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20007_SCREEN at Tue Aug 29 22:19:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20007_SCREEN at Tue Aug 29 22:19:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20007_SCREEN at Tue Aug 29 22:19:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20007_SCREEN at Tue Aug 29 22:19:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20025_WEEK2 at Tue Aug 29 22:19:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20025_WEEK2 at Tue Aug 29 22:19:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20025_WEEK2 at Tue Aug 29 22:19:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20025_WEEK2 at Tue Aug 29 22:19:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt44_WEEK4 at Tue Aug 29 22:19:43 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt44_WEEK4 at Tue Aug 29 22:19:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt44_WEEK4 at Tue Aug 29 22:19:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt44_WEEK4 at Tue Aug 29 22:19:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt109_WEEK4 at Tue Aug 29 22:19:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt109_WEEK4 at Tue Aug 29 22:19:43 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt109_WEEK4 at Tue Aug 29 22:19:43 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt109_WEEK4 at Tue Aug 29 22:19:43 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt93_WEEK4 at Tue Aug 29 22:19:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt93_WEEK4 at Tue Aug 29 22:19:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt93_WEEK4 at Tue Aug 29 22:19:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt93_WEEK4 at Tue Aug 29 22:19:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt79_WEEK4 at Tue Aug 29 22:19:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt79_WEEK4 at Tue Aug 29 22:19:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt79_WEEK4 at Tue Aug 29 22:19:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt79_WEEK4 at Tue Aug 29 22:19:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt92_SCREEN at Tue Aug 29 22:19:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt92_SCREEN at Tue Aug 29 22:19:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt92_SCREEN at Tue Aug 29 22:19:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt92_SCREEN at Tue Aug 29 22:19:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt8_SCREEN at Tue Aug 29 22:19:54 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt8_SCREEN at Tue Aug 29 22:19:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt8_SCREEN at Tue Aug 29 22:19:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt8_SCREEN at Tue Aug 29 22:19:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt87_WEEK4 at Tue Aug 29 22:19:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt87_WEEK4 at Tue Aug 29 22:19:54 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt87_WEEK4 at Tue Aug 29 22:19:54 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt87_WEEK4 at Tue Aug 29 22:19:54 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt26_SCREEN at Tue Aug 29 22:19:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt26_SCREEN at Tue Aug 29 22:19:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt26_SCREEN at Tue Aug 29 22:19:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt26_SCREEN at Tue Aug 29 22:19:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt92_WEEK4 at Tue Aug 29 22:20:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt92_WEEK4 at Tue Aug 29 22:19:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt92_WEEK4 at Tue Aug 29 22:19:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt92_WEEK4 at Tue Aug 29 22:19:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt11_SCREEN at Tue Aug 29 22:20:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt11_SCREEN at Tue Aug 29 22:20:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt11_SCREEN at Tue Aug 29 22:20:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt11_SCREEN at Tue Aug 29 22:20:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt28_SCREEN at Tue Aug 29 22:20:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt28_SCREEN at Tue Aug 29 22:20:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt28_SCREEN at Tue Aug 29 22:20:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt28_SCREEN at Tue Aug 29 22:20:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt16_WEEK4 at Tue Aug 29 22:20:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt16_WEEK4 at Tue Aug 29 22:20:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt16_WEEK4 at Tue Aug 29 22:20:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt16_WEEK4 at Tue Aug 29 22:20:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt78_SCREEN at Tue Aug 29 22:20:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt78_SCREEN at Tue Aug 29 22:20:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt78_SCREEN at Tue Aug 29 22:20:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt78_SCREEN at Tue Aug 29 22:20:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for Pt20018_WEEK4 at Tue Aug 29 22:20:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for Pt20018_WEEK4 at Tue Aug 29 22:20:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for Pt20018_WEEK4 at Tue Aug 29 22:20:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+Start find_circ for Pt20018_WEEK4 at Tue Aug 29 22:20:08 CST 2023
+Final result exists and is not empty, skipped this sample.
