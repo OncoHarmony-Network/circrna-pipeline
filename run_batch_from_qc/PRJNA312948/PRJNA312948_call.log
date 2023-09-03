@@ -1,0 +1,7 @@
+[Sun 2023-09-03 14:58:07] [INFO ] Input reads: SRR3184285_1.fastq.gz,SRR3184285_2.fastq.gz
+[Sun 2023-09-03 14:58:07] [INFO ] Library type: unstranded
+[Sun 2023-09-03 14:58:07] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJNA312948/SRR3184285.CIRI, Output prefix: SRR3184285
+[Sun 2023-09-03 14:58:07] [INFO ] Config: hg38 Loaded
+[Sun 2023-09-03 14:58:07] [INFO ] 96 CPU cores availble, using 8
+[Sun 2023-09-03 14:58:07] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-09-03 14:58:07] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJNA312948/fq/SRR3184285_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJNA312948/fq/SRR3184285_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJNA312948/SRR3184285.CIRI/align/SRR3184285.bam
