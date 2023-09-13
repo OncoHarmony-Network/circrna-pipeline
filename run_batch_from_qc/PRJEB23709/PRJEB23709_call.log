@@ -1,0 +1,7 @@
+[Wed 2023-09-13 14:47:57] [INFO ] Input reads: ERR3262563_1.fastq.gz,ERR3262563_2.fastq.gz
+[Wed 2023-09-13 14:47:57] [INFO ] Library type: unstranded
+[Wed 2023-09-13 14:47:57] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262563.CIRI, Output prefix: ERR3262563
+[Wed 2023-09-13 14:47:57] [INFO ] Config: hg38 Loaded
+[Wed 2023-09-13 14:47:57] [INFO ] 96 CPU cores availble, using 10
+[Wed 2023-09-13 14:47:57] [INFO ] Align RNA-seq reads to reference genome ..
+[Wed 2023-09-13 14:47:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262563_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262563_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262563.CIRI/align/ERR3262563.bam
