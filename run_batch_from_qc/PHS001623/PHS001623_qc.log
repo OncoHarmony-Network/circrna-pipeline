@@ -1,0 +1,117 @@
+WARNING: fastp uses up to 16 threads although you specified 20
+
+WARNNIG: different read numbers of the 20069 pack
+Read1 pack size: 1000
+Read2 pack size: 871
+
+ERROR: input files don't contain identical amount of reads
+Sample SRR13977635 is failed
+WARNING: fastp uses up to 16 threads although you specified 20
+
+WARNNIG: different read numbers of the 20009 pack
+Read1 pack size: 633
+Read2 pack size: 1000
+
+ERROR: input files don't contain identical amount of reads
+Sample SRR13977640 is failed
+WARNING: fastp uses up to 16 threads although you specified 20
+
+WARNNIG: different read numbers of the 21925 pack
+Read1 pack size: 1000
+Read2 pack size: 814
+
+ERROR: input files don't contain identical amount of reads
+Sample SRR13977646 is failed
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 21588838
+total bases: 3259914538
+Q20 bases: 3217518611(98.6995%)
+Q30 bases: 3145152988(96.4796%)
+
+Read2 before filtering:
+total reads: 21588838
+total bases: 3259914538
+Q20 bases: 3160573275(96.9526%)
+Q30 bases: 3031636708(92.9974%)
+
+Read1 after filtering:
+total reads: 21278975
+total bases: 3007128469
+Q20 bases: 2976132069(98.9692%)
+Q30 bases: 2916669135(96.9918%)
+
+Read2 after filtering:
+total reads: 21278975
+total bases: 3007128469
+Q20 bases: 2937647160(97.6894%)
+Q30 bases: 2831307248(94.1532%)
+
+Filtering result:
+reads passed filter: 42557950
+reads failed due to low quality: 613006
+reads failed due to too many N: 6720
+reads failed due to too short: 0
+reads with adapter trimmed: 16379852
+bases trimmed due to adapters: 412420982
+
+Duplication rate: 16.5898%
+
+Insert size peak (evaluated by paired-end reads): 145
+
+JSON report: /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977647_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977647_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs001623/raw/SRR13977647_1.fq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs001623/raw/SRR13977647_2.fq.gz -o /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977647_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977647_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977647_fastp.json -h /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977647_fastp.html -w 20 
+fastp v0.23.4, time used: 96 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 21930057
+total bases: 3311438607
+Q20 bases: 3267933363(98.6862%)
+Q30 bases: 3193970886(96.4527%)
+
+Read2 before filtering:
+total reads: 21930057
+total bases: 3311438607
+Q20 bases: 3208491271(96.8912%)
+Q30 bases: 3076883672(92.9168%)
+
+Read1 after filtering:
+total reads: 21600325
+total bases: 3059812399
+Q20 bases: 3028251906(98.9685%)
+Q30 bases: 2967687087(96.9892%)
+
+Read2 after filtering:
+total reads: 21600325
+total bases: 3059812399
+Q20 bases: 2987784140(97.646%)
+Q30 bases: 2878596104(94.0775%)
+
+Filtering result:
+reads passed filter: 43200650
+reads failed due to low quality: 652860
+reads failed due to too many N: 6604
+reads failed due to too short: 0
+reads with adapter trimmed: 15715512
+bases trimmed due to adapters: 404076774
+
+Duplication rate: 16.4985%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977649_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977649_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs001623/raw/SRR13977649_1.fq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs001623/raw/SRR13977649_2.fq.gz -o /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977649_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977649_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977649_fastp.json -h /home/zhou/raid/IO_RNA/PHS001623/fq/SRR13977649_fastp.html -w 20 
+fastp v0.23.4, time used: 99 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+
+WARNNIG: different read numbers of the 6008 pack
+Read1 pack size: 1000
+Read2 pack size: 241
+
+ERROR: input files don't contain identical amount of reads
+Sample SRR13977652 is failed
+WARNING: fastp uses up to 16 threads although you specified 20

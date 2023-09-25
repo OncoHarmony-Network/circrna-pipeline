@@ -9,10 +9,10 @@ def list_fastq_files(directory, output_all, output_uniq):
     # 获取目录下所有文件名
     file_list = os.listdir(directory)
 
-    # 使用正则表达式匹配文件名，去掉后缀_2.fastq.gz或_1.fastq.gz
+    # 使用正则表达式匹配文件名，去掉后缀_2.fastq.gz或_1.fastq.gz (fq.gz is also supported)
     fastq_files = []
     for file_name in file_list:
-        match = re.match(r'(.+)_[fr]?\d.+fastq\.gz$', file_name)
+        match = re.match(r'(.+)_[fr]?\d.+f*q\.gz$', file_name)
         if match:
             fastq_files.append(match.group(1))
 

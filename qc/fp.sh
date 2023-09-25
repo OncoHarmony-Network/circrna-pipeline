@@ -19,7 +19,7 @@ do
     if [ -f ${outdir}/${sample}_fastp.html ]; then
         echo "QC file for ${sample} has been detected, skip this sample"
     else
-        ${fp} -i ${indir}/${sample}_*1*fastq.gz -I ${indir}/${sample}_*2*fastq.gz -o ${outdir}/${sample}_1.fastq.gz -O ${outdir}/${sample}_2.fastq.gz \
+        ${fp} -i ${indir}/${sample}_*1*f*q.gz -I ${indir}/${sample}_*2*f*q.gz -o ${outdir}/${sample}_1.fastq.gz -O ${outdir}/${sample}_2.fastq.gz \
             -j ${outdir}/${sample}_fastp.json -h ${outdir}/${sample}_fastp.html -w ${nthreads}
         
         if [ $? -ne 0 ]; then
