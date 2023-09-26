@@ -39,3 +39,1859 @@ HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780246_fastp.html
 
 /home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780246_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780246_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780246_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780246_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780246_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780246_fastp.html -w 4 
 fastp v0.23.4, time used: 83 seconds
+Read1 before filtering:
+total reads: 111509181
+total bases: 16837886331
+Q20 bases: 16505026605(98.0232%)
+Q30 bases: 16054738861(95.3489%)
+
+Read2 before filtering:
+total reads: 111509181
+total bases: 16837886331
+Q20 bases: 16089571578(95.5558%)
+Q30 bases: 15333695800(91.0666%)
+
+Read1 after filtering:
+total reads: 109763391
+total bases: 15824024683
+Q20 bases: 15628801290(98.7663%)
+Q30 bases: 15294295386(96.6524%)
+
+Read2 after filtering:
+total reads: 109763391
+total bases: 15824024683
+Q20 bases: 15358311829(97.0569%)
+Q30 bases: 14747289774(93.1956%)
+
+Filtering result:
+reads passed filter: 219526782
+reads failed due to low quality: 3209078
+reads failed due to too many N: 282502
+reads failed due to too short: 0
+reads with adapter trimmed: 53009128
+bases trimmed due to adapters: 1504487798
+
+Duplication rate: 46.5318%
+
+Insert size peak (evaluated by paired-end reads): 166
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780250_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780250_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780250_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780250_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780250_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780250_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780250_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780250_fastp.html -w 4 
+fastp v0.23.4, time used: 600 seconds
+Read1 before filtering:
+total reads: 49588407
+total bases: 7487849457
+Q20 bases: 7362919300(98.3316%)
+Q30 bases: 7185175368(95.9578%)
+
+Read2 before filtering:
+total reads: 49588407
+total bases: 7487849457
+Q20 bases: 7306761913(97.5816%)
+Q30 bases: 7102349953(94.8517%)
+
+Read1 after filtering:
+total reads: 49190161
+total bases: 6674154924
+Q20 bases: 6600214721(98.8921%)
+Q30 bases: 6473634025(96.9956%)
+
+Read2 after filtering:
+total reads: 49190161
+total bases: 6674154924
+Q20 bases: 6568755843(98.4208%)
+Q30 bases: 6422771097(96.2335%)
+
+Filtering result:
+reads passed filter: 98380322
+reads failed due to low quality: 661168
+reads failed due to too many N: 135324
+reads failed due to too short: 0
+reads with adapter trimmed: 55703050
+bases trimmed due to adapters: 1510714408
+
+Duplication rate: 71.5058%
+
+Insert size peak (evaluated by paired-end reads): 134
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780258_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780258_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780258_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780258_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780258_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780258_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780258_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780258_fastp.html -w 4 
+fastp v0.23.4, time used: 225 seconds
+Read1 before filtering:
+total reads: 77408423
+total bases: 11688671873
+Q20 bases: 11458506141(98.0309%)
+Q30 bases: 11138917751(95.2967%)
+
+Read2 before filtering:
+total reads: 77408423
+total bases: 11688671873
+Q20 bases: 11268599464(96.4062%)
+Q30 bases: 10845575874(92.7871%)
+
+Read1 after filtering:
+total reads: 76352276
+total bases: 10777294414
+Q20 bases: 10634240588(98.6726%)
+Q30 bases: 10394718534(96.4502%)
+
+Read2 after filtering:
+total reads: 76352276
+total bases: 10777294414
+Q20 bases: 10516678960(97.5818%)
+Q30 bases: 10187654973(94.5289%)
+
+Filtering result:
+reads passed filter: 152704552
+reads failed due to low quality: 2026886
+reads failed due to too many N: 85408
+reads failed due to too short: 0
+reads with adapter trimmed: 54051898
+bases trimmed due to adapters: 1506087452
+
+Duplication rate: 47.4359%
+
+Insert size peak (evaluated by paired-end reads): 146
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780259_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780259_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780259_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780259_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780259_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780259_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780259_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780259_fastp.html -w 4 
+fastp v0.23.4, time used: 362 seconds
+Read1 before filtering:
+total reads: 51978582
+total bases: 7848765882
+Q20 bases: 7685038438(97.914%)
+Q30 bases: 7465311583(95.1145%)
+
+Read2 before filtering:
+total reads: 51978582
+total bases: 7848765882
+Q20 bases: 7557130549(96.2843%)
+Q30 bases: 7271377071(92.6436%)
+
+Read1 after filtering:
+total reads: 51288304
+total bases: 7086583199
+Q20 bases: 6991718463(98.6613%)
+Q30 bases: 6835154618(96.452%)
+
+Read2 after filtering:
+total reads: 51288304
+total bases: 7086583199
+Q20 bases: 6915414527(97.5846%)
+Q30 bases: 6705174197(94.6179%)
+
+Filtering result:
+reads passed filter: 102576608
+reads failed due to low quality: 1323136
+reads failed due to too many N: 57420
+reads failed due to too short: 0
+reads with adapter trimmed: 46775970
+bases trimmed due to adapters: 1318054110
+
+Duplication rate: 50.7407%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780262_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780262_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780262_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780262_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780262_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780262_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780262_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780262_fastp.html -w 4 
+fastp v0.23.4, time used: 244 seconds
+Read1 before filtering:
+total reads: 55175952
+total bases: 8331568752
+Q20 bases: 8154224472(97.8714%)
+Q30 bases: 7906819051(94.9019%)
+
+Read2 before filtering:
+total reads: 55175952
+total bases: 8331568752
+Q20 bases: 8035811910(96.4502%)
+Q30 bases: 7731867531(92.8021%)
+
+Read1 after filtering:
+total reads: 54437676
+total bases: 7676572740
+Q20 bases: 7563530710(98.5274%)
+Q30 bases: 7375211912(96.0743%)
+
+Read2 after filtering:
+total reads: 54437676
+total bases: 7676572740
+Q20 bases: 7491193261(97.5851%)
+Q30 bases: 7255538851(94.5153%)
+
+Filtering result:
+reads passed filter: 108875352
+reads failed due to low quality: 1415114
+reads failed due to too many N: 61438
+reads failed due to too short: 0
+reads with adapter trimmed: 42295150
+bases trimmed due to adapters: 1088930252
+
+Duplication rate: 50.481%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780266_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780266_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780266_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780266_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780266_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780266_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780266_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780266_fastp.html -w 4 
+fastp v0.23.4, time used: 246 seconds
+Read1 before filtering:
+total reads: 53965469
+total bases: 8148785819
+Q20 bases: 7935420507(97.3816%)
+Q30 bases: 7665524160(94.0695%)
+
+Read2 before filtering:
+total reads: 53965469
+total bases: 8148785819
+Q20 bases: 7638023051(93.732%)
+Q30 bases: 7197446877(88.3254%)
+
+Read1 after filtering:
+total reads: 53209917
+total bases: 7402448182
+Q20 bases: 7294294790(98.539%)
+Q30 bases: 7112391358(96.0816%)
+
+Read2 after filtering:
+total reads: 53209917
+total bases: 7402448182
+Q20 bases: 7104024539(95.9686%)
+Q30 bases: 6773457424(91.5029%)
+
+Filtering result:
+reads passed filter: 106419834
+reads failed due to low quality: 1452492
+reads failed due to too many N: 58612
+reads failed due to too short: 0
+reads with adapter trimmed: 43339538
+bases trimmed due to adapters: 1267081870
+
+Duplication rate: 54.7543%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780267_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780267_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780267_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780267_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780267_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780267_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780267_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780267_fastp.html -w 4 
+fastp v0.23.4, time used: 243 seconds
+Read1 before filtering:
+total reads: 34188978
+total bases: 5162535678
+Q20 bases: 5053504557(97.888%)
+Q30 bases: 4907083376(95.0518%)
+
+Read2 before filtering:
+total reads: 34188978
+total bases: 5162535678
+Q20 bases: 4963447017(96.1436%)
+Q30 bases: 4772562717(92.4461%)
+
+Read1 after filtering:
+total reads: 33732857
+total bases: 4572756321
+Q20 bases: 4512361269(98.6792%)
+Q30 bases: 4412154982(96.4879%)
+
+Read2 after filtering:
+total reads: 33732857
+total bases: 4572756321
+Q20 bases: 4461160965(97.5596%)
+Q30 bases: 4325807544(94.5996%)
+
+Filtering result:
+reads passed filter: 67465714
+reads failed due to low quality: 873090
+reads failed due to too many N: 39152
+reads failed due to too short: 0
+reads with adapter trimmed: 34624762
+bases trimmed due to adapters: 1043810884
+
+Duplication rate: 52.2086%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780270_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780270_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780270_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780270_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780270_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780270_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780270_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780270_fastp.html -w 4 
+fastp v0.23.4, time used: 146 seconds
+Read1 before filtering:
+total reads: 90741238
+total bases: 13701926938
+Q20 bases: 13423126793(97.9652%)
+Q30 bases: 13038657173(95.1593%)
+
+Read2 before filtering:
+total reads: 90741238
+total bases: 13701926938
+Q20 bases: 13130339826(95.8284%)
+Q30 bases: 12560853521(91.6722%)
+
+Read1 after filtering:
+total reads: 89227915
+total bases: 12891717444
+Q20 bases: 12715083129(98.6299%)
+Q30 bases: 12419629790(96.3381%)
+
+Read2 after filtering:
+total reads: 89227915
+total bases: 12891717444
+Q20 bases: 12528326535(97.1812%)
+Q30 bases: 12067577708(93.6072%)
+
+Filtering result:
+reads passed filter: 178455830
+reads failed due to low quality: 2929654
+reads failed due to too many N: 96992
+reads failed due to too short: 0
+reads with adapter trimmed: 44072018
+bases trimmed due to adapters: 1165516620
+
+Duplication rate: 40.0377%
+
+Insert size peak (evaluated by paired-end reads): 161
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780272_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780272_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780272_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780272_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780272_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780272_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780272_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780272_fastp.html -w 4 
+fastp v0.23.4, time used: 388 seconds
+Read1 before filtering:
+total reads: 64076371
+total bases: 9675532021
+Q20 bases: 9482010462(97.9999%)
+Q30 bases: 9086262994(93.9097%)
+
+Read2 before filtering:
+total reads: 64076371
+total bases: 9675532021
+Q20 bases: 9350417716(96.6398%)
+Q30 bases: 8773189667(90.674%)
+
+Read1 after filtering:
+total reads: 63666802
+total bases: 9060491420
+Q20 bases: 8900167039(98.2305%)
+Q30 bases: 8540934040(94.2657%)
+
+Read2 after filtering:
+total reads: 63666802
+total bases: 9060491420
+Q20 bases: 8803370842(97.1622%)
+Q30 bases: 8283203783(91.4211%)
+
+Filtering result:
+reads passed filter: 127333604
+reads failed due to low quality: 808248
+reads failed due to too many N: 10890
+reads failed due to too short: 0
+reads with adapter trimmed: 45795958
+bases trimmed due to adapters: 1106770542
+
+Duplication rate: 48.4885%
+
+Insert size peak (evaluated by paired-end reads): 142
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780273_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780273_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780273_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780273_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780273_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780273_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780273_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780273_fastp.html -w 4 
+fastp v0.23.4, time used: 300 seconds
+Read1 before filtering:
+total reads: 26091073
+total bases: 3939752023
+Q20 bases: 3867204700(98.1586%)
+Q30 bases: 3713811293(94.2651%)
+
+Read2 before filtering:
+total reads: 26091073
+total bases: 3939752023
+Q20 bases: 3816068037(96.8606%)
+Q30 bases: 3593761776(91.218%)
+
+Read1 after filtering:
+total reads: 25960535
+total bases: 3416545165
+Q20 bases: 3361235768(98.3811%)
+Q30 bases: 3233242294(94.6348%)
+
+Read2 after filtering:
+total reads: 25960535
+total bases: 3416545165
+Q20 bases: 3333909939(97.5813%)
+Q30 bases: 3158064292(92.4344%)
+
+Filtering result:
+reads passed filter: 51921070
+reads failed due to low quality: 256804
+reads failed due to too many N: 4272
+reads failed due to too short: 0
+reads with adapter trimmed: 33909878
+bases trimmed due to adapters: 1007334806
+
+Duplication rate: 60.9638%
+
+Insert size peak (evaluated by paired-end reads): 130
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780274_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780274_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780274_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780274_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780274_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780274_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780274_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780274_fastp.html -w 4 
+fastp v0.23.4, time used: 220 seconds
+Read1 before filtering:
+total reads: 37653608
+total bases: 2824020600
+Q20 bases: 2734125571(96.8168%)
+Q30 bases: 2698831298(95.567%)
+
+Read2 before filtering:
+total reads: 37653608
+total bases: 2824020600
+Q20 bases: 2646003438(93.6963%)
+Q30 bases: 2594296880(91.8654%)
+
+Read1 after filtering:
+total reads: 35999206
+total bases: 2692000848
+Q20 bases: 2621579278(97.384%)
+Q30 bases: 2589809918(96.2039%)
+
+Read2 after filtering:
+total reads: 35999206
+total bases: 2692000848
+Q20 bases: 2597749626(96.4988%)
+Q30 bases: 2555051699(94.9127%)
+
+Filtering result:
+reads passed filter: 71998412
+reads failed due to low quality: 3264248
+reads failed due to too many N: 44556
+reads failed due to too short: 0
+reads with adapter trimmed: 716198
+bases trimmed due to adapters: 16141764
+
+Duplication rate: 69.4944%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780275_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780275_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780275_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780275_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780275_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780275_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780275_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780275_fastp.html -w 4 
+fastp v0.23.4, time used: 207 seconds
+Read1 before filtering:
+total reads: 53329748
+total bases: 3999731100
+Q20 bases: 3870330318(96.7648%)
+Q30 bases: 3819743091(95.5%)
+
+Read2 before filtering:
+total reads: 53329748
+total bases: 3999731100
+Q20 bases: 3798883365(94.9785%)
+Q30 bases: 3732328113(93.3145%)
+
+Read1 after filtering:
+total reads: 52071208
+total bases: 3892192979
+Q20 bases: 3788100823(97.3256%)
+Q30 bases: 3741537457(96.1293%)
+
+Read2 after filtering:
+total reads: 52071208
+total bases: 3892192979
+Q20 bases: 3751000775(96.3724%)
+Q30 bases: 3691037678(94.8318%)
+
+Filtering result:
+reads passed filter: 104142416
+reads failed due to low quality: 2452844
+reads failed due to too many N: 64236
+reads failed due to too short: 0
+reads with adapter trimmed: 1153104
+bases trimmed due to adapters: 26572724
+
+Duplication rate: 42.7154%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780277_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780277_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780277_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780277_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780277_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780277_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780277_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780277_fastp.html -w 4 
+fastp v0.23.4, time used: 222 seconds
+Read1 before filtering:
+total reads: 56764695
+total bases: 4257352125
+Q20 bases: 4106827237(96.4644%)
+Q30 bases: 4047472366(95.0702%)
+
+Read2 before filtering:
+total reads: 56764695
+total bases: 4257352125
+Q20 bases: 4036220240(94.8059%)
+Q30 bases: 3961627403(93.0538%)
+
+Read1 after filtering:
+total reads: 55556474
+total bases: 4158885071
+Q20 bases: 4029599815(96.8913%)
+Q30 bases: 3974166851(95.5585%)
+
+Read2 after filtering:
+total reads: 55556474
+total bases: 4158885071
+Q20 bases: 3992172745(95.9914%)
+Q30 bases: 3923715257(94.3454%)
+
+Filtering result:
+reads passed filter: 111112948
+reads failed due to low quality: 2372902
+reads failed due to too many N: 43540
+reads failed due to too short: 0
+reads with adapter trimmed: 723772
+bases trimmed due to adapters: 15835924
+
+Duplication rate: 42.4237%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780278_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780278_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780278_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780278_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780278_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780278_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780278_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780278_fastp.html -w 4 
+fastp v0.23.4, time used: 250 seconds
+Read1 before filtering:
+total reads: 59462166
+total bases: 4459662450
+Q20 bases: 4138493471(92.7984%)
+Q30 bases: 4020520657(90.153%)
+
+Read2 before filtering:
+total reads: 59462166
+total bases: 4459662450
+Q20 bases: 4028479252(90.3315%)
+Q30 bases: 3890762728(87.2434%)
+
+Read1 after filtering:
+total reads: 57381807
+total bases: 4295652007
+Q20 bases: 4019485919(93.571%)
+Q30 bases: 3911164376(91.0494%)
+
+Read2 after filtering:
+total reads: 57381807
+total bases: 4295652007
+Q20 bases: 3948612760(91.9212%)
+Q30 bases: 3822235266(88.9792%)
+
+Filtering result:
+reads passed filter: 114763614
+reads failed due to low quality: 4133812
+reads failed due to too many N: 26906
+reads failed due to too short: 0
+reads with adapter trimmed: 714582
+bases trimmed due to adapters: 16139614
+
+Duplication rate: 33.0343%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780279_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780279_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780279_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780279_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780279_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780279_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780279_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780279_fastp.html -w 4 
+fastp v0.23.4, time used: 245 seconds
+Read1 before filtering:
+total reads: 86414594
+total bases: 6481094550
+Q20 bases: 5955677975(91.8931%)
+Q30 bases: 5763301274(88.9248%)
+
+Read2 before filtering:
+total reads: 86414594
+total bases: 6481094550
+Q20 bases: 5791212236(89.3555%)
+Q30 bases: 5567906139(85.91%)
+
+Read1 after filtering:
+total reads: 82812417
+total bases: 6188298849
+Q20 bases: 5751492833(92.9414%)
+Q30 bases: 5577131917(90.1238%)
+
+Read2 after filtering:
+total reads: 82812417
+total bases: 6188298849
+Q20 bases: 5647295927(91.2576%)
+Q30 bases: 5444271215(87.9769%)
+
+Filtering result:
+reads passed filter: 165624834
+reads failed due to low quality: 7153408
+reads failed due to too many N: 50946
+reads failed due to too short: 0
+reads with adapter trimmed: 2149618
+bases trimmed due to adapters: 46051314
+
+Duplication rate: 26.9411%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780287_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780287_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780287_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780287_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780287_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780287_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780287_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780287_fastp.html -w 4 
+fastp v0.23.4, time used: 344 seconds
+Read1 before filtering:
+total reads: 11325877
+total bases: 1710207427
+Q20 bases: 1670917324(97.7026%)
+Q30 bases: 1615819436(94.4809%)
+
+Read2 before filtering:
+total reads: 11325877
+total bases: 1710207427
+Q20 bases: 1664709941(97.3397%)
+Q30 bases: 1614076843(94.379%)
+
+Read1 after filtering:
+total reads: 11238170
+total bases: 1473435717
+Q20 bases: 1451714803(98.5258%)
+Q30 bases: 1414964305(96.0316%)
+
+Read2 after filtering:
+total reads: 11238170
+total bases: 1473435717
+Q20 bases: 1449092650(98.3479%)
+Q30 bases: 1415943806(96.0981%)
+
+Filtering result:
+reads passed filter: 22476340
+reads failed due to low quality: 140366
+reads failed due to too many N: 35048
+reads failed due to too short: 0
+reads with adapter trimmed: 14524342
+bases trimmed due to adapters: 448154474
+
+Duplication rate: 64.5577%
+
+Insert size peak (evaluated by paired-end reads): 126
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780256_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780256_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780256_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780256_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780256_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780256_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780256_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780256_fastp.html -w 4 
+fastp v0.23.4, time used: 71 seconds
+Read1 before filtering:
+total reads: 118680307
+total bases: 17920726357
+Q20 bases: 17523772386(97.7849%)
+Q30 bases: 16963496987(94.6585%)
+
+Read2 before filtering:
+total reads: 118680307
+total bases: 17920726357
+Q20 bases: 17281373886(96.4323%)
+Q30 bases: 16611553406(92.6946%)
+
+Read1 after filtering:
+total reads: 117438635
+total bases: 16456001732
+Q20 bases: 16208813456(98.4979%)
+Q30 bases: 15787394807(95.937%)
+
+Read2 after filtering:
+total reads: 117438635
+total bases: 16456001732
+Q20 bases: 16058447002(97.5841%)
+Q30 bases: 15537121481(94.4161%)
+
+Filtering result:
+reads passed filter: 234877270
+reads failed due to low quality: 2127432
+reads failed due to too many N: 355912
+reads failed due to too short: 0
+reads with adapter trimmed: 91975904
+bases trimmed due to adapters: 2560904750
+
+Duplication rate: 51.1346%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780268_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780268_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780268_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780268_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780268_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780268_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780268_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780268_fastp.html -w 4 
+fastp v0.23.4, time used: 716 seconds
+Read1 before filtering:
+total reads: 48569820
+total bases: 7334042820
+Q20 bases: 7193585917(98.0849%)
+Q30 bases: 6980907371(95.185%)
+
+Read2 before filtering:
+total reads: 48569820
+total bases: 7334042820
+Q20 bases: 7074535672(96.4616%)
+Q30 bases: 6773676908(92.3594%)
+
+Read1 after filtering:
+total reads: 47984123
+total bases: 6740656670
+Q20 bases: 6654806004(98.7264%)
+Q30 bases: 6496367374(96.3759%)
+
+Read2 after filtering:
+total reads: 47984123
+total bases: 6740656670
+Q20 bases: 6578209877(97.59%)
+Q30 bases: 6342033640(94.0863%)
+
+Filtering result:
+reads passed filter: 95968246
+reads failed due to low quality: 1007528
+reads failed due to too many N: 163866
+reads failed due to too short: 0
+reads with adapter trimmed: 36969380
+bases trimmed due to adapters: 1012798130
+
+Duplication rate: 50.5174%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780269_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780269_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780269_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780269_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780269_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780269_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780269_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780269_fastp.html -w 4 
+fastp v0.23.4, time used: 261 seconds
+Read1 before filtering:
+total reads: 57852085
+total bases: 8735664835
+Q20 bases: 8578197139(98.1974%)
+Q30 bases: 8360872759(95.7096%)
+
+Read2 before filtering:
+total reads: 57852085
+total bases: 8735664835
+Q20 bases: 8460067495(96.8451%)
+Q30 bases: 8166586015(93.4856%)
+
+Read1 after filtering:
+total reads: 57153750
+total bases: 8089062426
+Q20 bases: 7992619638(98.8077%)
+Q30 bases: 7829562577(96.792%)
+
+Read2 after filtering:
+total reads: 57153750
+total bases: 8089062426
+Q20 bases: 7918523534(97.8917%)
+Q30 bases: 7687593007(95.0369%)
+
+Filtering result:
+reads passed filter: 114307500
+reads failed due to low quality: 1244286
+reads failed due to too many N: 152384
+reads failed due to too short: 0
+reads with adapter trimmed: 40851976
+bases trimmed due to adapters: 1085052978
+
+Duplication rate: 51.0526%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780254_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780254_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780254_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780254_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780254_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780254_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780254_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780254_fastp.html -w 4 
+fastp v0.23.4, time used: 295 seconds
+Read1 before filtering:
+total reads: 60259128
+total bases: 9099128328
+Q20 bases: 8921879211(98.052%)
+Q30 bases: 8650982619(95.0749%)
+
+Read2 before filtering:
+total reads: 60259128
+total bases: 9099128328
+Q20 bases: 8797436849(96.6844%)
+Q30 bases: 8437251091(92.7259%)
+
+Read1 after filtering:
+total reads: 59513312
+total bases: 8477374041
+Q20 bases: 8362320825(98.6428%)
+Q30 bases: 8152514288(96.1679%)
+
+Read2 after filtering:
+total reads: 59513312
+total bases: 8477374041
+Q20 bases: 8285158640(97.7326%)
+Q30 bases: 7996040654(94.3221%)
+
+Filtering result:
+reads passed filter: 119026624
+reads failed due to low quality: 1289620
+reads failed due to too many N: 202012
+reads failed due to too short: 0
+reads with adapter trimmed: 40094492
+bases trimmed due to adapters: 1021308740
+
+Duplication rate: 46.6478%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780247_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780247_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780247_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780247_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780247_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780247_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780247_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780247_fastp.html -w 4 
+fastp v0.23.4, time used: 296 seconds
+Read1 before filtering:
+total reads: 61770360
+total bases: 9327324360
+Q20 bases: 9129204459(97.8759%)
+Q30 bases: 8860562145(94.9958%)
+
+Read2 before filtering:
+total reads: 61770360
+total bases: 9327324360
+Q20 bases: 8944504387(95.8957%)
+Q30 bases: 8566924525(91.8476%)
+
+Read1 after filtering:
+total reads: 60968101
+total bases: 8455179603
+Q20 bases: 8340272583(98.641%)
+Q30 bases: 8147549107(96.3616%)
+
+Read2 after filtering:
+total reads: 60968101
+total bases: 8455179603
+Q20 bases: 8225297585(97.2812%)
+Q30 bases: 7940033743(93.9073%)
+
+Filtering result:
+reads passed filter: 121936202
+reads failed due to low quality: 1537160
+reads failed due to too many N: 67358
+reads failed due to too short: 0
+reads with adapter trimmed: 51493298
+bases trimmed due to adapters: 1504434912
+
+Duplication rate: 42.7465%
+
+Insert size peak (evaluated by paired-end reads): 142
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780248_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780248_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780248_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780248_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780248_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780248_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780248_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780248_fastp.html -w 4 
+fastp v0.23.4, time used: 312 seconds
+Read1 before filtering:
+total reads: 40475810
+total bases: 6111847310
+Q20 bases: 5894900751(96.4504%)
+Q30 bases: 5587027388(91.4131%)
+
+Read2 before filtering:
+total reads: 40475810
+total bases: 6111847310
+Q20 bases: 5842043364(95.5856%)
+Q30 bases: 5558462351(90.9457%)
+
+Read1 after filtering:
+total reads: 39854772
+total bases: 5631808621
+Q20 bases: 5481575211(97.3324%)
+Q30 bases: 5226934281(92.8109%)
+
+Read2 after filtering:
+total reads: 39854772
+total bases: 5631808621
+Q20 bases: 5460015589(96.9496%)
+Q30 bases: 5235903664(92.9702%)
+
+Filtering result:
+reads passed filter: 79709544
+reads failed due to low quality: 1199792
+reads failed due to too many N: 42284
+reads failed due to too short: 0
+reads with adapter trimmed: 27935754
+bases trimmed due to adapters: 774460808
+
+Duplication rate: 39.6102%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780249_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780249_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780249_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780249_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780249_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780249_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780249_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780249_fastp.html -w 4 
+fastp v0.23.4, time used: 225 seconds
+Read1 before filtering:
+total reads: 48919325
+total bases: 7386818075
+Q20 bases: 7185386049(97.2731%)
+Q30 bases: 6883420541(93.1852%)
+
+Read2 before filtering:
+total reads: 48919325
+total bases: 7386818075
+Q20 bases: 7185642919(97.2766%)
+Q30 bases: 6930074846(93.8168%)
+
+Read1 after filtering:
+total reads: 48378967
+total bases: 6753231257
+Q20 bases: 6608842815(97.8619%)
+Q30 bases: 6357900724(94.1461%)
+
+Read2 after filtering:
+total reads: 48378967
+total bases: 6753231257
+Q20 bases: 6623143781(98.0737%)
+Q30 bases: 6423129847(95.1119%)
+
+Filtering result:
+reads passed filter: 96757934
+reads failed due to low quality: 951624
+reads failed due to too many N: 129092
+reads failed due to too short: 0
+reads with adapter trimmed: 42237878
+bases trimmed due to adapters: 1107569556
+
+Duplication rate: 52.4221%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780251_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780251_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780251_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780251_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780251_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780251_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780251_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780251_fastp.html -w 4 
+fastp v0.23.4, time used: 260 seconds
+Read1 before filtering:
+total reads: 48252701
+total bases: 7286157851
+Q20 bases: 7156390355(98.219%)
+Q30 bases: 6973316822(95.7064%)
+
+Read2 before filtering:
+total reads: 48252701
+total bases: 7286157851
+Q20 bases: 7091155349(97.3237%)
+Q30 bases: 6866540278(94.2409%)
+
+Read1 after filtering:
+total reads: 47794574
+total bases: 6568674088
+Q20 bases: 6489134086(98.7891%)
+Q30 bases: 6354576063(96.7406%)
+
+Read2 after filtering:
+total reads: 47794574
+total bases: 6568674088
+Q20 bases: 6451187954(98.2114%)
+Q30 bases: 6283530480(95.659%)
+
+Filtering result:
+reads passed filter: 95589148
+reads failed due to low quality: 787902
+reads failed due to too many N: 128352
+reads failed due to too short: 0
+reads with adapter trimmed: 47405610
+bases trimmed due to adapters: 1299738820
+
+Duplication rate: 55.8843%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780252_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780252_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780252_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780252_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780252_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780252_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780252_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780252_fastp.html -w 4 
+fastp v0.23.4, time used: 242 seconds
+Read1 before filtering:
+total reads: 44815839
+total bases: 6767191689
+Q20 bases: 6644799016(98.1914%)
+Q30 bases: 6473387166(95.6584%)
+
+Read2 before filtering:
+total reads: 44815839
+total bases: 6767191689
+Q20 bases: 6561179327(96.9557%)
+Q30 bases: 6335427146(93.6197%)
+
+Read1 after filtering:
+total reads: 44279186
+total bases: 6254857662
+Q20 bases: 6178873060(98.7852%)
+Q30 bases: 6050054783(96.7257%)
+
+Read2 after filtering:
+total reads: 44279186
+total bases: 6254857662
+Q20 bases: 6126951106(97.9551%)
+Q30 bases: 5949062827(95.1111%)
+
+Filtering result:
+reads passed filter: 88558372
+reads failed due to low quality: 953950
+reads failed due to too many N: 119356
+reads failed due to too short: 0
+reads with adapter trimmed: 31874698
+bases trimmed due to adapters: 864788762
+
+Duplication rate: 43.679%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780253_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780253_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780253_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780253_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780253_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780253_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780253_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780253_fastp.html -w 4 
+fastp v0.23.4, time used: 232 seconds
+Read1 before filtering:
+total reads: 33061718
+total bases: 4992319418
+Q20 bases: 4914980034(98.4508%)
+Q30 bases: 4802699791(96.2018%)
+
+Read2 before filtering:
+total reads: 33061718
+total bases: 4992319418
+Q20 bases: 4878159721(97.7133%)
+Q30 bases: 4738707055(94.9199%)
+
+Read1 after filtering:
+total reads: 32775293
+total bases: 4393615365
+Q20 bases: 4347539607(98.9513%)
+Q30 bases: 4268373745(97.1495%)
+
+Read2 after filtering:
+total reads: 32775293
+total bases: 4393615365
+Q20 bases: 4325999261(98.461%)
+Q30 bases: 4225464573(96.1728%)
+
+Filtering result:
+reads passed filter: 65550586
+reads failed due to low quality: 482912
+reads failed due to too many N: 89938
+reads failed due to too short: 0
+reads with adapter trimmed: 37023960
+bases trimmed due to adapters: 1113482316
+
+Duplication rate: 51.9473%
+
+Insert size peak (evaluated by paired-end reads): 127
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780255_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780255_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780255_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780255_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780255_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780255_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780255_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780255_fastp.html -w 4 
+fastp v0.23.4, time used: 165 seconds
+Read1 before filtering:
+total reads: 56664824
+total bases: 8556388424
+Q20 bases: 8414232579(98.3386%)
+Q30 bases: 8214106687(95.9997%)
+
+Read2 before filtering:
+total reads: 56664824
+total bases: 8556388424
+Q20 bases: 8342594800(97.5014%)
+Q30 bases: 8099204234(94.6568%)
+
+Read1 after filtering:
+total reads: 56167796
+total bases: 7685297647
+Q20 bases: 7598630921(98.8723%)
+Q30 bases: 7453444847(96.9832%)
+
+Read2 after filtering:
+total reads: 56167796
+total bases: 7685297647
+Q20 bases: 7556271983(98.3211%)
+Q30 bases: 7377017390(95.9887%)
+
+Filtering result:
+reads passed filter: 112335592
+reads failed due to low quality: 838974
+reads failed due to too many N: 155082
+reads failed due to too short: 0
+reads with adapter trimmed: 58896070
+bases trimmed due to adapters: 1595886532
+
+Duplication rate: 67.9647%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780257_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780257_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780257_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780257_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780257_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780257_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780257_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780257_fastp.html -w 4 
+fastp v0.23.4, time used: 282 seconds
+Read1 before filtering:
+total reads: 49935904
+total bases: 7540321504
+Q20 bases: 7385677307(97.9491%)
+Q30 bases: 7176199871(95.171%)
+
+Read2 before filtering:
+total reads: 49935904
+total bases: 7540321504
+Q20 bases: 7270009728(96.4151%)
+Q30 bases: 7002100953(92.8621%)
+
+Read1 after filtering:
+total reads: 49278700
+total bases: 6812868464
+Q20 bases: 6721409962(98.6576%)
+Q30 bases: 6570808793(96.447%)
+
+Read2 after filtering:
+total reads: 49278700
+total bases: 6812868464
+Q20 bases: 6652719755(97.6493%)
+Q30 bases: 6454115427(94.7342%)
+
+Filtering result:
+reads passed filter: 98557400
+reads failed due to low quality: 1257496
+reads failed due to too many N: 56912
+reads failed due to too short: 0
+reads with adapter trimmed: 44409084
+bases trimmed due to adapters: 1258502236
+
+Duplication rate: 48.423%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780260_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780260_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780260_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780260_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780260_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780260_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780260_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780260_fastp.html -w 4 
+fastp v0.23.4, time used: 237 seconds
+Read1 before filtering:
+total reads: 46500608
+total bases: 7021591808
+Q20 bases: 6872106350(97.8711%)
+Q30 bases: 6670136997(94.9947%)
+
+Read2 before filtering:
+total reads: 46500608
+total bases: 7021591808
+Q20 bases: 6733785247(95.9011%)
+Q30 bases: 6459431936(91.9938%)
+
+Read1 after filtering:
+total reads: 45890037
+total bases: 6427901997
+Q20 bases: 6340304934(98.6372%)
+Q30 bases: 6193955780(96.3605%)
+
+Read2 after filtering:
+total reads: 45890037
+total bases: 6427901997
+Q20 bases: 6254938456(97.3092%)
+Q30 bases: 6046353758(94.0642%)
+
+Filtering result:
+reads passed filter: 91780074
+reads failed due to low quality: 1169090
+reads failed due to too many N: 52052
+reads failed due to too short: 0
+reads with adapter trimmed: 36244312
+bases trimmed due to adapters: 1004774968
+
+Duplication rate: 53.0953%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780264_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780264_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_fastp.html -w 4 
+fastp v0.23.4, time used: 211 seconds
+Read1 before filtering:
+total reads: 40922518
+total bases: 6179300218
+Q20 bases: 5986812768(96.885%)
+Q30 bases: 5700445345(92.2507%)
+
+Read2 before filtering:
+total reads: 40922518
+total bases: 6179300218
+Q20 bases: 5973237205(96.6653%)
+Q30 bases: 5723012828(92.6159%)
+
+Read1 after filtering:
+total reads: 40396334
+total bases: 5788175581
+Q20 bases: 5646924885(97.5597%)
+Q30 bases: 5400917238(93.3095%)
+
+Read2 after filtering:
+total reads: 40396334
+total bases: 5788175581
+Q20 bases: 5652375182(97.6538%)
+Q30 bases: 5446913918(94.1042%)
+
+Filtering result:
+reads passed filter: 80792668
+reads failed due to low quality: 949056
+reads failed due to too many N: 103312
+reads failed due to too short: 0
+reads with adapter trimmed: 25272356
+bases trimmed due to adapters: 625533746
+
+Duplication rate: 58.3165%
+
+Insert size peak (evaluated by paired-end reads): 148
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780265_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780265_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_fastp.html -w 4 
+fastp v0.23.4, time used: 203 seconds
+Read1 before filtering:
+total reads: 59707739
+total bases: 4478080425
+Q20 bases: 4159129136(92.8775%)
+Q30 bases: 4045202634(90.3334%)
+
+Read2 before filtering:
+total reads: 59707739
+total bases: 4478080425
+Q20 bases: 4026956953(89.926%)
+Q30 bases: 3890597719(86.8809%)
+
+Read1 after filtering:
+total reads: 56883869
+total bases: 4258691859
+Q20 bases: 3986582243(93.6105%)
+Q30 bases: 3882937437(91.1768%)
+
+Read2 after filtering:
+total reads: 56883869
+total bases: 4258691859
+Q20 bases: 3934419413(92.3856%)
+Q30 bases: 3813905694(89.5558%)
+
+Filtering result:
+reads passed filter: 113767738
+reads failed due to low quality: 5620698
+reads failed due to too many N: 27042
+reads failed due to too short: 0
+reads with adapter trimmed: 695156
+bases trimmed due to adapters: 15391392
+
+Duplication rate: 43.1927%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780280_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780280_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780280_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780280_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780280_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780280_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780280_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780280_fastp.html -w 4 
+fastp v0.23.4, time used: 194 seconds
+Read1 before filtering:
+total reads: 53211845
+total bases: 3990888375
+Q20 bases: 3771963962(94.5144%)
+Q30 bases: 3682729769(92.2784%)
+
+Read2 before filtering:
+total reads: 53211845
+total bases: 3990888375
+Q20 bases: 3687251451(92.3917%)
+Q30 bases: 3574856145(89.5754%)
+
+Read1 after filtering:
+total reads: 51420514
+total bases: 3848915171
+Q20 bases: 3663402494(95.1801%)
+Q30 bases: 3581330896(93.0478%)
+
+Read2 after filtering:
+total reads: 51420514
+total bases: 3848915171
+Q20 bases: 3622880268(94.1273%)
+Q30 bases: 3520424434(91.4654%)
+
+Filtering result:
+reads passed filter: 102841028
+reads failed due to low quality: 3486666
+reads failed due to too many N: 95996
+reads failed due to too short: 0
+reads with adapter trimmed: 683918
+bases trimmed due to adapters: 15437270
+
+Duplication rate: 57.0889%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780283_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780283_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780283_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780283_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780283_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780283_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780283_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780283_fastp.html -w 4 
+fastp v0.23.4, time used: 160 seconds
+Read1 before filtering:
+total reads: 13849461
+total bases: 1038709575
+Q20 bases: 983276803(94.6633%)
+Q30 bases: 961204327(92.5383%)
+
+Read2 before filtering:
+total reads: 13849461
+total bases: 1038709575
+Q20 bases: 961448495(92.5618%)
+Q30 bases: 931646605(89.6927%)
+
+Read1 after filtering:
+total reads: 13333164
+total bases: 996554555
+Q20 bases: 950828938(95.4116%)
+Q30 bases: 930683354(93.3901%)
+
+Read2 after filtering:
+total reads: 13333164
+total bases: 996554555
+Q20 bases: 942670954(94.593%)
+Q30 bases: 916135869(91.9303%)
+
+Filtering result:
+reads passed filter: 26666328
+reads failed due to low quality: 1006902
+reads failed due to too many N: 25692
+reads failed due to too short: 0
+reads with adapter trimmed: 345624
+bases trimmed due to adapters: 6971804
+
+Duplication rate: 47.0527%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780284_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780284_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780284_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780284_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780284_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780284_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780284_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780284_fastp.html -w 4 
+fastp v0.23.4, time used: 44 seconds
+Read1 before filtering:
+total reads: 45169251
+total bases: 3387693825
+Q20 bases: 3191424374(94.2064%)
+Q30 bases: 3113291952(91.9%)
+
+Read2 before filtering:
+total reads: 45169251
+total bases: 3387693825
+Q20 bases: 3099092595(91.4809%)
+Q30 bases: 2999860850(88.5517%)
+
+Read1 after filtering:
+total reads: 43235738
+total bases: 3231539236
+Q20 bases: 3068259500(94.9473%)
+Q30 bases: 2997174984(92.7476%)
+
+Read2 after filtering:
+total reads: 43235738
+total bases: 3231539236
+Q20 bases: 3034715187(93.9093%)
+Q30 bases: 2946643811(91.1839%)
+
+Filtering result:
+reads passed filter: 86471476
+reads failed due to low quality: 3787498
+reads failed due to too many N: 79528
+reads failed due to too short: 0
+reads with adapter trimmed: 956594
+bases trimmed due to adapters: 22585954
+
+Duplication rate: 45.3319%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780285_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780285_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780285_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780285_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780285_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780285_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780285_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780285_fastp.html -w 4 
+fastp v0.23.4, time used: 145 seconds
+Read1 before filtering:
+total reads: 84609542
+total bases: 6345715650
+Q20 bases: 6029797164(95.0215%)
+Q30 bases: 5916638618(93.2383%)
+
+Read2 before filtering:
+total reads: 84609542
+total bases: 6345715650
+Q20 bases: 5870408068(92.5098%)
+Q30 bases: 5727069007(90.251%)
+
+Read1 after filtering:
+total reads: 81933956
+total bases: 6130155962
+Q20 bases: 5860901540(95.6077%)
+Q30 bases: 5756895546(93.9111%)
+
+Read2 after filtering:
+total reads: 81933956
+total bases: 6130155962
+Q20 bases: 5776180093(94.2257%)
+Q30 bases: 5647177875(92.1213%)
+
+Filtering result:
+reads passed filter: 163867912
+reads failed due to low quality: 5314906
+reads failed due to too many N: 36266
+reads failed due to too short: 0
+reads with adapter trimmed: 1528050
+bases trimmed due to adapters: 30083548
+
+Duplication rate: 36.307%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780286_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780286_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780286_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780286_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780286_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780286_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780286_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780286_fastp.html -w 4 
+fastp v0.23.4, time used: 250 seconds
+Read1 before filtering:
+total reads: 91491387
+total bases: 6861854025
+Q20 bases: 6501382099(94.7467%)
+Q30 bases: 6333233795(92.2962%)
+
+Read2 before filtering:
+total reads: 91491387
+total bases: 6861854025
+Q20 bases: 6293061451(91.7108%)
+Q30 bases: 6097224006(88.8568%)
+
+Read1 after filtering:
+total reads: 87914548
+total bases: 6582499760
+Q20 bases: 6282371088(95.4405%)
+Q30 bases: 6128716122(93.1062%)
+
+Read2 after filtering:
+total reads: 87914548
+total bases: 6582499760
+Q20 bases: 6168819467(93.7155%)
+Q30 bases: 5993405993(91.0506%)
+
+Filtering result:
+reads passed filter: 175829096
+reads failed due to low quality: 6900394
+reads failed due to too many N: 253284
+reads failed due to too short: 0
+reads with adapter trimmed: 989552
+bases trimmed due to adapters: 22480900
+
+Duplication rate: 32.5525%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780288_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780288_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780288_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780288_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780288_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780288_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780288_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780288_fastp.html -w 4 
+fastp v0.23.4, time used: 256 seconds
+Read1 before filtering:
+total reads: 85545670
+total bases: 6415925250
+Q20 bases: 6063954102(94.5141%)
+Q30 bases: 5903601460(92.0148%)
+
+Read2 before filtering:
+total reads: 85545670
+total bases: 6415925250
+Q20 bases: 5734699331(89.3823%)
+Q30 bases: 5536332444(86.2905%)
+
+Read1 after filtering:
+total reads: 79672554
+total bases: 5958562024
+Q20 bases: 5679563786(95.3177%)
+Q30 bases: 5538079405(92.9432%)
+
+Read2 after filtering:
+total reads: 79672554
+total bases: 5958562024
+Q20 bases: 5563154335(93.364%)
+Q30 bases: 5399081370(90.6105%)
+
+Filtering result:
+reads passed filter: 159345108
+reads failed due to low quality: 11519764
+reads failed due to too many N: 226468
+reads failed due to too short: 0
+reads with adapter trimmed: 1464520
+bases trimmed due to adapters: 34296258
+
+Duplication rate: 21.3437%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780290_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780290_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780290_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780290_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780290_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780290_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780290_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780290_fastp.html -w 4 
+fastp v0.23.4, time used: 256 seconds
+Read1 before filtering:
+total reads: 52912116
+total bases: 3968408700
+Q20 bases: 3837130703(96.6919%)
+Q30 bases: 3774625232(95.1168%)
+
+Read2 before filtering:
+total reads: 52912116
+total bases: 3968408700
+Q20 bases: 3744049049(94.3464%)
+Q30 bases: 3660846955(92.2497%)
+
+Read1 after filtering:
+total reads: 51712331
+total bases: 3871337924
+Q20 bases: 3762265768(97.1826%)
+Q30 bases: 3704629760(95.6938%)
+
+Read2 after filtering:
+total reads: 51712331
+total bases: 3871337924
+Q20 bases: 3697892479(95.5198%)
+Q30 bases: 3621435463(93.5448%)
+
+Filtering result:
+reads passed filter: 103424662
+reads failed due to low quality: 2337082
+reads failed due to too many N: 62488
+reads failed due to too short: 0
+reads with adapter trimmed: 818060
+bases trimmed due to adapters: 14331890
+
+Duplication rate: 30.4829%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780291_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780291_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780291_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780291_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780291_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780291_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780291_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780291_fastp.html -w 4 
+fastp v0.23.4, time used: 153 seconds
+Read1 before filtering:
+total reads: 50963107
+total bases: 7695429157
+Q20 bases: 7537015005(97.9415%)
+Q30 bases: 7321945480(95.1467%)
+
+Read2 before filtering:
+total reads: 50963107
+total bases: 7695429157
+Q20 bases: 7437581076(96.6493%)
+Q30 bases: 7170617452(93.1802%)
+
+Read1 after filtering:
+total reads: 50445348
+total bases: 6952889504
+Q20 bases: 6863921691(98.7204%)
+Q30 bases: 6710426077(96.5128%)
+
+Read2 after filtering:
+total reads: 50445348
+total bases: 6952889504
+Q20 bases: 6800690711(97.811%)
+Q30 bases: 6602997123(94.9677%)
+
+Filtering result:
+reads passed filter: 100890696
+reads failed due to low quality: 898986
+reads failed due to too many N: 136532
+reads failed due to too short: 0
+reads with adapter trimmed: 49798346
+bases trimmed due to adapters: 1332027840
+
+Duplication rate: 69.8661%
+
+Insert size peak (evaluated by paired-end reads): 148
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780261_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780261_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780261_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780261_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780261_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780261_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780261_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780261_fastp.html -w 4 
+fastp v0.23.4, time used: 222 seconds
+Read1 before filtering:
+total reads: 13070562
+total bases: 980292150
+Q20 bases: 951231577(97.0355%)
+Q30 bases: 940508876(95.9417%)
+
+Read2 before filtering:
+total reads: 13070562
+total bases: 980292150
+Q20 bases: 887521597(90.5364%)
+Q30 bases: 865915280(88.3324%)
+
+Read1 after filtering:
+total reads: 11748741
+total bases: 877215086
+Q20 bases: 857023492(97.6982%)
+Q30 bases: 848122992(96.6836%)
+
+Read2 after filtering:
+total reads: 11748741
+total bases: 877215086
+Q20 bases: 852907578(97.229%)
+Q30 bases: 840618636(95.8281%)
+
+Filtering result:
+reads passed filter: 23497482
+reads failed due to low quality: 2628428
+reads failed due to too many N: 15214
+reads failed due to too short: 0
+reads with adapter trimmed: 682982
+bases trimmed due to adapters: 8361940
+
+Duplication rate: 66.1242%
+
+Insert size peak (evaluated by paired-end reads): 107
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780281_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780281_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780281_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780281_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780281_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780281_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780281_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780281_fastp.html -w 4 
+fastp v0.23.4, time used: 34 seconds
+Read1 before filtering:
+total reads: 50272125
+total bases: 7591090875
+Q20 bases: 7433181943(97.9198%)
+Q30 bases: 7193986237(94.7688%)
+
+Read2 before filtering:
+total reads: 50272125
+total bases: 7591090875
+Q20 bases: 7334476186(96.6195%)
+Q30 bases: 7034976118(92.6741%)
+
+Read1 after filtering:
+total reads: 49636980
+total bases: 7016511850
+Q20 bases: 6916688575(98.5773%)
+Q30 bases: 6735017467(95.9881%)
+
+Read2 after filtering:
+total reads: 49636980
+total bases: 7016511850
+Q20 bases: 6855657220(97.7075%)
+Q30 bases: 6618506441(94.3276%)
+
+Filtering result:
+reads passed filter: 99273960
+reads failed due to low quality: 1099924
+reads failed due to too many N: 170366
+reads failed due to too short: 0
+reads with adapter trimmed: 35924180
+bases trimmed due to adapters: 960181506
+
+Duplication rate: 44.7574%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780271_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780271_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780271_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780271_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780271_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780271_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780271_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780271_fastp.html -w 4 
+fastp v0.23.4, time used: 267 seconds
+Read1 before filtering:
+total reads: 75963868
+total bases: 5697290100
+Q20 bases: 5378730049(94.4086%)
+Q30 bases: 5236363035(91.9097%)
+
+Read2 before filtering:
+total reads: 75963868
+total bases: 5697290100
+Q20 bases: 5225058457(91.7113%)
+Q30 bases: 5062346551(88.8553%)
+
+Read1 after filtering:
+total reads: 72851794
+total bases: 5446090705
+Q20 bases: 5184082253(95.1891%)
+Q30 bases: 5054114454(92.8026%)
+
+Read2 after filtering:
+total reads: 72851794
+total bases: 5446090705
+Q20 bases: 5117548163(93.9674%)
+Q30 bases: 4973916633(91.33%)
+
+Filtering result:
+reads passed filter: 145703588
+reads failed due to low quality: 6015008
+reads failed due to too many N: 209140
+reads failed due to too short: 0
+reads with adapter trimmed: 1651266
+bases trimmed due to adapters: 36127074
+
+Duplication rate: 47.0881%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780289_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780289_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780289_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780289_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780289_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780289_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780289_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780289_fastp.html -w 4 
+fastp v0.23.4, time used: 300 seconds
+Read1 before filtering:
+total reads: 78590975
+total bases: 5894323125
+Q20 bases: 5705545886(96.7973%)
+Q30 bases: 5626916699(95.4633%)
+
+Read2 before filtering:
+total reads: 78590975
+total bases: 5894323125
+Q20 bases: 5594166894(94.9077%)
+Q30 bases: 5493388199(93.1979%)
+
+Read1 after filtering:
+total reads: 76803468
+total bases: 5757343374
+Q20 bases: 5592537320(97.1375%)
+Q30 bases: 5519314201(95.8656%)
+
+Read2 after filtering:
+total reads: 76803468
+total bases: 5757343374
+Q20 bases: 5532195808(96.0894%)
+Q30 bases: 5440060796(94.4891%)
+
+Filtering result:
+reads passed filter: 153606936
+reads failed due to low quality: 3513080
+reads failed due to too many N: 61934
+reads failed due to too short: 0
+reads with adapter trimmed: 374170
+bases trimmed due to adapters: 5898606
+
+Duplication rate: 20.6118%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780276_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780276_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780276_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780276_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780276_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780276_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780276_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780276_fastp.html -w 4 
+fastp v0.23.4, time used: 283 seconds
+Read1 before filtering:
+total reads: 78223579
+total bases: 5866768425
+Q20 bases: 5716563453(97.4397%)
+Q30 bases: 5653804164(96.37%)
+
+Read2 before filtering:
+total reads: 78223579
+total bases: 5866768425
+Q20 bases: 5613740945(95.6871%)
+Q30 bases: 5532012315(94.294%)
+
+Read1 after filtering:
+total reads: 76430272
+total bases: 5723519648
+Q20 bases: 5598145136(97.8095%)
+Q30 bases: 5539955192(96.7928%)
+
+Read2 after filtering:
+total reads: 76430272
+total bases: 5723519648
+Q20 bases: 5552217078(97.007%)
+Q30 bases: 5480934274(95.7616%)
+
+Filtering result:
+reads passed filter: 152860544
+reads failed due to low quality: 3486884
+reads failed due to too many N: 99730
+reads failed due to too short: 0
+reads with adapter trimmed: 829510
+bases trimmed due to adapters: 17667770
+
+Duplication rate: 35.5557%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780282_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780282_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780282_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780282_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780282_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780282_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780282_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780282_fastp.html -w 4 
+fastp v0.23.4, time used: 271 seconds
+Read1 before filtering:
+total reads: 89472739
+total bases: 13510383589
+Q20 bases: 13235628168(97.9663%)
+Q30 bases: 12847442499(95.0931%)
+
+Read2 before filtering:
+total reads: 89472739
+total bases: 13510383589
+Q20 bases: 13030021580(96.4445%)
+Q30 bases: 12528616961(92.7332%)
+
+Read1 after filtering:
+total reads: 88205022
+total bases: 12607097698
+Q20 bases: 12429089666(98.588%)
+Q30 bases: 12128489702(96.2037%)
+
+Read2 after filtering:
+total reads: 88205022
+total bases: 12607097698
+Q20 bases: 12301587460(97.5767%)
+Q30 bases: 11901324042(94.4018%)
+
+Filtering result:
+reads passed filter: 176410044
+reads failed due to low quality: 2438028
+reads failed due to too many N: 97406
+reads failed due to too short: 0
+reads with adapter trimmed: 56118692
+bases trimmed due to adapters: 1426084454
+
+Duplication rate: 52.6717%
+
+Insert size peak (evaluated by paired-end reads): 151
+
+JSON report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780263_1.fastq.gz -I /home/zhou/raid/ncbi/dbGaP-24835/RNA_phs002176/raw/SRR13780263_2.fastq.gz -o /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_1.fastq.gz -O /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_2.fastq.gz -j /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_fastp.json -h /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_fastp.html -w 4 
+fastp v0.23.4, time used: 464 seconds
+
+  /// MultiQC 🔍 | v1.14
+
+|           multiqc | MultiQC Version v1.15 now available!
+|           multiqc | Search path : /home/zhou/raid/IO_RNA/PHS002176/fq
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 184/184  
+|             fastp | Found 46 reports
+|           multiqc | Compressing plot data
+|           multiqc | Report      : ../../../../zhou/raid/IO_RNA/PHS002176/fq/multiqc_report.html
+|           multiqc | Data        : ../../../../zhou/raid/IO_RNA/PHS002176/fq/multiqc_data
+|           multiqc | MultiQC complete

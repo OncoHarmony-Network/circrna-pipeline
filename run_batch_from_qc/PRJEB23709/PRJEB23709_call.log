@@ -4555,3 +4555,336 @@ Start CIRIquant for ERR2208962 at Mon Sep 25 19:14:48 CST 2023
 Final result file does not exist, run it.
 Done for ERR2208962, final result should be ERR2208962.CIRI.bed
 End CIRIquant for ERR2208962 at Mon Sep 25 21:11:08 CST 2023
+Start circexplorer2 for ERR2208962 at Mon Sep 25 19:14:47 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b ERR2208962_circ2_result.txt -o ERR2208962_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 19:53:03
+Start to annotate fusion junctions...
+Annotated 12092 fusion junctions!
+Start to fix fusion junctions...
+Fixed 6963 fusion junctions!
+End CIRCexplorer2 annotate at 19:53:30
+Done for ERR2208962, final result should be ERR2208962.circexplorer2.bed
+End circexplorer2 for ERR2208962 at Mon Sep 25 19:53:36 CST 2023
+Start circRNA_finder for ERR2208962 at Mon Sep 25 19:14:47 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208962_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208962_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix ERR2208962. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Sep 25 19:14:47 ..... started STAR run
+Sep 25 19:14:47 ..... loading genome
+Sep 25 19:15:06 ..... started mapping
+Sep 25 19:26:53 ..... finished mapping
+Sep 25 19:26:58 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for ERR2208962, final result should be ERR2208962.circRNA_finder.bed
+End circRNA_finder for ERR2208962 at Mon Sep 25 19:27:08 CST 2023
+Start find_circ for ERR2208962 at Mon Sep 25 19:14:47 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for ERR2208962, final result should be ERR2208962.find_circ.bed
+End find_circ for ERR2208962 at Mon Sep 25 23:06:49 CST 2023
+[Mon 2023-09-25 23:06:51] [INFO ] Input reads: ERR2208957_1.fastq.gz,ERR2208957_2.fastq.gz
+[Mon 2023-09-25 23:06:51] [INFO ] Library type: unstranded
+[Mon 2023-09-25 23:06:51] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI, Output prefix: ERR2208957
+[Mon 2023-09-25 23:06:51] [INFO ] Config: hg38 Loaded
+[Mon 2023-09-25 23:06:51] [INFO ] 96 CPU cores availble, using 10
+[Mon 2023-09-25 23:06:51] [INFO ] Align RNA-seq reads to reference genome ..
+[Mon 2023-09-25 23:06:51] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/align/ERR2208957.bam
+****** Processing ERR2208957. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Mon 2023-09-25 23:53:40] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/align/ERR2208957.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/align/ERR2208957.bam
+[Mon 2023-09-25 23:59:56] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/align/ERR2208957.sorted.bam
+[Tue 2023-09-26 00:00:36] [DEBUG] HISAT2 bam: ERR2208957.sorted.bam
+[Tue 2023-09-26 00:00:36] [INFO ] Skipping gene abundance estimation
+[Tue 2023-09-26 00:00:36] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-09-26 00:00:36] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-09-26 00:00:36] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 10 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_unmapped.sam
+[bam_sort_core] merging from 3 files and 10 in-memory blocks...
+[Tue 2023-09-26 00:38:09] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_unmapped.sam
+[Tue 2023-09-26 00:38:09] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-09-26 00:38:09] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 10 -G /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/ERR2208957.log
+[Tue 2023-09-26 00:53:47] [INFO ] Extract circular sequence
+[Tue 2023-09-26 00:53:47] [0%   ] [..................................................][Tue 2023-09-26 00:53:47] [4%   ] [##................................................][Tue 2023-09-26 00:53:48] [8%   ] [####..............................................][Tue 2023-09-26 00:53:49] [12%  ] [######............................................][Tue 2023-09-26 00:53:50] [16%  ] [########..........................................][Tue 2023-09-26 00:53:51] [20%  ] [##########........................................][Tue 2023-09-26 00:53:52] [25%  ] [############......................................][Tue 2023-09-26 00:53:53] [29%  ] [##############....................................][Tue 2023-09-26 00:53:54] [33%  ] [################..................................][Tue 2023-09-26 00:53:54] [37%  ] [##################................................][Tue 2023-09-26 00:53:55] [41%  ] [####################..............................][Tue 2023-09-26 00:53:55] [45%  ] [######################............................][Tue 2023-09-26 00:53:56] [50%  ] [#########################.........................][Tue 2023-09-26 00:53:57] [54%  ] [###########################.......................][Tue 2023-09-26 00:53:58] [58%  ] [############################......................][Tue 2023-09-26 00:53:58] [62%  ] [###############################...................][Tue 2023-09-26 00:53:58] [66%  ] [#################################.................][Tue 2023-09-26 00:53:59] [70%  ] [###################################...............][Tue 2023-09-26 00:54:00] [75%  ] [#####################################.............][Tue 2023-09-26 00:54:01] [79%  ] [#######################################...........][Tue 2023-09-26 00:54:02] [83%  ] [#########################################.........][Tue 2023-09-26 00:54:03] [87%  ] [###########################################.......][Tue 2023-09-26 00:54:04] [91%  ] [#############################################.....][Tue 2023-09-26 00:54:05] [95%  ] [###############################################...][Tue 2023-09-26 00:54:06] [100% ] [##################################################]
+[Tue 2023-09-26 00:54:06] [INFO ] Building circular index ..
+[Tue 2023-09-26 00:54:06] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 10 -f /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_index.fa /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_index
+[Tue 2023-09-26 00:59:21] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_index
+[Tue 2023-09-26 00:59:21] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-09-26 00:59:21] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_index -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_denovo.bam
+[Tue 2023-09-26 01:34:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_denovo.bam
+[Tue 2023-09-26 01:39:49] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_denovo.sorted.bam
+[Tue 2023-09-26 01:40:21] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208957.CIRI/circ/ERR2208957_denovo.sorted.bam
+[Tue 2023-09-26 01:40:21] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-09-26 01:41:10] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-09-26 01:49:45] [INFO ] Merge bsj and fsj results
+[Tue 2023-09-26 01:49:45] [INFO ] Loading annotation gtf ..
+[Tue 2023-09-26 01:50:01] [INFO ] Output circRNA expression values
+[Tue 2023-09-26 01:50:19] [WARNING] chrom of contig "KI270720.1" not in annotation gtf, please check
+[Tue 2023-09-26 01:50:26] [INFO ] circRNA Expression profile: ERR2208957.gtf
+[Tue 2023-09-26 01:50:26] [INFO ] Finished!
+Start CIRIquant for ERR2208957 at Mon Sep 25 23:06:51 CST 2023
+Final result file does not exist, run it.
+Done for ERR2208957, final result should be ERR2208957.CIRI.bed
+End CIRIquant for ERR2208957 at Tue Sep 26 01:50:30 CST 2023
+Start circexplorer2 for ERR2208957 at Mon Sep 25 23:06:49 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b ERR2208957_circ2_result.txt -o ERR2208957_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 00:03:25
+Start to annotate fusion junctions...
+Annotated 13093 fusion junctions!
+Start to fix fusion junctions...
+Fixed 7884 fusion junctions!
+End CIRCexplorer2 annotate at 00:03:54
+Done for ERR2208957, final result should be ERR2208957.circexplorer2.bed
+End circexplorer2 for ERR2208957 at Tue Sep 26 00:03:57 CST 2023
+Start circRNA_finder for ERR2208957 at Mon Sep 25 23:06:49 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208957_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix ERR2208957. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Sep 25 23:06:49 ..... started STAR run
+Sep 25 23:06:49 ..... loading genome
+Sep 25 23:10:08 ..... started mapping
+Sep 25 23:26:16 ..... finished mapping
+Sep 25 23:26:23 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for ERR2208957, final result should be ERR2208957.circRNA_finder.bed
+End circRNA_finder for ERR2208957 at Mon Sep 25 23:26:39 CST 2023
+Start find_circ for ERR2208957 at Mon Sep 25 23:06:49 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for ERR2208957, final result should be ERR2208957.find_circ.bed
+End find_circ for ERR2208957 at Tue Sep 26 03:46:14 CST 2023
+[Tue 2023-09-26 03:46:16] [INFO ] Input reads: ERR2208952_1.fastq.gz,ERR2208952_2.fastq.gz
+[Tue 2023-09-26 03:46:16] [INFO ] Library type: unstranded
+[Tue 2023-09-26 03:46:16] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI, Output prefix: ERR2208952
+[Tue 2023-09-26 03:46:16] [INFO ] Config: hg38 Loaded
+[Tue 2023-09-26 03:46:16] [INFO ] 96 CPU cores availble, using 10
+[Tue 2023-09-26 03:46:16] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-09-26 03:46:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/align/ERR2208952.bam
+****** Processing ERR2208952. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-09-26 04:25:50] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/align/ERR2208952.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/align/ERR2208952.bam
+[Tue 2023-09-26 04:30:26] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/align/ERR2208952.sorted.bam
+[Tue 2023-09-26 04:30:49] [DEBUG] HISAT2 bam: ERR2208952.sorted.bam
+[Tue 2023-09-26 04:30:49] [INFO ] Skipping gene abundance estimation
+[Tue 2023-09-26 04:30:49] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-09-26 04:30:49] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-09-26 04:30:49] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 10 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_unmapped.sam
+[bam_sort_core] merging from 3 files and 10 in-memory blocks...
+[Tue 2023-09-26 04:59:14] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_unmapped.sam
+[Tue 2023-09-26 04:59:14] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-09-26 04:59:14] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 10 -G /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/ERR2208952.log
+[Tue 2023-09-26 05:08:43] [INFO ] Extract circular sequence
+[Tue 2023-09-26 05:08:43] [0%   ] [..................................................][Tue 2023-09-26 05:08:43] [4%   ] [##................................................][Tue 2023-09-26 05:08:44] [8%   ] [####..............................................][Tue 2023-09-26 05:08:45] [12%  ] [######............................................][Tue 2023-09-26 05:08:46] [16%  ] [########..........................................][Tue 2023-09-26 05:08:47] [20%  ] [##########........................................][Tue 2023-09-26 05:08:47] [25%  ] [############......................................][Tue 2023-09-26 05:08:48] [29%  ] [##############....................................][Tue 2023-09-26 05:08:48] [33%  ] [################..................................][Tue 2023-09-26 05:08:49] [37%  ] [##################................................][Tue 2023-09-26 05:08:49] [41%  ] [####################..............................][Tue 2023-09-26 05:08:49] [45%  ] [######################............................][Tue 2023-09-26 05:08:50] [50%  ] [#########################.........................][Tue 2023-09-26 05:08:51] [54%  ] [###########################.......................][Tue 2023-09-26 05:08:51] [58%  ] [############################......................][Tue 2023-09-26 05:08:52] [62%  ] [###############################...................][Tue 2023-09-26 05:08:52] [66%  ] [#################################.................][Tue 2023-09-26 05:08:53] [70%  ] [###################################...............][Tue 2023-09-26 05:08:54] [75%  ] [#####################################.............][Tue 2023-09-26 05:08:55] [79%  ] [#######################################...........][Tue 2023-09-26 05:08:56] [83%  ] [#########################################.........][Tue 2023-09-26 05:08:57] [87%  ] [###########################################.......][Tue 2023-09-26 05:08:58] [91%  ] [#############################################.....][Tue 2023-09-26 05:08:58] [95%  ] [###############################################...][Tue 2023-09-26 05:08:59] [100% ] [##################################################]
+[Tue 2023-09-26 05:08:59] [INFO ] Building circular index ..
+[Tue 2023-09-26 05:08:59] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 10 -f /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_index.fa /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_index
+[Tue 2023-09-26 05:11:14] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_index
+[Tue 2023-09-26 05:11:14] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-09-26 05:11:14] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_index -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_denovo.bam
+[Tue 2023-09-26 05:31:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_denovo.bam
+[Tue 2023-09-26 05:35:23] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_denovo.sorted.bam
+[Tue 2023-09-26 05:35:46] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208952.CIRI/circ/ERR2208952_denovo.sorted.bam
+[Tue 2023-09-26 05:35:46] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-09-26 05:36:35] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-09-26 05:43:14] [INFO ] Merge bsj and fsj results
+[Tue 2023-09-26 05:43:14] [INFO ] Loading annotation gtf ..
+[Tue 2023-09-26 05:43:31] [INFO ] Output circRNA expression values
+[Tue 2023-09-26 05:43:38] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Tue 2023-09-26 05:43:45] [INFO ] circRNA Expression profile: ERR2208952.gtf
+[Tue 2023-09-26 05:43:45] [INFO ] Finished!
+Start CIRIquant for ERR2208952 at Tue Sep 26 03:46:16 CST 2023
+Final result file does not exist, run it.
+Done for ERR2208952, final result should be ERR2208952.CIRI.bed
+End CIRIquant for ERR2208952 at Tue Sep 26 05:43:48 CST 2023
+Start circexplorer2 for ERR2208952 at Tue Sep 26 03:46:14 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b ERR2208952_circ2_result.txt -o ERR2208952_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 04:28:09
+Start to annotate fusion junctions...
+Annotated 9648 fusion junctions!
+Start to fix fusion junctions...
+Fixed 5362 fusion junctions!
+End CIRCexplorer2 annotate at 04:28:34
+Done for ERR2208952, final result should be ERR2208952.circexplorer2.bed
+End circexplorer2 for ERR2208952 at Tue Sep 26 04:28:39 CST 2023
+Start circRNA_finder for ERR2208952 at Tue Sep 26 03:46:14 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208952_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix ERR2208952. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Sep 26 03:46:14 ..... started STAR run
+Sep 26 03:46:14 ..... loading genome
+Sep 26 03:52:43 ..... started mapping
+Sep 26 04:09:10 ..... finished mapping
+Sep 26 04:09:15 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for ERR2208952, final result should be ERR2208952.circRNA_finder.bed
+End circRNA_finder for ERR2208952 at Tue Sep 26 04:09:25 CST 2023
+Start find_circ for ERR2208952 at Tue Sep 26 03:46:14 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for ERR2208952, final result should be ERR2208952.find_circ.bed
+End find_circ for ERR2208952 at Tue Sep 26 06:41:46 CST 2023
+[Tue 2023-09-26 06:41:48] [INFO ] Input reads: ERR2208919_1.fastq.gz,ERR2208919_2.fastq.gz
+[Tue 2023-09-26 06:41:48] [INFO ] Library type: unstranded
+[Tue 2023-09-26 06:41:48] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI, Output prefix: ERR2208919
+[Tue 2023-09-26 06:41:48] [INFO ] Config: hg38 Loaded
+[Tue 2023-09-26 06:41:48] [INFO ] 96 CPU cores availble, using 10
+[Tue 2023-09-26 06:41:48] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-09-26 06:41:48] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/align/ERR2208919.bam
+****** Processing ERR2208919. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-09-26 08:45:07] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/align/ERR2208919.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/align/ERR2208919.bam
+[Tue 2023-09-26 09:05:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/align/ERR2208919.sorted.bam
+[Tue 2023-09-26 09:07:12] [DEBUG] HISAT2 bam: ERR2208919.sorted.bam
+[Tue 2023-09-26 09:07:12] [INFO ] Skipping gene abundance estimation
+[Tue 2023-09-26 09:07:12] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-09-26 09:07:12] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-09-26 09:07:12] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 10 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_unmapped.sam
+[bam_sort_core] merging from 10 files and 10 in-memory blocks...
+[Tue 2023-09-26 10:47:20] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_unmapped.sam
+[Tue 2023-09-26 10:47:20] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-09-26 10:47:20] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 10 -G /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/ERR2208919.log
+[Tue 2023-09-26 11:21:36] [INFO ] Extract circular sequence
+[Tue 2023-09-26 11:21:36] [0%   ] [..................................................][Tue 2023-09-26 11:21:36] [4%   ] [##................................................][Tue 2023-09-26 11:21:38] [8%   ] [####..............................................][Tue 2023-09-26 11:21:39] [12%  ] [######............................................][Tue 2023-09-26 11:21:40] [16%  ] [########..........................................][Tue 2023-09-26 11:21:41] [20%  ] [##########........................................][Tue 2023-09-26 11:21:42] [24%  ] [############......................................][Tue 2023-09-26 11:21:43] [28%  ] [##############....................................][Tue 2023-09-26 11:21:44] [32%  ] [################..................................][Tue 2023-09-26 11:21:45] [36%  ] [##################................................][Tue 2023-09-26 11:21:46] [40%  ] [####################..............................][Tue 2023-09-26 11:21:46] [44%  ] [######################............................][Tue 2023-09-26 11:21:47] [48%  ] [########################..........................][Tue 2023-09-26 11:21:49] [52%  ] [##########################........................][Tue 2023-09-26 11:21:49] [56%  ] [############################......................][Tue 2023-09-26 11:21:50] [60%  ] [##############################....................][Tue 2023-09-26 11:21:50] [64%  ] [################################..................][Tue 2023-09-26 11:21:52] [68%  ] [##################################................][Tue 2023-09-26 11:21:54] [72%  ] [####################################..............][Tue 2023-09-26 11:21:55] [76%  ] [######################################............][Tue 2023-09-26 11:21:57] [80%  ] [########################################..........][Tue 2023-09-26 11:21:58] [84%  ] [##########################################........][Tue 2023-09-26 11:21:59] [88%  ] [############################################......][Tue 2023-09-26 11:22:00] [92%  ] [##############################################....][Tue 2023-09-26 11:22:02] [96%  ] [################################################..][Tue 2023-09-26 11:22:02] [100% ] [##################################################]
+[Tue 2023-09-26 11:22:02] [INFO ] Building circular index ..
+[Tue 2023-09-26 11:22:02] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 10 -f /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_index.fa /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_index
+[Tue 2023-09-26 11:26:43] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_index
+[Tue 2023-09-26 11:26:43] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-09-26 11:26:43] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_index -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_denovo.bam
+[Tue 2023-09-26 13:02:32] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_denovo.bam
+[Tue 2023-09-26 13:17:18] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_denovo.sorted.bam
+[Tue 2023-09-26 13:18:36] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208919.CIRI/circ/ERR2208919_denovo.sorted.bam
+[Tue 2023-09-26 13:18:36] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-09-26 13:20:52] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-09-26 13:48:42] [INFO ] Merge bsj and fsj results
+[Tue 2023-09-26 13:48:42] [INFO ] Loading annotation gtf ..
+[Tue 2023-09-26 13:49:02] [INFO ] Output circRNA expression values
+[Tue 2023-09-26 13:49:22] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Tue 2023-09-26 13:49:35] [INFO ] circRNA Expression profile: ERR2208919.gtf
+[Tue 2023-09-26 13:49:35] [INFO ] Finished!
+Start CIRIquant for ERR2208919 at Tue Sep 26 06:41:48 CST 2023
+Final result file does not exist, run it.
+Done for ERR2208919, final result should be ERR2208919.CIRI.bed
+End CIRIquant for ERR2208919 at Tue Sep 26 13:49:42 CST 2023
+Start circexplorer2 for ERR2208919 at Tue Sep 26 06:41:46 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b ERR2208919_circ2_result.txt -o ERR2208919_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 09:13:08
+Start to annotate fusion junctions...
+Annotated 13988 fusion junctions!
+Start to fix fusion junctions...
+Fixed 7943 fusion junctions!
+End CIRCexplorer2 annotate at 09:13:37
+Done for ERR2208919, final result should be ERR2208919.circexplorer2.bed
+End circexplorer2 for ERR2208919 at Tue Sep 26 09:13:41 CST 2023
+Start circRNA_finder for ERR2208919 at Tue Sep 26 06:41:46 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208919_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix ERR2208919. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Sep 26 06:41:46 ..... started STAR run
+Sep 26 06:41:46 ..... loading genome
+Sep 26 06:42:09 ..... started mapping
+Sep 26 07:11:49 ..... finished mapping
+Sep 26 07:11:53 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for ERR2208919, final result should be ERR2208919.circRNA_finder.bed
+End circRNA_finder for ERR2208919 at Tue Sep 26 07:12:16 CST 2023
+Start find_circ for ERR2208919 at Tue Sep 26 06:41:46 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for ERR2208919, final result should be ERR2208919.find_circ.bed
+End find_circ for ERR2208919 at Tue Sep 26 19:59:15 CST 2023
+[Tue 2023-09-26 19:59:18] [INFO ] Input reads: ERR2208940_1.fastq.gz,ERR2208940_2.fastq.gz
+[Tue 2023-09-26 19:59:18] [INFO ] Library type: unstranded
+[Tue 2023-09-26 19:59:18] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI, Output prefix: ERR2208940
+[Tue 2023-09-26 19:59:18] [INFO ] Config: hg38 Loaded
+[Tue 2023-09-26 19:59:18] [INFO ] 96 CPU cores availble, using 10
+[Tue 2023-09-26 19:59:18] [INFO ] Align RNA-seq reads to reference genome ..
+[Tue 2023-09-26 19:59:18] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/align/ERR2208940.bam
+****** Processing ERR2208940. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Tue 2023-09-26 20:31:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/align/ERR2208940.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/align/ERR2208940.bam
+[Tue 2023-09-26 20:35:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/align/ERR2208940.sorted.bam
+[Tue 2023-09-26 20:36:21] [DEBUG] HISAT2 bam: ERR2208940.sorted.bam
+[Tue 2023-09-26 20:36:21] [INFO ] Skipping gene abundance estimation
+[Tue 2023-09-26 20:36:21] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Tue 2023-09-26 20:36:21] [INFO ] Running BWA-mem mapping candidate reads ..
+[Tue 2023-09-26 20:36:21] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 10 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_unmapped.sam
+[bam_sort_core] merging from 3 files and 10 in-memory blocks...
+[Tue 2023-09-26 21:11:34] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_unmapped.sam
+[Tue 2023-09-26 21:11:34] [INFO ] Running CIRI2 for circRNA detection ..
+[Tue 2023-09-26 21:11:34] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 10 -G /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/ERR2208940.log
+[Tue 2023-09-26 21:22:59] [INFO ] Extract circular sequence
+[Tue 2023-09-26 21:22:59] [0%   ] [..................................................][Tue 2023-09-26 21:22:59] [3%   ] [#.................................................][Tue 2023-09-26 21:22:59] [7%   ] [###...............................................][Tue 2023-09-26 21:23:01] [11%  ] [#####.............................................][Tue 2023-09-26 21:23:02] [15%  ] [#######...........................................][Tue 2023-09-26 21:23:04] [19%  ] [#########.........................................][Tue 2023-09-26 21:23:05] [23%  ] [###########.......................................][Tue 2023-09-26 21:23:06] [26%  ] [#############.....................................][Tue 2023-09-26 21:23:07] [30%  ] [###############...................................][Tue 2023-09-26 21:23:07] [34%  ] [#################.................................][Tue 2023-09-26 21:23:08] [38%  ] [###################...............................][Tue 2023-09-26 21:23:09] [42%  ] [#####################.............................][Tue 2023-09-26 21:23:10] [46%  ] [#######################...........................][Tue 2023-09-26 21:23:10] [50%  ] [#########################.........................][Tue 2023-09-26 21:23:12] [53%  ] [##########################........................][Tue 2023-09-26 21:23:13] [57%  ] [############################......................][Tue 2023-09-26 21:23:13] [61%  ] [##############################....................][Tue 2023-09-26 21:23:14] [65%  ] [################################..................][Tue 2023-09-26 21:23:15] [69%  ] [##################################................][Tue 2023-09-26 21:23:17] [73%  ] [####################################..............][Tue 2023-09-26 21:23:18] [76%  ] [######################################............][Tue 2023-09-26 21:23:20] [80%  ] [########################################..........][Tue 2023-09-26 21:23:21] [84%  ] [##########################################........][Tue 2023-09-26 21:23:22] [88%  ] [############################################......][Tue 2023-09-26 21:23:23] [92%  ] [##############################################....][Tue 2023-09-26 21:23:25] [96%  ] [################################################..][Tue 2023-09-26 21:23:25] [100% ] [##################################################]
+[Tue 2023-09-26 21:23:25] [INFO ] Building circular index ..
+[Tue 2023-09-26 21:23:25] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 10 -f /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_index.fa /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_index
+[Tue 2023-09-26 21:29:47] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_index
+[Tue 2023-09-26 21:29:47] [INFO ] De novo alignment for circular RNAs ..
+[Tue 2023-09-26 21:29:47] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_index -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_denovo.bam
+[Tue 2023-09-26 21:56:13] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_denovo.bam
+[Tue 2023-09-26 22:00:16] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_denovo.sorted.bam
+[Tue 2023-09-26 22:00:45] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR2208940.CIRI/circ/ERR2208940_denovo.sorted.bam
+[Tue 2023-09-26 22:00:45] [INFO ] Detecting reads containing Back-splicing signals
+[Tue 2023-09-26 22:01:32] [INFO ] Detecting FSJ reads from genome alignment file
+[Tue 2023-09-26 22:08:32] [INFO ] Merge bsj and fsj results
+[Tue 2023-09-26 22:08:32] [INFO ] Loading annotation gtf ..
+[Tue 2023-09-26 22:08:46] [INFO ] Output circRNA expression values
+[Tue 2023-09-26 22:09:03] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Tue 2023-09-26 22:09:03] [WARNING] chrom of contig "KI270720.1" not in annotation gtf, please check
+[Tue 2023-09-26 22:09:11] [INFO ] circRNA Expression profile: ERR2208940.gtf
+[Tue 2023-09-26 22:09:11] [INFO ] Finished!
+Start CIRIquant for ERR2208940 at Tue Sep 26 19:59:17 CST 2023
+Final result file does not exist, run it.
+Done for ERR2208940, final result should be ERR2208940.CIRI.bed
+End CIRIquant for ERR2208940 at Tue Sep 26 22:09:14 CST 2023
