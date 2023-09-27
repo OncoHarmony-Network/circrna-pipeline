@@ -4888,3 +4888,89 @@ Start CIRIquant for ERR2208940 at Tue Sep 26 19:59:17 CST 2023
 Final result file does not exist, run it.
 Done for ERR2208940, final result should be ERR2208940.CIRI.bed
 End CIRIquant for ERR2208940 at Tue Sep 26 22:09:14 CST 2023
+Start circexplorer2 for ERR2208940 at Tue Sep 26 19:59:15 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b ERR2208940_circ2_result.txt -o ERR2208940_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 20:39:29
+Start to annotate fusion junctions...
+Annotated 13478 fusion junctions!
+Start to fix fusion junctions...
+Fixed 7987 fusion junctions!
+End CIRCexplorer2 annotate at 20:39:52
+Done for ERR2208940, final result should be ERR2208940.circexplorer2.bed
+End circexplorer2 for ERR2208940 at Tue Sep 26 20:39:58 CST 2023
+Start circRNA_finder for ERR2208940 at Tue Sep 26 19:59:15 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR2208940_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix ERR2208940. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Sep 26 19:59:15 ..... started STAR run
+Sep 26 19:59:15 ..... loading genome
+Sep 26 19:59:54 ..... started mapping
+Sep 26 20:12:33 ..... finished mapping
+Sep 26 20:12:37 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for ERR2208940, final result should be ERR2208940.circRNA_finder.bed
+End circRNA_finder for ERR2208940 at Tue Sep 26 20:12:45 CST 2023
+Start find_circ for ERR2208940 at Tue Sep 26 19:59:15 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for ERR2208940, final result should be ERR2208940.find_circ.bed
+End find_circ for ERR2208940 at Wed Sep 27 00:36:01 CST 2023
+[Wed 2023-09-27 00:36:04] [INFO ] Input reads: ERR3262561_1.fastq.gz,ERR3262561_2.fastq.gz
+[Wed 2023-09-27 00:36:04] [INFO ] Library type: unstranded
+[Wed 2023-09-27 00:36:04] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI, Output prefix: ERR3262561
+[Wed 2023-09-27 00:36:04] [INFO ] Config: hg38 Loaded
+[Wed 2023-09-27 00:36:04] [INFO ] 96 CPU cores availble, using 10
+[Wed 2023-09-27 00:36:04] [INFO ] Align RNA-seq reads to reference genome ..
+[Wed 2023-09-27 00:36:04] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262561_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262561_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/align/ERR3262561.bam
+****** Processing ERR3262561. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Wed 2023-09-27 05:02:38] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/align/ERR3262561.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/align/ERR3262561.bam
+[Wed 2023-09-27 05:48:45] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/align/ERR3262561.sorted.bam
+[Wed 2023-09-27 05:54:15] [DEBUG] HISAT2 bam: ERR3262561.sorted.bam
+[Wed 2023-09-27 05:54:15] [INFO ] Skipping gene abundance estimation
+[Wed 2023-09-27 05:54:15] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Wed 2023-09-27 05:54:15] [INFO ] Running BWA-mem mapping candidate reads ..
+[Wed 2023-09-27 05:54:15] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 10 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262561_1.fastq.gz /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262561_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_unmapped.sam
+[bam_sort_core] merging from 17 files and 10 in-memory blocks...
+[Wed 2023-09-27 09:24:40] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_unmapped.sam
+[Wed 2023-09-27 09:24:40] [INFO ] Running CIRI2 for circRNA detection ..
+[Wed 2023-09-27 09:24:40] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 10 -G /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/ERR3262561.log
+[Wed 2023-09-27 10:11:42] [INFO ] Extract circular sequence
+[Wed 2023-09-27 10:11:42] [0%   ] [..................................................][Wed 2023-09-27 10:11:42] [3%   ] [#.................................................][Wed 2023-09-27 10:11:42] [7%   ] [###...............................................][Wed 2023-09-27 10:11:44] [11%  ] [#####.............................................][Wed 2023-09-27 10:11:46] [15%  ] [#######...........................................][Wed 2023-09-27 10:11:47] [19%  ] [#########.........................................][Wed 2023-09-27 10:11:48] [23%  ] [###########.......................................][Wed 2023-09-27 10:11:49] [26%  ] [#############.....................................][Wed 2023-09-27 10:11:50] [30%  ] [###############...................................][Wed 2023-09-27 10:11:51] [34%  ] [#################.................................][Wed 2023-09-27 10:11:52] [38%  ] [###################...............................][Wed 2023-09-27 10:11:52] [42%  ] [#####################.............................][Wed 2023-09-27 10:11:53] [46%  ] [#######################...........................][Wed 2023-09-27 10:11:53] [50%  ] [#########################.........................][Wed 2023-09-27 10:11:56] [53%  ] [##########################........................][Wed 2023-09-27 10:11:56] [57%  ] [############################......................][Wed 2023-09-27 10:11:56] [61%  ] [##############################....................][Wed 2023-09-27 10:11:57] [65%  ] [################################..................][Wed 2023-09-27 10:11:58] [69%  ] [##################################................][Wed 2023-09-27 10:12:00] [73%  ] [####################################..............][Wed 2023-09-27 10:12:01] [76%  ] [######################################............][Wed 2023-09-27 10:12:03] [80%  ] [########################################..........][Wed 2023-09-27 10:12:04] [84%  ] [##########################################........][Wed 2023-09-27 10:12:06] [88%  ] [############################################......][Wed 2023-09-27 10:12:07] [92%  ] [##############################################....][Wed 2023-09-27 10:12:08] [96%  ] [################################################..][Wed 2023-09-27 10:12:09] [100% ] [##################################################]
+[Wed 2023-09-27 10:12:09] [INFO ] Building circular index ..
+[Wed 2023-09-27 10:12:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 10 -f /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_index.fa /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_index
+[Wed 2023-09-27 10:26:19] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_index
+[Wed 2023-09-27 10:26:19] [INFO ] De novo alignment for circular RNAs ..
+[Wed 2023-09-27 10:26:19] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_index -1 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262561_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PRJEB23709/fq/ERR3262561_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_denovo.bam
+[Wed 2023-09-27 13:27:56] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_denovo.bam
+[Wed 2023-09-27 14:15:22] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_denovo.sorted.bam
+[Wed 2023-09-27 14:18:26] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/PRJEB23709/ERR3262561.CIRI/circ/ERR3262561_denovo.sorted.bam
+[Wed 2023-09-27 14:18:26] [INFO ] Detecting reads containing Back-splicing signals
+[Wed 2023-09-27 14:22:09] [INFO ] Detecting FSJ reads from genome alignment file
+[Wed 2023-09-27 15:03:31] [INFO ] Merge bsj and fsj results
+[Wed 2023-09-27 15:03:31] [INFO ] Loading annotation gtf ..
+[Wed 2023-09-27 15:03:47] [INFO ] Output circRNA expression values
+[Wed 2023-09-27 15:04:25] [WARNING] chrom of contig "KI270711.1" not in annotation gtf, please check
+[Wed 2023-09-27 15:04:25] [WARNING] chrom of contig "KI270720.1" not in annotation gtf, please check
+[Wed 2023-09-27 15:04:25] [WARNING] chrom of contig "KI270720.1" not in annotation gtf, please check
+[Wed 2023-09-27 15:04:25] [WARNING] chrom of contig "KI270720.1" not in annotation gtf, please check
+[Wed 2023-09-27 15:04:39] [INFO ] circRNA Expression profile: ERR3262561.gtf
+[Wed 2023-09-27 15:04:39] [INFO ] Finished!
+Start CIRIquant for ERR3262561 at Wed Sep 27 00:36:03 CST 2023
+Final result file does not exist, run it.
+Done for ERR3262561, final result should be ERR3262561.CIRI.bed
+End CIRIquant for ERR3262561 at Wed Sep 27 15:04:44 CST 2023
