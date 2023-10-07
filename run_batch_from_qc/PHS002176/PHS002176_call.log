@@ -2457,3 +2457,85 @@ Start CIRIquant for SRR13780264 at Sat Oct  7 08:14:38 CST 2023
 Final result file does not exist, run it.
 Done for SRR13780264, final result should be SRR13780264.CIRI.bed
 End CIRIquant for SRR13780264 at Sat Oct  7 10:59:54 CST 2023
+Start circexplorer2 for SRR13780264 at Sat Oct  7 08:14:36 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b SRR13780264_circ2_result.txt -o SRR13780264_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 09:51:13
+Start to annotate fusion junctions...
+Annotated 14844 fusion junctions!
+Start to fix fusion junctions...
+Fixed 8244 fusion junctions!
+End CIRCexplorer2 annotate at 09:51:36
+Done for SRR13780264, final result should be SRR13780264.circexplorer2.bed
+End circexplorer2 for SRR13780264 at Sat Oct  7 09:51:43 CST 2023
+Start circRNA_finder for SRR13780264 at Sat Oct  7 08:14:36 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_1.fastq.gz /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780264_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR13780264. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 07 08:14:36 ..... started STAR run
+Oct 07 08:14:36 ..... loading genome
+Oct 07 08:20:51 ..... started mapping
+Oct 07 09:01:14 ..... finished mapping
+Oct 07 09:01:20 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR13780264, final result should be SRR13780264.circRNA_finder.bed
+End circRNA_finder for SRR13780264 at Sat Oct  7 09:01:32 CST 2023
+Start find_circ for SRR13780264 at Sat Oct  7 08:14:36 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for SRR13780264, final result should be SRR13780264.find_circ.bed
+End find_circ for SRR13780264 at Sat Oct  7 17:58:32 CST 2023
+[Sat 2023-10-07 17:58:35] [INFO ] Input reads: SRR13780265_1.fastq.gz,SRR13780265_2.fastq.gz
+[Sat 2023-10-07 17:58:35] [INFO ] Library type: unstranded
+[Sat 2023-10-07 17:58:35] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI, Output prefix: SRR13780265
+[Sat 2023-10-07 17:58:35] [INFO ] Config: hg38 Loaded
+[Sat 2023-10-07 17:58:35] [INFO ] 96 CPU cores availble, using 8
+[Sat 2023-10-07 17:58:35] [INFO ] Align RNA-seq reads to reference genome ..
+[Sat 2023-10-07 17:58:35] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/align/SRR13780265.bam
+****** Processing SRR13780265. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Sat 2023-10-07 19:22:38] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 8 -o /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/align/SRR13780265.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/align/SRR13780265.bam
+[Sat 2023-10-07 19:28:52] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 8 /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/align/SRR13780265.sorted.bam
+[Sat 2023-10-07 19:29:31] [DEBUG] HISAT2 bam: SRR13780265.sorted.bam
+[Sat 2023-10-07 19:29:31] [INFO ] Skipping gene abundance estimation
+[Sat 2023-10-07 19:29:31] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Sat 2023-10-07 19:29:31] [INFO ] Running BWA-mem mapping candidate reads ..
+[Sat 2023-10-07 19:29:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 8 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_1.fastq.gz /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_unmapped.sam
+[bam_sort_core] merging from 4 files and 8 in-memory blocks...
+[Sat 2023-10-07 20:49:46] [DEBUG] BWA-mem sam: /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_unmapped.sam
+[Sat 2023-10-07 20:49:46] [INFO ] Running CIRI2 for circRNA detection ..
+[Sat 2023-10-07 20:49:46] [DEBUG] CIRI2.pl -I /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_unmapped.sam -O /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265.ciri -F /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -A /home/zhou/t12b/reference/hg38_ek12/gencode.v34.annotation.gtf -0 -T 8 -G /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/SRR13780265.log
+[Sat 2023-10-07 21:09:16] [INFO ] Extract circular sequence
+[Sat 2023-10-07 21:09:16] [0%   ] [..................................................][Sat 2023-10-07 21:09:18] [4%   ] [##................................................][Sat 2023-10-07 21:09:19] [8%   ] [####..............................................][Sat 2023-10-07 21:09:21] [12%  ] [######............................................][Sat 2023-10-07 21:09:22] [16%  ] [########..........................................][Sat 2023-10-07 21:09:23] [20%  ] [##########........................................][Sat 2023-10-07 21:09:24] [25%  ] [############......................................][Sat 2023-10-07 21:09:25] [29%  ] [##############....................................][Sat 2023-10-07 21:09:25] [33%  ] [################..................................][Sat 2023-10-07 21:09:26] [37%  ] [##################................................][Sat 2023-10-07 21:09:27] [41%  ] [####################..............................][Sat 2023-10-07 21:09:27] [45%  ] [######################............................][Sat 2023-10-07 21:09:29] [50%  ] [#########################.........................][Sat 2023-10-07 21:09:30] [54%  ] [###########################.......................][Sat 2023-10-07 21:09:30] [58%  ] [############################......................][Sat 2023-10-07 21:09:31] [62%  ] [###############################...................][Sat 2023-10-07 21:09:32] [66%  ] [#################################.................][Sat 2023-10-07 21:09:34] [70%  ] [###################################...............][Sat 2023-10-07 21:09:35] [75%  ] [#####################################.............][Sat 2023-10-07 21:09:37] [79%  ] [#######################################...........][Sat 2023-10-07 21:09:38] [83%  ] [#########################################.........][Sat 2023-10-07 21:09:39] [87%  ] [###########################################.......][Sat 2023-10-07 21:09:41] [91%  ] [#############################################.....][Sat 2023-10-07 21:09:42] [95%  ] [###############################################...][Sat 2023-10-07 21:09:42] [100% ] [##################################################]
+[Sat 2023-10-07 21:09:42] [INFO ] Building circular index ..
+[Sat 2023-10-07 21:09:42] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2-build -p 8 -f /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_index.fa /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_index
+[Sat 2023-10-07 21:16:31] [DEBUG] De-novo index: /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_index
+[Sat 2023-10-07 21:16:31] [INFO ] De novo alignment for circular RNAs ..
+[Sat 2023-10-07 21:16:31] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_index -1 /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780265_2.fastq.gz | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_denovo.bam
+[Sat 2023-10-07 21:53:01] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 8 -o /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_denovo.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_denovo.bam
+[Sat 2023-10-07 21:59:51] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 8 /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_denovo.sorted.bam
+[Sat 2023-10-07 22:00:30] [DEBUG] De-novo bam: /home/zhou/raid/IO_RNA/circRNA/PHS002176/SRR13780265.CIRI/circ/SRR13780265_denovo.sorted.bam
+[Sat 2023-10-07 22:00:30] [INFO ] Detecting reads containing Back-splicing signals
+[Sat 2023-10-07 22:04:02] [INFO ] Detecting FSJ reads from genome alignment file
+[Sat 2023-10-07 22:27:27] [INFO ] Merge bsj and fsj results
+[Sat 2023-10-07 22:27:28] [INFO ] Loading annotation gtf ..
+[Sat 2023-10-07 22:27:43] [INFO ] Output circRNA expression values
+[Sat 2023-10-07 22:28:08] [INFO ] circRNA Expression profile: SRR13780265.gtf
+[Sat 2023-10-07 22:28:08] [INFO ] Finished!
+Start CIRIquant for SRR13780265 at Sat Oct  7 17:58:35 CST 2023
+Final result file does not exist, run it.
+Done for SRR13780265, final result should be SRR13780265.CIRI.bed
+End CIRIquant for SRR13780265 at Sat Oct  7 22:28:11 CST 2023
