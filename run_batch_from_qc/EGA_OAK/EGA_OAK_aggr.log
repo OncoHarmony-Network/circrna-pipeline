@@ -1,0 +1,646 @@
+Reading GTF annotation data...
+Extracting gene and region information...
+Checking gtf data...
+    chr start   end         gene_id      symbol
+1: chr1 11869 14409 ENSG00000223972     DDX11L1
+2: chr1 14404 29570 ENSG00000227232      WASH7P
+3: chr1 17369 17436 ENSG00000278267   MIR6859-1
+4: chr1 29554 31109 ENSG00000243485 MIR1302-2HG
+5: chr1 30366 30503 ENSG00000284332   MIR1302-2
+6: chr1 34554 36081 ENSG00000237613     FAM138A
+Scanning result bed files and extracting sample IDs...
+699 sample(s) detected
+Reading, joining & annotating circRNAs...
+	handling go28915_ngs_rna_wts_rnaaccess_EA_002d8e81a8_20170520
+	=>1075 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0110347bf1_20170519
+	=>1070 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_01813c5ad1_20170517
+	=>1112 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_022952077d_20170526
+	=>1902 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_02438b1b49_20170517
+	=>1360 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_02a72f3307_20170520
+	=>1851 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_030d5f1198_20170517
+	=>1500 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_033a6dffad_20170517
+	=>1728 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0377054c4d_20170512
+	=>1051 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_03c698602c_20170512
+	=>1091 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_03c914ddcc_20170517
+	=>1664 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_044dbcc71b_20170521
+	=>346 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0581dd58e8_20170521
+	=>1532 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_05ef70125f_20170520
+	=>522 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_060fdb9f54_20170522
+	=>2593 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_065d5f0458_20170512
+	=>2039 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_065eaa2a79_20170520
+	=>895 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_067bbb86b2_20170520
+	=>1349 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_06cda66ef1_20170519
+	=>1660 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_06d0116ba4_20170525
+	=>1340 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_07d7e22dce_20170521
+	=>332 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_083310024e_20170520
+	=>868 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0860e218af_20170522
+	=>2365 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_08d9c7efe8_20170521
+	=>413 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_099ca15e52_20170512
+	=>1137 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0a32b10266_20170517
+	=>432 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0a4575323c_20170521
+	=>1211 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0a5483d81c_20170512
+	=>1369 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0a71e17237_20170520
+	=>1535 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0aa9921a07_20170517
+	=>1119 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0b137c8555_20170517
+	=>670 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0b211d576c_20170517
+	=>1045 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0b3b29708a_20170521
+	=>932 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0b41ec80ed_20170517
+	=>993 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0bdbd01b6d_20170520
+	=>1782 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0be42d8a8e_20170520
+	=>2601 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0bf7465f3b_20170525
+	=>1348 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0c3d3430e5_20170517
+	=>2083 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0c549080fd_20170512
+	=>1270 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0da6ae6c2d_20170525
+	=>1358 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0e1d5bde8d_20170520
+	=>1426 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0e771b891a_20170526
+	=>1152 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0ed12cf5b1_20170521
+	=>3154 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0eebb976e7_20170522
+	=>1957 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0f0e652a51_20170521
+	=>1062 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0f1576c475_20170512
+	=>1155 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0f2a643209_20170512
+	=>1239 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_0f8bd46cdd_20170520
+	=>1976 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_100ce2ecda_20170512
+	=>1341 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_10cefa531f_20170521
+	=>2021 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_11ba06a132_20170517
+	=>907 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1231fc077b_20170520
+	=>1946 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_12426f8252_20170522
+	=>1542 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_132f12c9b2_20170521
+	=>2017 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_135fb6753c_20170522
+	=>1731 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_13605d0f04_20170519
+	=>1102 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1376174dfc_20170512
+	=>903 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1466c03d14_20170521
+	=>1741 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1492683ed6_20170525
+	=>1516 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_151ff9b042_20170517
+	=>991 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_15ec48b0b6_20170520
+	=>2278 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_15ef0fa6c6_20170520
+	=>1330 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_164d62ea96_20170526
+	=>855 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_165f68c263_20170530
+	=>459 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_175bce5be6_20170520
+	=>3233 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_17638e3ffd_20170512
+	=>613 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_186555bd08_20170512
+	=>1074 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1890c17ed9_20170512
+	=>746 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_18bada65c8_20170530
+	=>236 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_18bc22c977_20170520
+	=>1775 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_18fe387769_20170520
+	=>1285 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_195a03dda5_20170526
+	=>1443 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1a88d70f62_20170512
+	=>1197 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1c003c97de_20170520
+	=>2292 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1c10b7cd01_20170517
+	=>1716 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1c4723248b_20170520
+	=>983 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1d1dae5757_20170520
+	=>1404 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1d404875c5_20170519
+	=>1832 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1d5156213b_20170521
+	=>1150 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1e2b90f1b7_20170525
+	=>1965 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1e46058ae9_20170526
+	=>928 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1e56e4e3b6_20170517
+	=>1037 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1edbd1e6b1_20170521
+	=>1040 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1f51c8269c_20170517
+	=>624 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1f7903b241_20170512
+	=>1966 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_1f98fc9c45_20170517
+	=>1090 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_203d4f95fa_20170522
+	=>881 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_211e4bf400_20170520
+	=>1675 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_21376a9772_20170530
+	=>664 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_2164c0f598_20170519
+	=>1845 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_217d735251_20170520
+	=>1407 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_2190f20505_20170517
+	=>1364 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_2194d92157_20170521
+	=>640 solid circRNAs detected
+	handling go28915_ngs_rna_wts_rnaaccess_EA_21afb03371_20170517
+20170517"
+[153] "go28915_ngs_rna_wts_rnaaccess_EA_2ebe0a2499_20170526"
+[154] "go28915_ngs_rna_wts_rnaaccess_EA_6ae8bad142_20170520"
+[155] "go28915_ngs_rna_wts_rnaaccess_EA_92e0c307da_20170520"
+[156] "go28915_ngs_rna_wts_rnaaccess_EA_bf9a82931f_20170521"
+[157] "go28915_ngs_rna_wts_rnaaccess_EA_8f00f63c45_20170520"
+[158] "go28915_ngs_rna_wts_rnaaccess_EA_e124954ab9_20170512"
+[159] "go28915_ngs_rna_wts_rnaaccess_EA_3871274d1c_20170525"
+[160] "go28915_ngs_rna_wts_rnaaccess_EA_90635f2a8f_20170517"
+[161] "go28915_ngs_rna_wts_rnaaccess_EA_6fb1ef4552_20170520"
+[162] "go28915_ngs_rna_wts_rnaaccess_EA_f7dc22a3e4_20170526"
+[163] "go28915_ngs_rna_wts_rnaaccess_EA_54f37562a2_20170522"
+[164] "go28915_ngs_rna_wts_rnaaccess_EA_b9745528cb_20170512"
+[165] "go28915_ngs_rna_wts_rnaaccess_EA_51cae87bd1_20170526"
+[166] "go28915_ngs_rna_wts_rnaaccess_EA_b30e7df347_20170530"
+[167] "go28915_ngs_rna_wts_rnaaccess_EA_2efcaeda94_20170517"
+[168] "go28915_ngs_rna_wts_rnaaccess_EA_9a525c13f0_20170517"
+[169] "go28915_ngs_rna_wts_rnaaccess_EA_2683ccb3a1_20170517"
+[170] "go28915_ngs_rna_wts_rnaaccess_EA_70b3d70538_20170517"
+[171] "go28915_ngs_rna_wts_rnaaccess_EA_81d8c3e57b_20170522"
+[172] "go28915_ngs_rna_wts_rnaaccess_EA_8c18391d9f_20170517"
+[173] "go28915_ngs_rna_wts_rnaaccess_EA_77cd760c62_20170512"
+[174] "go28915_ngs_rna_wts_rnaaccess_EA_b395382896_20170512"
+[175] "go28915_ngs_rna_wts_rnaaccess_EA_565d538800_20170512"
+[176] "go28915_ngs_rna_wts_rnaaccess_EA_c99cf6b782_20170512"
+[177] "go28915_ngs_rna_wts_rnaaccess_EA_f099a40ea6_20170512"
+[178] "go28915_ngs_rna_wts_rnaaccess_EA_57bf9583e5_20170522"
+[179] "go28915_ngs_rna_wts_rnaaccess_EA_a4faa72112_20170517"
+[180] "go28915_ngs_rna_wts_rnaaccess_EA_714871496a_20170522"
+[181] "go28915_ngs_rna_wts_rnaaccess_EA_d89deb4e3e_20170512"
+[182] "go28915_ngs_rna_wts_rnaaccess_EA_d58aebf74a_20170517"
+[183] "go28915_ngs_rna_wts_rnaaccess_EA_5d887e1041_20170525"
+[184] "go28915_ngs_rna_wts_rnaaccess_EA_b750208dd2_20170519"
+[185] "go28915_ngs_rna_wts_rnaaccess_EA_c26eb17a48_20170517"
+[186] "go28915_ngs_rna_wts_rnaaccess_EA_5487a4be29_20170520"
+[187] "go28915_ngs_rna_wts_rnaaccess_EA_50b3403aca_20170521"
+[188] "go28915_ngs_rna_wts_rnaaccess_EA_e05e227078_20170520"
+[189] "go28915_ngs_rna_wts_rnaaccess_EA_a862ca56ac_20170520"
+[190] "go28915_ngs_rna_wts_rnaaccess_EA_31308b91bb_20170520"
+[191] "go28915_ngs_rna_wts_rnaaccess_EA_a9869a0237_20170517"
+[192] "go28915_ngs_rna_wts_rnaaccess_EA_fd78d6ec5b_20170517"
+[193] "go28915_ngs_rna_wts_rnaaccess_EA_5ff9c1f087_20170520"
+[194] "go28915_ngs_rna_wts_rnaaccess_EA_c0703545c3_20170521"
+[195] "go28915_ngs_rna_wts_rnaaccess_EA_261dfab612_20170521"
+[196] "go28915_ngs_rna_wts_rnaaccess_EA_a285584af5_20170520"
+[197] "go28915_ngs_rna_wts_rnaaccess_EA_4f3bc8f52a_20170521"
+[198] "go28915_ngs_rna_wts_rnaaccess_EA_e658480097_20170521"
+[199] "go28915_ngs_rna_wts_rnaaccess_EA_7352e8d34a_20170512"
+[200] "go28915_ngs_rna_wts_rnaaccess_EA_2f087e6489_20170512"
+[201] "go28915_ngs_rna_wts_rnaaccess_EA_b004878e7e_20170522"
+[202] "go28915_ngs_rna_wts_rnaaccess_EA_b4759d069f_20170519"
+[203] "go28915_ngs_rna_wts_rnaaccess_EA_3e3f30205b_20170512"
+[204] "go28915_ngs_rna_wts_rnaaccess_EA_588161850b_20170517"
+[205] "go28915_ngs_rna_wts_rnaaccess_EA_3ccf6755a0_20170520"
+[206] "go28915_ngs_rna_wts_rnaaccess_EA_b351474656_20170520"
+[207] "go28915_ngs_rna_wts_rnaaccess_EA_cdb7d7b7e4_20170517"
+[208] "go28915_ngs_rna_wts_rnaaccess_EA_3c4c8f8be9_20170520"
+[209] "go28915_ngs_rna_wts_rnaaccess_EA_82a571c3cc_20170521"
+[210] "go28915_ngs_rna_wts_rnaaccess_EA_6adcfd9ee0_20170520"
+[211] "go28915_ngs_rna_wts_rnaaccess_EA_42f586f0dc_20170520"
+[212] "go28915_ngs_rna_wts_rnaaccess_EA_389f58aa55_20170520"
+[213] "go28915_ngs_rna_wts_rnaaccess_EA_584decb792_20170512"
+[214] "go28915_ngs_rna_wts_rnaaccess_EA_b54c43ca1b_20170517"
+[215] "go28915_ngs_rna_wts_rnaaccess_EA_916f535659_20170520"
+[216] "go28915_ngs_rna_wts_rnaaccess_EA_c7d4f27870_20170519"
+[217] "go28915_ngs_rna_wts_rnaaccess_EA_6dfb2d747e_20170520"
+[218] "go28915_ngs_rna_wts_rnaaccess_EA_3e3fc66b5f_20170517"
+[219] "go28915_ngs_rna_wts_rnaaccess_EA_9f7edd6526_20170512"
+[220] "go28915_ngs_rna_wts_rnaaccess_EA_456d496537_20170522"
+[221] "go28915_ngs_rna_wts_rnaaccess_EA_a200fb0c41_20170517"
+[222] "go28915_ngs_rna_wts_rnaaccess_EA_54a47375d4_20170522"
+[223] "go28915_ngs_rna_wts_rnaaccess_EA_e71a94e2c1_20170517"
+[224] "go28915_ngs_rna_wts_rnaaccess_EA_c13f0dfd8f_20170526"
+[225] "go28915_ngs_rna_wts_rnaaccess_EA_94bba3f5b7_20170521"
+[226] "go28915_ngs_rna_wts_rnaaccess_EA_bfdcd2da05_20170526"
+[227] "go28915_ngs_rna_wts_rnaaccess_EA_5b80f9037d_20170517"
+[228] "go28915_ngs_rna_wts_rnaaccess_EA_a0f3275d25_20170512"
+[229] "go28915_ngs_rna_wts_rnaaccess_EA_94c6ba1664_20170522"
+[230] "go28915_ngs_rna_wts_rnaaccess_EA_f10576f99f_20170522"
+[231] "go28915_ngs_rna_wts_rnaaccess_EA_769f4957f8_20170521"
+[232] "go28915_ngs_rna_wts_rnaaccess_EA_94f6872f22_20170521"
+[233] "go28915_ngs_rna_wts_rnaaccess_EA_9303d74b08_20170517"
+[234] "go28915_ngs_rna_wts_rnaaccess_EA_b249172d62_20170522"
+[235] "go28915_ngs_rna_wts_rnaaccess_EA_7e4befce54_20170522"
+[236] "go28915_ngs_rna_wts_rnaaccess_EA_d23ea9fdb5_20170517"
+[237] "go28915_ngs_rna_wts_rnaaccess_EA_801476e40a_20170519"
+[238] "go28915_ngs_rna_wts_rnaaccess_EA_c75f3b0201_20170521"
+[239] "go28915_ngs_rna_wts_rnaaccess_EA_9af013ac70_20170521"
+[240] "go28915_ngs_rna_wts_rnaaccess_EA_3ff31551ee_20170526"
+[241] "go28915_ngs_rna_wts_rnaaccess_EA_df835d16f5_20170520"
+[242] "go28915_ngs_rna_wts_rnaaccess_EA_31bc57399d_20170517"
+[243] "go28915_ngs_rna_wts_rnaaccess_EA_59b481939c_20170520"
+[244] "go28915_ngs_rna_wts_rnaaccess_EA_99f9c7d747_20170517"
+[245] "go28915_ngs_rna_wts_rnaaccess_EA_f7f2cb6e54_20170526"
+[246] "go28915_ngs_rna_wts_rnaaccess_EA_d0f7fdc319_20170520"
+[247] "go28915_ngs_rna_wts_rnaaccess_EA_e56286db78_20170521"
+[248] "go28915_ngs_rna_wts_rnaaccess_EA_5cfd968276_20170522"
+[249] "go28915_ngs_rna_wts_rnaaccess_EA_364de94f4d_20170517"
+[250] "go28915_ngs_rna_wts_rnaaccess_EA_8dbf47a63b_20170512"
+[251] "go28915_ngs_rna_wts_rnaaccess_EA_d76c2ef3ec_20170525"
+[252] "go28915_ngs_rna_wts_rnaaccess_EA_dd3c0eacc8_20170517"
+[253] "go28915_ngs_rna_wts_rnaaccess_EA_72a5cedf9e_20170520"
+[254] "go28915_ngs_rna_wts_rnaaccess_EA_ada5a8fa2b_20170517"
+[255] "go28915_ngs_rna_wts_rnaaccess_EA_c82b0ecee6_20170530"
+[256] "go28915_ngs_rna_wts_rnaaccess_EA_b48e7841f6_20170525"
+[257] "go28915_ngs_rna_wts_rnaaccess_EA_b7217fa2ad_20170517"
+[258] "go28915_ngs_rna_wts_rnaaccess_EA_b9a00365b4_20170521"
+[259] "go28915_ngs_rna_wts_rnaaccess_EA_52023a1477_20170520"
+[260] "go28915_ngs_rna_wts_rnaaccess_EA_608aa4ac91_20170522"
+[261] "go28915_ngs_rna_wts_rnaaccess_EA_4d848746ba_20170521"
+[262] "go28915_ngs_rna_wts_rnaaccess_EA_ad84a46783_20170520"
+[263] "go28915_ngs_rna_wts_rnaaccess_EA_3db1695834_20170520"
+[264] "go28915_ngs_rna_wts_rnaaccess_EA_787a08fd0d_20170517"
+[265] "go28915_ngs_rna_wts_rnaaccess_EA_e1c333e015_20170520"
+[266] "go28915_ngs_rna_wts_rnaaccess_EA_72cd721440_20170512"
+[267] "go28915_ngs_rna_wts_rnaaccess_EA_932778cee7_20170512"
+[268] "go28915_ngs_rna_wts_rnaaccess_EA_6ecace6c04_20170512"
+[269] "go28915_ngs_rna_wts_rnaaccess_EA_b72743cd6c_20170521"
+[270] "go28915_ngs_rna_wts_rnaaccess_EA_416b3b12b7_20170522"
+[271] "go28915_ngs_rna_wts_rnaaccess_EA_c6ae1d4ac9_20170517"
+[272] "go28915_ngs_rna_wts_rnaaccess_EA_9eb0640f58_20170526"
+[273] "go28915_ngs_rna_wts_rnaaccess_EA_d853fb58e4_20170521"
+[274] "go28915_ngs_rna_wts_rnaaccess_EA_c8ab46852e_20170512"
+[275] "go28915_ngs_rna_wts_rnaaccess_EA_73e5137802_20170521"
+[276] "go28915_ngs_rna_wts_rnaaccess_EA_49cc660fd5_20170520"
+[277] "go28915_ngs_rna_wts_rnaaccess_EA_f1853fd41b_20170512"
+[278] "go28915_ngs_rna_wts_rnaaccess_EA_39668716ab_20170526"
+[279] "go28915_ngs_rna_wts_rnaaccess_EA_ebb57dedd5_20170517"
+[280] "go28915_ngs_rna_wts_rnaaccess_EA_7f12097eca_20170526"
+[281] "go28915_ngs_rna_wts_rnaaccess_EA_b31cf4b3e1_20170521"
+[282] "go28915_ngs_rna_wts_rnaaccess_EA_a8239855a2_20170517"
+[283] "go28915_ngs_rna_wts_rnaaccess_EA_8dd1e5eaf5_20170519"
+[284] "go28915_ngs_rna_wts_rnaaccess_EA_9059c51f34_20170520"
+[285] "go28915_ngs_rna_wts_rnaaccess_EA_801afc2861_20170517"
+[286] "go28915_ngs_rna_wts_rnaaccess_EA_74e8aa68c1_20170526"
+[287] "go28915_ngs_rna_wts_rnaaccess_EA_428b5f374f_20170526"
+[288] "go28915_ngs_rna_wts_rnaaccess_EA_356e6d6807_20170520"
+[289] "go28915_ngs_rna_wts_rnaaccess_EA_dd41197452_20170521"
+[290] "go28915_ngs_rna_wts_rnaaccess_EA_88eb003566_20170522"
+[291] "go28915_ngs_rna_wts_rnaaccess_EA_29cd8ee3ce_20170512"
+[292] "go28915_ngs_rna_wts_rnaaccess_EA_fa140178ee_20170522"
+[293] "go28915_ngs_rna_wts_rnaaccess_EA_d6730f6906_20170522"
+[294] "go28915_ngs_rna_wts_rnaaccess_EA_a896ff0946_20170520"
+[295] "go28915_ngs_rna_wts_rnaaccess_EA_4aeb35f202_20170519"
+[296] "go28915_ngs_rna_wts_rnaaccess_EA_5e02f90c7c_20170520"
+[297] "go28915_ngs_rna_wts_rnaaccess_EA_8bb25456df_20170522"
+[298] "go28915_ngs_rna_wts_rnaaccess_EA_7a24243778_20170517"
+[299] "go28915_ngs_rna_wts_rnaaccess_EA_d13394b0ef_20170519"
+[300] "go28915_ngs_rna_wts_rnaaccess_EA_4e5d987d9a_20170517"
+[301] "go28915_ngs_rna_wts_rnaaccess_EA_c595fde491_20170522"
+[302] "go28915_ngs_rna_wts_rnaaccess_EA_62b2326200_20170522"
+[303] "go28915_ngs_rna_wts_rnaaccess_EA_9ce9757dbf_20170512"
+[304] "go28915_ngs_rna_wts_rnaaccess_EA_9e47ef3011_20170521"
+[305] "go28915_ngs_rna_wts_rnaaccess_EA_eb9923dd6c_20170517"
+[306] "go28915_ngs_rna_wts_rnaaccess_EA_6157b40595_20170520"
+[307] "go28915_ngs_rna_wts_rnaaccess_EA_a0d4b694fb_20170517"
+[308] "go28915_ngs_rna_wts_rnaaccess_EA_b19e574747_20170521"
+[309] "go28915_ngs_rna_wts_rnaaccess_EA_44cc76c6db_20170517"
+[310] "go28915_ngs_rna_wts_rnaaccess_EA_57d98a2d57_20170517"
+[311] "go28915_ngs_rna_wts_rnaaccess_EA_40a10eb8b8_20170521"
+[312] "go28915_ngs_rna_wts_rnaaccess_EA_977b883d54_20170525"
+[313] "go28915_ngs_rna_wts_rnaaccess_EA_2ddde72fd8_20170525"
+[314] "go28915_ngs_rna_wts_rnaaccess_EA_ab582b5ebe_20170521"
+[315] "go28915_ngs_rna_wts_rnaaccess_EA_bc79c6e22d_20170521"
+[316] "go28915_ngs_rna_wts_rnaaccess_EA_49cb514d22_20170526"
+[317] "go28915_ngs_rna_wts_rnaaccess_EA_58fa75bda2_20170517"
+[318] "go28915_ngs_rna_wts_rnaaccess_EA_3f925064db_20170522"
+[319] "go28915_ngs_rna_wts_rnaaccess_EA_36fb30eefe_20170526"
+[320] "go28915_ngs_rna_wts_rnaaccess_EA_dc287ba563_20170521"
+[321] "go28915_ngs_rna_wts_rnaaccess_EA_4777220b55_20170512"
+[322] "go28915_ngs_rna_wts_rnaaccess_EA_f9a3bc486c_20170517"
+[323] "go28915_ngs_rna_wts_rnaaccess_EA_8329a80bed_20170526"
+[324] "go28915_ngs_rna_wts_rnaaccess_EA_2c154c68ad_20170512"
+[325] "go28915_ngs_rna_wts_rnaaccess_EA_269132cfa6_20170521"
+[326] "go28915_ngs_rna_wts_rnaaccess_EA_60df45b842_20170521"
+[327] "go28915_ngs_rna_wts_rnaaccess_EA_eed6f87fd6_20170521"
+[328] "go28915_ngs_rna_wts_rnaaccess_EA_9afeed06ee_20170512"
+[329] "go28915_ngs_rna_wts_rnaaccess_EA_6add8119ba_20170517"
+[330] "go28915_ngs_rna_wts_rnaaccess_EA_701e7456c9_20170517"
+[331] "go28915_ngs_rna_wts_rnaaccess_EA_95b472a9cb_20170526"
+[332] "go28915_ngs_rna_wts_rnaaccess_EA_95b0dcf177_20170512"
+[333] "go28915_ngs_rna_wts_rnaaccess_EA_8e7914333a_20170519"
+[334] "go28915_ngs_rna_wts_rnaaccess_EA_f5b95ec603_20170522"
+[335] "go28915_ngs_rna_wts_rnaaccess_EA_71f4dd15d9_20170520"
+[336] "go28915_ngs_rna_wts_rnaaccess_EA_beae1a8f3b_20170519"
+[337] "go28915_ngs_rna_wts_rnaaccess_EA_6225726ad5_20170512"
+[338] "go28915_ngs_rna_wts_rnaaccess_EA_b33219953f_20170522"
+[339] "go28915_ngs_rna_wts_rnaaccess_EA_a2dd40cf33_20170517"
+[340] "go28915_ngs_rna_wts_rnaaccess_EA_27ee7b8f4c_20170520"
+[341] "go28915_ngs_rna_wts_rnaaccess_EA_2c3fa128ad_20170520"
+[342] "go28915_ngs_rna_wts_rnaaccess_EA_c701ba964a_20170517"
+[343] "go28915_ngs_rna_wts_rnaaccess_EA_725c099e54_20170512"
+[344] "go28915_ngs_rna_wts_rnaaccess_EA_f624236c53_20170517"
+[345] "go28915_ngs_rna_wts_rnaaccess_EA_2c6da9c344_20170522"
+[346] "go28915_ngs_rna_wts_rnaaccess_EA_3cc102aec3_20170512"
+[347] "go28915_ngs_rna_wts_rnaaccess_EA_491ad46160_20170522"
+[348] "go28915_ngs_rna_wts_rnaaccess_EA_39db351c7f_20170526"
+[349] "go28915_ngs_rna_wts_rnaaccess_EA_3c335b9f14_20170526"
+[350] "go28915_ngs_rna_wts_rnaaccess_EA_f6365a46c2_20170512"
+[351] "go28915_ngs_rna_wts_rnaaccess_EA_6a05900be3_20170525"
+[352] "go28915_ngs_rna_wts_rnaaccess_EA_8b87e2c28c_20170522"
+[353] "go28915_ngs_rna_wts_rnaaccess_EA_2fbdfe2839_20170519"
+[354] "go28915_ngs_rna_wts_rnaaccess_EA_fa3f77cae0_20170517"
+[355] "go28915_ngs_rna_wts_rnaaccess_EA_6d3ddbe718_20170520"
+[356] "go28915_ngs_rna_wts_rnaaccess_EA_dea5a534a4_20170512"
+[357] "go28915_ngs_rna_wts_rnaaccess_EA_5546f7b1d1_20170522"
+[358] "go28915_ngs_rna_wts_rnaaccess_EA_68c8ed062d_20170517"
+[359] "go28915_ngs_rna_wts_rnaaccess_EA_5b294e4dad_20170522"
+[360] "go28915_ngs_rna_wts_rnaaccess_EA_d4bac337be_20170522"
+[361] "go28915_ngs_rna_wts_rnaaccess_EA_dac81ad023_20170519"
+[362] "go28915_ngs_rna_wts_rnaaccess_EA_f07cfba7fb_20170517"
+[363] "go28915_ngs_rna_wts_rnaaccess_EA_bfe43f86f1_20170520"
+[364] "go28915_ngs_rna_wts_rnaaccess_EA_fea4b6553a_20170517"
+[365] "go28915_ngs_rna_wts_rnaaccess_EA_c28e1571f1_20170520"
+[366] "go28915_ngs_rna_wts_rnaaccess_EA_41a13f6858_20170520"
+[367] "go28915_ngs_rna_wts_rnaaccess_EA_28494617e2_20170512"
+[368] "go28915_ngs_rna_wts_rnaaccess_EA_9efb7c0960_20170530"
+[369] "go28915_ngs_rna_wts_rnaaccess_EA_8fe3b86eb3_20170522"
+[370] "go28915_ngs_rna_wts_rnaaccess_EA_5354d4ff11_20170520"
+[371] "go28915_ngs_rna_wts_rnaaccess_EA_a13d5890c9_20170519"
+[372] "go28915_ngs_rna_wts_rnaaccess_EA_47a244a198_20170525"
+[373] "go28915_ngs_rna_wts_rnaaccess_EA_dff6655536_20170512"
+[374] "go28915_ngs_rna_wts_rnaaccess_EA_e8a8c291f5_20170522"
+[375] "go28915_ngs_rna_wts_rnaaccess_EA_2bd19392cc_20170517"
+[376] "go28915_ngs_rna_wts_rnaaccess_EA_2eb0e0f5d5_20170521"
+[377] "go28915_ngs_rna_wts_rnaaccess_EA_61cc095bc1_20170517"
+[378] "go28915_ngs_rna_wts_rnaaccess_EA_df558972c9_20170517"
+[379] "go28915_ngs_rna_wts_rnaaccess_EA_557679b25e_20170522"
+[380] "go28915_ngs_rna_wts_rnaaccess_EA_72bf235b8d_20170520"
+[381] "go28915_ngs_rna_wts_rnaaccess_EA_64f823babd_20170517"
+[382] "go28915_ngs_rna_wts_rnaaccess_EA_634f98825f_20170512"
+[383] "go28915_ngs_rna_wts_rnaaccess_EA_41e7a59cb4_20170522"
+[384] "go28915_ngs_rna_wts_rnaaccess_EA_43301ccc3f_20170521"
+[385] "go28915_ngs_rna_wts_rnaaccess_EA_9a4b749eaf_20170526"
+[386] "go28915_ngs_rna_wts_rnaaccess_EA_99b541ee1f_20170522"
+[387] "go28915_ngs_rna_wts_rnaaccess_EA_c10225043d_20170521"
+[388] "go28915_ngs_rna_wts_rnaaccess_EA_41dfa9e10e_20170512"
+[389] "go28915_ngs_rna_wts_rnaaccess_EA_f3c3c86cad_20170520"
+[390] "go28915_ngs_rna_wts_rnaaccess_EA_612aaee722_20170521"
+[391] "go28915_ngs_rna_wts_rnaaccess_EA_3ad49038f2_20170520"
+[392] "go28915_ngs_rna_wts_rnaaccess_EA_e4596332ac_20170517"
+[393] "go28915_ngs_rna_wts_rnaaccess_EA_c29c6cb18b_20170519"
+[394] "go28915_ngs_rna_wts_rnaaccess_EA_28309af25e_20170517"
+[395] "go28915_ngs_rna_wts_rnaaccess_EA_b3e0e56c27_20170525"
+[396] "go28915_ngs_rna_wts_rnaaccess_EA_500189a5d1_20170520"
+[397] "go28915_ngs_rna_wts_rnaaccess_EA_804b504518_20170530"
+[398] "go28915_ngs_rna_wts_rnaaccess_EA_77fccd2f2c_20170512"
+[399] "go28915_ngs_rna_wts_rnaaccess_EA_90386fd6c1_20170520"
+[400] "go28915_ngs_rna_wts_rnaaccess_EA_318daa00e1_20170519"
+[401] "go28915_ngs_rna_wts_rnaaccess_EA_5c023ca6fa_20170526"
+[402] "go28915_ngs_rna_wts_rnaaccess_EA_a656b64bff_20170521"
+[403] "go28915_ngs_rna_wts_rnaaccess_EA_568026f619_20170517"
+[404] "go28915_ngs_rna_wts_rnaaccess_EA_f5d411a3db_20170525"
+[405] "go28915_ngs_rna_wts_rnaaccess_EA_3c1c49517a_20170520"
+[406] "go28915_ngs_rna_wts_rnaaccess_EA_eab017d1d0_20170519"
+[407] "go28915_ngs_rna_wts_rnaaccess_EA_4b20637c67_20170521"
+[408] "go28915_ngs_rna_wts_rnaaccess_EA_98c2ccc42c_20170512"
+[409] "go28915_ngs_rna_wts_rnaaccess_EA_80713f6571_20170521"
+[410] "go28915_ngs_rna_wts_rnaaccess_EA_5468e1dc03_20170522"
+[411] "go28915_ngs_rna_wts_rnaaccess_EA_c5b8e7eb1f_20170521"
+[412] "go28915_ngs_rna_wts_rnaaccess_EA_2873544c3b_20170530"
+[413] "go28915_ngs_rna_wts_rnaaccess_EA_6ae15cb0ec_20170520"
+[414] "go28915_ngs_rna_wts_rnaaccess_EA_8d08c6f804_20170512"
+[415] "go28915_ngs_rna_wts_rnaaccess_EA_3d83dcde85_20170517"
+[416] "go28915_ngs_rna_wts_rnaaccess_EA_b4cc91760c_20170522"
+[417] "go28915_ngs_rna_wts_rnaaccess_EA_d4969df236_20170522"
+[418] "go28915_ngs_rna_wts_rnaaccess_EA_977d9c96b8_20170512"
+[419] "go28915_ngs_rna_wts_rnaaccess_EA_6b186ee14c_20170512"
+[420] "go28915_ngs_rna_wts_rnaaccess_EA_9fd33cc24a_20170522"
+[421] "go28915_ngs_rna_wts_rnaaccess_EA_b4bda5cfaf_20170512"
+[422] "go28915_ngs_rna_wts_rnaaccess_EA_668b247d03_20170520"
+[423] "go28915_ngs_rna_wts_rnaaccess_EA_cc43e53baa_20170512"
+[424] "go28915_ngs_rna_wts_rnaaccess_EA_eaa103cf98_20170517"
+[425] "go28915_ngs_rna_wts_rnaaccess_EA_589781a608_20170522"
+[426] "go28915_ngs_rna_wts_rnaaccess_EA_fc2d728359_20170530"
+[427] "go28915_ngs_rna_wts_rnaaccess_EA_5594aa276e_20170521"
+[428] "go28915_ngs_rna_wts_rnaaccess_EA_259f489417_20170517"
+[429] "go28915_ngs_rna_wts_rnaaccess_EA_44ccd5ac82_20170517"
+[430] "go28915_ngs_rna_wts_rnaaccess_EA_35703b7c82_20170517"
+[431] "go28915_ngs_rna_wts_rnaaccess_EA_85f7323b65_20170512"
+[432] "go28915_ngs_rna_wts_rnaaccess_EA_60b1a8bbde_20170525"
+[433] "go28915_ngs_rna_wts_rnaaccess_EA_41868322d5_20170526"
+[434] "go28915_ngs_rna_wts_rnaaccess_EA_90ae55b31b_20170521"
+[435] "go28915_ngs_rna_wts_rnaaccess_EA_f5291d36c9_20170530"
+[436] "go28915_ngs_rna_wts_rnaaccess_EA_d9f7354b56_20170521"
+[437] "go28915_ngs_rna_wts_rnaaccess_EA_b34cdb17ee_20170519"
+[438] "go28915_ngs_rna_wts_rnaaccess_EA_521ff3b701_20170522"
+[439] "go28915_ngs_rna_wts_rnaaccess_EA_e9ac9617f8_20170521"
+[440] "go28915_ngs_rna_wts_rnaaccess_EA_eca8275487_20170521"
+[441] "go28915_ngs_rna_wts_rnaaccess_EA_c10ae20da0_20170520"
+[442] "go28915_ngs_rna_wts_rnaaccess_EA_8e84ee04e0_20170521"
+[443] "go28915_ngs_rna_wts_rnaaccess_EA_58b77792e4_20170520"
+[444] "go28915_ngs_rna_wts_rnaaccess_EA_877b949bb9_20170517"
+[445] "go28915_ngs_rna_wts_rnaaccess_EA_6542c831e7_20170521"
+[446] "go28915_ngs_rna_wts_rnaaccess_EA_d041f20762_20170522"
+[447] "go28915_ngs_rna_wts_rnaaccess_EA_deb1282668_20170525"
+[448] "go28915_ngs_rna_wts_rnaaccess_EA_7dd048a542_20170512"
+[449] "go28915_ngs_rna_wts_rnaaccess_EA_47ad7d7e1b_20170512"
+[450] "go28915_ngs_rna_wts_rnaaccess_EA_cf6f3a5ebb_20170522"
+[451] "go28915_ngs_rna_wts_rnaaccess_EA_cbca0a2943_20170519"
+[452] "go28915_ngs_rna_wts_rnaaccess_EA_70dc4111a1_20170521"
+[453] "go28915_ngs_rna_wts_rnaaccess_EA_51cf0053eb_20170520"
+[454] "go28915_ngs_rna_wts_rnaaccess_EA_95764c3700_20170520"
+[455] "go28915_ngs_rna_wts_rnaaccess_EA_477e42b772_20170512"
+[456] "go28915_ngs_rna_wts_rnaaccess_EA_cb5efe9d8c_20170517"
+[457] "go28915_ngs_rna_wts_rnaaccess_EA_ac939ddc98_20170520"
+[458] "go28915_ngs_rna_wts_rnaaccess_EA_da6270d2dd_20170530"
+[459] "go28915_ngs_rna_wts_rnaaccess_EA_8fe9acdcb5_20170517"
+[460] "go28915_ngs_rna_wts_rnaaccess_EA_43981e52dc_20170519"
+[461] "go28915_ngs_rna_wts_rnaaccess_EA_bac527916e_20170520"
+[462] "go28915_ngs_rna_wts_rnaaccess_EA_5b243faa97_20170521"
+[463] "go28915_ngs_rna_wts_rnaaccess_EA_99d2831845_20170520"
+[464] "go28915_ngs_rna_wts_rnaaccess_EA_ac64c022d7_20170525"
+[465] "go28915_ngs_rna_wts_rnaaccess_EA_e4a779e260_20170522"
+[466] "go28915_ngs_rna_wts_rnaaccess_EA_ef4f5802e1_20170517"
+[467] "go28915_ngs_rna_wts_rnaaccess_EA_50ee026330_20170519"
+[468] "go28915_ngs_rna_wts_rnaaccess_EA_d571e7c50b_20170522"
+[469] "go28915_ngs_rna_wts_rnaaccess_EA_f66ce68638_20170517"
+[470] "go28915_ngs_rna_wts_rnaaccess_EA_b540ea9c21_20170521"
+[471] "go28915_ngs_rna_wts_rnaaccess_EA_46d0df8fca_20170522"
+[472] "go28915_ngs_rna_wts_rnaaccess_EA_f50cdf3b37_20170525"
+[473] "go28915_ngs_rna_wts_rnaaccess_EA_4c5e2cc921_20170522"
+[474] "go28915_ngs_rna_wts_rnaaccess_EA_d5748da039_20170520"
+[475] "go28915_ngs_rna_wts_rnaaccess_EA_315c5e432a_20170517"
+[476] "go28915_ngs_rna_wts_rnaaccess_EA_3f93ecc626_20170517"
+[477] "go28915_ngs_rna_wts_rnaaccess_EA_44debdb806_20170519"
+[478] "go28915_ngs_rna_wts_rnaaccess_EA_d836fe2625_20170517"
+[479] "go28915_ngs_rna_wts_rnaaccess_EA_467f797b6f_20170519"
+[480] "go28915_ngs_rna_wts_rnaaccess_EA_a4bacddcb5_20170517"
+[481] "go28915_ngs_rna_wts_rnaaccess_EA_44c14d6642_20170521"
+[482] "go28915_ngs_rna_wts_rnaaccess_EA_7f0ed483dd_20170521"
+[483] "go28915_ngs_rna_wts_rnaaccess_EA_d8e8a39ad4_20170521"
+[484] "go28915_ngs_rna_wts_rnaaccess_EA_753724ec66_20170517"
+[485] "go28915_ngs_rna_wts_rnaaccess_EA_c90c72d336_20170520"
+[486] "go28915_ngs_rna_wts_rnaaccess_EA_585d813503_20170520"
+[487] "go28915_ngs_rna_wts_rnaaccess_EA_a1059deb80_20170522"
+[488] "go28915_ngs_rna_wts_rnaaccess_EA_8b682741ca_20170512"
+[489] "go28915_ngs_rna_wts_rnaaccess_EA_dfd11f5d9c_20170519"
+[490] "go28915_ngs_rna_wts_rnaaccess_EA_df7ba5cd1d_20170520"
+[491] "go28915_ngs_rna_wts_rnaaccess_EA_d1b6fb4598_20170517"
+[492] "go28915_ngs_rna_wts_rnaaccess_EA_437edb53d1_20170519"
+[493] "go28915_ngs_rna_wts_rnaaccess_EA_8de6ace1fe_20170517"
+[494] "go28915_ngs_rna_wts_rnaaccess_EA_42a49716db_20170520"
+[495] "go28915_ngs_rna_wts_rnaaccess_EA_756f9ad8cd_20170517"
+[496] "go28915_ngs_rna_wts_rnaaccess_EA_59aa67b29e_20170512"
+[497] "go28915_ngs_rna_wts_rnaaccess_EA_4ed095dc40_20170522"
+[498] "go28915_ngs_rna_wts_rnaaccess_EA_699c86eb81_20170520"
+[499] "go28915_ngs_rna_wts_rnaaccess_EA_3afd5a8b64_20170522"
+[500] "go28915_ngs_rna_wts_rnaaccess_EA_b6c75e5e91_20170520"
+[501] "go28915_ngs_rna_wts_rnaaccess_EA_bd961dc182_20170517"
+[502] "go28915_ngs_rna_wts_rnaaccess_EA_c77ce3d8a5_20170526"
+[503] "go28915_ngs_rna_wts_rnaaccess_EA_5d8709ab8d_20170517"
+[504] "go28915_ngs_rna_wts_rnaaccess_EA_a7e7af40fe_20170526"
+[505] "go28915_ngs_rna_wts_rnaaccess_EA_e445e5b98e_20170520"
+[506] "go28915_ngs_rna_wts_rnaaccess_EA_727bae315b_20170521"
+[507] "go28915_ngs_rna_wts_rnaaccess_EA_46b3788293_20170530"
+[508] "go28915_ngs_rna_wts_rnaaccess_EA_756f4394a0_20170512"
+[509] "go28915_ngs_rna_wts_rnaaccess_EA_d22ebe7c7f_20170517"
+[510] "go28915_ngs_rna_wts_rnaaccess_EA_809d453920_20170512"
+[511] "go28915_ngs_rna_wts_rnaaccess_EA_b8e45bbb80_20170521"
+[512] "go28915_ngs_rna_wts_rnaaccess_EA_6948166f75_20170521"
+[513] "go28915_ngs_rna_wts_rnaaccess_EA_6c35cca71f_20170517"
+[514] "go28915_ngs_rna_wts_rnaaccess_EA_b801b7182b_20170530"
+[515] "go28915_ngs_rna_wts_rnaaccess_EA_6e30ed024c_20170517"
+[516] "go28915_ngs_rna_wts_rnaaccess_EA_fa7acf78a5_20170520"
+[517] "go28915_ngs_rna_wts_rnaaccess_EA_5cbdba0157_20170517"
+[518] "go28915_ngs_rna_wts_rnaaccess_EA_7bed3ce5a0_20170521"
+[519] "go28915_ngs_rna_wts_rnaaccess_EA_ff7aa4957c_20170517"
+[520] "go28915_ngs_rna_wts_rnaaccess_EA_b163abbb35_20170519"
+[521] "go28915_ngs_rna_wts_rnaaccess_EA_37a40c2034_20170526"
+[522] "go28915_ngs_rna_wts_rnaaccess_EA_8e9b5dd23f_20170521"
+[523] "go28915_ngs_rna_wts_rnaaccess_EA_c8f530a487_20170517"
+[524] "go28915_ngs_rna_wts_rnaaccess_EA_fdd080d56a_20170522"
+[525] "go28915_ngs_rna_wts_rnaaccess_EA_d0d681c15e_20170522"
+[526] "go28915_ngs_rna_wts_rnaaccess_EA_832e01df62_20170517"
+[527] "go28915_ngs_rna_wts_rnaaccess_EA_43562af289_20170521"
+[528] "go28915_ngs_rna_wts_rnaaccess_EA_567fa82c1b_20170525"
+[529] "go28915_ngs_rna_wts_rnaaccess_EA_ffe004da1c_20170521"
+[530] "go28915_ngs_rna_wts_rnaaccess_EA_532141db56_20170520"
+[531] "go28915_ngs_rna_wts_rnaaccess_EA_6c620c9474_20170522"
+[532] "go28915_ngs_rna_wts_rnaaccess_EA_d438b2d355_20170520"
+[533] "go28915_ngs_rna_wts_rnaaccess_EA_848c2ef6fc_20170520"
+[534] "go28915_ngs_rna_wts_rnaaccess_EA_ea47f20418_20170530"
+[535] "go28915_ngs_rna_wts_rnaaccess_EA_2dbae42e09_20170519"
+[536] "go28915_ngs_rna_wts_rnaaccess_EA_ac7669b1c9_20170520"
+[537] "go28915_ngs_rna_wts_rnaaccess_EA_5d82b0301f_20170512"
+[538] "go28915_ngs_rna_wts_rnaaccess_EA_5c8296207f_20170522"
+[539] "go28915_ngs_rna_wts_rnaaccess_EA_d102e7d148_20170522"
+[540] "go28915_ngs_rna_wts_rnaaccess_EA_60126bd66e_20170519"
+[541] "go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517"
+[542] "go28915_ngs_rna_wts_rnaaccess_EA_8a153937dd_20170530"
+[543] "go28915_ngs_rna_wts_rnaaccess_EA_862a997bc9_20170521"
+[544] "go28915_ngs_rna_wts_rnaaccess_EA_df4dd25737_20170525"
+[545] "go28915_ngs_rna_wts_rnaaccess_EA_57da89657c_20170519"
+[546] "go28915_ngs_rna_wts_rnaaccess_EA_f3a6d7fd6f_20170522"
+[547] "go28915_ngs_rna_wts_rnaaccess_EA_3d57c755d9_20170520"
+[548] "go28915_ngs_rna_wts_rnaaccess_EA_f7d4c4712c_20170530"
+[549] "go28915_ngs_rna_wts_rnaaccess_EA_7fc2421b5f_20170517"
+[550] "go28915_ngs_rna_wts_rnaaccess_EA_66b093e7f2_20170522"
+[551] "go28915_ngs_rna_wts_rnaaccess_EA_4d9cf3d1f2_20170521"
+[552] "go28915_ngs_rna_wts_rnaaccess_EA_abe406c1de_20170521"
+[553] "go28915_ngs_rna_wts_rnaaccess_EA_df3ea91b04_20170521"
+[554] "go28915_ngs_rna_wts_rnaaccess_EA_c301512e66_20170526"
+[555] "go28915_ngs_rna_wts_rnaaccess_EA_52721a6beb_20170526"
+[556] "go28915_ngs_rna_wts_rnaaccess_EA_5ad56c4ce6_20170522"
+[557] "go28915_ngs_rna_wts_rnaaccess_EA_c880c8c06f_20170520"
+[558] "go28915_ngs_rna_wts_rnaaccess_EA_e0c92eecd3_20170512"
+[559] "go28915_ngs_rna_wts_rnaaccess_EA_2b309823f7_20170522"
+[560] "go28915_ngs_rna_wts_rnaaccess_EA_919d86ea3a_20170521"
+[561] "go28915_ngs_rna_wts_rnaaccess_EA_ef264e1ea6_20170517"
+[562] "go28915_ngs_rna_wts_rnaaccess_EA_a0bb0a7c59_20170530"
+[563] "go28915_ngs_rna_wts_rnaaccess_EA_8364b312ee_20170519"
+[564] "go28915_ngs_rna_wts_rnaaccess_EA_d21fdecb18_20170517"
+[565] "go28915_ngs_rna_wts_rnaaccess_EA_48a03cbf77_20170520"
+[566] "go28915_ngs_rna_wts_rnaaccess_EA_c4dd048b35_20170521"
+[567] "go28915_ngs_rna_wts_rnaaccess_EA_eba6b7475e_20170521"
+[568] "go28915_ngs_rna_wts_rnaaccess_EA_5acaed8523_20170520"
+[569] "go28915_ngs_rna_wts_rnaaccess_EA_30103435d3_20170517"
+[570] "go28915_ngs_rna_wts_rnaaccess_EA_cc9a64d129_20170520"
+[571] "go28915_ngs_rna_wts_rnaaccess_EA_63ddec6c3b_20170522"
+[572] "go28915_ngs_rna_wts_rnaaccess_EA_82ae9d2d9e_20170526"
+[573] "go28915_ngs_rna_wts_rnaaccess_EA_a4e123b69e_20170517"
+[574] "go28915_ngs_rna_wts_rnaaccess_EA_a298cf43d8_20170520"
+[575] "go28915_ngs_rna_wts_rnaaccess_EA_f2b7c893ac_20170512"
+[576] "go28915_ngs_rna_wts_rnaaccess_EA_b40e660b2c_20170512"
+[577] "go28915_ngs_rna_wts_rnaaccess_EA_b9c6b2a514_20170521"
+[578] "go28915_ngs_rna_wts_rnaaccess_EA_2f86e5f81f_20170512"
+[579] "go28915_ngs_rna_wts_rnaaccess_EA_94c670cf1e_20170520"
+[580] "go28915_ngs_rna_wts_rnaaccess_EA_d3919f1abe_20170517"
+[581] "go28915_ngs_rna_wts_rnaaccess_EA_69bb9a23f8_20170522"
+[582] "go28915_ngs_rna_wts_rnaaccess_EA_7ed91a19ad_20170520"
+[583] "go28915_ngs_rna_wts_rnaaccess_EA_d5d337b227_20170522"
+[584] "go28915_ngs_rna_wts_rnaaccess_EA_b481ead925_20170517"
+[585] "go28915_ngs_rna_wts_rnaaccess_EA_9a2a734cbf_20170512"
+[586] "go28915_ngs_rna_wts_rnaaccess_EA_e3cfaf8036_20170526"
+[587] "go28915_ngs_rna_wts_rnaaccess_EA_2ef09896f2_20170517"
+[588] "go28915_ngs_rna_wts_rnaaccess_EA_fde78bb036_20170526"
+[589] "go28915_ngs_rna_wts_rnaaccess_EA_dc95d4320d_20170517"
+[590] "go28915_ngs_rna_wts_rnaaccess_EA_43a4700311_20170517"
+[591] "go28915_ngs_rna_wts_rnaaccess_EA_716ea00377_20170521"
+[592] "go28915_ngs_rna_wts_rnaaccess_EA_a497ba27db_20170517"
+[593] "go28915_ngs_rna_wts_rnaaccess_EA_8fc1983dbd_20170522"
+Merging result aggr files...
+Filling non-detectable samples with 0...
+Outputing
+Done. Check /home/data/IO_RNA/circRNA/EGA_OAK/aggr/aggr_circRNA.tsv.gz

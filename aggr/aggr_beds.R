@@ -110,6 +110,14 @@ aggr_circRNA_beds = function(sample, methods) {
     })
     bed_dt = rbindlist(bed_list, use.names = FALSE)
     colnames(bed_dt) = c("chr", "start", "end", "strand", "count", "tool")
+
+    # 增加样本水平 circRNA ID 的输出
+    # 方便后续分析不同方法的 overlap 以及统计总量
+    bed_dt_o = copy(bed_dt)
+    bed_dt_o$sample = sample
+    fwrite(x = bed_dt_o, file = file_to_all, sep = "\t", append = TRUE)
+
+    # 获取和分析 common circRNA
     colnames(bed_common) = c("chr", "start", "end")
     bed_common = bed_common[chr %in% paste0("chr", c(1:22, "X", "Y"))]
 
@@ -152,6 +160,9 @@ aggr_circRNA_beds = function(sample, methods) {
 # Processing in batch
 
 message("Reading, joining & annotating circRNAs...")
+
+file_to_all = file.path(OutDir, paste0(basename(InDir), ".circRNA_all.txt"))
+if (file.exists(file_to_all)) file.remove(file_to_all)
 
 for (sample in sample_ids) {
   message("\thandling ", sample)
