@@ -98,7 +98,7 @@ aggr_circRNA_beds = function(sample, methods) {
     file.remove(file.path(OutDir, paste0(sample, ".common.txt")))  # Remove temp common file
 
     # Read all files and filter them
-    bed_list = lapply(methods[!nonexists], function(x) {
+    bed_list = parallel::mclapply(methods[!nonexists], function(x) {
       if (x == "CIRI") {
         d = fread(file.path(InDir, paste0(sample, ".", x, ".bed")), select = c(1:4, 7), header = FALSE, sep = "\t")
       } else {
@@ -107,7 +107,7 @@ aggr_circRNA_beds = function(sample, methods) {
 
       d$tool = x
       d
-    })
+    }, mc.cores = getOption("mc.cores", 4L))
     bed_dt = rbindlist(bed_list, use.names = FALSE)
     colnames(bed_dt) = c("chr", "start", "end", "strand", "count", "tool")
 
@@ -162,12 +162,19 @@ aggr_circRNA_beds = function(sample, methods) {
 message("Reading, joining & annotating circRNAs...")
 
 file_to_all = file.path(OutDir, paste0(basename(InDir), ".circRNA_all.txt"))
-if (file.exists(file_to_all)) file.remove(file_to_all)
+if (file.exists(file_to_all)) invisible(file.remove(file_to_all))
 
-for (sample in sample_ids) {
+invisible(
+  parallel::mclapply(sample_ids, function(sample) {
   message("\thandling ", sample)
   aggr_circRNA_beds(sample, methods)
-}
+}, mc.cores = min(parallel::detectCores(), 20L))
+)
+
+# for (sample in sample_ids) {
+#   message("\thandling ", sample)
+#   aggr_circRNA_beds(sample, methods)
+# }
 
 message("Done. Please check result *.aggr.txt in ", OutDir)
 
