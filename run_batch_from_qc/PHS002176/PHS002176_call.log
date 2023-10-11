@@ -3782,3 +3782,40 @@ Start CIRIquant for SRR13780263 at Tue Oct 10 18:33:06 CST 2023
 Final result file does not exist, run it.
 Done for SRR13780263, final result should be SRR13780263.CIRI.bed
 End CIRIquant for SRR13780263 at Wed Oct 11 05:00:19 CST 2023
+Start circexplorer2 for SRR13780263 at Tue Oct 10 18:33:04 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b SRR13780263_circ2_result.txt -o SRR13780263_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 22:12:58
+Start to annotate fusion junctions...
+Annotated 25419 fusion junctions!
+Start to fix fusion junctions...
+Fixed 13491 fusion junctions!
+End CIRCexplorer2 annotate at 22:13:35
+Done for SRR13780263, final result should be SRR13780263.circexplorer2.bed
+End circexplorer2 for SRR13780263 at Tue Oct 10 22:13:42 CST 2023
+Start circRNA_finder for SRR13780263 at Tue Oct 10 18:33:04 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_1.fastq.gz /home/zhou/raid/IO_RNA/PHS002176/fq/SRR13780263_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR13780263. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 10 18:33:04 ..... started STAR run
+Oct 10 18:33:04 ..... loading genome
+Oct 10 18:38:19 ..... started mapping
+Oct 10 20:12:00 ..... finished mapping
+Oct 10 20:12:05 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR13780263, final result should be SRR13780263.circRNA_finder.bed
+End circRNA_finder for SRR13780263 at Tue Oct 10 20:12:27 CST 2023
+Start find_circ for SRR13780263 at Tue Oct 10 18:33:04 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for SRR13780263, final result should be SRR13780263.find_circ.bed
+End find_circ for SRR13780263 at Wed Oct 11 13:38:52 CST 2023
+The pipeline is done. Please check the result files.

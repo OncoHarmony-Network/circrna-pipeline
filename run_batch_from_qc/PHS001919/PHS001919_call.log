@@ -2696,3 +2696,54 @@ Start CIRIquant for SRR10486077 at Wed Oct 11 00:03:52 CST 2023
 Final result file does not exist, run it.
 Done for SRR10486077, final result should be SRR10486077.CIRI.bed
 End CIRIquant for SRR10486077 at Wed Oct 11 08:57:29 CST 2023
+Start circexplorer2 for SRR10486077 at Wed Oct 11 00:03:50 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Running parse module...
+3. Running annotate module...
+CIRCexplorer parameters: /home/circrna/miniconda3/envs/Circexplorer2/bin/CIRCexplorer2 annotate -r /home/zhou/t12b/reference/hg38_ek12/hg38_ref_all.txt -g /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -b SRR10486077_circ2_result.txt -o SRR10486077_circ2_result_ann.txt
+Start CIRCexplorer2 annotate at 03:12:27
+Start to annotate fusion junctions...
+Annotated 3509 fusion junctions!
+Start to fix fusion junctions...
+Fixed 2137 fusion junctions!
+End CIRCexplorer2 annotate at 03:12:52
+Done for SRR10486077, final result should be SRR10486077.circexplorer2.bed
+End circexplorer2 for SRR10486077 at Wed Oct 11 03:13:04 CST 2023
+Start circRNA_finder for SRR10486077 at Wed Oct 11 00:03:50 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS001919/fq/SRR10486077_1.fastq.gz /home/zhou/raid/IO_RNA/PHS001919/fq/SRR10486077_2.fastq.gz --runThreadN 20 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR10486077. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 11 00:03:50 ..... started STAR run
+Oct 11 00:03:50 ..... loading genome
+Oct 11 00:09:02 ..... started mapping
+Oct 11 00:30:49 ..... finished mapping
+Oct 11 00:30:56 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR10486077, final result should be SRR10486077.circRNA_finder.bed
+End circRNA_finder for SRR10486077 at Wed Oct 11 00:31:20 CST 2023
+Start find_circ for SRR10486077 at Wed Oct 11 00:03:50 CST 2023
+Final result file does not exist, run it.
+1. Aligning reads...
+2. Fetching the unmapped reads
+3. Splitting into anchors
+4. Aligning anchors and piping through find_circ
+Done for SRR10486077, final result should be SRR10486077.find_circ.bed
+End find_circ for SRR10486077 at Wed Oct 11 13:55:37 CST 2023
+[Wed 2023-10-11 13:55:39] [INFO ] Input reads: SRR10486078_1.fastq.gz,SRR10486078_2.fastq.gz
+[Wed 2023-10-11 13:55:39] [INFO ] Library type: unstranded
+[Wed 2023-10-11 13:55:39] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI, Output prefix: SRR10486078
+[Wed 2023-10-11 13:55:39] [INFO ] Config: hg38 Loaded
+[Wed 2023-10-11 13:55:39] [INFO ] 96 CPU cores availble, using 10
+[Wed 2023-10-11 13:55:39] [INFO ] Align RNA-seq reads to reference genome ..
+[Wed 2023-10-11 13:55:39] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 10 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS001919/fq/SRR10486078_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS001919/fq/SRR10486078_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/align/SRR10486078.bam
+****** Processing SRR10486078. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+[Wed 2023-10-11 15:54:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/align/SRR10486078.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/align/SRR10486078.bam

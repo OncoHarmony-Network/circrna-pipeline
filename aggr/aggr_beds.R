@@ -105,6 +105,11 @@ aggr_circRNA_beds = function(sample, methods) {
         d = fread(file.path(InDir, paste0(sample, ".", x, ".bed")), select = 1:5, header = FALSE, sep = "\t")
       }
 
+      if (nrow(d) == 0) {
+        warning(sprintf("void data detected for %s with method %s", sample, x), immediate. = TRUE)
+        return(d)
+      }
+
       d$tool = x
       d
     }, mc.cores = getOption("mc.cores", 4L))
