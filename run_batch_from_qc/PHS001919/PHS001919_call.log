@@ -2747,3 +2747,9 @@ Creating .bam file...
 Sorting .bam file...
 Indexing .bam file...
 [Wed 2023-10-11 15:54:30] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools sort --threads 10 -o /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/align/SRR10486078.sorted.bam /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/align/SRR10486078.bam
+[Wed 2023-10-11 16:16:46] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/samtools index -@ 10 /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/align/SRR10486078.sorted.bam
+[Wed 2023-10-11 16:17:57] [DEBUG] HISAT2 bam: SRR10486078.sorted.bam
+[Wed 2023-10-11 16:17:57] [INFO ] Skipping gene abundance estimation
+[Wed 2023-10-11 16:17:57] [INFO ] No circRNA information provided, run CIRI2 for junction site prediction ..
+[Wed 2023-10-11 16:17:57] [INFO ] Running BWA-mem mapping candidate reads ..
+[Wed 2023-10-11 16:17:57] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/bwa mem -t 10 -T 19 /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa /home/zhou/raid/IO_RNA/PHS001919/fq/SRR10486078_1.fastq.gz /home/zhou/raid/IO_RNA/PHS001919/fq/SRR10486078_2.fastq.gz > /home/zhou/raid/IO_RNA/circRNA/PHS001919/SRR10486078.CIRI/circ/SRR10486078_unmapped.sam
