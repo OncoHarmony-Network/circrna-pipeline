@@ -1,0 +1,61 @@
+Reading GTF annotation data...
+Extracting gene and region information...
+Checking gtf data...
+    chr start   end         gene_id      symbol
+1: chr1 11869 14409 ENSG00000223972     DDX11L1
+2: chr1 14404 29570 ENSG00000227232      WASH7P
+3: chr1 17369 17436 ENSG00000278267   MIR6859-1
+4: chr1 29554 31109 ENSG00000243485 MIR1302-2HG
+5: chr1 30366 30503 ENSG00000284332   MIR1302-2
+6: chr1 34554 36081 ENSG00000237613     FAM138A
+Scanning result bed files and extracting sample IDs...
+19 sample(s) detected
+Reading, joining & annotating circRNAs...
+	handling SRR6118673
+	handling SRR6118676
+	handling SRR6118678
+	handling SRR6118680
+	handling SRR6118688
+	handling SRR6118691
+	handling SRR6118693
+	handling SRR6118696
+	handling SRR6118698
+	handling SRR6118701
+	handling SRR6118705
+	handling SRR6118708
+	handling SRR6118712
+	handling SRR6118715
+	handling SRR6118718
+	handling SRR6118720
+	handling SRR6118723
+	handling SRR6118727
+	handling SRR6118731
+Warning in aggr_circRNA_beds(sample, methods) :
+  no common circRNA detected for sample SRR6118673
+	=>4 solid circRNAs detected
+	=>4 solid circRNAs detected
+	=>8 solid circRNAs detected
+	=>9 solid circRNAs detected
+	=>13 solid circRNAs detected
+	=>2 solid circRNAs detected
+	=>20 solid circRNAs detected
+	=>10 solid circRNAs detected
+	=>8 solid circRNAs detected
+	=>15 solid circRNAs detected
+	=>14 solid circRNAs detected
+	=>29 solid circRNAs detected
+	=>10 solid circRNAs detected
+	=>2 solid circRNAs detected
+	=>15 solid circRNAs detected
+	=>8 solid circRNAs detected
+	=>22 solid circRNAs detected
+	=>13 solid circRNAs detected
+Done. Please check result *.aggr.txt in /home/zhou/raid/IO_RNA/circRNA/PHS001464/aggr
+Scanning result aggr files...
+Checking if all sample result data files could be found...
+  No. Print all non-detectable samples...
+[1] "SRR6118673"
+Merging result aggr files...
+Filling non-detectable samples with 0...
+Outputing
+Done. Check /home/zhou/raid/IO_RNA/circRNA/PHS001464/aggr/aggr_circRNA.tsv.gz

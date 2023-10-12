@@ -123,8 +123,16 @@ aggr_circRNA_beds = function(sample, methods) {
     fwrite(x = bed_dt_o, file = file_to_all, sep = "\t", append = TRUE)
 
     # 获取和分析 common circRNA
+    if (nrow(bed_common) == 0) {
+      warning("no common circRNA detected for sample ", sample, immediate. = TRUE)
+      return(invisible(NULL))
+    }
     colnames(bed_common) = c("chr", "start", "end")
     bed_common = bed_common[chr %in% paste0("chr", c(1:22, "X", "Y"))]
+    if (nrow(bed_common) == 0) {
+      warning("no common circRNA detected for sample in chr 1-22,X,Y", sample, immediate. = TRUE)
+      return(invisible(NULL))
+    }
 
     bed_dt[, id := paste(chr, start, end, sep = "-")]
     bed_common[, id := paste(chr, start, end, sep = "-")]
