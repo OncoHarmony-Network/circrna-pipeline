@@ -10,4 +10,6 @@ do
     cp ${workdir}/${i}/aggr/${i}.circRNA_all.txt ${workdir}/aggr_results
 done
 
+cd ${workdir}/aggr_results && gzip *.txt
+
 echo Done
