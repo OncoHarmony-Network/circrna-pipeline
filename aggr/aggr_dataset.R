@@ -47,14 +47,14 @@ if (!is.null(AllSampleList)) {
 message("Merging result aggr files...")
 AllData = lapply(fileListAll, fread)
 AllData = rbindlist(AllData)
-AllData[, id := paste(symbol, strand, chr, start, end, sep = ":")]
+AllData[, id := paste(gene, strand, chr, start, end, sep = ":")]
 AllData[, tool := "four_methods"]  # 多样本聚合没法保留单样本的方法，不然聚合会有问题
-AllData = dcast(AllData, id + symbol + strand + chr + start + end + tool ~ sample, value.var = "count", fill = 0)
-colnames(AllData)[1:7] = c("id", "symbol", "strand", "chrom", "startUpBSE", "endDownBSE", "tool")
+AllData = dcast(AllData, id + gene + strand + chr + start + end + tool ~ sample, value.var = "count", fill = 0)
+colnames(AllData)[1:7] = c("id", "gene", "strand", "chrom", "startUpBSE", "endDownBSE", "tool")
 
 # Final output
-#id, symbol, strand, chrom, startUpBSE, endDownBSE, tool, samples...
-#id: symbol:strand:chrom:startUpBSE:endDownBSE
+#id, gene, strand, chrom, startUpBSE, endDownBSE, tool, samples...
+#id: gene:strand:chrom:startUpBSE:endDownBSE
 
 # 当有参考的全部样本列表时，对没有检测到的样本全部用 0 填充
 if (!is.null(AllSampleList)) {
