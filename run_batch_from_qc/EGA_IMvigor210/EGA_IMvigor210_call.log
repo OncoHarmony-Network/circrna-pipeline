@@ -1,0 +1,7 @@
+[Sun 2023-10-15 17:47:05] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706_2.fastq.gz
+[Sun 2023-10-15 17:47:05] [INFO ] Library type: unstranded
+[Sun 2023-10-15 17:47:05] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706
+[Sun 2023-10-15 17:47:05] [INFO ] Config: hg38 Loaded
+[Sun 2023-10-15 17:47:05] [INFO ] 128 CPU cores availble, using 40
+[Sun 2023-10-15 17:47:05] [INFO ] Align RNA-seq reads to reference genome ..
+[Sun 2023-10-15 17:47:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 40 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706.bam
