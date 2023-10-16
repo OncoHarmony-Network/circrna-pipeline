@@ -31,14 +31,14 @@ message("Extracting gene and region information...")
 # 提取gene_id和symbol信息
 # 一般来说，GTF文件的attributes列是以"; "分隔的键值对，我们可以利用这个信息提取gene_id和symbol
 # 这里假设gene_id和gene_symbol都是以"gene_id"和"gene_name"的形式出现在attributes列中
-gtf_data[, c("gene_id", "symbol") := {
+gtf_data[, c("gene_id", "gene") := {
   attrs <- tstrsplit(V9, "; ")
   gene_id <- gsub('"', '', attrs[grep("^gene_id", attrs)])
-  symbol <- gsub('"', '', attrs[grep("^gene_name", attrs)])
-  list(gene_id = gene_id, symbol = symbol)
+  gene <- gsub('"', '', attrs[grep("^gene_name", attrs)])
+  list(gene_id = gene_id, gene = gene)
 }, by = 1:nrow(gtf_data)]
 
-gtf_data = unique(gtf_data[, list(chr = V1, start = V4, end = V5, gene_id = substr(sub("gene_id ", "", gene_id), 1, 15), symbol = sub("gene_name ", "", symbol))])
+gtf_data = unique(gtf_data[, list(chr = V1, start = V4, end = V5, gene_id = substr(sub("gene_id ", "", gene_id), 1, 15), gene = sub("gene_name ", "", gene))])
 
 # 输出前几行结果
 message("Checking gtf data...")
@@ -138,14 +138,14 @@ aggr_circRNA_beds = function(sample, methods) {
     bed_common[, id := paste(chr, start, end, sep = "-")]
 
     annot = unique(overlaps(bed_common, gtf_data)[
-      , .(id, gene_id, symbol, ovp_len = fcase(
+      , .(id, gene_id, gene, ovp_len = fcase(
         i.start <= start, i.end - start + 1,
         i.end >= end, end - i.start + 1,
         i.start > start, i.end - i.start + 1
       ))])
     # Only keep symbol, as gene_id is not required in downstream
     # 仅标记最大 overlap 的基因
-    annot = annot[ , list(symbol = symbol[which.max(ovp_len)]), by = .(id)]
+    annot = annot[ , list(gene = gene[which.max(ovp_len)]), by = .(id)]
     # Some may have no annotation on gene, such cases will not be kept
     #"chr4-42725521-42744676"
 
@@ -159,7 +159,7 @@ aggr_circRNA_beds = function(sample, methods) {
       bed_dt2$id = NULL
       rv = bed_dt2[, .(tool = paste(tool, collapse = ","),
                   count = mean(count, na.rm=TRUE)), 
-                  by = .(chr, start, end, strand, symbol)]  # Get average count
+                  by = .(chr, start, end, strand, gene)]  # Get average count
       rv$sample = sample
       fwrite(x = rv, file = file.path(OutDir, paste0(sample, ".aggr.txt")), sep = "\t")
     } else {
