@@ -110,11 +110,17 @@ aggr_circRNA_beds = function(sample, methods) {
         return(d)
       }
 
+      if (is.character(d[[5]])) {
+         warning(sprintf("invalid (character) count detected for %s with method %s", sample, x), immediate. = TRUE)
+         d[[5]] = as.integer(d[[5]])
+      }
+
       d$tool = x
       d
     }, mc.cores = getOption("mc.cores", 4L))
     bed_dt = rbindlist(bed_list, use.names = FALSE)
     colnames(bed_dt) = c("chr", "start", "end", "strand", "count", "tool")
+    bed_dt = bed_dt[!is.na(bed_dt$count)]
 
     # 增加样本水平 circRNA ID 的输出
     # 方便后续分析不同方法的 overlap 以及统计总量
