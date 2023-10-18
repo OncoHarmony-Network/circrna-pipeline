@@ -4,7 +4,6 @@
 
 # https://github.com/shenwei356/rush
 rush=/home/circrna/bin/rush
-#!/usr/bin/env bash
 
 # Get the directory of the script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -35,10 +34,6 @@ if [ ! -f ${circRNA_finder} ]; then
     exit 1
 fi
 
-# Set paths to other programs
-# https://github.com/OpenGene/fastp
-# fp=/home/circrna/miniconda3/bin/fastp
-
 # Set input and output
 fqfile=$1
 indir=$2
@@ -51,25 +46,39 @@ if [ -z "$config" ]; then
     config=${DIR}/config_zhou2.sh
 fi
 
-# Set commands
-# TODO: set QC with fastp
+array1=(${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc})
+array2=($(cat $fqfile))
 
-# commands="
-# bash ${CIRIquant} {} ${indir} ${oudir} ${nthreads};
-# bash ${FindCirc} {} ${indir} ${oudir} ${nthreads};
-# bash ${Circexplorer2} {} ${indir} ${oudir} ${nthreads};
-# bash ${circRNA_finder} {} ${indir} ${oudir} ${nthreads};
-# "
-#cat $fqfile | head -n 4 | ${rush} ${commands} -j ${nbatch} -k
+# Create an empty array to store the combinations
+combinations=()
+
+# Loop through the first array
+for item1 in "${array1[@]}"; do
+    # Loop through the second array
+    for item2 in "${array2[@]}"; do
+        # Concatenate the two items and add them to the combinations array
+        combinations+=("$item1;$item2")
+    done
+done
+
+echo "CircRNA identification pipeline with 4 callers"
+echo "=================================================="
+echo "Author: Shixiang Wang (shixiang1994wang@gmail.com)"
+echo "Latest update: 2023-10-18"
+echo "========================="
+echo ""
 
 # Run commands in batch
-commands="bash {} {sample} ${indir} ${oudir} ${nthreads} ${config}"
+nthreads_prog=8
+njob=$((${nthreads} / ${nthreads_prog}))
+if [ $njob -lt 1 ]; then
+    njob=1
+fi
+echo "$nthreads_prog threads sets to each call by default"
+echo "$nthreads threads set by user (a multiple of 8 is recommended)"
+echo "Number of jobs: $njob"
+echo "The pipeline is starting..."
 
-for sample in $(cat $fqfile)
-do
-    #bash ${CIRIquant} ${sample} ${indir} ${oudir} ${nthreads}
-    echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} -D " " -T b -k -j 4 -v sample=${sample} ${commands}
-    #echo "${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc}" | ${rush} --dry-run -D " " -T b -k -j 4 -v sample=${sample} ${commands}
-done
+echo ${combinations[@]} | ${rush} -D " " -d ";" -T b -k -j ${njob} "bash {1} {2} ${indir} ${oudir} ${nthreads_prog} ${config}"
 
 echo "The pipeline is done. Please check the result files."
