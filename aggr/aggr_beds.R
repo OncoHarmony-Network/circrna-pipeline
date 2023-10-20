@@ -187,7 +187,7 @@ invisible(
   parallel::mclapply(sample_ids, function(sample) {
   message("\thandling ", sample)
   aggr_circRNA_beds(sample, methods)
-}, mc.cores = min(parallel::detectCores(), 20L))
+}, mc.cores = min(parallel::detectCores(), 20L, length(sample_ids)))
 )
 
 # for (sample in sample_ids) {

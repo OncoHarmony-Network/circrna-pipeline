@@ -8,7 +8,7 @@ PIPELINE=/home/circrna/circrna-pipeline
 fqfile=./PHS003284.txt
 indir=/home/zhou/raid/ncbi/dbGaP-24835/RNA_phs003284/raw
 oudir=/home/zhou/raid/IO_RNA/PHS003284/fq
-nthreads=8
+nthreads=16
 
 ${py} ${PIPELINE}/common/ll_fq.py ${indir} --output ${fqfile}
 

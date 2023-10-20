@@ -1,0 +1,39 @@
+Reading GTF annotation data...
+Extracting gene and region information...
+Checking gtf data...
+    chr start   end         gene_id        gene
+1: chr1 11869 14409 ENSG00000223972     DDX11L1
+2: chr1 14404 29570 ENSG00000227232      WASH7P
+3: chr1 17369 17436 ENSG00000278267   MIR6859-1
+4: chr1 29554 31109 ENSG00000243485 MIR1302-2HG
+5: chr1 30366 30503 ENSG00000284332   MIR1302-2
+6: chr1 34554 36081 ENSG00000237613     FAM138A
+Scanning result bed files and extracting sample IDs...
+10 sample(s) detected
+Reading, joining & annotating circRNAs...
+	handling SRR25103040
+	handling SRR25103042
+	handling SRR25103044
+	handling SRR25103059
+	handling SRR25103062
+	handling SRR25103074
+	handling SRR25103076
+	handling SRR25103078
+	handling SRR25103086
+	handling SRR25103092
+	=>61 solid circRNAs detected
+	=>115 solid circRNAs detected
+	=>2899 solid circRNAs detected
+	=>3224 solid circRNAs detected
+	=>3498 solid circRNAs detected
+	=>3796 solid circRNAs detected
+	=>5509 solid circRNAs detected
+	=>11137 solid circRNAs detected
+	=>13489 solid circRNAs detected
+	=>13036 solid circRNAs detected
+Done. Please check result *.aggr.txt in /home/zhou/raid/IO_RNA/circRNA/PHS003316/aggr
+Scanning result aggr files...
+Checking if all sample result data files could be found...
+Merging result aggr files...
+Outputing
+Done. Check /home/zhou/raid/IO_RNA/circRNA/PHS003316/aggr/aggr_circRNA.tsv.gz
