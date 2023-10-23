@@ -1,180 +1,340 @@
+CircRNA identification pipeline with 4 callers
+==================================================
+Author: Shixiang Wang (shixiang1994wang@gmail.com)
+Latest update: 2023-10-18
+=========================
+
 8 threads sets to each call by default
-120 threads set by user (a multiple of 8 is recommended)
-Number of jobs: 15
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706 at 2023年 10月 18日 星期三 11:08:57 CST
+112 threads set by user (a multiple of 8 is recommended)
+Number of jobs: 14
+The pipeline is starting...
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM297c0301e861_20150702 at 2023年 10月 18日 星期三 11:08:58 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_SAMef0e3d2415fd_20160128 at 2023年 10月 18日 星期三 11:08:58 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM2070b416069c_20150627 at 2023年 10月 18日 星期三 11:08:57 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM75142fcab9df_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM4305ab968b90_20150706 at 2023年 10月 18日 星期三 11:08:57 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM297c0301e861_20150702 at 2023年 10月 23日 星期一 11:21:44 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM7aa01fc49a80_20150706 at 2023年 10月 18日 星期三 11:08:57 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM297c0301e861_20150702 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM491e341d5a82_20150706 at 2023年 10月 18日 星期三 11:08:57 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM297c0301e861_20150702 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM7fb6987514a4_20150706 at 2023年 10月 18日 星期三 11:08:58 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM297c0301e861_20150702 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMb8f13a0525a6_20150627 at 2023年 10月 18日 星期三 11:08:57 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_SAMef0e3d2415fd_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM31f41dd0d6ca_20150702 at 2023年 10月 18日 星期三 11:08:57 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAMef0e3d2415fd_20160128 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_SAM07a93a28f801_20160128 at 2023年 10月 18日 星期三 11:08:58 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAMef0e3d2415fd_20160128 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM5d989c86255e_20150627 at 2023年 10月 18日 星期三 11:08:58 CST
+Start find_circ for GO29293_ngs_rna_targrna_SAMef0e3d2415fd_20160128 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_SAM7fb7a13c096b_20160128 at 2023年 10月 18日 星期三 11:08:58 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM2070b416069c_20150627 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_SAMae02629a97f7_20160128 at 2023年 10月 18日 星期三 11:08:58 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM2070b416069c_20150627 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM9fb814c22bdb_20150627 at 2023年 10月 18日 星期三 11:08:57 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM2070b416069c_20150627 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMa535fcdf18a0_20150706 at 2023年 10月 18日 星期三 11:09:01 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM2070b416069c_20150627 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM110501d0eedb_20150628 at 2023年 10月 18日 星期三 11:09:01 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM4305ab968b90_20150706 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM3f2033c90438_20150702 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM4305ab968b90_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM2dc578e0165f_20150702 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM4305ab968b90_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMdb3f50c9129c_20150628 at 2023年 10月 18日 星期三 11:09:01 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM4305ab968b90_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMd135d5867fe3_20150706 at 2023年 10月 18日 星期三 11:09:01 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM7aa01fc49a80_20150706 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM075e037d95bc_20150628 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM7aa01fc49a80_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM4b0175e8db6e_20150629 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM7aa01fc49a80_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMb963dda93cfd_20150707 at 2023年 10月 18日 星期三 11:09:01 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM7aa01fc49a80_20150706 at 2023年 10月 23日 星期一 11:21:42 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMae1690469964_20150629 at 2023年 10月 18日 星期三 11:09:01 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM491e341d5a82_20150706 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_SAM95c70496ffb5_20160128 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM491e341d5a82_20150706 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM9d2494119c05_20150702 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM491e341d5a82_20150706 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM6cb230f208a8_20150628 at 2023年 10月 18日 星期三 11:09:01 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM491e341d5a82_20150706 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM59b825252c0d_20150706 at 2023年 10月 18日 星期三 11:09:01 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM7fb6987514a4_20150706 at 2023年 10月 23日 星期一 11:21:45 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM7ee2b6e4d6b3_20150706 at 2023年 10月 18日 星期三 11:09:01 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM7fb6987514a4_20150706 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMd43f8933066b_20150627 at 2023年 10月 18日 星期三 11:09:04 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM7fb6987514a4_20150706 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM5b57e47fdcb3_20150628 at 2023年 10月 18日 星期三 11:09:05 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM7fb6987514a4_20150706 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMeff2ce356ccb_20150702 at 2023年 10月 18日 星期三 11:09:05 CST
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMb8f13a0525a6_20150627 at 2023年 10月 23日 星期一 11:21:46 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMf82bbdc267c8_20150706 at 2023年 10月 18日 星期三 11:09:05 CST
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMb8f13a0525a6_20150627 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMbe83eae4026e_20150702 at 2023年 10月 18日 星期三 11:09:05 CST
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMb8f13a0525a6_20150627 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-Start CIRIquant for GO29293_ngs_rna_targrna_SAMe56c96c51190_20160128 at 2023年 10月 18日 星期三 11:09:05 CST
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMb8f13a0525a6_20150627 at 2023年 10月 23日 星期一 11:21:43 CST
 Final result exists and is not empty, skipped this sample.
-[Wed 2023-10-18 11:09:05] [INFO ] Input reads: GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128_1.fastq.gz,GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128_2.fastq.gz
-[Wed 2023-10-18 11:09:05] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:05] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128.CIRI, Output prefix: GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128
-[Wed 2023-10-18 11:09:05] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:05] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:05] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128.CIRI/align/GO29293_ngs_rna_targrna_SAM1abf01dd4544_20160128.bam
-[Wed 2023-10-18 11:09:05] [INFO ] Input reads: GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128_1.fastq.gz,GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128_2.fastq.gz
-[Wed 2023-10-18 11:09:05] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:05] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128.CIRI, Output prefix: GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128
-[Wed 2023-10-18 11:09:05] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:05] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:05] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128.CIRI/align/GO29293_ngs_rna_targrna_SAMda4d892fddc8_20160128.bam
-[Wed 2023-10-18 11:09:05] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627_2.fastq.gz
-[Wed 2023-10-18 11:09:05] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:05] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627
-[Wed 2023-10-18 11:09:05] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:05] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:05] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAM065890737112_20150627.bam
-[Wed 2023-10-18 11:09:05] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628_2.fastq.gz
-[Wed 2023-10-18 11:09:05] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:05] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628
-[Wed 2023-10-18 11:09:05] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:05] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:05] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:05] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAM59f392864f5d_20150628.bam
-[Wed 2023-10-18 11:09:08] [INFO ] Input reads: GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128_1.fastq.gz,GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128_2.fastq.gz
-[Wed 2023-10-18 11:09:08] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:08] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128.CIRI, Output prefix: GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128
-[Wed 2023-10-18 11:09:08] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:08] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:08] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:08] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128.CIRI/align/GO29293_ngs_rna_targrna_SAM8b4b8b0f9e73_20160128.bam
-[Wed 2023-10-18 11:09:08] [INFO ] Input reads: GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128_1.fastq.gz,GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128_2.fastq.gz
-[Wed 2023-10-18 11:09:08] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:08] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128.CIRI, Output prefix: GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128
-[Wed 2023-10-18 11:09:08] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:08] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:08] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:08] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128.CIRI/align/GO29293_ngs_rna_targrna_SAM47fc46c3d6be_20160128.bam
-[Wed 2023-10-18 11:09:08] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628_2.fastq.gz
-[Wed 2023-10-18 11:09:08] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:08] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628
-[Wed 2023-10-18 11:09:08] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:08] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:08] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:08] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAMcee0fa8c05b4_20150628.bam
-[Wed 2023-10-18 11:09:08] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627_2.fastq.gz
-[Wed 2023-10-18 11:09:08] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:08] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627
-[Wed 2023-10-18 11:09:08] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:08] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:08] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:08] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAMbf91f27e7f9b_20150627.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAM698d8d76b934_20150706.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAMd1bd63734394_20150628.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAMbf1a3ae828e6_20150702.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAM7c67b05aa109_20150628.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128_1.fastq.gz,GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128.CIRI, Output prefix: GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128.CIRI/align/GO29293_ngs_rna_targrna_SAM09c84ec0cf34_20160128.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628_1.fastq.gz,GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628.CIRI, Output prefix: GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628.CIRI/align/GO29293_ngs_rna_targrna_rnaaccess_SAMba1a34b5a060_20150628.bam
-[Wed 2023-10-18 11:09:09] [INFO ] Input reads: GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128_1.fastq.gz,GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128_2.fastq.gz
-[Wed 2023-10-18 11:09:09] [INFO ] Library type: unstranded
-[Wed 2023-10-18 11:09:09] [INFO ] Output directory: /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128.CIRI, Output prefix: GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128
-[Wed 2023-10-18 11:09:09] [INFO ] Config: hg38 Loaded
-[Wed 2023-10-18 11:09:09] [INFO ] 128 CPU cores availble, using 8
-[Wed 2023-10-18 11:09:09] [INFO ] Align RNA-seq reads to reference genome ..
-[Wed 2023-10-18 11:09:09] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/data/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128_1.fastq.gz -2 /home/data/IO_RNA/EGA_IMvigor210/fq/GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/data/IO_RNA/circRNA/EGA_IMvigor210/GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128.CIRI/align/GO29293_ngs_rna_targrna_SAM9725303dce0c_20160128.bam
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM31f41dd0d6ca_20150702 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM31f41dd0d6ca_20150702 at 2023年 10月 23日 星期一 11:21:43 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM31f41dd0d6ca_20150702 at 2023年 10月 23日 星期一 11:21:43 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM31f41dd0d6ca_20150702 at 2023年 10月 23日 星期一 11:21:43 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_SAM07a93a28f801_20160128 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAM07a93a28f801_20160128 at 2023年 10月 23日 星期一 11:21:43 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAM07a93a28f801_20160128 at 2023年 10月 23日 星期一 11:21:44 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_SAM07a93a28f801_20160128 at 2023年 10月 23日 星期一 11:21:44 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM5d989c86255e_20150627 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM5d989c86255e_20150627 at 2023年 10月 23日 星期一 11:21:44 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM5d989c86255e_20150627 at 2023年 10月 23日 星期一 11:21:44 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM5d989c86255e_20150627 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_SAM7fb7a13c096b_20160128 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAM7fb7a13c096b_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAM7fb7a13c096b_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_SAM7fb7a13c096b_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_SAMae02629a97f7_20160128 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAMae02629a97f7_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAMae02629a97f7_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_SAMae02629a97f7_20160128 at 2023年 10月 23日 星期一 11:21:45 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM9fb814c22bdb_20150627 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM9fb814c22bdb_20150627 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM9fb814c22bdb_20150627 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM9fb814c22bdb_20150627 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMa535fcdf18a0_20150706 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMa535fcdf18a0_20150706 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMa535fcdf18a0_20150706 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMa535fcdf18a0_20150706 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM110501d0eedb_20150628 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM110501d0eedb_20150628 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM110501d0eedb_20150628 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM110501d0eedb_20150628 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM3f2033c90438_20150702 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM3f2033c90438_20150702 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM3f2033c90438_20150702 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM3f2033c90438_20150702 at 2023年 10月 23日 星期一 11:21:46 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM2dc578e0165f_20150702 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM2dc578e0165f_20150702 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM2dc578e0165f_20150702 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM2dc578e0165f_20150702 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMdb3f50c9129c_20150628 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMdb3f50c9129c_20150628 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMdb3f50c9129c_20150628 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMdb3f50c9129c_20150628 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMd135d5867fe3_20150706 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMd135d5867fe3_20150706 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMd135d5867fe3_20150706 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMd135d5867fe3_20150706 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM075e037d95bc_20150628 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM075e037d95bc_20150628 at 2023年 10月 23日 星期一 11:21:47 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM075e037d95bc_20150628 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM075e037d95bc_20150628 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM4b0175e8db6e_20150629 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM4b0175e8db6e_20150629 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM4b0175e8db6e_20150629 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM4b0175e8db6e_20150629 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMb963dda93cfd_20150707 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMb963dda93cfd_20150707 at 2023年 10月 23日 星期一 11:21:48 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMb963dda93cfd_20150707 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMb963dda93cfd_20150707 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMae1690469964_20150629 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMae1690469964_20150629 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMae1690469964_20150629 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMae1690469964_20150629 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_SAM95c70496ffb5_20160128 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAM95c70496ffb5_20160128 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAM95c70496ffb5_20160128 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_SAM95c70496ffb5_20160128 at 2023年 10月 23日 星期一 11:21:49 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM9d2494119c05_20150702 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM9d2494119c05_20150702 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM9d2494119c05_20150702 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM9d2494119c05_20150702 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM6cb230f208a8_20150628 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM6cb230f208a8_20150628 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM6cb230f208a8_20150628 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM6cb230f208a8_20150628 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM59b825252c0d_20150706 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM59b825252c0d_20150706 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM59b825252c0d_20150706 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM59b825252c0d_20150706 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM7ee2b6e4d6b3_20150706 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM7ee2b6e4d6b3_20150706 at 2023年 10月 23日 星期一 11:21:50 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM7ee2b6e4d6b3_20150706 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM7ee2b6e4d6b3_20150706 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMd43f8933066b_20150627 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMd43f8933066b_20150627 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMd43f8933066b_20150627 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMd43f8933066b_20150627 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAM5b57e47fdcb3_20150628 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAM5b57e47fdcb3_20150628 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAM5b57e47fdcb3_20150628 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAM5b57e47fdcb3_20150628 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMeff2ce356ccb_20150702 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMeff2ce356ccb_20150702 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMeff2ce356ccb_20150702 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMeff2ce356ccb_20150702 at 2023年 10月 23日 星期一 11:21:51 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMf82bbdc267c8_20150706 at 2023年 10月 23日 星期一 11:21:55 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMf82bbdc267c8_20150706 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMf82bbdc267c8_20150706 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMf82bbdc267c8_20150706 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMbe83eae4026e_20150702 at 2023年 10月 23日 星期一 11:21:55 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMbe83eae4026e_20150702 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMbe83eae4026e_20150702 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMbe83eae4026e_20150702 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_SAMe56c96c51190_20160128 at 2023年 10月 23日 星期一 11:21:55 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAMe56c96c51190_20160128 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAMe56c96c51190_20160128 at 2023年 10月 23日 星期一 11:21:52 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_SAMe56c96c51190_20160128 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMeb587a68006b_20150706 at 2023年 10月 23日 星期一 11:21:56 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMeb587a68006b_20150706 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMeb587a68006b_20150706 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMeb587a68006b_20150706 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_SAM7538ad9ff524_20160128 at 2023年 10月 23日 星期一 11:21:56 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_SAM7538ad9ff524_20160128 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_SAM7538ad9ff524_20160128 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_SAM7538ad9ff524_20160128 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMd35318127278_20150706 at 2023年 10月 23日 星期一 11:21:56 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMd35318127278_20150706 at 2023年 10月 23日 星期一 11:21:53 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMd35318127278_20150706 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMd35318127278_20150706 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMd3601288319e_20150706 at 2023年 10月 23日 星期一 11:21:57 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMd3601288319e_20150706 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMd3601288319e_20150706 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start find_circ for GO29293_ngs_rna_targrna_rnaaccess_SAMd3601288319e_20150706 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start CIRIquant for GO29293_ngs_rna_targrna_rnaaccess_SAMe1eb5d988760_20150627 at 2023年 10月 23日 星期一 11:21:57 CST
+Final result exists and is not empty, skipped this sample.
+Start circexplorer2 for GO29293_ngs_rna_targrna_rnaaccess_SAMe1eb5d988760_20150627 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+Start circRNA_finder for GO29293_ngs_rna_targrna_rnaaccess_SAMe1eb5d988760_20150627 at 2023年 10月 23日 星期一 11:21:54 CST
+Final result exists and is not empty, skipped this sample.
+[bam_sort_core] merging from 2 files and 8 in-memory blocks...
+[bam_sort_core] merging from 2 files and 8 in-memory blocks...
+[bam_sort_core] merging from 2 files and 8 in-memory blocks...
+[bam_sort_core] merging from 3 files and 8 in-memory blocks...

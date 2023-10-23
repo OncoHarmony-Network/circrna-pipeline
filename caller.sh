@@ -46,15 +46,15 @@ if [ -z "$config" ]; then
     config=${DIR}/config_zhou2.sh
 fi
 
-array1=(${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc})
-array2=($(cat $fqfile))
+array1=($(cat $fqfile))
+array2=(${CIRIquant} ${Circexplorer2} ${circRNA_finder} ${FindCirc})
 
 # Create an empty array to store the combinations
 combinations=()
 
-# Loop through the first array
+# Loop through the sample array
 for item1 in "${array1[@]}"; do
-    # Loop through the second array
+    # Loop through the method path array
     for item2 in "${array2[@]}"; do
         # Concatenate the two items and add them to the combinations array
         combinations+=("$item1;$item2")
@@ -79,6 +79,7 @@ echo "$nthreads threads set by user (a multiple of 8 is recommended)"
 echo "Number of jobs: $njob"
 echo "The pipeline is starting..."
 
-echo ${combinations[@]} | ${rush} -D " " -d ";" -T b -k -j ${njob} "bash {1} {2} ${indir} ${oudir} ${nthreads_prog} ${config}"
+cmds="echo 'starting rush job with setting: {2}, {1}' && bash {2} {1} ${indir} ${oudir} ${nthreads_prog} ${config}"
+echo ${combinations[@]} | ${rush} -D " " -d ";" -T b -k -j ${njob} ${cmds}
 
 echo "The pipeline is done. Please check the result files."
