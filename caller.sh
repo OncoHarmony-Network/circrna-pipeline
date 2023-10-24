@@ -81,5 +81,8 @@ echo "The pipeline is starting..."
 
 cmds="echo 'starting rush job with setting: {2}, {1}' && bash {2} {1} ${indir} ${oudir} ${nthreads_prog} ${config}"
 echo ${combinations[@]} | ${rush} -D " " -d ";" -T b -k -j ${njob} ${cmds}
+# 一个已知问题，当circrna_finder并行调用过多时需要内存非常大，star可能出现问题崩溃导致结果为空
+# 当发现相关错误时可以合理减少计算资源重跑解决
+# for 循环按样本逐个处理可能会更加稳定（计算时间会延长）
 
 echo "The pipeline is done. Please check the result files."

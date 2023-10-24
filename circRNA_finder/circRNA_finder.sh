@@ -33,7 +33,7 @@ rm -rf ${outdir2}/*
 echo "1. Aligning reads..."
 
 STAR --readFilesIn ${indir}/${sample}_1.fastq.gz ${indir}/${sample}_2.fastq.gz \
---runThreadN 20 --genomeDir ${gdir} \
+--runThreadN ${ncpu} --genomeDir ${gdir} \
 --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 \
 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 \
 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 \

@@ -5,55 +5,1022 @@ Latest update: 2023-10-18
 =========================
 
 8 threads sets to each call by default
-56 threads set by user (a multiple of 8 is recommended)
-Number of jobs: 7
+28 threads set by user (a multiple of 8 is recommended)
+Number of jobs: 3
 The pipeline is starting...
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464234_1.fastq.gz,SRR25464234_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464234.CIRI, Output prefix: SRR25464234
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464234_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464234_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464234.CIRI/align/SRR25464234.bam
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464276_1.fastq.gz,SRR25464276_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464276.CIRI, Output prefix: SRR25464276
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464276_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464276_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464276.CIRI/align/SRR25464276.bam
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464256_1.fastq.gz,SRR25464256_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464256.CIRI, Output prefix: SRR25464256
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464256_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464256_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464256.CIRI/align/SRR25464256.bam
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464283_1.fastq.gz,SRR25464283_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464283.CIRI, Output prefix: SRR25464283
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464283_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464283_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464283.CIRI/align/SRR25464283.bam
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464245_1.fastq.gz,SRR25464245_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464245.CIRI, Output prefix: SRR25464245
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464245_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464245_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464245.CIRI/align/SRR25464245.bam
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464262_1.fastq.gz,SRR25464262_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464262.CIRI, Output prefix: SRR25464262
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464262_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464262_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464262.CIRI/align/SRR25464262.bam
-[Fri 2023-10-20 14:26:10] [INFO ] Input reads: SRR25464296_1.fastq.gz,SRR25464296_2.fastq.gz
-[Fri 2023-10-20 14:26:10] [INFO ] Library type: unstranded
-[Fri 2023-10-20 14:26:10] [INFO ] Output directory: /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464296.CIRI, Output prefix: SRR25464296
-[Fri 2023-10-20 14:26:10] [INFO ] Config: hg38 Loaded
-[Fri 2023-10-20 14:26:10] [INFO ] 96 CPU cores availble, using 8
-[Fri 2023-10-20 14:26:10] [INFO ] Align RNA-seq reads to reference genome ..
-[Fri 2023-10-20 14:26:10] [DEBUG] /home/circrna/miniconda3/envs/CIRIquant/bin/hisat2 -p 8 --dta -q -x /home/zhou/t12b/reference/hg38_ek12/GRCh38.primary_assembly.genome.fa -1 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464296_1.fastq.gz -2 /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464296_2.fastq.gz -t | /home/circrna/miniconda3/envs/CIRIquant/bin/samtools view -bS > /home/zhou/raid/IO_RNA/circRNA/PHS003284/SRR25464296.CIRI/align/SRR25464296.bam
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464256
+Start CIRIquant for SRR25464256 at Tue Oct 24 16:22:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464256
+Start circexplorer2 for SRR25464256 at Tue Oct 24 16:22:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464256
+Start circRNA_finder for SRR25464256 at Tue Oct 24 16:22:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464256
+Start find_circ for SRR25464256 at Tue Oct 24 16:22:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464234
+Start CIRIquant for SRR25464234 at Tue Oct 24 16:22:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464234
+Start circexplorer2 for SRR25464234 at Tue Oct 24 16:22:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464234
+Start circRNA_finder for SRR25464234 at Tue Oct 24 16:22:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464234
+Start find_circ for SRR25464234 at Tue Oct 24 16:22:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464296
+Start CIRIquant for SRR25464296 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464296
+Start circexplorer2 for SRR25464296 at Tue Oct 24 16:22:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464296
+Start circRNA_finder for SRR25464296 at Tue Oct 24 16:22:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464296
+Start find_circ for SRR25464296 at Tue Oct 24 16:22:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464245
+Start CIRIquant for SRR25464245 at Tue Oct 24 16:22:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464245
+Start circexplorer2 for SRR25464245 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464245
+Start circRNA_finder for SRR25464245 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464245
+Start find_circ for SRR25464245 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464262
+Start CIRIquant for SRR25464262 at Tue Oct 24 16:22:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464262
+Start circexplorer2 for SRR25464262 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464262
+Start circRNA_finder for SRR25464262 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464262
+Start find_circ for SRR25464262 at Tue Oct 24 16:22:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464283
+Start CIRIquant for SRR25464283 at Tue Oct 24 16:22:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464283
+Start circexplorer2 for SRR25464283 at Tue Oct 24 16:22:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464283
+Start circRNA_finder for SRR25464283 at Tue Oct 24 16:22:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464283
+Start find_circ for SRR25464283 at Tue Oct 24 16:22:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464276
+Start CIRIquant for SRR25464276 at Tue Oct 24 16:22:46 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464276
+Start circexplorer2 for SRR25464276 at Tue Oct 24 16:22:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464276
+Start circRNA_finder for SRR25464276 at Tue Oct 24 16:22:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464276
+Start find_circ for SRR25464276 at Tue Oct 24 16:22:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464282
+Start CIRIquant for SRR25464282 at Tue Oct 24 16:22:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464282
+Start circexplorer2 for SRR25464282 at Tue Oct 24 16:22:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464282
+Start circRNA_finder for SRR25464282 at Tue Oct 24 16:22:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464282
+Start find_circ for SRR25464282 at Tue Oct 24 16:22:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464292
+Start CIRIquant for SRR25464292 at Tue Oct 24 16:22:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464292
+Start circexplorer2 for SRR25464292 at Tue Oct 24 16:22:46 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464292
+Start circRNA_finder for SRR25464292 at Tue Oct 24 16:22:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464292
+Start find_circ for SRR25464292 at Tue Oct 24 16:22:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464286
+Start CIRIquant for SRR25464286 at Tue Oct 24 16:22:49 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464286
+Start circexplorer2 for SRR25464286 at Tue Oct 24 16:22:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464286. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464286
+Start circRNA_finder for SRR25464286 at Tue Oct 24 16:22:47 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464286_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464286_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464286. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:22:47 ..... started STAR run
+Oct 24 16:22:47 ..... loading genome
+Oct 24 16:24:50 ..... started mapping
+Oct 24 16:30:56 ..... finished mapping
+Oct 24 16:31:00 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464286, final result should be SRR25464286.circRNA_finder.bed
+End circRNA_finder for SRR25464286 at Tue Oct 24 16:31:09 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464286
+Start find_circ for SRR25464286 at Tue Oct 24 16:22:48 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464242
+Start CIRIquant for SRR25464242 at Tue Oct 24 16:22:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464242
+Start circexplorer2 for SRR25464242 at Tue Oct 24 16:22:49 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464242
+Start circRNA_finder for SRR25464242 at Tue Oct 24 16:22:49 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464242
+Start find_circ for SRR25464242 at Tue Oct 24 16:22:49 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464284
+Start CIRIquant for SRR25464284 at Tue Oct 24 16:22:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464284
+Start circexplorer2 for SRR25464284 at Tue Oct 24 16:22:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464284
+Start circRNA_finder for SRR25464284 at Tue Oct 24 16:22:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464284
+Start find_circ for SRR25464284 at Tue Oct 24 16:22:50 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464240
+Start CIRIquant for SRR25464240 at Tue Oct 24 16:22:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464240
+Start circexplorer2 for SRR25464240 at Tue Oct 24 16:22:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464240
+Start circRNA_finder for SRR25464240 at Tue Oct 24 16:22:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464240
+Start find_circ for SRR25464240 at Tue Oct 24 16:22:52 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464285
+Start CIRIquant for SRR25464285 at Tue Oct 24 16:22:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464285
+Start circexplorer2 for SRR25464285 at Tue Oct 24 16:22:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464285
+Start circRNA_finder for SRR25464285 at Tue Oct 24 16:22:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464285
+Start find_circ for SRR25464285 at Tue Oct 24 16:22:53 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464287
+Start CIRIquant for SRR25464287 at Tue Oct 24 16:22:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464287
+Start circexplorer2 for SRR25464287 at Tue Oct 24 16:22:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464287
+Start circRNA_finder for SRR25464287 at Tue Oct 24 16:22:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464287
+Start find_circ for SRR25464287 at Tue Oct 24 16:22:55 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464289
+Start CIRIquant for SRR25464289 at Tue Oct 24 16:22:57 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464289
+Start circexplorer2 for SRR25464289 at Tue Oct 24 16:22:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464289
+Start circRNA_finder for SRR25464289 at Tue Oct 24 16:22:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464289
+Start find_circ for SRR25464289 at Tue Oct 24 16:22:56 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464288
+Start CIRIquant for SRR25464288 at Tue Oct 24 16:22:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464288
+Start circexplorer2 for SRR25464288 at Tue Oct 24 16:22:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464288
+Start circRNA_finder for SRR25464288 at Tue Oct 24 16:22:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464288
+Start find_circ for SRR25464288 at Tue Oct 24 16:22:58 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464290
+Start CIRIquant for SRR25464290 at Tue Oct 24 16:23:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464290
+Start circexplorer2 for SRR25464290 at Tue Oct 24 16:22:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464290
+Start circRNA_finder for SRR25464290 at Tue Oct 24 16:22:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464290
+Start find_circ for SRR25464290 at Tue Oct 24 16:22:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464293
+Start CIRIquant for SRR25464293 at Tue Oct 24 16:23:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464293
+Start circexplorer2 for SRR25464293 at Tue Oct 24 16:23:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464293
+Start circRNA_finder for SRR25464293 at Tue Oct 24 16:23:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464293
+Start find_circ for SRR25464293 at Tue Oct 24 16:23:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464295
+Start CIRIquant for SRR25464295 at Tue Oct 24 16:23:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464295
+Start circexplorer2 for SRR25464295 at Tue Oct 24 16:23:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464291. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+****** Processing SRR25464295. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464295
+Start circRNA_finder for SRR25464295 at Tue Oct 24 16:23:02 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464295_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464295_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464295. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:23:02 ..... started STAR run
+Oct 24 16:23:02 ..... loading genome
+Oct 24 16:24:50 ..... started mapping
+Oct 24 16:33:19 ..... finished mapping
+Oct 24 16:33:23 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464295, final result should be SRR25464295.circRNA_finder.bed
+End circRNA_finder for SRR25464295 at Tue Oct 24 16:33:36 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464295
+Start find_circ for SRR25464295 at Tue Oct 24 16:23:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464291
+Start CIRIquant for SRR25464291 at Tue Oct 24 16:23:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464291
+Start circexplorer2 for SRR25464291 at Tue Oct 24 16:23:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464291
+Start circRNA_finder for SRR25464291 at Tue Oct 24 16:23:06 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464291_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464291_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464291. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:23:06 ..... started STAR run
+Oct 24 16:23:06 ..... loading genome
+Oct 24 16:24:50 ..... started mapping
+Oct 24 16:31:18 ..... finished mapping
+Oct 24 16:31:22 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464291, final result should be SRR25464291.circRNA_finder.bed
+End circRNA_finder for SRR25464291 at Tue Oct 24 16:31:29 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464291
+Start find_circ for SRR25464291 at Tue Oct 24 16:31:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464297
+Start CIRIquant for SRR25464297 at Tue Oct 24 16:31:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464297
+Start circexplorer2 for SRR25464297 at Tue Oct 24 16:31:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464297
+Start circRNA_finder for SRR25464297 at Tue Oct 24 16:31:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464297
+Start find_circ for SRR25464297 at Tue Oct 24 16:31:13 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464294
+Start CIRIquant for SRR25464294 at Tue Oct 24 16:31:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464294
+Start circexplorer2 for SRR25464294 at Tue Oct 24 16:31:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464294
+Start circRNA_finder for SRR25464294 at Tue Oct 24 16:31:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464294
+Start find_circ for SRR25464294 at Tue Oct 24 16:31:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464235
+Start CIRIquant for SRR25464235 at Tue Oct 24 16:31:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464235
+Start circexplorer2 for SRR25464235 at Tue Oct 24 16:31:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464235
+Start circRNA_finder for SRR25464235 at Tue Oct 24 16:31:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464235
+Start find_circ for SRR25464235 at Tue Oct 24 16:31:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464236
+Start CIRIquant for SRR25464236 at Tue Oct 24 16:31:20 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464236
+Start circexplorer2 for SRR25464236 at Tue Oct 24 16:31:20 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464236. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464236
+Start circRNA_finder for SRR25464236 at Tue Oct 24 16:31:21 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464236_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464236_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464236. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:31:21 ..... started STAR run
+Oct 24 16:31:21 ..... loading genome
+Oct 24 16:31:44 ..... started mapping
+Oct 24 16:37:50 ..... finished mapping
+Oct 24 16:37:54 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464236, final result should be SRR25464236.circRNA_finder.bed
+End circRNA_finder for SRR25464236 at Tue Oct 24 16:38:01 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464236
+Start find_circ for SRR25464236 at Tue Oct 24 16:31:30 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464239
+Start CIRIquant for SRR25464239 at Tue Oct 24 16:31:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464239
+Start circexplorer2 for SRR25464239 at Tue Oct 24 16:31:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464239
+Start circRNA_finder for SRR25464239 at Tue Oct 24 16:31:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464239
+Start find_circ for SRR25464239 at Tue Oct 24 16:31:32 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464241
+Start CIRIquant for SRR25464241 at Tue Oct 24 16:31:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464241
+Start circexplorer2 for SRR25464241 at Tue Oct 24 16:31:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464241
+Start circRNA_finder for SRR25464241 at Tue Oct 24 16:31:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464241
+Start find_circ for SRR25464241 at Tue Oct 24 16:31:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464244
+Start CIRIquant for SRR25464244 at Tue Oct 24 16:31:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464244
+Start circexplorer2 for SRR25464244 at Tue Oct 24 16:31:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464244
+Start circRNA_finder for SRR25464244 at Tue Oct 24 16:31:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464244
+Start find_circ for SRR25464244 at Tue Oct 24 16:31:37 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464237
+Start CIRIquant for SRR25464237 at Tue Oct 24 16:31:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464237
+Start circexplorer2 for SRR25464237 at Tue Oct 24 16:31:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464237
+Start circRNA_finder for SRR25464237 at Tue Oct 24 16:31:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464237
+Start find_circ for SRR25464237 at Tue Oct 24 16:31:40 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464238
+Start CIRIquant for SRR25464238 at Tue Oct 24 16:31:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464238
+Start circexplorer2 for SRR25464238 at Tue Oct 24 16:31:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464238
+Start circRNA_finder for SRR25464238 at Tue Oct 24 16:31:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464238
+Start find_circ for SRR25464238 at Tue Oct 24 16:31:43 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464243
+Start CIRIquant for SRR25464243 at Tue Oct 24 16:31:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464243
+Start circexplorer2 for SRR25464243 at Tue Oct 24 16:31:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464243
+Start circRNA_finder for SRR25464243 at Tue Oct 24 16:31:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464243
+Start find_circ for SRR25464243 at Tue Oct 24 16:31:45 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464246
+Start CIRIquant for SRR25464246 at Tue Oct 24 16:31:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464246
+Start circexplorer2 for SRR25464246 at Tue Oct 24 16:31:47 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464246. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464246
+Start circRNA_finder for SRR25464246 at Tue Oct 24 16:31:48 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464246_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464246_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464246. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:31:48 ..... started STAR run
+Oct 24 16:31:48 ..... loading genome
+Oct 24 16:32:09 ..... started mapping
+Oct 24 16:39:00 ..... finished mapping
+Oct 24 16:39:04 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464246, final result should be SRR25464246.circRNA_finder.bed
+End circRNA_finder for SRR25464246 at Tue Oct 24 16:39:10 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464246
+Start find_circ for SRR25464246 at Tue Oct 24 16:33:36 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464249
+Start CIRIquant for SRR25464249 at Tue Oct 24 16:33:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464249
+Start circexplorer2 for SRR25464249 at Tue Oct 24 16:33:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464249
+Start circRNA_finder for SRR25464249 at Tue Oct 24 16:33:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464249
+Start find_circ for SRR25464249 at Tue Oct 24 16:33:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464247
+Start CIRIquant for SRR25464247 at Tue Oct 24 16:33:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464247
+Start circexplorer2 for SRR25464247 at Tue Oct 24 16:33:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464247
+Start circRNA_finder for SRR25464247 at Tue Oct 24 16:33:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464247
+Start find_circ for SRR25464247 at Tue Oct 24 16:33:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464254
+Start CIRIquant for SRR25464254 at Tue Oct 24 16:33:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464254
+Start circexplorer2 for SRR25464254 at Tue Oct 24 16:33:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464254. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464254
+Start circRNA_finder for SRR25464254 at Tue Oct 24 16:33:44 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464254_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464254_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464254. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:33:45 ..... started STAR run
+Oct 24 16:33:45 ..... loading genome
+Oct 24 16:34:12 ..... started mapping
+Oct 24 16:40:17 ..... finished mapping
+Oct 24 16:40:20 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464254, final result should be SRR25464254.circRNA_finder.bed
+End circRNA_finder for SRR25464254 at Tue Oct 24 16:40:28 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464254
+Start find_circ for SRR25464254 at Tue Oct 24 16:38:01 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464248
+Start CIRIquant for SRR25464248 at Tue Oct 24 16:38:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464248
+Start circexplorer2 for SRR25464248 at Tue Oct 24 16:38:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464248
+Start circRNA_finder for SRR25464248 at Tue Oct 24 16:38:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464248
+Start find_circ for SRR25464248 at Tue Oct 24 16:38:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464266
+Start CIRIquant for SRR25464266 at Tue Oct 24 16:38:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464266
+Start circexplorer2 for SRR25464266 at Tue Oct 24 16:38:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464266
+Start circRNA_finder for SRR25464266 at Tue Oct 24 16:38:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464266
+Start find_circ for SRR25464266 at Tue Oct 24 16:38:07 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464252
+Start CIRIquant for SRR25464252 at Tue Oct 24 16:38:09 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464252
+Start circexplorer2 for SRR25464252 at Tue Oct 24 16:38:09 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464252
+Start circRNA_finder for SRR25464252 at Tue Oct 24 16:38:09 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464252
+Start find_circ for SRR25464252 at Tue Oct 24 16:38:09 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464258
+Start CIRIquant for SRR25464258 at Tue Oct 24 16:38:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464258
+Start circexplorer2 for SRR25464258 at Tue Oct 24 16:38:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464258
+Start circRNA_finder for SRR25464258 at Tue Oct 24 16:38:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464258
+Start find_circ for SRR25464258 at Tue Oct 24 16:38:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464257
+Start CIRIquant for SRR25464257 at Tue Oct 24 16:38:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464257
+Start circexplorer2 for SRR25464257 at Tue Oct 24 16:38:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464257
+Start circRNA_finder for SRR25464257 at Tue Oct 24 16:38:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464257
+Start find_circ for SRR25464257 at Tue Oct 24 16:38:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464265
+Start CIRIquant for SRR25464265 at Tue Oct 24 16:38:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464265
+Start circexplorer2 for SRR25464265 at Tue Oct 24 16:38:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464265. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464265
+Start circRNA_finder for SRR25464265 at Tue Oct 24 16:38:18 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464265_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464265_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464265. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:38:18 ..... started STAR run
+Oct 24 16:38:18 ..... loading genome
+Oct 24 16:38:43 ..... started mapping
+Oct 24 16:45:49 ..... finished mapping
+Oct 24 16:45:52 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464265, final result should be SRR25464265.circRNA_finder.bed
+End circRNA_finder for SRR25464265 at Tue Oct 24 16:46:00 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464265
+Start find_circ for SRR25464265 at Tue Oct 24 16:39:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464264
+Start CIRIquant for SRR25464264 at Tue Oct 24 16:39:13 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464264
+Start circexplorer2 for SRR25464264 at Tue Oct 24 16:39:13 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464264
+Start circRNA_finder for SRR25464264 at Tue Oct 24 16:39:13 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464264
+Start find_circ for SRR25464264 at Tue Oct 24 16:39:13 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464267
+Start CIRIquant for SRR25464267 at Tue Oct 24 16:39:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464267
+Start circexplorer2 for SRR25464267 at Tue Oct 24 16:39:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464267
+Start circRNA_finder for SRR25464267 at Tue Oct 24 16:39:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464267
+Start find_circ for SRR25464267 at Tue Oct 24 16:39:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464269
+Start CIRIquant for SRR25464269 at Tue Oct 24 16:39:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464269
+Start circexplorer2 for SRR25464269 at Tue Oct 24 16:39:18 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464269
+Start circRNA_finder for SRR25464269 at Tue Oct 24 16:39:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464269
+Start find_circ for SRR25464269 at Tue Oct 24 16:39:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464270
+Start CIRIquant for SRR25464270 at Tue Oct 24 16:39:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464270
+Start circexplorer2 for SRR25464270 at Tue Oct 24 16:39:21 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464270. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464270
+Start circRNA_finder for SRR25464270 at Tue Oct 24 16:39:21 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464270_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464270_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464270. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:39:22 ..... started STAR run
+Oct 24 16:39:22 ..... loading genome
+Oct 24 16:39:40 ..... started mapping
+Oct 24 16:46:27 ..... finished mapping
+Oct 24 16:46:30 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464270, final result should be SRR25464270.circRNA_finder.bed
+End circRNA_finder for SRR25464270 at Tue Oct 24 16:46:39 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464270
+Start find_circ for SRR25464270 at Tue Oct 24 16:40:28 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464268
+Start CIRIquant for SRR25464268 at Tue Oct 24 16:40:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464268
+Start circexplorer2 for SRR25464268 at Tue Oct 24 16:40:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464268
+Start circRNA_finder for SRR25464268 at Tue Oct 24 16:40:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464268
+Start find_circ for SRR25464268 at Tue Oct 24 16:40:31 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464271
+Start CIRIquant for SRR25464271 at Tue Oct 24 16:40:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464271
+Start circexplorer2 for SRR25464271 at Tue Oct 24 16:40:34 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464271. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464271
+Start circRNA_finder for SRR25464271 at Tue Oct 24 16:40:34 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464271_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464271_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464271. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:40:34 ..... started STAR run
+Oct 24 16:40:34 ..... loading genome
+Oct 24 16:40:52 ..... started mapping
+Oct 24 16:48:00 ..... finished mapping
+Oct 24 16:48:04 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464271, final result should be SRR25464271.circRNA_finder.bed
+End circRNA_finder for SRR25464271 at Tue Oct 24 16:48:12 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464271
+Start find_circ for SRR25464271 at Tue Oct 24 16:46:00 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464263
+Start CIRIquant for SRR25464263 at Tue Oct 24 16:46:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464263
+Start circexplorer2 for SRR25464263 at Tue Oct 24 16:46:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464263
+Start circRNA_finder for SRR25464263 at Tue Oct 24 16:46:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464263
+Start find_circ for SRR25464263 at Tue Oct 24 16:46:03 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464272
+Start CIRIquant for SRR25464272 at Tue Oct 24 16:46:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464272
+Start circexplorer2 for SRR25464272 at Tue Oct 24 16:46:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464272
+Start circRNA_finder for SRR25464272 at Tue Oct 24 16:46:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464272
+Start find_circ for SRR25464272 at Tue Oct 24 16:46:06 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464274
+Start CIRIquant for SRR25464274 at Tue Oct 24 16:46:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464274
+Start circexplorer2 for SRR25464274 at Tue Oct 24 16:46:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464274
+Start circRNA_finder for SRR25464274 at Tue Oct 24 16:46:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464274
+Start find_circ for SRR25464274 at Tue Oct 24 16:46:09 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464275
+Start CIRIquant for SRR25464275 at Tue Oct 24 16:46:11 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464275
+Start circexplorer2 for SRR25464275 at Tue Oct 24 16:46:11 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464275
+Start circRNA_finder for SRR25464275 at Tue Oct 24 16:46:11 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464275
+Start find_circ for SRR25464275 at Tue Oct 24 16:46:11 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464277
+Start CIRIquant for SRR25464277 at Tue Oct 24 16:46:13 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464277
+Start circexplorer2 for SRR25464277 at Tue Oct 24 16:46:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464277
+Start circRNA_finder for SRR25464277 at Tue Oct 24 16:46:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464277
+Start find_circ for SRR25464277 at Tue Oct 24 16:46:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464278
+Start CIRIquant for SRR25464278 at Tue Oct 24 16:46:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464278
+Start circexplorer2 for SRR25464278 at Tue Oct 24 16:46:16 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464278
+Start circRNA_finder for SRR25464278 at Tue Oct 24 16:46:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464278
+Start find_circ for SRR25464278 at Tue Oct 24 16:46:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464280
+Start CIRIquant for SRR25464280 at Tue Oct 24 16:46:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464280
+Start circexplorer2 for SRR25464280 at Tue Oct 24 16:46:19 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464279. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+****** Processing SRR25464280. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464280
+Start circRNA_finder for SRR25464280 at Tue Oct 24 16:46:19 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464280_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464280_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464280. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:46:20 ..... started STAR run
+Oct 24 16:46:20 ..... loading genome
+Oct 24 16:46:38 ..... started mapping
+Oct 24 16:53:10 ..... finished mapping
+Oct 24 16:53:14 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464280, final result should be SRR25464280.circRNA_finder.bed
+End circRNA_finder for SRR25464280 at Tue Oct 24 16:53:22 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464280
+Start find_circ for SRR25464280 at Tue Oct 24 16:46:39 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464281
+Start CIRIquant for SRR25464281 at Tue Oct 24 16:46:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464281
+Start circexplorer2 for SRR25464281 at Tue Oct 24 16:46:41 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464281
+Start circRNA_finder for SRR25464281 at Tue Oct 24 16:46:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464281
+Start find_circ for SRR25464281 at Tue Oct 24 16:46:42 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464279
+Start CIRIquant for SRR25464279 at Tue Oct 24 16:46:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464279
+Start circexplorer2 for SRR25464279 at Tue Oct 24 16:46:44 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464279
+Start circRNA_finder for SRR25464279 at Tue Oct 24 16:46:45 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464279_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464279_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464279. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:46:45 ..... started STAR run
+Oct 24 16:46:45 ..... loading genome
+Oct 24 16:47:03 ..... started mapping
+Oct 24 16:52:46 ..... finished mapping
+Oct 24 16:52:50 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464279, final result should be SRR25464279.circRNA_finder.bed
+End circRNA_finder for SRR25464279 at Tue Oct 24 16:52:59 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464279
+Start find_circ for SRR25464279 at Tue Oct 24 16:48:12 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464261
+Start CIRIquant for SRR25464261 at Tue Oct 24 16:48:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464261
+Start circexplorer2 for SRR25464261 at Tue Oct 24 16:48:14 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464261
+Start circRNA_finder for SRR25464261 at Tue Oct 24 16:48:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464261
+Start find_circ for SRR25464261 at Tue Oct 24 16:48:15 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464251
+Start CIRIquant for SRR25464251 at Tue Oct 24 16:48:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464251
+Start circexplorer2 for SRR25464251 at Tue Oct 24 16:48:17 CST 2023
+Final result exists and is not empty, skipped this sample.
+****** Processing SRR25464251. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464251
+Start circRNA_finder for SRR25464251 at Tue Oct 24 16:48:17 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464251_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464251_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464251. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:48:18 ..... started STAR run
+Oct 24 16:48:18 ..... loading genome
+Oct 24 16:48:36 ..... started mapping
+Oct 24 16:56:09 ..... finished mapping
+Oct 24 16:56:12 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464251, final result should be SRR25464251.circRNA_finder.bed
+End circRNA_finder for SRR25464251 at Tue Oct 24 16:56:26 CST 2023
+****** Processing SRR25464259. (1/1) ******
+Filtering chimeric transcripts...
+Converting to .bed file...
+Getting forward spliced reads for circle junctions with splice sites...
+Creating .bam file...
+Sorting .bam file...
+Indexing .bam file...
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464251
+Start find_circ for SRR25464251 at Tue Oct 24 16:52:59 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464273
+Start CIRIquant for SRR25464273 at Tue Oct 24 16:53:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464273
+Start circexplorer2 for SRR25464273 at Tue Oct 24 16:53:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464273
+Start circRNA_finder for SRR25464273 at Tue Oct 24 16:53:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464273
+Start find_circ for SRR25464273 at Tue Oct 24 16:53:02 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464253
+Start CIRIquant for SRR25464253 at Tue Oct 24 16:53:04 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464253
+Start circexplorer2 for SRR25464253 at Tue Oct 24 16:53:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464253
+Start circRNA_finder for SRR25464253 at Tue Oct 24 16:53:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464253
+Start find_circ for SRR25464253 at Tue Oct 24 16:53:05 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464250
+Start CIRIquant for SRR25464250 at Tue Oct 24 16:53:07 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464250
+Start circexplorer2 for SRR25464250 at Tue Oct 24 16:53:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464250
+Start circRNA_finder for SRR25464250 at Tue Oct 24 16:53:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464250
+Start find_circ for SRR25464250 at Tue Oct 24 16:53:08 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464259
+Start CIRIquant for SRR25464259 at Tue Oct 24 16:53:10 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464259
+Start circexplorer2 for SRR25464259 at Tue Oct 24 16:53:11 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464259
+Start circRNA_finder for SRR25464259 at Tue Oct 24 16:53:11 CST 2023
+Final result file exists but is empty, re-run it.
+1. Aligning reads...
+	/home/circrna/miniconda3/envs/circRNA_finder/bin/STAR-avx2 --readFilesIn /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464259_1.fastq.gz /home/zhou/raid/IO_RNA/PHS003284/fq/SRR25464259_2.fastq.gz --runThreadN 8 --genomeDir /home/zhou/t12b/reference/hg38_ek12/STAR_index_star_2.7.10b --chimSegmentMin 20 --chimScoreMin 1 --alignIntronMax 100000 --chimOutType Junctions SeparateSAMold --outFilterMismatchNmax 4 --alignTranscriptsPerReadNmax 100000 --outFilterMultimapNmax 2 --outFileNamePrefix SRR25464259. --readFilesCommand zcat
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Oct 24 16:53:11 ..... started STAR run
+Oct 24 16:53:11 ..... loading genome
+Oct 24 16:53:30 ..... started mapping
+Oct 24 16:59:09 ..... finished mapping
+Oct 24 16:59:15 ..... finished successfully
+2. Analyzing reads...
+3. Outputing...
+Done for SRR25464259, final result should be SRR25464259.circRNA_finder.bed
+End circRNA_finder for SRR25464259 at Tue Oct 24 16:59:28 CST 2023
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464259
+Start find_circ for SRR25464259 at Tue Oct 24 16:53:22 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464260
+Start CIRIquant for SRR25464260 at Tue Oct 24 16:53:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464260
+Start circexplorer2 for SRR25464260 at Tue Oct 24 16:53:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464260
+Start circRNA_finder for SRR25464260 at Tue Oct 24 16:53:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464260
+Start find_circ for SRR25464260 at Tue Oct 24 16:53:25 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/CIRIquant/CIRIquant.sh, SRR25464255
+Start CIRIquant for SRR25464255 at Tue Oct 24 16:53:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/Circexplorer2/Circexplorer2.sh, SRR25464255
+Start circexplorer2 for SRR25464255 at Tue Oct 24 16:53:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/circRNA_finder/circRNA_finder.sh, SRR25464255
+Start circRNA_finder for SRR25464255 at Tue Oct 24 16:53:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+starting rush job with setting: /home/circrna/circrna-pipeline/FindCirc/FindCirc.sh, SRR25464255
+Start find_circ for SRR25464255 at Tue Oct 24 16:53:27 CST 2023
+Final result exists and is not empty, skipped this sample.
+The pipeline is done. Please check the result files.

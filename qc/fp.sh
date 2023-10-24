@@ -32,5 +32,5 @@ done
 if [ -z "$mqc" ]; then
     echo "No multiQC set, skip it"
 else 
-    ${mqc} ${outdir} -o ${outdir}
+    ${mqc} ${outdir} --force -o ${outdir}
 fi
