@@ -1,3 +1,147 @@
 Reading GTF annotation data...
-
-Execution halted
+Extracting gene and region information...
+Checking gtf data...
+    chr start   end         gene_id        gene
+1: chr1 11869 14409 ENSG00000223972     DDX11L1
+2: chr1 14404 29570 ENSG00000227232      WASH7P
+3: chr1 17369 17436 ENSG00000278267   MIR6859-1
+4: chr1 29554 31109 ENSG00000243485 MIR1302-2HG
+5: chr1 30366 30503 ENSG00000284332   MIR1302-2
+6: chr1 34554 36081 ENSG00000237613     FAM138A
+Scanning result bed files and extracting sample IDs...
+64 sample(s) detected
+Reading, joining & annotating circRNAs...
+	handling SRR25464234
+	handling SRR25464235
+	handling SRR25464236
+	handling SRR25464237
+	handling SRR25464238
+	handling SRR25464239
+	handling SRR25464240
+	handling SRR25464241
+	handling SRR25464242
+	handling SRR25464243
+	handling SRR25464244
+	handling SRR25464245
+	handling SRR25464246
+	handling SRR25464247
+	handling SRR25464248
+	handling SRR25464249
+	handling SRR25464250
+	handling SRR25464251
+	handling SRR25464252
+	handling SRR25464253
+	=>69 solid circRNAs detected
+	handling SRR25464254
+	=>66 solid circRNAs detected
+	handling SRR25464258
+	=>65 solid circRNAs detected
+	handling SRR25464256
+	=>82 solid circRNAs detected
+	=>75 solid circRNAs detected
+	=>74 solid circRNAs detected
+	handling SRR25464267
+	=>92 solid circRNAs detected
+	handling SRR25464265
+	=>70 solid circRNAs detected
+	handling SRR25464263
+	handling SRR25464261
+	handling SRR25464264
+	=>97 solid circRNAs detected
+	=>84 solid circRNAs detected
+	handling SRR25464257
+	=>52 solid circRNAs detected
+	handling SRR25464259
+	=>98 solid circRNAs detected
+	handling SRR25464266
+	handling SRR25464260
+	=>133 solid circRNAs detected
+	=>242 solid circRNAs detected
+	handling SRR25464262
+	=>78 solid circRNAs detected
+	handling SRR25464255
+	=>62 solid circRNAs detected
+	=>81 solid circRNAs detected
+	handling SRR25464268
+	=>77 solid circRNAs detected
+	=>80 solid circRNAs detected
+	handling SRR25464272
+	handling SRR25464269
+	handling SRR25464273
+	handling SRR25464270
+	=>95 solid circRNAs detected
+	handling SRR25464271
+	=>71 solid circRNAs detected
+	handling SRR25464287
+	=>69 solid circRNAs detected
+	handling SRR25464276
+	=>50 solid circRNAs detected
+	=>70 solid circRNAs detected
+	=>78 solid circRNAs detected
+	handling SRR25464274
+	handling SRR25464286
+	handling SRR25464293
+	=>78 solid circRNAs detected
+	handling SRR25464283
+	=>80 solid circRNAs detected
+	handling SRR25464275
+	=>107 solid circRNAs detected
+	=>73 solid circRNAs detected
+	handling SRR25464279
+	handling SRR25464292
+	=>98 solid circRNAs detected
+	handling SRR25464280
+	=>61 solid circRNAs detected
+	=>87 solid circRNAs detected
+	handling SRR25464277
+	handling SRR25464282
+	=>280 solid circRNAs detected
+	handling SRR25464288
+	=>57 solid circRNAs detected
+	handling SRR25464281
+	=>50 solid circRNAs detected
+	handling SRR25464284
+	=>82 solid circRNAs detected
+	handling SRR25464290
+	=>36 solid circRNAs detected
+	handling SRR25464295
+	=>69 solid circRNAs detected
+	handling SRR25464285
+	=>71 solid circRNAs detected
+	handling SRR25464296
+	=>88 solid circRNAs detected
+	=>141 solid circRNAs detected
+	handling SRR25464278
+	=>75 solid circRNAs detected
+	=>76 solid circRNAs detected
+	=>109 solid circRNAs detected
+	handling SRR25464291
+	=>88 solid circRNAs detected
+	=>129 solid circRNAs detected
+	=>175 solid circRNAs detected
+	=>55 solid circRNAs detected
+	handling SRR25464289
+	=>145 solid circRNAs detected
+	handling SRR25464297
+	=>101 solid circRNAs detected
+	handling SRR25464294
+	=>57 solid circRNAs detected
+	=>131 solid circRNAs detected
+	=>124 solid circRNAs detected
+	=>102 solid circRNAs detected
+	=>65 solid circRNAs detected
+	=>108 solid circRNAs detected
+	=>116 solid circRNAs detected
+	=>90 solid circRNAs detected
+	=>68 solid circRNAs detected
+	=>57 solid circRNAs detected
+	=>107 solid circRNAs detected
+	=>88 solid circRNAs detected
+	=>64 solid circRNAs detected
+	=>151 solid circRNAs detected
+Done. Please check result *.aggr.txt in /home/zhou/raid/IO_RNA/circRNA/PHS003284/aggr
+Scanning result aggr files...
+Checking if all sample result data files could be found...
+Merging result aggr files...
+Outputing
+Done. Check /home/zhou/raid/IO_RNA/circRNA/PHS003284/aggr/aggr_circRNA.tsv.gz
