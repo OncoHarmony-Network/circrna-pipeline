@@ -4,7 +4,7 @@ srcdir=/home/circrna/circrna-pipeline/run_batch_from_qc
 workdir=/home/data/IO_RNA/circRNA
 mkdir ${workdir}/aggr_results
 
-for i in EGA_OAK EGA_IMmotion151 EGA_IMvigor010
+for i in EGA_OAK EGA_IMmotion151 EGA_IMvigor010 EGA_IMvigor210
 do
     echo handling $i
     echo ..aggr...
