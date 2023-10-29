@@ -1,3 +1,4 @@
+Previous failed sample list file detected, remove it
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_752e0b914b_20170522 has been detected, skip this sample
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_7eba74a7dd_20170520 has been detected, skip this sample
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_5e194ff13c_20170521 has been detected, skip this sample
@@ -633,8 +634,47 @@ QC file for go28915_ngs_rna_wts_rnaaccess_EA_5c8296207f_20170522 has been detect
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_d102e7d148_20170522 has been detected, skip this sample
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_60126bd66e_20170519 has been detected, skip this sample
 WARNING: fastp uses up to 16 threads although you specified 20
-ERROR: igzip: unexpected eof
-Sample go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517 is failed
+Read1 before filtering:
+total reads: 52069881
+total bases: 2655563931
+Q20 bases: 2573797495(96.9209%)
+Q30 bases: 2482607177(93.487%)
+
+Read2 before filtering:
+total reads: 52069881
+total bases: 2655563931
+Q20 bases: 2503034481(94.2562%)
+Q30 bases: 2382875360(89.7314%)
+
+Read1 after filtering:
+total reads: 51572096
+total bases: 2628482789
+Q20 bases: 2551068188(97.0548%)
+Q30 bases: 2462418391(93.6821%)
+
+Read2 after filtering:
+total reads: 51572096
+total bases: 2628482789
+Q20 bases: 2495923486(94.9568%)
+Q30 bases: 2377618720(90.4559%)
+
+Filtering result:
+reads passed filter: 103144192
+reads failed due to low quality: 974742
+reads failed due to too many N: 20828
+reads failed due to too short: 0
+reads with adapter trimmed: 326286
+bases trimmed due to adapters: 3400186
+
+Duplication rate: 36.5223%
+
+Insert size peak (evaluated by paired-end reads): 71
+
+JSON report: /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_fastp.json
+HTML report: /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/data/EGA/OAK/raw/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_1.fastq.gz -I /home/data/EGA/OAK/raw/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_2.fastq.gz -o /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_1.fastq.gz -O /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_2.fastq.gz -j /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_fastp.json -h /home/data/IO_RNA/EGA_OAK/fq/go28915_ngs_rna_wts_rnaaccess_EA_486b56bcf8_20170517_fastp.html -w 20 
+fastp v0.23.4, time used: 134 seconds
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_195a03dda5_20170526 has been detected, skip this sample
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_8a153937dd_20170530 has been detected, skip this sample
 QC file for go28915_ngs_rna_wts_rnaaccess_EA_0f8bd46cdd_20170520 has been detected, skip this sample
@@ -704,13 +744,13 @@ QC file for go28915_ngs_rna_wts_rnaaccess_EA_8fc1983dbd_20170522 has been detect
 
 |           multiqc | MultiQC Version v1.16 now available!
 |           multiqc | Search path : /home/data/IO_RNA/EGA_OAK/fq
-|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 2795/2795  
-|             fastp | Found 698 reports
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 2817/2817  
+|             fastp | Found 699 reports
 |           multiqc | Compressing plot data
-|           multiqc | Previous MultiQC output found! Adjusting filenames..
-|           multiqc | Use -f or --force to overwrite existing reports instead
-|           multiqc | Report      : ../../../../data/IO_RNA/EGA_OAK/fq/multiqc_report_1.html
-|           multiqc | Data        : ../../../../data/IO_RNA/EGA_OAK/fq/multiqc_data_1
+|           multiqc | Deleting    : ../../../../data/IO_RNA/EGA_OAK/fq/multiqc_report.html   (-f was specified)
+|           multiqc | Deleting    : ../../../../data/IO_RNA/EGA_OAK/fq/multiqc_data   (-f was specified)
+|           multiqc | Report      : ../../../../data/IO_RNA/EGA_OAK/fq/multiqc_report.html
+|           multiqc | Data        : ../../../../data/IO_RNA/EGA_OAK/fq/multiqc_data
 |           multiqc | MultiQC complete
 |           multiqc | 5 flat-image plots used in the report due to large sample numbers
 |           multiqc | To force interactive plots, use the '--interactive' flag. 
