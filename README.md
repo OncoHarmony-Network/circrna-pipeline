@@ -2,6 +2,8 @@
 
 The pipeline provides an easy and reproducible way to detect circRNA from pair-end FASTQ files using four methods: CIRIquant, Circexplorer2, find_circ, and circRNA_finder.
 
+> The scripts and logs for handling TCCIA cohorts are available under the [run_batch_from_qc](https://github.com/ShixiangWang/circrna-pipeline/tree/main/run_batch_from_qc) path.
+
 ## Step 1. Install the required conda environment
 
 1. (Optional) Set an independent linux account `circrna` for deploying and running circRNA identification pipeline.
@@ -92,6 +94,15 @@ The directory [run_batch](run_batch/) have examples for running our TCCIA cohort
 
 I recommend testing the pipeline with 4 samples. If it goes well, run all the data files you have. The pipeline will skip samples with result files already generated.
 
+After getting the detection results from 4 methods, you can use the ensemble approach (code under [aggr](aggr/) to get final results.
+
+[An example](https://github.com/ShixiangWang/circrna-pipeline/blob/main/run_batch_from_qc/PHS003316/PHS003316_aggr.sh) is given as:
+
+```
+workdir=/home/zhou/raid/IO_RNA/circRNA/PHS003316
+
+bash -c "../../aggr/aggr_beds.R ${workdir} ${workdir}/aggr && ../../aggr/aggr_dataset.R ${workdir}/aggr ${workdir}/aggr ./PHS003316.txt" &> PHS003316_aggr.log
+```
 
 ## Output
 
