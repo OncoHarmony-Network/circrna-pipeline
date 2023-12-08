@@ -143,4 +143,4 @@ was inspired by the two works and could not be built without them.
 
 ## Copyright
 
-&copy; 2023 - TCCIA team by Shixiang Wang, Yi Xiong, and Jian-Guo Zhou.
+&copy; 2023 - OncoHarmony Network by Shixiang Wang, Yi Xiong, and Jian-Guo Zhou.
