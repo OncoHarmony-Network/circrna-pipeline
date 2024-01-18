@@ -8,4 +8,4 @@ oudir=/home/zhou/raid/IO_RNA/circRNA/PRJNA795330
 nthreads=24
 config=/home/circrna/circrna-pipeline/config_zhou.sh
 
-nohup bash ${PIPELINE}/caller.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${config} &> PRJNA795330_call.log &
+nohup bash ${PIPELINE}/caller.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${config} &> PRJNA744780_call.log &

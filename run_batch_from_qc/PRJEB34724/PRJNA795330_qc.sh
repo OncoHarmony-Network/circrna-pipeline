@@ -12,4 +12,4 @@ nthreads=20
 
 ${py} ${PIPELINE}/common/ll_fq.py ${indir} --output ${fqfile}
 
-nohup bash ${PIPELINE}/qc/fp.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${fp} ${multiqc} &> PRJNA795330_qc.log &
+nohup bash ${PIPELINE}/qc/fp.sh ${fqfile} ${indir} ${oudir} ${nthreads} ${fp} ${multiqc} &> PRJNA744780_qc.log &
