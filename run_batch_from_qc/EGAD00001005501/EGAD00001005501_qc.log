@@ -1,1 +1,253 @@
 WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 35783624
+total bases: 3552170298
+Q20 bases: 3458566642(97.3649%)
+Q30 bases: 3349600280(94.2973%)
+
+Read2 before filtering:
+total reads: 35783624
+total bases: 3551913440
+Q20 bases: 3400429895(95.7352%)
+Q30 bases: 3282897003(92.4262%)
+
+Read1 after filtering:
+total reads: 35597114
+total bases: 3532952030
+Q20 bases: 3440905846(97.3946%)
+Q30 bases: 3332847595(94.3361%)
+
+Read2 after filtering:
+total reads: 35597114
+total bases: 3532834694
+Q20 bases: 3392270931(96.0212%)
+Q30 bases: 3278250814(92.7938%)
+
+Filtering result:
+reads passed filter: 71194228
+reads failed due to low quality: 309800
+reads failed due to too many N: 54418
+reads failed due to too short: 8802
+reads with adapter trimmed: 708990
+bases trimmed due to adapters: 2111774
+
+Duplication rate: 31.8596%
+
+Insert size peak (evaluated by paired-end reads): 127
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490962_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490962_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490962_1.fq.gz -I /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490962_2.fq.gz -o /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490962_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490962_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490962_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490962_fastp.html -w 20 
+fastp v0.23.4, time used: 107 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 45030166
+total bases: 4478515222
+Q20 bases: 4373528178(97.6558%)
+Q30 bases: 4257574605(95.0667%)
+
+Read2 before filtering:
+total reads: 45030166
+total bases: 4469650279
+Q20 bases: 4295890826(96.1125%)
+Q30 bases: 4146420475(92.7683%)
+
+Read1 after filtering:
+total reads: 44695643
+total bases: 4445047278
+Q20 bases: 4342408774(97.6909%)
+Q30 bases: 4228108433(95.1195%)
+
+Read2 after filtering:
+total reads: 44695643
+total bases: 4445494127
+Q20 bases: 4282668070(96.3373%)
+Q30 bases: 4137179729(93.0646%)
+
+Filtering result:
+reads passed filter: 89391286
+reads failed due to low quality: 508558
+reads failed due to too many N: 160092
+reads failed due to too short: 396
+reads with adapter trimmed: 560456
+bases trimmed due to adapters: 1803177
+
+Duplication rate: 19.3223%
+
+Insert size peak (evaluated by paired-end reads): 131
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490924_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490924_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490924_1.fq.gz -I /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490924_2.fq.gz -o /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490924_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490924_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490924_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490924_fastp.html -w 20 
+fastp v0.23.4, time used: 134 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 33150210
+total bases: 3292636564
+Q20 bases: 3205991753(97.3685%)
+Q30 bases: 3103797318(94.2648%)
+
+Read2 before filtering:
+total reads: 33150210
+total bases: 3293068351
+Q20 bases: 3146072549(95.5362%)
+Q30 bases: 3032751274(92.095%)
+
+Read1 after filtering:
+total reads: 32988969
+total bases: 3275805248
+Q20 bases: 3190776955(97.4044%)
+Q30 bases: 3089450754(94.3112%)
+
+Read2 after filtering:
+total reads: 32988969
+total bases: 3275949516
+Q20 bases: 3138435719(95.8023%)
+Q30 bases: 3028164109(92.4362%)
+
+Filtering result:
+reads passed filter: 65977938
+reads failed due to low quality: 272462
+reads failed due to too many N: 46734
+reads failed due to too short: 3286
+reads with adapter trimmed: 688902
+bases trimmed due to adapters: 2276928
+
+Duplication rate: 23.1186%
+
+Insert size peak (evaluated by paired-end reads): 127
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490945_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490945_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490945_1.fq.gz -I /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490945_2.fq.gz -o /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490945_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490945_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490945_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490945_fastp.html -w 20 
+fastp v0.23.4, time used: 95 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 32542873
+total bases: 3225078423
+Q20 bases: 3149436593(97.6546%)
+Q30 bases: 3060754417(94.9048%)
+
+Read2 before filtering:
+total reads: 32542873
+total bases: 3225430167
+Q20 bases: 3082717459(95.5754%)
+Q30 bases: 2974777288(92.2289%)
+
+Read1 after filtering:
+total reads: 32355641
+total bases: 3205644404
+Q20 bases: 3131629442(97.6911%)
+Q30 bases: 3043846489(94.9527%)
+
+Read2 after filtering:
+total reads: 32355641
+total bases: 3205658080
+Q20 bases: 3074203404(95.8993%)
+Q30 bases: 2969833540(92.6435%)
+
+Filtering result:
+reads passed filter: 64711282
+reads failed due to low quality: 319430
+reads failed due to too many N: 50738
+reads failed due to too short: 4296
+reads with adapter trimmed: 829572
+bases trimmed due to adapters: 2532438
+
+Duplication rate: 19.1582%
+
+Insert size peak (evaluated by paired-end reads): 123
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490954_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490954_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490954_1.fq.gz -I /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003490954_2.fq.gz -o /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490954_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490954_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490954_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003490954_fastp.html -w 20 
+fastp v0.23.4, time used: 93 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 30392306
+total bases: 3020071940
+Q20 bases: 2943873876(97.4769%)
+Q30 bases: 2854735303(94.5254%)
+
+Read2 before filtering:
+total reads: 30392306
+total bases: 3019532759
+Q20 bases: 2888845858(95.6719%)
+Q30 bases: 2791586478(92.4509%)
+
+Read1 after filtering:
+total reads: 30239231
+total bases: 3004275827
+Q20 bases: 2929542953(97.5124%)
+Q30 bases: 2841222704(94.5726%)
+
+Read2 after filtering:
+total reads: 30239231
+total bases: 3003944142
+Q20 bases: 2882340945(95.9519%)
+Q30 bases: 2788024622(92.8121%)
+
+Filtering result:
+reads passed filter: 60478462
+reads failed due to low quality: 267544
+reads failed due to too many N: 34616
+reads failed due to too short: 3990
+reads with adapter trimmed: 583570
+bases trimmed due to adapters: 1813814
+
+Duplication rate: 27.0146%
+
+Insert size peak (evaluated by paired-end reads): 124
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003096344_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003096344_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003096344_1.fq.gz -I /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003096344_2.fq.gz -o /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003096344_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003096344_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003096344_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003096344_fastp.html -w 20 
+fastp v0.23.4, time used: 86 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
+Read1 before filtering:
+total reads: 34585808
+total bases: 3429806527
+Q20 bases: 3386315918(98.732%)
+Q30 bases: 3335454161(97.249%)
+
+Read2 before filtering:
+total reads: 34585808
+total bases: 3429875406
+Q20 bases: 3321840949(96.8502%)
+Q30 bases: 3233728697(94.2812%)
+
+Read1 after filtering:
+total reads: 34515148
+total bases: 3422058394
+Q20 bases: 3379048625(98.7432%)
+Q30 bases: 3328524320(97.2667%)
+
+Read2 after filtering:
+total reads: 34515148
+total bases: 3422182056
+Q20 bases: 3318294199(96.9643%)
+Q30 bases: 3231503089(94.4281%)
+
+Filtering result:
+reads passed filter: 69030296
+reads failed due to low quality: 113074
+reads failed due to too many N: 20794
+reads failed due to too short: 7452
+reads with adapter trimmed: 620348
+bases trimmed due to adapters: 1969223
+
+Duplication rate: 19.6036%
+
+Insert size peak (evaluated by paired-end reads): 127
+
+JSON report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003094520_fastp.json
+HTML report: /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003094520_fastp.html
+
+/home/circrna/miniconda3/bin/fastp -i /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003094520_1.fq.gz -I /home/zhou/raid/EGA/EGAD00001005501/raw/EGAF00003094520_2.fq.gz -o /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003094520_1.fastq.gz -O /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003094520_2.fastq.gz -j /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003094520_fastp.json -h /home/zhou/raid/IO_RNA/EGAD00001005501/fq/EGAF00003094520_fastp.html -w 20 
+fastp v0.23.4, time used: 98 seconds
+WARNING: fastp uses up to 16 threads although you specified 20
