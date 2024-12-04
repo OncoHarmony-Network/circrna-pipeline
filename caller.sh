@@ -3,7 +3,7 @@
 # running circRNA detection with four approaches.
 
 # https://github.com/shenwei356/rush
-rush=/home/circrna/bin/rush
+rush=~/bin/rush
 
 # Get the directory of the script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
